@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "DINNextLTArabic-Bold";
+    src: url("../font/DINNextLTArabic-Bold-2.ttf")
+}
+
+@font-face {
+    font-family: "DINNextLTArabic-Light";
+    src: url("../font/alfont_com_AlFont_com_DINNEXTLTARABIC-LIGHT-2-1.ttf")
+}
+
+@font-face {
+    font-family: "DINNextLTArabic-Medium";
+    src: url("../font/alfont_com_AlFont_com_DINNextLTArabic-Medium-1.ttf")
+}
+
+:root {
+    --khater-font: 'DINNextLTArabic-Bold', sans-serif !important;
+    --khater-font-two: 'DINNextLTArabic-Medium', sans-serif !important;
+    --khater-font-three: 'DINNextLTArabic-Light', sans-serif !important;
+    --khater-gray: #6f7775;
+    --khater-gray-rgb: 111, 119, 117;
+    --khater-white: #ffffff;
+    --khater-white-rgb: 255, 255, 255;
+    --khater-base: #522e90;
+    --khater-base-rgb: 0, 113, 93;
+    --khater-black: #4a346d;
+    --khater-secondary-1: #62BB46;
+    --khater-secondary-10: #61bb4675;
+    --khater-secondary-2: #005172;
+    --khater-secondary-20: #00527259;
+    --khater-secondary-3: #F37024;
+    --khater-secondary-30: #f370245b;
+    --khater-secondary-4: #FEC340;
+    --khater-secondary-5: #5e3056;
+    --khater-black-rgb: 40, 55, 52;
+    --khater-primary: #15c0f2;
+    --khater-primary-rgb: 251, 212, 90;
+    --khater-extra: #f9f4e8;
+    --khater-extra-rgb: 249, 244, 232;
+    --khater-bdr-color: #eee9db;
+    --khater-bdr-color-rgb: 238, 233, 219;
+    --khater-bdr-radius: 20px;
+
+}
+
+body {
+    direction: rtl;
+}
+
+.main-menu .main-menu__list>li+li,
+.stricky-header .main-menu__list>li+li {
+    margin-right: 55px;
+    margin-left: 5px;
+}
+
+.main-menu__left {
+    position: relative;
+    display: block;
+    width: 9%;
+    margin-left: 157px !important;
+    margin-right: 0 !important;
+}
+
+.main-slider {
+    direction: ltr !important;
+}
+
+.main-slider__content {
+    text-align: right !important;
+}
+
+.faq-one__text-1 {
+
+    margin-left: 70px !important;
+    margin-right: 0px !important;
+}
+
+.main-menu .main-menu__list>li>ul>li>a::before,
+.main-menu .main-menu__list>li>ul>li>ul>li>a::before,
+.stricky-header .main-menu__list>li>ul>li>a::before,
+.stricky-header .main-menu__list>li>ul>li>ul>li>a::before {
+
+    content: "";
+
+}
+
+.list-unstyled {
+    padding-right: 0 !important;
+}
+
+.footer-widget__contact-list li .text {
+    margin-right: 15px;
+    margin-left: 0px;
+}
+
+.footer-widget__about {
+    position: relative;
+    display: block;
+    margin-right: 0;
+    margin-left: 84px;
+
+}
+
+.site-footer__social a+a {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.about-four__img {
+    position: relative;
+    display: block;
+    z-index: 2;
+    width: 80%;
+    right: 150px;
+    transform: rotatey(180deg);
+}
+
+.about-four__img {
+    position: relative;
+    display: block;
+    z-index: 2;
+    width: 80%;
+    right: 150px !important;
+}
+
+.feature-two__title {
+    margin: -15px 47px 12px 57px !important;
+}
+
+.content-inner-1 .content li {
+    text-align: right !important;
+    direction: rtl;
+        margin-right: 18px;
+
+}
+
+.events-carousel-page {
+    direction: ltr;
+    text-align: right;
+}
+
+.main-slider .swiper-wrapper .container,
+.main-slider .swiper-wrapper .main-slider-shape-1 {
+    direction: rtl !important;
+}
+
+.main-slider-shape-2 {
+
+    right: 130px !important;
+    direction: rtl !important;
+
+}
+
+.main-slider .image-layer {
+    left: -20px !important;
+}
+
+/* .megamenu.ling {
+    margin-right: 100px !important;
+    margin-left: 10px !important;
+
+} */
