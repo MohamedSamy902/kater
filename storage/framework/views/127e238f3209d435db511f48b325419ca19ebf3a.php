@@ -14,7 +14,28 @@
 
     <!--About Two Start-->
     <section class="about-two">
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="about-two__right">
+                        <div class="section-title text-left">
+                            <h2 class="section-title__title"><?php echo e($Wellbiganing->title); ?></h2>
+                        </div>
+                        <p class="about-two__text-1"><?php echo e($Wellbiganing->content); ?></p>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="about-two__left">
+                        <div class="about-two__img-box  wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
+                            <div class="about-two__img">
+                                <img src="<?php echo e($Wellbiganing->getFirstMediaUrl('Wellbiganing')); ?>" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
     <!--About Two End-->
 

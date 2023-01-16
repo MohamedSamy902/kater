@@ -1,9 +1,7 @@
-@extends('site.layout.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header-bg" style="background-image: url({{ asset('site') }}/assets/images/backgrounds/IMG-20200513-WA0007.jpg)">
+        <div class="page-header-bg" style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/backgrounds/IMG-20200513-WA0007.jpg)">
         </div>
         <div class="container">
             <div class="page-header__inner">
@@ -15,11 +13,11 @@
 
     <!--Contact Three Start-->
     <section class="contact-three">
-        <div class="contact-three-shape" style="background-image: url({{ asset('site') }}/assets/images/shapes/contact-three-shape.png);"></div>
+        <div class="contact-three-shape" style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/contact-three-shape.png);"></div>
         <div class="container">
             <div class="section-title text-center">
                 <!-- <span class="section-title__tagline">Contact with us</span> -->
-                <h2 class="section-title__title" style="font-weight: 100;">{{ __('site.contact_title') }}</h2>
+                <h2 class="section-title__title" style="font-weight: 100;"><?php echo e(__('site.contact_title')); ?></h2>
             </div>
             <div class="contact-page__form-box">
                 <form action="https://layerdrops.com/khater/main-html/assets/inc/sendemail.php"
@@ -110,4 +108,6 @@
 
     </section>
     <!--Google Map End-->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('site.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/mohamed/Documents/kater/resources/views/site/contact.blade.php ENDPATH**/ ?>

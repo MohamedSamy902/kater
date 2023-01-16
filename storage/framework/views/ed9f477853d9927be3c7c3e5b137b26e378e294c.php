@@ -29,7 +29,7 @@
                                     <a href="<?php echo e(route('impact')); ?>"><?php echo e(__('site.ourImpact')); ?></a>
                                     <ul>
                                         <li><a href="<?php echo e(route('healthcare')); ?>"> <?php echo e(__('site.Healthcare')); ?></a></li>
-                                        <li><a href="javascript: void(0);"><?php echo e(__('site.WellBeing')); ?></a></li>
+                                        <li><a href="<?php echo e(route('wellbeing')); ?>"><?php echo e(__('site.WellBeing')); ?></a></li>
                                     </ul>
                                 </li>
                                 <li class="current megamenu"><a href="<?php echo e(route('gallery')); ?>"><?php echo e(__('site.gallery')); ?>

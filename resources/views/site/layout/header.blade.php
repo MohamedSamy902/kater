@@ -28,7 +28,7 @@
                                     <a href="{{ route('impact') }}">{{ __('site.ourImpact') }}</a>
                                     <ul>
                                         <li><a href="{{ route('healthcare') }}"> {{ __('site.Healthcare') }}</a></li>
-                                        <li><a href="javascript: void(0);">{{ __('site.WellBeing') }}</a></li>
+                                        <li><a href="{{ route('wellbeing') }}">{{ __('site.WellBeing') }}</a></li>
                                     </ul>
                                 </li>
                                 <li class="current megamenu"><a href="{{ route('gallery') }}">{{ __('site.gallery') }}
