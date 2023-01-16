@@ -369,8 +369,8 @@
 
 
 
-                                        <p class="counter-one__text4" style="width: 300px;"><?php echo e($healthcare->convoys != 0 ? $healthcare->convoys : ''); ?></span> </p>
-                                         <p class="counter-one__text4" style="width: 300px;"><?php echo e($healthcare->services != 0 ? $healthcare->services : ''); ?>
+                                        <p class="counter-one__text4" style="width: 300px;"><?php echo e($wellBeing->convoys != 0 ? $wellBeing->convoys : ''); ?></span> </p>
+                                         <p class="counter-one__text4" style="width: 300px;"><?php echo e($wellBeing->services != 0 ? $wellBeing->services : ''); ?>
 
                                         </p>
                                         

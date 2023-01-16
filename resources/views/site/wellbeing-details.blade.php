@@ -370,8 +370,8 @@
 
 
 
-                                        <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->convoys != 0 ? $healthcare->convoys : '' }}</span> </p>
-                                         <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->services != 0 ? $healthcare->services : '' }}
+                                        <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
+                                         <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->services != 0 ? $wellBeing->services : '' }}
                                         </p>
                                         {{-- <p class="counter-one__text4" style="width: 300px;"><span class="odometer"
                                             data-count="81">00</span> <span style="">Convoys</span>
