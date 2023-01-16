@@ -44,14 +44,15 @@ class GalleryDetalisController extends Controller
         $data['galleries_id'] = $request->galleries_id;
 
         $galleries = GalleryDetalis::create($data);
-
-        if ($request->file('galleryDetails')) {
-            // return 'test';
-            $galleries
-                ->addMedia($request->file('galleryDetails'))
+        // return 'test';
+        // if ($request->file('galleryDetails')) {
+            for ($i=0; $i < COUNT($request->galleryDetails); $i++) {
+                $galleries
+                ->addMedia($request->file('galleryDetails')[$i])
                 ->usingName($request->title)
                 ->toMediaCollection('galleryDetails');
-        }
+            }
+        // }
 
         return redirect()->back()
             ->with('success', __('master.messages_save'));

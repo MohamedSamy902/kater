@@ -11,9 +11,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class WellBeing extends Model implements HasMedia
 {
     use HasTranslations, HasFactory, InteractsWithMedia;
-    public $translatable = ['title', 'content', 'convoys', 'services'];
+    public $translatable = ['title', 'content', 'convoys', 'services', 'short_content'];
 
-    protected $fillable = ['title', 'content', 'convoys', 'services',  'status'];
+    protected $fillable = ['title', 'content', 'convoys', 'services',  'status', 'short_content'];
 
     public function WellBeingDetalis()
     {

@@ -36,20 +36,16 @@ class HealthcareDetailsController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['title'] = [
-            'en' => $request->title,
-            'ar' => $request->title_ar,
-        ];
 
-        $data['well_beings_id'] = $request->well_beings_id;
-
-        $healthcare = HealthcareDetails::create(
-            $data
-
-        );
+        $healthcare = HealthcareDetails::create([
+            'title' => [
+                'en' => $request->title,
+                'ar' => $request->title_ar,
+            ],
+            'healthcares_id' => $request->healthcares_id
+        ]);
 
         if ($request->file('healthcareDetails')) {
-            // return 'test';
             $healthcare
                 ->addMedia($request->file('healthcareDetails'))
                 ->usingName($request->title)
@@ -92,20 +88,20 @@ class HealthcareDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $healthcareDetalis = HealthcareDetails::findOrFail($id);
+        $healthcareDetails = HealthcareDetails::findOrFail($id);
         $data = $request->all();
         $data['title'] = [
             'en' => $request->title,
             'ar' => $request->title_ar
         ];
 
-        $healthcareDetalis->update($data);
+        $healthcareDetails->update($data);
 
-        if ($request->file('healthcareDetalis')) {
-            $healthcareDetalis
-                ->addMedia($request->file('healthcareDetalis'))
+        if ($request->file('healthcareDetails')) {
+            $healthcareDetails
+                ->addMedia($request->file('healthcareDetails'))
                 ->usingName($request->title)
-                ->toMediaCollection('healthcareDetalis');
+                ->toMediaCollection('healthcareDetails');
         }
 
         return redirect()->back()

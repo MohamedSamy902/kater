@@ -49,6 +49,25 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom03"><?php echo e(__('master.content_en')); ?></label>
+                                    <textarea rows="5" class="form-control" id="validationCustom03" type="text" name="content" ></textarea>
+                                    <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
+                                    <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom04"><?php echo e(__('master.content_ar')); ?></label>
+                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="content_ar" ></textarea>
+                                    <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
+                                    <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
+                                </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10"><?php echo e(__('master.image')); ?></label>
                                     <input class="form-control" id="validationCustom10" type="file"
                                         aria-label="file example" name="gallery" />

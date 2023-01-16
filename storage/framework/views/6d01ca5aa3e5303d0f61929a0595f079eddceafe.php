@@ -19,12 +19,13 @@
             <div class="swiper-wrapper">
                 <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="swiper-slide">
-                        <div class="image-layer"
-                            style="background-image: url(<?php echo e($slider->getFirstMediaUrl('slider')); ?>);"></div>
+                        <div class="image-layer" style="background-image: url(<?php echo e($slider->getFirstMediaUrl('slider')); ?>);">
+                        </div>
                         <!-- /.image-layer -->
 
                         <div class="main-slider-shape-1"
-                            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/main-slider-shape-1.jpg);"></div>
+                            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/main-slider-shape-1.jpg);">
+                        </div>
                         <div class="main-slider-shape-2 float-bob-x">
                             <img src="<?php echo e($slider->getFirstMediaUrl('shaip')); ?>" alt="">
                         </div>
@@ -36,7 +37,8 @@
                                         <h2 class="main-slider__title"><?php echo e($slider->title); ?></h2>
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
-                                            <a href="<?php echo e(route('about')); ?>" class="thm-btn main-slider__btn"> <?php echo e(__('site.readMore')); ?></a>
+                                            <a href="<?php echo e(route('about')); ?>" class="thm-btn main-slider__btn">
+                                                <?php echo e(__('site.readMore')); ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -64,15 +66,15 @@
     <!--About One Start-->
     <section class="about-one">
         <div class="about-one__shape-box-1">
-            <div class="about-one__shape-1" style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/about-one-shape-1.png);">
+            <div class="about-one__shape-1"
+                style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/about-one-shape-1.png);">
             </div>
         </div>
         <div class="container-fluid">
             <div class="row p-0">
                 <div class="col-xl-5 p-0">
                     <div class="about-one__left">
-                        <div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms"
-                            data-wow-duration="2500ms">
+                        <div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-one__img">
                                 <img src="<?php echo e($HowItAllBegan->getFirstMediaUrl('HowItAllBegan')); ?>" alt="">
                             </div>
@@ -99,8 +101,10 @@
 
     <!--FAQ One Start-->
     <section class="faq-one faq-two faq-three">
-        <div class="faq-one-shape-1" style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/faq-one-shape-1.png);"></div>
-        <div class="faq-one-bg" style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/gallery/Khater.jpg);height: 100%"></div>
+        <div class="faq-one-shape-1"
+            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/faq-one-shape-1.png);"></div>
+        <div class="faq-one-bg"
+            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/gallery/Khater.jpg);height: 100%"></div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-5 col-lg-5 pt-5 pb-0 px-5">
@@ -116,7 +120,8 @@
                 <div class="col-xl-7 col-lg-7 p-0">
                     <div class="faq-one__right">
                         <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                            <img src="<?php echo e($Vision->getFirstMediaUrl('Vision')); ?>" class="" style="width: 100%" alt="">
+                            <img src="<?php echo e($Vision->getFirstMediaUrl('Vision')); ?>" class="" style="width: 100%"
+                                alt="">
                         </div>
                     </div>
                 </div>
@@ -129,7 +134,8 @@
     <section class="become-volunteer-one" style="margin-top: 5px;">
         <div class="become-volunteer-one__bg-box">
             <div class="become-volunteer-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);"></div>
+                style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);">
+            </div>
         </div>
         <div class="become-volunteer-one__shape-1"
             style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/become-volunteer-shape-1.png);"></div>
@@ -137,21 +143,24 @@
             <div class="become-volunteer-one__inner">
                 <ul class="list-unstyled counter-one__list">
                     <li class="counter-one__single Served">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3" alt="">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3"
+                            alt="">
                         <div class="counter-one__count-box">
                             <h3 class="odometer" style="font-size: 28px;" data-count="14">00</h3>
                             <p class="counter-one__text1"><?php echo e(__('site.Institutions')); ?> </p>
                         </div>
                     </li>
                     <li class="counter-one__single Provided">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png" class="w-25 p-2 mt-3" alt="">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png" class="w-25 p-2 mt-3"
+                            alt="">
                         <div class="counter-one__count-box">
                             <h3 class="odometer" style="font-size: 28px;" data-count="66,480">00</h3>
                             <p class="counter-one__text2"><?php echo e(__('site.HealthcareServices')); ?></p>
                         </div>
                     </li>
                     <li class="counter-one__single boxes">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png" class="w-25 p-2 mt-3" alt="">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png" class="w-25 p-2 mt-3"
+                            alt="">
                         <div class="counter-one__count-box">
                             <h3 class="odometer" style="font-size: 28px;" data-count="2,846,020">00</h3>
                             <p class="counter-one__text3"><?php echo e(__('site.WellbeingServices')); ?></p>
@@ -169,57 +178,26 @@
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <a href="">
-                                <img src="<?php echo e(asset('site')); ?>/assets/images/Kasr.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="causes-one__content_index">
-                            <h3 class="causes-one__title"><a href="">Kasr AlAiny-Cairo University</a>
-                            </h3>
-                            <p class="causes-one__text">Computed Tomography Scan Device – CT
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!--Causes One Single End-->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <a href="">
-
-                                <img src="<?php echo e(asset('site')); ?>/assets/images/Ramadan cover.jpg" alt="">
-                            </a>
-
-                        </div>
-                        <div class="causes-one__content_index">
-                            <h3 class="causes-one__title"><a href="">Ramadan Campaigns</a>
-                            </h3>
-                            <p class="causes-one__text">The holy month of Ramadan is always an important time of the
-                                year. Khater Foundation’s charity activities advocate healthy habits. </p>
-
-                        </div>
-                    </div>
-                </div>
-                <!--Causes One Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="600ms">
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <a href="">
-                                <img src="<?php echo e(asset('site')); ?>/assets/images/Varian -NCI (22)-home page.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="causes-one__content_index">
-                            <h3 class="causes-one__title"><a href="">National Cancer Institute – Cairo University
+                <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="causes-one__single">
+                            <div class="causes-one__img">
+                                <a href="<?php echo e(route('gallery.detils', $gallery->id)); ?>">
+                                    <img src="<?php echo e($gallery->getFirstMediaUrl('gallery')); ?>" alt="">
                                 </a>
-                            </h3>
-                            <p class="causes-one__text">Varian Medical System (Mod. Unique RA.)</p>
+                            </div>
+                            <div class="causes-one__content_index">
+                                <h3 class="causes-one__title"><a
+                                        href="<?php echo e(route('gallery.detils', $gallery->id)); ?>"><?php echo e($gallery->title); ?></a>
+                                </h3>
+                                <p class="causes-one__text"><?php echo e($gallery->content); ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
                 <!--Causes One Single End-->
+
             </div>
         </div>
     </section>
@@ -286,7 +264,8 @@
                     </div>
                     <div class="swiper-slide story"
                         data-point="30.0287572,31.2360329,brand-1-5.png,Abu El Reesh Japanese Hospital">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Egyptian_Autistic_Society.jpg" alt="">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Egyptian_Autistic_Society.jpg"
+                            alt="">
                     </div>
                     <div class="swiper-slide story"
                         data-point="30.0315206,31.2374614,brand-1-4.png,Abu El Reesh Hospital in Al Mounira ">
@@ -299,12 +278,25 @@
                     <div class="swiper-slide">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
-                    </div>
+                    <?php
+                        if (App::getLocale() == 'ar') {
+                            echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                                    </div>';
+                        } else {
+                            echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                                    </div>';
+                        }
+                    ?>
+                    
+                    
                     <div class="swiper-slide">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/suez_canal.jpg" alt="">
                     </div>
@@ -332,7 +324,8 @@
                     </div>
                     <div class="swiper-slide story"
                         data-point="30.0287572,31.2360329,brand-1-5.png,Abu El Reesh Japanese Hospital">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Egyptian_Autistic_Society.jpg" alt="">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Egyptian_Autistic_Society.jpg"
+                            alt="">
                     </div>
                     <div class="swiper-slide story"
                         data-point="30.0315206,31.2374614,brand-1-4.png,Abu El Reesh Hospital in Al Mounira ">
@@ -345,12 +338,25 @@
                     <div class="swiper-slide">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
-                    </div>
+                    
+                    
+                    <?php
+                        if (App::getLocale() == 'ar') {
+                            echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                                    </div>';
+                        } else {
+                            echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide">
+                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                                    </div>';
+                        }
+                    ?>
                     <div class="swiper-slide">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/suez_canal.jpg" alt="">
                     </div>

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('articals', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->text('title');
             $table->text('content');
             $table->string('section');
             $table->enum('status', ['active', 'inactive', 'block'])->default('active');

@@ -2,7 +2,7 @@
 
 return
     [
-        'about'   => 'حولنا',
+        'about'   => ' عن خاطر',
         'ourImpact' => 'تأثيرنا',
         'Healthcare' => 'مبادرات الرعاية الصحية',
         'WellBeing' => 'مبادرات الرفاهيه',
@@ -11,13 +11,13 @@ return
 
 
         'contact_us'        => 'تواصل معانا',
-        'contact'        => 'تواصل',
+        'contact'        => 'اتصل بنا ',
         'contact_title'        => 'لا تتردد في الكتابة إلينا في أي وقت',
         'contact_with'        => 'اتصل بنا',
 
         'home' => 'الرئيسيه',
-        'gallery' => 'الاحداث',
-        'WellbeingServices' =>  'خدمات الرفاهية',
+        'gallery' => 'معرض الصور',
+        'WellbeingServices' =>  'الخدمات المجتمعية',
         'HealthcareServices' => 'خدمات الرعاية الصحية',
         'Institutions' => 'المؤسسات',
         'Subscribetoournewslette' => 'اشترك في نشرتنا الإخبارية',
@@ -26,7 +26,5 @@ return
         'SuccessPartners' => 'شركاء النجاح',
         'readMore' => 'قراءه المزيد',
         'timeLine' => 'أبرز المحطات',
-
-
 
     ];

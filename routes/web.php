@@ -91,6 +91,8 @@ Route::group(
         Route::get('impact', [SiteCotroller::class, 'impact'])->name('impact');
         Route::get('healthcare', [SiteCotroller::class, 'healthcare'])->name('healthcare');
         Route::get('healthcare/{id}', [SiteCotroller::class, 'healthcareDetiles'])->name('healthcare.detils');
+        Route::get('wellbeing', [SiteCotroller::class, 'wellbeing'])->name('wellbeing');
+        Route::get('wellbeing/{id}', [SiteCotroller::class, 'wellbeingDetiles'])->name('wellbeing.detils');
         Route::get('gallery/', [SiteCotroller::class, 'gallery'])->name('gallery');
         Route::get('gallery/{id}', [SiteCotroller::class, 'galleryDetiles'])->name('gallery.detils');
         Route::get('contact', [SiteCotroller::class, 'contact'])->name('contact');

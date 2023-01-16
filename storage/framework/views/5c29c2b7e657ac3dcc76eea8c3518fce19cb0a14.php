@@ -44,59 +44,36 @@
         <div class="container-fluid" style="padding: 30px 20px 0">
             <div class="row">
                 <!--Causes One Single Start-->
+                <?php $__currentLoopData = $healthcareies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $healthcareie): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="causes-one__single">
                             <div class="causes-one__img">
-                                <a href="<?php echo e(route('healthcare.detils', $wellBeing[0]->id)); ?>">
+                                <a href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>">
 
-                                    <img src="<?php echo e(asset('site')); ?>/assets/images/resources/WhatsApp Image 2022-11-22 at 12.43.46 PM.jpeg"
+                                    <img src="<?php echo e($healthcareie->getFirstMediaUrl('healthcarePhoto')); ?>"
                                         alt="">
                                 </a>
 
                             </div>
                             <div class="causes-one__content">
-                                <h3 class="causes-one__title"><a href="<?php echo e(route('healthcare.detils', $wellBeing[0]->id)); ?>"><?php echo e($wellBeing[0]->title); ?></a>
+                                <h3 class="causes-one__title"><a
+                                        href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>"><?php echo e($healthcareie->title); ?></a>
                                 </h3>
-                                <p class="causes-one__text"> <?php echo e(Str::limit($wellBeing[0]->content, 250, ' .....')); ?></p>
+                                <p class="causes-one__text">
+                                    <?php echo e($healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....')); ?></p>
 
                             </div>
                         </div>
                     </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <a href="<?php echo e(route('healthcare.detils', $wellBeing[1]->id)); ?>">
-                                <img src="<?php echo e(asset('site')); ?>/assets/images/gallery/WhatsApp Image 2022-11-22 at 12.44.56 PM.jpeg"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="causes-one__content">
-                            <h3 class="causes-one__title"><a href="<?php echo e(route('healthcare.detils', $wellBeing[1]->id)); ?>"><?php echo e($wellBeing[1]->title); ?></a>
-                            </h3>
-                            <p class="causes-one__text"><?php echo e(Str::limit($wellBeing[1]->content, 250, ' .....')); ?></p>
-                        </div>
-                    </div>
-                </div>
+                
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="600ms">
-                    <div class="causes-one__single">
-                        <div class="causes-one__img">
-                            <a href="<?php echo e(route('healthcare.detils', $wellBeing[2]->id)); ?>">
-                                <img src="<?php echo e(asset('site')); ?>/assets/images/resources/a994fa78-cf34-48c6-9ee0-6200db5846b5.jpg"
-                                    alt="">
-                            </a>
-                        </div>
-                        <div class="causes-one__content">
-                            <h3 class="causes-one__title"><a href="<?php echo e(route('healthcare.detils', $wellBeing[2]->id)); ?>"><?php echo e($wellBeing[2]->title); ?> </a>
-                            </h3>
-                            <p class="causes-one__text"><?php echo e(Str::limit($wellBeing[2]->content, 250, ' .....')); ?> </p>
-                        </div>
-                    </div>
-                </div>
+                
                 <!--Causes One Single End-->
             </div>
         </div>

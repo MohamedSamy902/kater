@@ -42,6 +42,10 @@ class GalleryController extends Controller
             'en' => $request->title,
             'ar' => $request->title_ar
         ];
+        $data['content'] = [
+            'en' => $request->content,
+            'ar' => $request->content_ar
+        ];
 
         $gallery = Gallery::create($data);
         if ($request->file('gallery')) {

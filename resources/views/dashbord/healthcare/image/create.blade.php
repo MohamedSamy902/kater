@@ -26,7 +26,7 @@
                         <h5>{{ __('master.data') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate="" method="post" action="{{ route('wellBeingDetails.store') }}"
+                        <form class="needs-validation" novalidate="" method="post" action="{{ route('healthcareDetails.store') }}"
                             enctype="multipart/form-data">
                             @csrf
 
@@ -34,7 +34,7 @@
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required="" value="Hihya Convoys’ Clinics"/>
+                                        required="" value="Online Clinics"/>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -42,8 +42,8 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required="" value="القوافل الطبية بمدينة ههيا"/>
-                                        <input type="hidden" value="{{ $wellBeing }}" name="well_beings_id">
+                                        required="" value="العيادات الطبية الإلكترونية" />
+                                        <input type="hidden" value="{{ $healthcare }}" name="healthcares_id">
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -53,7 +53,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10">{{ __('master.image') }}</label>
                                     <input class="form-control" id="validationCustom10" type="file"
-                                        aria-label="file example" name="wellBeingDetails" />
+                                        aria-label="file example" name="healthcareDetails" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>

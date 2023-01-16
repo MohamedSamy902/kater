@@ -66,6 +66,25 @@
                                 </div>
                             </div>
 
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom03">{{ __('master.short_content_en') }}</label>
+                                    <textarea rows="5" class="form-control" id="validationCustom03" type="text" name="short_content" required=""></textarea>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom04">{{ __('master.short_content_ar') }}</label>
+                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="short_content_ar" required=""></textarea>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
 
                             <div class="row g-2">
                                 <div class="col-md-6">
@@ -102,45 +121,21 @@
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
                             </div>
-                            {{-- <div class="row g-1">
+                            
+                            <div class="row g-1">
                                 <div class="col-md-12 mb-3">
-                                    <label class="form-label" for="validationDefault03">{{ __('master.cat') }}</label>
-                                    <select class="form-select js-example-placeholder-multiple"
-                                        id="validationDefault03" required="" name="category_id">
-                                        <option selected="" disabled="" value="">{{ __('master.cat') }}
-                                        </option>
-                                        @foreach ($categories as $category)
-                                            <option
-                                                value="{{ $category->id }}">{{ $category->name }}</option>
-                                        @endforeach
-                                    </select>
+                                    <label class="form-label" for="validationCustom10">{{ __('master.image') }}</label>
+                                    <input class="form-control" id="validationCustom10" type="file"
+                                        aria-label="file example" name="healthcarePhoto" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
-                            </div> --}}
-
-                            {{-- <div class="row g-1">
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label" for="validationDefault09">{{ __('master.tag') }}</label>
-                                    <select class="form-select js-example-placeholder-multiple" multiple data-live-search="true"
-                                        id="validationDefault09"  name="tags[]">
-                                        <option disabled="" value="">{{ __('master.tag') }}
-                                        </option>
-                                        @foreach ($tags as $tag)
-                                            <option {{ old('tags') == $tag->id ? 'selected' : '' }}
-                                                value="{{ $tag->id }}">{{ $tag->name }}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
-                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
-                                </div>
-                            </div> --}}
-
+                            </div>
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10">{{ __('master.video') }}</label>
                                     <input class="form-control" id="validationCustom10" type="file"
-                                        aria-label="file example" name="WellBeingvideo" />
+                                        aria-label="file example" name="healthcarevideo" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>

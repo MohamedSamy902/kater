@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
     <section class="donation-carousel-page text-center" style="padding: 60px 0px;">
-        <h1><?php echo e(__('site.gallery')); ?></h1>
+        <h1 style="text-align: -webkit-auto;"><?php echo e(__('site.gallery')); ?></h1>
         <div class="container-fuild p-5">
             <div class="row">
                 <!--Causes One Single Start-->
@@ -22,12 +22,6 @@
                         </div>
                     </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-                <!--Causes One Single End-->
-                
-                <!--Causes One Single Start-->
-                
-                <!--Causes One Single End-->
             </div>
         </div>
     </section>

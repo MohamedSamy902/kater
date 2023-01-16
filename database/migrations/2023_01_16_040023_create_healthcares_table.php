@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('healthcares', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->text('title');
+            $table->text('content');
+            $table->text('short_content')->nullable();
+            $table->string('convoys');
+            $table->string('services');
+            $table->enum('status', ['active', 'inactive', 'block'])->default('active');
             $table->timestamps();
         });
     }

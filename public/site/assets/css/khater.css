@@ -102,13 +102,15 @@ h4,
 h5,
 h6 {
   color: var(--khater-black);
-  font-family: var(--khater-font-two);
+  font-family: var(--khater-font-three);
   margin: 0;
   font-size: 32px;
 }
 
 p {
   margin: 0;
+  font-family: var(--khater-font-three);
+
 }
 
 dl,
@@ -1212,11 +1214,11 @@ ul {
   padding: 0 !important;
 }
 
-/* .megamenu.ling {
-  margin-left: 100px !important;
-  margin-right: 10px !important;
+.megamenu.ling {
+  margin-left: 160px !important;
+  margin-right: 0px !important;
 
-} */
+}
 
 .stricky-header {
   position: fixed;
@@ -4772,8 +4774,8 @@ body.locked .page-wrapper {
   font-size: 50px;
   padding: 0 10px;
   color: #00000059;
-  font-weight: 900;
-  font-family: var(--khater-font-two) !important;
+  /* font-weight: 900; */
+  font-family: var(--khater-font-three) !important;
   letter-spacing: -0.04em;
   line-height: 60px !important;
 }

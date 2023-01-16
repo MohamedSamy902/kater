@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="content">
                                     <p class="description">
-                                                                          
+
                                     <ul style="text-align: start;">
                                         <?php echo e($TimeLine[1]->content); ?>
 
@@ -261,7 +261,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href=" about.html" class="thm-btn "> Explore More</a>
+                        <a href="<?php echo e(route('gallery')); ?>" class="thm-btn "> Explore More</a>
                     </div>
                 </div>
             </div>
@@ -475,15 +475,28 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    <div class="swiper-slide story"
+                    
+                    <?php
+                        if (App::getLocale() == 'ar') {
+                            echo '<div class="swiper-slide story"
                         data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide story"
+                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide story"
                         data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/National_Cancer_Institute_en.jpg"
-                            alt="">
-                    </div>
+                        <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                                    </div>';
+                        } else {
+                            echo '<div class="swiper-slide story"
+                        data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
+                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide story"
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
+                        <img src=""' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                                    </div>';
+                        }
+                    ?>
                     <div class="swiper-slide story"
                         data-point="30.620533,32.2675403,suez_canal.jpg,Suez Canal University Hospital">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/suez_canal.jpg" alt="">
@@ -527,15 +540,29 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    <div class="swiper-slide story"
+                    
+
+                    <?php
+                        if (App::getLocale() == 'ar') {
+                            echo '<div class="swiper-slide story"
                         data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide story"
+                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide story"
                         data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/National_Cancer_Institute_en.jpg"
-                            alt="">
-                    </div>
+                        <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                                    </div>';
+                        } else {
+                            echo '<div class="swiper-slide story"
+                        data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
+                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    </div>';
+                                    echo '<div class="swiper-slide story"
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
+                        <img src=""' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                                    </div>';
+                        }
+                    ?>
                     <div class="swiper-slide story"
                         data-point="30.620533,32.2675403,suez_canal.jpg,Suez Canal University Hospital">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/suez_canal.jpg" alt="">
@@ -560,7 +587,7 @@
 <?php $__env->startSection('js'); ?>
     <script>
         // basic map setup. include other options as needed, refer to the docs
-        var map = L.map('map').setView([30.022863, 31.2378640], 7);
+        var map = L.map('map').setView([30.022863, 31.2378640], 11);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 17,
             color: 'red',
@@ -577,7 +604,7 @@
             var txt = latlng[3];
             var zoom = 17;
             var marker = L.marker([lat, lng], {}).addTo(map).bindPopup(
-                `<img src='assets/images/partners/${img}' style='max-width:100%'>`).openPopup().on('click',
+                `<img src='<?php echo e(asset('site')); ?>/assets/images/partners/${img}' style='max-width:100%'>`).openPopup().on('click',
                 onZoomInMark);
             // set the view
             map.setView([lat, lng], zoom);

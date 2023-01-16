@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="donation-carousel-page text-center" style="padding: 60px 0px;">
-        <h1>{{ __('site.gallery') }}</h1>
+        <h1 style="text-align: -webkit-auto;">{{ __('site.gallery') }}</h1>
         <div class="container-fuild p-5">
             <div class="row">
                 <!--Causes One Single Start-->

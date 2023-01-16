@@ -16,7 +16,7 @@
                                             echo '<a href=""><img src=" ' . asset('site') . '/assets/images/logo_white.png" alt=""></a>';
                                         }
                                     ?>
-                                        
+                                    
                                 </div>
                                 <div class="footer-widget__about-text-box">
                                     <div class="site-footer__social">
@@ -32,8 +32,8 @@
                             <div class="footer-widget__column footer-widget__links clearfix">
                                 <h3 class="footer-widget__title"> <?php echo e(__('site.Quicklinks')); ?></h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
-                                    <li><a href="about.html"><?php echo e(__('site.about')); ?></a></li>
-                                    <li><a href=""><?php echo e(__('site.ourImpact')); ?></a></li>
+                                    <li><a href="<?php echo e(route('about')); ?>"><?php echo e(__('site.about')); ?></a></li>
+                                    <li><a href="<?php echo e(route('impact')); ?>"><?php echo e(__('site.ourImpact')); ?></a></li>
                                     
 
                                 </ul>
@@ -76,9 +76,9 @@
                                     <div class="col-lg-12">
                                         <h3 class="footer-widget__title"> <?php echo e(__('site.Subscribetoournewslette')); ?></h3>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control p-2 rounded" placeholder="Email"
+                                            <input  type="text" class="form-control p-2 rounded" placeholder="Email"
                                                 aria-label="Email" aria-describedby="button-addon2">
-                                            <button class="btn btn-info text-white" type="button"
+                                            <button  style="border-radius: 5px"class="btn btn-info text-white" type="button"
                                                 id="button-addon2"><?php echo e(__('site.Subscribe')); ?></button>
                                         </div>
 

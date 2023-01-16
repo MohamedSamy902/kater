@@ -11,7 +11,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class HealthcareDetails extends Model implements HasMedia
 {
     use HasTranslations, HasFactory, InteractsWithMedia;
-    public $translatable = ['title', 'content', 'convoys', 'services'];
+    protected $table = 'healthcare_detalis';
+    public $translatable = ['title'];
 
-    protected $fillable = ['title', 'content', 'convoys', 'services',  'status'];
+    protected $fillable = ['title',  'healthcares_id'];
+
+    public function Healthcare()
+    {
+        return $this->belongsTo(Healthcare::class);
+    }
 }

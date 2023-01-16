@@ -3,7 +3,7 @@
     <section class="event-details ">
         <div class="container-fluid">
             <div class="row">
-                <h3 class="event-details__title"><?php echo e($wellBeing->title); ?></h3>
+                <h3 class="event-details__title"><?php echo e($healthcare->title); ?></h3>
                 <div class="col-xl-9 col-lg-9 ">
                     <div class="event-details__left">
 
@@ -20,7 +20,9 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            <h3 class="sidebar__title" style="color: #005172;margin-top: 10px;"><?php echo e(__('site.Healthcare')); ?></h3>
+                            <h3 class="sidebar__title" style="color: #005172;margin-top: 10px;"><?php echo e(__('site.Healthcare')); ?>
+
+                            </h3>
                             <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
                                 <div class="">
@@ -131,7 +133,7 @@
                             </marquee>
 
                             <hr style="height: 2px;">
-                            <h3 class="sidebar__title" style="color: #62BB46;"><?php echo e(__('site.WellBeing')); ?></h3>
+                            <h3 class="sidebar__title" style="color: #62BB46;"><?php echo e(__('site.healthcare')); ?></h3>
                             <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
                                 <div class="">
@@ -155,7 +157,8 @@
                                     <div class="causes-one__single">
                                         <div class="causes-one__img">
                                             <div class="row">
-                                                <div class="col-8"> <img src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
+                                                <div class="col-8"> <img
+                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
                                                         style="height: 80px;" alt=""></div>
                                                 <div class="col-4">
                                                     <p
@@ -206,7 +209,8 @@
                                     <div class="causes-one__single">
                                         <div class="causes-one__img">
                                             <div class="row">
-                                                <div class="col-8"> <img src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
+                                                <div class="col-8"> <img
+                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
                                                         style="height: 80px;" alt=""></div>
                                                 <div class="col-4">
                                                     <p
@@ -257,7 +261,8 @@
                                     <div class="causes-one__single">
                                         <div class="causes-one__img">
                                             <div class="row">
-                                                <div class="col-8"> <img src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
+                                                <div class="col-8"> <img
+                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
                                                         style="height: 80px;" alt=""></div>
                                                 <div class="col-4">
                                                     <p
@@ -308,7 +313,8 @@
                                     <div class="causes-one__single">
                                         <div class="causes-one__img">
                                             <div class="row">
-                                                <div class="col-8"> <img src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
+                                                <div class="col-8"> <img
+                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
                                                         style="height: 80px;" alt=""></div>
                                                 <div class="col-4">
                                                     <p
@@ -350,23 +356,25 @@
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
 
-                                <p class="event-details__text-6"><?php echo e($wellBeing->content); ?></p>
+                                <p class="event-details__text-6"><?php echo e($healthcare->content); ?></p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <ul style="padding: 20px 0 0 0;">
                                 <li class="counter-one__single Provided">
-                                    <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png" style="height: 50px;"
-                                        alt="">
+                                    <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png"
+                                        style="height: 50px;" alt="">
                                     <div class="counter-one__count-box p-2">
 
-                                        <p class="counter-one__text4" style="width: 300px;"><span class="odometer"
-                                                data-count="81">00</span> <span style="">Convoys</span>
+
+
+                                        <p class="counter-one__text4" style="width: 300px;"><?php echo e($healthcare->convoys != 0 ? $healthcare->convoys : ''); ?></span> </p>
+                                         <p class="counter-one__text4" style="width: 300px;"><?php echo e($healthcare->convoys != 0 ? $healthcare->services : ''); ?>
+
                                         </p>
-                                        <p class="counter-one__text4"><span class="odometer" data-count="10276">00</span>
-                                            <span>Services</span>
-                                        </p>
-                                        </p>
+                                        
+                                        
+                                        
                                     </div>
                                 </li>
                             </ul>
@@ -403,14 +411,15 @@
                         }
                     }
                 }'>
-                <?php $__currentLoopData = $wellBeing->WellBeingDetalis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $WellBeingDetalis): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = $healthcare->HealthcareDetails; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $HealthcareDetails): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
                                 <div class="causes-one__img">
-                                    <img src="<?php echo e($WellBeingDetalis->getFirstMediaUrl('wellBeingDetails')); ?>" style="height: 300px" alt="">
+                                    <img src="<?php echo e($HealthcareDetails->getFirstMediaUrl('healthcareDetails')); ?>"
+                                        style="height: 300px" alt="">
                                     <div class="causes-one__cat">
-                                        <p><?php echo e($WellBeingDetalis->title); ?></p>
+                                        <p><?php echo e($HealthcareDetails->title); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -418,24 +427,11 @@
                     </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-                
-                <!-- <div class="item px-1">
-                                <div class="events-one__single">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <img src="<?php echo e(asset('site')); ?>/assets/images/HihyaConvoys/W4.jpeg" style="height: 300px" alt="">
-                                            <div class="causes-one__cat">
-                                                <p>Hihya Convoys</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                
 
             </div>
         </div>
     </section>
+
     <!--Events Page End-->
 <?php $__env->stopSection(); ?>
 

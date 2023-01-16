@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('well_being_detalis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->text('title');
             $table->unsignedInteger('well_beings_id');
             $table->foreign('well_beings_id')->references('id')->on('well_beings')->onDelete('cascade');
             $table->timestamps();

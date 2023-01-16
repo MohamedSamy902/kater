@@ -46,28 +46,33 @@
         <div class="container-fluid" style="padding: 30px 20px 0">
             <div class="row">
                 <!--Causes One Single Start-->
+                @foreach ($healthcareies as $healthcareie)
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="causes-one__single">
                             <div class="causes-one__img">
-                                <a href="{{ route('healthcare.detils', $wellBeing[0]->id) }}">
+                                <a href="{{ route('healthcare.detils', $healthcareie->id) }}">
 
-                                    <img src="{{ asset('site') }}/assets/images/resources/WhatsApp Image 2022-11-22 at 12.43.46 PM.jpeg"
+                                    <img src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}"
                                         alt="">
                                 </a>
 
                             </div>
                             <div class="causes-one__content">
-                                <h3 class="causes-one__title"><a href="{{ route('healthcare.detils', $wellBeing[0]->id) }}">{{$wellBeing[0]->title}}</a>
+                                <h3 class="causes-one__title"><a
+                                        href="{{ route('healthcare.detils', $healthcareie->id) }}">{{ $healthcareie->title }}</a>
                                 </h3>
-                                <p class="causes-one__text"> {{ Str::limit($wellBeing[0]->content, 250, ' .....'); }}</p>
+                                <p class="causes-one__text">
+                                    {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }}</p>
 
                             </div>
                         </div>
                     </div>
+                @endforeach
+
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+                {{-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="500ms">
                     <div class="causes-one__single">
                         <div class="causes-one__img">
                             <a href="{{ route('healthcare.detils', $wellBeing[1]->id) }}">
@@ -76,15 +81,16 @@
                             </a>
                         </div>
                         <div class="causes-one__content">
-                            <h3 class="causes-one__title"><a href="{{ route('healthcare.detils', $wellBeing[1]->id) }}">{{$wellBeing[1]->title}}</a>
+                            <h3 class="causes-one__title"><a
+                                    href="{{ route('healthcare.detils', $wellBeing[1]->id) }}">{{ $wellBeing[1]->title }}</a>
                             </h3>
-                            <p class="causes-one__text">{{ Str::limit($wellBeing[1]->content, 250, ' .....'); }}</p>
+                            <p class="causes-one__text">{{ Str::limit($wellBeing[1]->content, 250, ' .....') }}</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+                {{-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="600ms">
                     <div class="causes-one__single">
                         <div class="causes-one__img">
                             <a href="{{ route('healthcare.detils', $wellBeing[2]->id) }}">
@@ -93,12 +99,14 @@
                             </a>
                         </div>
                         <div class="causes-one__content">
-                            <h3 class="causes-one__title"><a href="{{ route('healthcare.detils', $wellBeing[2]->id) }}">{{$wellBeing[2]->title}} </a>
+                            <h3 class="causes-one__title"><a
+                                    href="{{ route('healthcare.detils', $wellBeing[2]->id) }}">{{ $wellBeing[2]->title }}
+                                </a>
                             </h3>
-                            <p class="causes-one__text">{{ Str::limit($wellBeing[2]->content, 250, ' .....'); }} </p>
+                            <p class="causes-one__text">{{ Str::limit($wellBeing[2]->content, 250, ' .....') }} </p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!--Causes One Single End-->
             </div>
         </div>

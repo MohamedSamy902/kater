@@ -17,7 +17,7 @@
                                         }
                                     @endphp
                                     {{-- <a href=""><img src="{{ asset('site') }}/assets/images/logo_white.png"
-                                            alt=""></a> --}}    
+                                            alt=""></a> --}}
                                 </div>
                                 <div class="footer-widget__about-text-box">
                                     <div class="site-footer__social">
@@ -33,8 +33,8 @@
                             <div class="footer-widget__column footer-widget__links clearfix">
                                 <h3 class="footer-widget__title"> {{ __('site.Quicklinks') }}</h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
-                                    <li><a href="about.html">{{ __('site.about') }}</a></li>
-                                    <li><a href="">{{ __('site.ourImpact') }}</a></li>
+                                    <li><a href="{{ route('about') }}">{{ __('site.about') }}</a></li>
+                                    <li><a href="{{ route('impact') }}">{{ __('site.ourImpact') }}</a></li>
                                     {{-- <li><a href="">{{ __('site.ourImpact') }}</a></li> --}}
 
                                 </ul>
@@ -77,9 +77,9 @@
                                     <div class="col-lg-12">
                                         <h3 class="footer-widget__title"> {{ __('site.Subscribetoournewslette') }}</h3>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control p-2 rounded" placeholder="Email"
+                                            <input  type="text" class="form-control p-2 rounded" placeholder="Email"
                                                 aria-label="Email" aria-describedby="button-addon2">
-                                            <button class="btn btn-info text-white" type="button"
+                                            <button  style="border-radius: 5px"class="btn btn-info text-white" type="button"
                                                 id="button-addon2">{{ __('site.Subscribe') }}</button>
                                         </div>
 

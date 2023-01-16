@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->text('title');
+            $table->text('content')->nullable();
             $table->enum('status', ['active', 'inactive', 'block'])->default('active');
             $table->timestamps();
         });

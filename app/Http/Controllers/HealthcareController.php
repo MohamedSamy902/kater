@@ -49,6 +49,10 @@ class HealthcareController extends Controller
                 'en' => $request->content,
                 'ar' => $request->content_ar,
             ],
+            'short_content' => [
+                'en' => $request->short_content,
+                'ar' => $request->short_content_ar,
+            ],
             'convoys' => [
                 'en' => $request->convoys,
                 'ar' => $request->convoys_ar,
@@ -64,6 +68,16 @@ class HealthcareController extends Controller
                 ->addMedia($request->file('healthcarevideo'))
                 ->usingName($request->title)
                 ->toMediaCollection('healthcarevideo');
+        }
+
+
+        if ($request->file('healthcarePhoto')) {
+
+            $Healthcare
+                // ->clearMediaCollection('healthcarePhoto')
+                ->addMedia($request->file('healthcarePhoto'))
+                ->usingName($request->title)
+                ->toMediaCollection('healthcarePhoto');
         }
 
 
@@ -91,7 +105,7 @@ class HealthcareController extends Controller
      */
     public function edit(Healthcare $healthcare)
     {
-        return view('dashbord.Healthcare.edit', compact('healthcare'));
+        return view('dashbord.healthcare.edit', compact('healthcare'));
     }
 
     /**
@@ -134,6 +148,21 @@ class HealthcareController extends Controller
                 ->toMediaCollection('healthcarevideo');
         }
 
+        // if ($request->file('healthcareImage')) {
+        //     $healthcare
+        //         ->addMedia($request->file('healthcareImage'))
+        //         ->usingName($request->title)
+        //         ->toMediaCollection('healthcareImage');
+        // }
+
+        if ($request->file('healthcarePhoto')) {
+
+            $healthcare
+                // ->clearMediaCollection('healthcarePhoto')
+                ->addMedia($request->file('healthcarePhoto'))
+                ->usingName($request->title)
+                ->toMediaCollection('healthcarePhoto');
+        }
         return redirect()->back()
             ->with('success', __('master.messages_edit'));
     }

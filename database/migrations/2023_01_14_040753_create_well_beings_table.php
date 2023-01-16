@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('well_beings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->text('title');
             $table->text('content');
+            $table->text('short_content')->nullable();
             $table->string('convoys');
             $table->string('services');
             $table->enum('status', ['active', 'inactive', 'block'])->default('active');

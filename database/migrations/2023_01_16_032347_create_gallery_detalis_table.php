@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('gallery_detalis', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->nullable();
+            $table->text('title')->nullable();
             $table->unsignedInteger('galleries_id');
             $table->foreign('galleries_id')->references('id')->on('galleries')->onDelete('cascade');
             $table->timestamps();

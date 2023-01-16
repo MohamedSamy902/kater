@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Artical;
 use App\Models\Gallery;
 use App\Models\GalleryDetalis;
+use App\Models\Healthcare;
 use App\Models\Slider;
 use App\Models\WellBeing;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class SiteCotroller extends Controller
         $sliders = Slider::get();
         $HowItAllBegan = Artical::where('section', 'HowItAllBegan')->first();
         $Vision = Artical::where('section', 'Vision')->first();
-        return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision'));
+        $galleries = Gallery::whereNotNull('content')->get();
+        return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'galleries'));
     }
 
     public function about()
@@ -55,15 +57,34 @@ class SiteCotroller extends Controller
     public function healthcare()
     {
         $healthcare = Artical::where('section', 'HealthcareInitiatives')->first();
-        $wellBeing = WellBeing::get();
-        return view('site.healthcare', compact('healthcare', 'wellBeing'));
+        $healthcareies = Healthcare::get();
+        return view('site.healthcare', compact('healthcare', 'healthcareies'));
     }
 
     public function healthcareDetiles($id)
     {
-        $wellBeing = WellBeing::findOrFail($id);
-        return view('site.healthcare-details', compact('wellBeing'));
+        $healthcare = Healthcare::findOrFail($id);
+        return view('site.healthcare-details', compact('healthcare'));
     }
+
+
+
+    public function wellbeing()
+    {
+        $wellbeing = Artical::where('section', 'wellbeingInitiatives')->first();
+        $wellBeing = WellBeing::get();
+        return view('site.wellbeing', compact('wellbeing', 'wellBeing'));
+    }
+
+
+    public function wellbeingDetiles($id)
+    {
+        $wellBeing = WellBeing::findOrFail($id);
+        return view('site.wellbeing-details', compact('wellBeing'));
+    }
+
+
+
 
     public function gallery()
     {

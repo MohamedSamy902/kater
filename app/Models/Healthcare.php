@@ -11,13 +11,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Healthcare extends Model implements HasMedia
 {
     use HasTranslations, HasFactory, InteractsWithMedia;
-    public $translatable = ['title', 'content', 'convoys', 'services'];
+    public $translatable = ['title', 'content', 'convoys', 'services', 'short_content'];
 
-    protected $fillable = ['title', 'content', 'convoys', 'services',  'status'];
+    protected $fillable = ['title', 'content', 'convoys', 'services',  'status', 'short_content'];
 
-    public function WellBeingDetalis()
+    public function HealthcareDetails()
     {
-        return $this->hasMany(WellBeingDetalis::class, 'well_beings_id', 'id');
+        return $this->hasMany(HealthcareDetails::class, 'healthcares_id', 'id');
     }
 }
 

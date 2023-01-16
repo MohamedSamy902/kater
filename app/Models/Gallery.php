@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Gallery extends Model implements HasMedia
 {
     use HasTranslations, HasFactory, InteractsWithMedia;
-    public $translatable = ['title'];
+    public $translatable = ['title', 'content'];
 
-    protected $fillable = ['title', 'status'];
+    protected $fillable = ['title', 'content','status'];
 }
