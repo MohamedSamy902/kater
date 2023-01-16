@@ -9,9 +9,13 @@
                 <div class="col-xl-9 col-lg-9 ">
                     <div class="event-details__left">
 
-                        <video autoplay controls width="100%" style="">
+                        {{-- <video autoplay controls width="100%" style="">
                             <source src="{{ asset('site') }}/assets/images/Convoys.mp4" type="video/mp4">
                             <source src="{{ asset('site') }}/assets/images/Convoys.mp4" type="video/ogg">
+                        </video> --}}
+                        <video autoplay controls width="100%" style="">
+                            <source src="{{ $wellBeing->getFirstMediaUrl('WellBeingvideo') }}" type="video/mp4">
+                            <source src="{{ $wellBeing->getFirstMediaUrl('WellBeingvideo') }}" type="video/ogg">
                         </video>
                     </div>
 
@@ -370,8 +374,10 @@
 
 
 
-                                        <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
-                                         <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->services != 0 ? $wellBeing->services : '' }}
+                                        <p class="counter-one__text4" style="width: 300px;">
+                                            {{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
+                                        <p class="counter-one__text4" style="width: 300px;">
+                                            {{ $wellBeing->services != 0 ? $wellBeing->services : '' }}
                                         </p>
                                         {{-- <p class="counter-one__text4" style="width: 300px;"><span class="odometer"
                                             data-count="81">00</span> <span style="">Convoys</span>

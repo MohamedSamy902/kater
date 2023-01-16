@@ -6,10 +6,11 @@
                 <h3 class="event-details__title"><?php echo e($healthcare->title); ?></h3>
                 <div class="col-xl-9 col-lg-9 ">
                     <div class="event-details__left">
+                        <?php echo e($healthcare->title); ?>
 
                         <video autoplay controls width="100%" style="">
-                            <source src="<?php echo e(asset('site')); ?>/assets/images/Convoys.mp4" type="video/mp4">
-                            <source src="<?php echo e(asset('site')); ?>/assets/images/Convoys.mp4" type="video/ogg">
+                            <source src="<?php echo e($healthcare->getFirstMediaUrl('healthcarevideo')); ?>" type="video/mp4">
+                            <source src="<?php echo e($healthcare->getFirstMediaUrl('healthcarevideo')); ?>" type="video/ogg">
                         </video>
                     </div>
 
@@ -133,7 +134,7 @@
                             </marquee>
 
                             <hr style="height: 2px;">
-                            <h3 class="sidebar__title" style="color: #62BB46;"><?php echo e(__('site.healthcare')); ?></h3>
+                            <h3 class="sidebar__title" style="color: #62BB46;"><?php echo e(__('site.Healthcare')); ?></h3>
                             <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
                                 <div class="">

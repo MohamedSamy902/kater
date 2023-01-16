@@ -8,10 +8,9 @@
                 <h3 class="event-details__title">{{ $healthcare->title }}</h3>
                 <div class="col-xl-9 col-lg-9 ">
                     <div class="event-details__left">
-
                         <video autoplay controls width="100%" style="">
-                            <source src="{{ asset('site') }}/assets/images/Convoys.mp4" type="video/mp4">
-                            <source src="{{ asset('site') }}/assets/images/Convoys.mp4" type="video/ogg">
+                            <source src="{{ $healthcare->getFirstMediaUrl('healthcarevideo') }}" type="video/mp4">
+                            <source src="{{ $healthcare->getFirstMediaUrl('healthcarevideo') }}" type="video/ogg">
                         </video>
                     </div>
 
@@ -134,7 +133,7 @@
                             </marquee>
 
                             <hr style="height: 2px;">
-                            <h3 class="sidebar__title" style="color: #62BB46;">{{ __('site.healthcare') }}</h3>
+                            <h3 class="sidebar__title" style="color: #62BB46;">{{ __('site.Healthcare') }}</h3>
                             <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
                                 <div class="">
