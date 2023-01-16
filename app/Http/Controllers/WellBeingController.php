@@ -56,6 +56,10 @@ class WellBeingController extends Controller
                 'en' => $request->services,
                 'ar' => $request->services_ar,
             ],
+            'short_content' => [
+                'en' => $request->short_content,
+                'ar' => $request->short_content_ar,
+            ],
         ]);
 
         if ($request->file('wellbeingVideo')) {
@@ -65,8 +69,7 @@ class WellBeingController extends Controller
                 ->toMediaCollection('wellbeingVideo');
         }
 
-        if ($request->file('healthcarePhoto')) {
-
+        if ($request->file('wellbeingPhoto')) {
             $wellBeing
                 // ->clearMediaCollection('healthcarePhoto')
                 ->addMedia($request->file('wellbeingPhoto'))
@@ -140,6 +143,13 @@ class WellBeingController extends Controller
                 ->addMedia($request->file('WellBeingvideo'))
                 ->usingName($request->title)
                 ->toMediaCollection('WellBeingvideo');
+        }
+        if ($request->file('wellbeingPhoto')) {
+            $wellBeing
+                ->clearMediaCollection('wellbeingPhoto')
+                ->addMedia($request->file('wellbeingPhoto'))
+                ->usingName($request->title)
+                ->toMediaCollection('wellbeingPhoto');
         }
 
         return redirect()->back()

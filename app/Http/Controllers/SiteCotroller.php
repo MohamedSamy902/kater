@@ -71,9 +71,10 @@ class SiteCotroller extends Controller
 
     public function wellbeing()
     {
-        $wellbeing = Artical::where('section', 'wellbeingInitiatives')->first();
-        $wellBeing = WellBeing::get();
-        return view('site.wellbeing', compact('wellbeing', 'wellBeing'));
+        $artical = Artical::where('section', 'wellbeingInitiatives')->first();
+        $wellbeingies = WellBeing::get();
+        // return $artical;
+        return view('site.wellbeing', compact('artical', 'wellbeingies'));
     }
 
 

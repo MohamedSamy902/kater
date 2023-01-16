@@ -16,28 +16,28 @@
 
     <!--About Two Start-->
     <section class="about-two">
-        <div class="container">
+        {{-- <div class="container">
             <div class="row">
                 <div class="col-xl-6">
                     <div class="about-two__right">
                         <div class="section-title text-left">
-                            <h2 class="section-title__title">{{ $wellbeing->title }}</h2>
+                            <h2 class="section-title__title">{{ $artical->title }}</h2>
                         </div>
-                        <p class="about-two__text-1">{{ $wellbeing->content }}</p>
+                        <p class="about-two__text-1">{{ $artical->content }}</p>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="about-two__left">
                         <div class="about-two__img-box  wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms">
                             <div class="about-two__img">
-                                <img src="{{ $wellbeing->getFirstMediaUrl('wellbeing') }}" class="w-100">
+                                <img src="{{ $artical->getFirstMediaUrl('wellbeing') }}" class="w-100">
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+        </div> --}}
     </section>
     <!--About Two End-->
 

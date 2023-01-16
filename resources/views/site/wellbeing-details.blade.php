@@ -5,7 +5,7 @@
     <section class="event-details ">
         <div class="container-fluid">
             <div class="row">
-                <h3 class="event-details__title">{{ $healthcare->title }}</h3>
+                <h3 class="event-details__title">{{ $wellBeing->title }}</h3>
                 <div class="col-xl-9 col-lg-9 ">
                     <div class="event-details__left">
 
@@ -357,20 +357,21 @@
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
 
-                                <p class="event-details__text-6">{{ $healthcare->content }}</p>
+                                <p class="event-details__text-6">{{ $wellBeing->content }}</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <ul style="padding: 20px 0 0 0;">
                                 <li class="counter-one__single Provided">
-                                    <img src="{{ asset('site') }}/assets/images/healthcare- icon 2022 KF.png"
+                                    <img src="{{ asset('site') }}/assets/images/well-bieng icon.png"
                                         style="height: 50px;" alt="">
+
                                     <div class="counter-one__count-box p-2">
 
 
 
-                                        <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->convoys != 0 ? $healthcare->convoys : '' }}</span> </p>
-                                         <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->convoys != 0 ? $healthcare->services : '' }}
+                                        <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
+                                         <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->convoys != 0 ? $wellBeing->services : '' }}
                                         </p>
                                         {{-- <p class="counter-one__text4" style="width: 300px;"><span class="odometer"
                                             data-count="81">00</span> <span style="">Convoys</span>
@@ -416,15 +417,15 @@
                         }
                     }
                 }'>
-                @foreach ($healthcare->HealthcareDetails as $HealthcareDetails)
+                @foreach ($wellBeing->WellBeingDetalis as $WellBeingDetails)
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
                                 <div class="causes-one__img">
-                                    <img src="{{ $HealthcareDetails->getFirstMediaUrl('healthcareDetails') }}"
+                                    <img src="{{ $WellBeingDetails->getFirstMediaUrl('wellBeingDetails') }}"
                                         style="height: 300px" alt="">
                                     <div class="causes-one__cat">
-                                        <p>{{ $HealthcareDetails->title }}</p>
+                                        <p>{{ $WellBeingDetails->title }}</p>
                                     </div>
                                 </div>
                             </div>
