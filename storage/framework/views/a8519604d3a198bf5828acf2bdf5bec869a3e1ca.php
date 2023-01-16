@@ -10,10 +10,8 @@
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="gallery-page__single">
                             <div class="gallery-page__img">
-                                <img src="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>" alt="" style="height: 55vh">
-                                
-                                <!-- /.img-popup -->
-                                
+                                <img src="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>">
+                                <a href="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>" class="img-popup"></a>
                             </div>
                         </div>
                     </div>

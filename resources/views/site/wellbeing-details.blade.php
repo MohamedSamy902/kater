@@ -134,7 +134,7 @@
                             </marquee>
 
                             <hr style="height: 2px;">
-                            <h3 class="sidebar__title" style="color: #62BB46;">{{ __('site.healthcare') }}</h3>
+                            <h3 class="sidebar__title" style="color: #62BB46;">{{ __('site.Healthcare') }}</h3>
                             <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
                                 <div class="">
@@ -370,8 +370,8 @@
 
 
 
-                                        <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
-                                         <p class="counter-one__text4" style="width: 300px;">{{ $wellBeing->convoys != 0 ? $wellBeing->services : '' }}
+                                        <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->convoys != 0 ? $healthcare->convoys : '' }}</span> </p>
+                                         <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->services != 0 ? $healthcare->services : '' }}
                                         </p>
                                         {{-- <p class="counter-one__text4" style="width: 300px;"><span class="odometer"
                                             data-count="81">00</span> <span style="">Convoys</span>

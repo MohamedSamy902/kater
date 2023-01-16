@@ -370,7 +370,7 @@
 
 
                                         <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->convoys != 0 ? $healthcare->convoys : '' }}</span> </p>
-                                         <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->convoys != 0 ? $healthcare->services : '' }}
+                                         <p class="counter-one__text4" style="width: 300px;">{{ $healthcare->services != 0 ? $healthcare->services : '' }}
                                         </p>
                                         {{-- <p class="counter-one__text4" style="width: 300px;"><span class="odometer"
                                             data-count="81">00</span> <span style="">Convoys</span>
@@ -423,9 +423,9 @@
                                 <div class="causes-one__img">
                                     <img src="{{ $HealthcareDetails->getFirstMediaUrl('healthcareDetails') }}"
                                         style="height: 300px" alt="">
-                                    <div class="causes-one__cat">
+                                    {{-- <div class="causes-one__cat">
                                         <p>{{ $HealthcareDetails->title }}</p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

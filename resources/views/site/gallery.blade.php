@@ -2,8 +2,9 @@
 
 @section('content')
     <section class="donation-carousel-page text-center" style="padding: 60px 0px;">
-        <h1 style="text-align: -webkit-auto;">{{ __('site.gallery') }}</h1>
         <div class="container-fuild p-5">
+        <h1 style="text-align: -webkit-auto;padding-bottom: 30px;">{{ __('site.gallery') }}</h1>
+
             <div class="row">
                 <!--Causes One Single Start-->
 

@@ -498,7 +498,7 @@
                                     </div>';
                                     echo '<div class="swiper-slide story"
                         data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src=""' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                        <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     @endphp
