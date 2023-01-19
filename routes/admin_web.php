@@ -283,4 +283,4 @@ Route::prefix('editors')->group( function(){
 	Route::view('ace-code-editor', 'admin.miscellaneous.ace-code-editor')->name('ace-code-editor');
 });
 
-Route::view('knowledgebase', 'admin.miscellaneous.knowledgebase')->name('knowledgebase');
+Route::view('knowledgebase', 'admin.miscellaneous.knowledgebase')->name('knowledgebase'); 

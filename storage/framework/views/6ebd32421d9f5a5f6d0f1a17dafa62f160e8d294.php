@@ -1,21 +1,20 @@
-@extends('layouts.admin.master')
+<?php $__env->startSection('title'); ?>Ck Editor
+ <?php echo e($title); ?>
 
-@section('title')Ck Editor
- {{ $title }}
-@endsection
+<?php $__env->stopSection(); ?>
 
-@push('css')
-@endpush
+<?php $__env->startPush('css'); ?>
+<?php $__env->stopPush(); ?>
 
-@section('content')
-	@component('components.breadcrumb')
-		@slot('breadcrumb_title')
+<?php $__env->startSection('content'); ?>
+	<?php $__env->startComponent('components.breadcrumb'); ?>
+		<?php $__env->slot('breadcrumb_title'); ?>
 			<h3>Ck Editor</h3>
-		@endslot
+		<?php $__env->endSlot(); ?>
 		<li class="breadcrumb-item">Editors</li>
 		<li class="breadcrumb-item active">Ck Editor</li>
-	@endcomponent
-
+	<?php echo $__env->renderComponent(); ?>
+	
 	<div class="container-fluid">
 	    <div class="row">
 	        <div class="col-sm-12">
@@ -69,7 +68,7 @@
 	                    </textarea>
 	                </div>
 	            </div>
-	        </div> 
+	        </div>
 	    </div>
 	    <div class="row">
 	        <div class="col-sm-12">
@@ -91,12 +90,13 @@
 	        </div>
 	    </div>
 	</div>
+	
+	<?php $__env->startPush('scripts'); ?>
+	<script src="<?php echo e(asset('assets/js/editor/ckeditor/ckeditor.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/editor/ckeditor/adapters/jquery.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/editor/ckeditor/styles.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/editor/ckeditor/ckeditor.custom.js')); ?>"></script>
+	<?php $__env->stopPush(); ?>
 
-	@push('scripts')
-	<script src="{{asset('assets/js/editor/ckeditor/ckeditor.js')}}"></script>
-    <script src="{{asset('assets/js/editor/ckeditor/adapters/jquery.js')}}"></script>
-    <script src="{{asset('assets/js/editor/ckeditor/styles.js')}}"></script>
-    <script src="{{asset('assets/js/editor/ckeditor/ckeditor.custom.js')}}"></script>
-	@endpush
-
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/mohamed/Desktop/kater/resources/views/admin/miscellaneous/ckeditor.blade.php ENDPATH**/ ?>

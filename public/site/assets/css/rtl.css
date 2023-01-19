@@ -15,8 +15,8 @@
 
 :root {
     --khater-font: 'DINNextLTArabic-Bold', sans-serif !important;
-    --khater-font-two: 'DINNextLTArabic-Medium', sans-serif !important;
-    --khater-font-three: 'DINNextLTArabic-Light', sans-serif !important;
+    --khater-font-two: 'DINNextLTArabic-Light', sans-serif !important;
+    --khater-font-three: 'DINNextLTArabic-Medium', sans-serif !important;
     --khater-gray: #6f7775;
     --khater-gray-rgb: 111, 119, 117;
     --khater-white: #ffffff;
@@ -49,7 +49,7 @@ body {
 
 p {
     margin: 0;
-    font-family: var(--khater-font-three) !important;
+    font-family: var(--khater-font-two) !important;
 
 }
 
@@ -60,7 +60,7 @@ h4,
 h5,
 h6 {
     color: var(--khater-black);
-    font-family: var(--khater-font-three)!important;
+    font-family: var(--khater-font-two)!important;
     margin: 0;
     font-size: 32px;
 }
@@ -70,6 +70,7 @@ h6 {
 .stricky-header .main-menu__list>li+li {
     margin-right: 55px;
     margin-left: 5px;
+    font-family: var(--khater-font-two);
 }
 
 .main-menu__left {
@@ -202,4 +203,20 @@ h6 {
     margin-left: 0 !important;
     margin-right: 160px !important;
 
+  }
+
+
+  @media (min-width: 1200px) {
+
+    .main-menu .main-menu__list,
+    .main-menu .main-menu__list>li>ul,
+    .main-menu .main-menu__list>li>ul>li>ul,
+    .stricky-header .main-menu__list,
+    .stricky-header .main-menu__list>li>ul,
+    .stricky-header .main-menu__list>li>ul>li>ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-family: var(--khater-font-two);
+    }
   }

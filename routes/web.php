@@ -17,7 +17,7 @@ use App\Models\Healthcare;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
-
+@include_once('admin_web.php');
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),

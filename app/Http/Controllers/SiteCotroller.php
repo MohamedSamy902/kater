@@ -42,13 +42,6 @@ class SiteCotroller extends Controller
     public function impact()
     {
         $impact = Artical::where('section', 'Impact')->first();
-        // $OurVision = Artical::where('section', 'OurVision')->first();
-        // $OurGoals = Artical::where('section', 'OurGoals')->first();
-        // $OurMission = Artical::where('section', 'OurMission')->first();
-        // $FoundationStory = Artical::where('section', 'FoundationStory')->first();
-        // $WhoWeServe = Artical::where('section', 'WhoWeServe')->first();
-        // $WhereWeServe = Artical::where('section', 'WhereWeServe')->first();
-
 
         return view('site.impact', compact('impact'));
     }
@@ -64,7 +57,9 @@ class SiteCotroller extends Controller
     public function healthcareDetiles($id)
     {
         $healthcare = Healthcare::findOrFail($id);
-        return view('site.healthcare-details', compact('healthcare'));
+        $allHealthcare = Healthcare::get();
+        $allWellBeing = WellBeing::get();
+        return view('site.healthcare-details', compact('healthcare', 'allHealthcare', 'allWellBeing'));
     }
 
 
