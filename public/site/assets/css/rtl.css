@@ -204,19 +204,3 @@ h6 {
     margin-right: 160px !important;
 
   }
-
-
-  @media (min-width: 1200px) {
-
-    .main-menu .main-menu__list,
-    .main-menu .main-menu__list>li>ul,
-    .main-menu .main-menu__list>li>ul>li>ul,
-    .stricky-header .main-menu__list,
-    .stricky-header .main-menu__list>li>ul,
-    .stricky-header .main-menu__list>li>ul>li>ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      font-family: var(--khater-font-three) !important;
-    }
-  }
