@@ -34,7 +34,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title">{{ $FoundationStory->title }}</h2>
                         </div>
-                        <p class="about-four__text">{{ $FoundationStory->content }}</p>
+                        <p class="about-four__text">{!! $FoundationStory->content !!}</p>
 
 
                     </div>

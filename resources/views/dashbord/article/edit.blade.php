@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.admin.master')
 
 @section('title')
@@ -36,8 +33,7 @@
 
                             <div class="row g-2">
                                 <div class="col-md-6">
-                                    <label class="form-label"
-                                        for="validationCustom01">{{ __('master.title_en') }}</label>
+                                    <label class="form-label" for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
                                         required=""
                                         value="{{ old('title') ? old('title') : $article->getTranslation('title', 'en') }}" />
@@ -46,8 +42,7 @@
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label"
-                                        for="validationCustom02">{{ __('master.title_ar') }}</label>
+                                    <label class="form-label" for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
                                         required=""
                                         value="{{ old('title_ar') ? old('title_ar') : $article->getTranslation('title', 'ar') }}" />
@@ -60,8 +55,8 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label"
                                         for="validationCustom03">{{ __('master.content_en') }}</label>
-                                    <textarea rows="5" class="form-control" id="validationCustom03" type="text" name="content"
-                                        required="">{{ old('content') ? old('content') : $article->getTranslation('content', 'en') }}</textarea>
+                                    <textarea id="editor1" cols="30" rows="10" class="form-control" id="validationCustom03" type="text"
+                                        name="content" required="">{{ old('content') ? old('content') : $article->getTranslation('content', 'en') }}</textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -70,8 +65,8 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label"
                                         for="validationCustom04">{{ __('master.content_ar') }}</label>
-                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="content_ar"
-                                        required="">{{ old('content_ar') ? old('content_ar') : $article->getTranslation('content', 'ar') }}</textarea>
+                                    <textarea id="editor2" cols="30" rows="10" class="form-control" id="validationCustom04" type="text"
+                                        name="content_ar" required="">{{ old('content_ar') ? old('content_ar') : $article->getTranslation('content', 'ar') }}</textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -99,6 +94,10 @@
 
 
     @push('scripts')
+        <script src="{{ asset('assets/js/editor/ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ asset('assets/js/editor/ckeditor/adapters/jquery.js') }}"></script>
+        <script src="{{ asset('assets/js/editor/ckeditor/styles.js') }}"></script>
+        <script src="{{ asset('assets/js/editor/ckeditor/ckeditor.custom.js') }}"></script>
         <script src="{{ asset('assets/js/form-validation-custom.js') }}"></script>
         <script src="{{ asset('assets/js/select2/select2.full.min.js') }}"></script>
         <script src="{{ asset('assets/js/select2/select2-custom.js') }}"></script>

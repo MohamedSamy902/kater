@@ -33,7 +33,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($FoundationStory->title); ?></h2>
                         </div>
-                        <p class="about-four__text"><?php echo e($FoundationStory->content); ?></p>
+                        <p class="about-four__text"><?php echo $FoundationStory->content; ?></p>
 
 
                     </div>
