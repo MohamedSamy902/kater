@@ -5,6 +5,7 @@
             <div class="row">
                 <h3 class="event-details__title"><?php echo e($wellBeing->title); ?></h3>
                 <div class="col-xl-9 col-lg-9 ">
+                    <?php echo e($wellBeing->getFirstMediaUrl('WellBeingvideo')); ?>
 
                     <?php
                         if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
@@ -32,7 +33,7 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            <marquee width="100%" direction="up" height="460px" scrollamount="2" loop="true"
+                            <marquee width="100%" direction="up" height="510px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
 
                                 <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

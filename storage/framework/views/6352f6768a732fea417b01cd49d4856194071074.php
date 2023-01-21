@@ -32,7 +32,7 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            <marquee width="100%" direction="up" height="460px" scrollamount="2" loop="true"
+                            <marquee width="100%" direction="up" height="510px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
 
                                 <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

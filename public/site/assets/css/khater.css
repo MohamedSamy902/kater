@@ -104,11 +104,12 @@ h6 {
   color: var(--khater-black);
   font-family: var(--khater-font-two);
   margin: 0;
-  font-size: 32px;
+  font-size: 38px;
 }
 
 p {
   margin: 0;
+  font-size: 19px;
   font-family: var(--khater-font-two);
 
 }
