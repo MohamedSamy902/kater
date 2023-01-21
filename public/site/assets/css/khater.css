@@ -3426,7 +3426,7 @@ body.locked .page-wrapper {
 }
 
 .causes-one__title {
-  font-size: 26px;
+  font-size: 34px !important;
   line-height: 36px;
   /* font-weight: 800; */
 

@@ -182,11 +182,12 @@
                 @foreach ($galleries as $gallery)
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <div class="causes-one__img">
-                                <a href="{{ route('gallery.detils', $gallery->id) }}">
+                            <a href="{{ route('gallery.detils', $gallery->id) }}">
+                                <div class="causes-one__img">
                                     <img src="{{ $gallery->getFirstMediaUrl('gallery') }}" alt="">
-                                </a>
-                            </div>
+                                </div>
+                            </a>
+
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
                                         href="{{ route('gallery.detils', $gallery->id) }}">{{ $gallery->title }}</a>
@@ -282,17 +283,25 @@
                     @php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     @endphp
@@ -354,17 +363,25 @@
                     @php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     @endphp
