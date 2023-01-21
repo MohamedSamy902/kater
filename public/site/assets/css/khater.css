@@ -104,12 +104,11 @@ h6 {
   color: var(--khater-black);
   font-family: var(--khater-font-two);
   margin: 0;
-  font-size: 38px !important;
+  font-size: 32px;
 }
 
 p {
   margin: 0;
-  font-size: 19px !important;
   font-family: var(--khater-font-two);
 
 }
@@ -3426,7 +3425,7 @@ body.locked .page-wrapper {
 }
 
 .causes-one__title {
-  font-size: 34px !important;
+  font-size: 34px;
   line-height: 36px;
   /* font-weight: 800; */
 
