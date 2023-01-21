@@ -37,6 +37,8 @@
                                         <h2 class="main-slider__title"><?php echo e($slider->title); ?></h2>
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
+                                            <?php echo e(URL::current()); ?>
+
                                             <?php if($slider->link != null): ?>
                                             <a href="<?php echo e(route('about')); ?>" class="thm-btn main-slider__btn">
                                                 <?php echo e(__('site.readMore')); ?></a>
