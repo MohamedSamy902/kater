@@ -9,15 +9,15 @@
                 <div class="col-xl-9 col-lg-9 ">
 
                     @php
-                        if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
+                        if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
                             echo '<div class="event-details__left">
 
                                 <video autoplay controls width="100%" style="">
                                     <source src=" ' .
-                                $wellBeing->getFirstMediaUrl('WellBeingvideo') .
+                                $wellBeing->getFirstMediaUrl('wellbeingVideo') .
                                 ' " type="video/mp4">
                                     <source src=" ' .
-                                $wellBeing->getFirstMediaUrl('WellBeingvideo') .
+                                $wellBeing->getFirstMediaUrl('wellbeingVideo') .
                                 ' " type="video/ogg">
                                 </video>
                                 </div>';
