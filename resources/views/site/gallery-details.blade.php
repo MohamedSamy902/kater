@@ -14,7 +14,7 @@
                         <div class="gallery-page__single">
                             <div class="gallery-page__img">
                                 <img src="{{ $gallery->getFirstMediaUrl('galleryDetails') }}">
-                                <a href="{{ $gallery->getFirstMediaUrl('galleryDetails') }}" class="img-popup"></a>
+                                <a href="" class="img-popup"></a>
                             </div>
                         </div>
                     </div>

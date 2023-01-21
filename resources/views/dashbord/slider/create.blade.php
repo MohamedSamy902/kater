@@ -67,6 +67,17 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationCustom5">{{ __('master.link') }}</label>
+                                    <input class="form-control" id="validationCustom5" type="text"
+                                        aria-label="file example" name="link" required />
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10">{{ __('master.image') }}</label>
                                     <input class="form-control" id="validationCustom10" type="file"
                                         aria-label="file example" name="slider" required />
@@ -75,6 +86,8 @@
                                 </div>
 
                             </div>
+
+
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">

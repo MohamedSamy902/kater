@@ -38,8 +38,11 @@
                                         <h2 class="main-slider__title">{{ $slider->title }}</h2>
                                         <p class="text-white">{{ $slider->content }}</p>
                                         <div class="main-slider__btn-box">
+                                            @if ($slider->link != null)
                                             <a href="{{ route('about') }}" class="thm-btn main-slider__btn">
                                                 {{ __('site.readMore') }}</a>
+                                            @endif
+                                            {{-- <a href="{{ route('about') }}" class="thm-btn main-slider__btn">{{ __('site.readMore') }}</a> --}}
                                         </div>
                                     </div>
                                 </div>

@@ -37,8 +37,11 @@
                                         <h2 class="main-slider__title"><?php echo e($slider->title); ?></h2>
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
+                                            <?php if($slider->link != null): ?>
                                             <a href="<?php echo e(route('about')); ?>" class="thm-btn main-slider__btn">
                                                 <?php echo e(__('site.readMore')); ?></a>
+                                            <?php endif; ?>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -181,11 +184,12 @@
                 <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <div class="causes-one__img">
-                                <a href="<?php echo e(route('gallery.detils', $gallery->id)); ?>">
+                            <a href="<?php echo e(route('gallery.detils', $gallery->id)); ?>">
+                                <div class="causes-one__img">
                                     <img src="<?php echo e($gallery->getFirstMediaUrl('gallery')); ?>" alt="">
-                                </a>
-                            </div>
+                                </div>
+                            </a>
+
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
                                         href="<?php echo e(route('gallery.detils', $gallery->id)); ?>"><?php echo e($gallery->title); ?></a>
@@ -281,17 +285,25 @@
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     ?>
@@ -343,17 +355,25 @@
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     ?>

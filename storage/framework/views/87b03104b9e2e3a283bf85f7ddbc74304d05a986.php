@@ -12,7 +12,7 @@
                         <div class="gallery-page__single">
                             <div class="gallery-page__img">
                                 <img src="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>">
-                                <a href="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>" class="img-popup"></a>
+                                <a href="" class="img-popup"></a>
                             </div>
                         </div>
                     </div>

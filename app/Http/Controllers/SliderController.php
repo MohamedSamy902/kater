@@ -110,6 +110,7 @@ class SliderController extends Controller
             'en' => $request->content,
             'ar' => $request->content_ar,
         ];
+        $data['link'] = $request->link;
         $slider->update($data);
         if ($request->file('slider')) {
             $slider
