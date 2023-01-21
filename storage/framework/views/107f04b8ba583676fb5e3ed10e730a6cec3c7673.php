@@ -45,4 +45,4 @@
         </script>
     <?php $__env->stopPush(); ?>
 <?php endif; ?>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/dashbord/alert/alert.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/dashbord/alert/alert.blade.php ENDPATH**/ ?>

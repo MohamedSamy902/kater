@@ -169,4 +169,4 @@
 
         <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
                 class="icon-up-arrow"></i></a>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/layout/footer.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/layout/footer.blade.php ENDPATH**/ ?>

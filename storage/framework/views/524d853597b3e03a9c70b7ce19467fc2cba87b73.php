@@ -188,4 +188,4 @@
         </div>
     </nav>
 </header>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/layouts/admin/partials/sidebar.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/layouts/admin/partials/sidebar.blade.php ENDPATH**/ ?>

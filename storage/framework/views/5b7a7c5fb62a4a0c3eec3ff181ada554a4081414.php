@@ -32,4 +32,4 @@
         </div>
       </div>
     </div>
-</div><?php /**PATH /home/mohamed/Desktop/kater/resources/views/components/breadcrumb.blade.php ENDPATH**/ ?>
+</div><?php /**PATH /home/perfectchoice/public_html/kater/resources/views/components/breadcrumb.blade.php ENDPATH**/ ?>

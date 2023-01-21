@@ -28,32 +28,27 @@
                                     <tr>
                                         <th>#</th>
                                         <th><?php echo e(__('master.title')); ?></th>
-                                        <th><?php echo e(__('master.image')); ?></th>
+                                        <th><?php echo e(__('master.content')); ?></th>
                                         <th><?php echo e(__('master.processes')); ?></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <?php $__currentLoopData = $healthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $well): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
 
                                             <td><?php echo e(++$i); ?></td>
-                                            <td><a
-                                                    href="<?php echo e(route('galleries.show', $gallery->id)); ?>"><?php echo e($gallery->title); ?></a>
-                                            </td>
-                                            <td><img style="max-width: 100px;max-height: 100px;"
-                                                    src="<?php echo e($gallery->getFirstMediaUrl('gallery') != null ? $gallery->getFirstMediaUrl('gallery') : asset('assets/images/dashboard/1.png')); ?>">
-                                            </td>
-
+                                            <td><a href="<?php echo e(route('healthcare.show', $well->id)); ?>"><?php echo e($well->title); ?></a></td>
+                                            <td><?php echo e($well->content); ?></td>
 
                                             <td>
                                                 <div style="display: flex;">
                                                     <a class="btn btn-outline-primary-2x" style="margin-right: 20px;"
-                                                        href="<?php echo e(route('galleries.edit', $gallery->id)); ?>"><?php echo e(__('master.edit')); ?></a>
+                                                        href="<?php echo e(route('healthcare.edit', $well->id)); ?>"><?php echo e(__('master.edit')); ?></a>
 
-                                                    <a class="btn btn-outline-primary-2x" style="margin-right: 20px;"
-                                                        href="<?php echo e(route('galleriesgDetails.create', $gallery->id)); ?>"><?php echo e(__('master.add_image')); ?></a>
+                                                        <a class="btn btn-outline-primary-2x" style="margin-right: 20px;"
+                                                        href="<?php echo e(route('healthcareDetails.create', $well->id)); ?>"><?php echo e(__('master.add_image')); ?></a>
 
-                                                    <form action="<?php echo e(route('galleries.destroy', $gallery->id)); ?>"
+                                                    <form action="<?php echo e(route('healthcare.destroy', $well->id)); ?>"
                                                         method="post">
                                                         <?php echo csrf_field(); ?>
                                                         <?php echo method_field('delete'); ?>
@@ -103,4 +98,4 @@
     <?php $__env->stopPush(); ?>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/mohamed/Desktop/kater/resources/views/dashbord/gallery/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/perfectchoice/public_html/kater/resources/views/dashbord/healthcare/index.blade.php ENDPATH**/ ?>

@@ -32,4 +32,4 @@
         </div>
     </body>
 </html>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/errors/minimal.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/errors/minimal.blade.php ENDPATH**/ ?>

@@ -57,4 +57,4 @@
         </div>
     </nav>
 </header>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/layout/header.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/layout/header.blade.php ENDPATH**/ ?>

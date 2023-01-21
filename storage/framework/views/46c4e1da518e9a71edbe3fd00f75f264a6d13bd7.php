@@ -155,4 +155,4 @@
     <!--Events Page End-->
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('site.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/healthcare-details.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('site.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/healthcare-details.blade.php ENDPATH**/ ?>

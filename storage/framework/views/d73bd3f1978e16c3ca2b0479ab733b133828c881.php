@@ -38,4 +38,4 @@
 
 
 </html>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/layout/master.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/layout/master.blade.php ENDPATH**/ ?>

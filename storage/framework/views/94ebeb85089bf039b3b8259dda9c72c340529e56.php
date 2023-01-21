@@ -35,4 +35,4 @@
 
 
 <?php echo $__env->yieldContent('js'); ?>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/layout/js.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/layout/js.blade.php ENDPATH**/ ?>

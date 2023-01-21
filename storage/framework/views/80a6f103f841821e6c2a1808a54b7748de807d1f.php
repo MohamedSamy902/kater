@@ -14,4 +14,4 @@
 <!-- Theme js-->
 <script src="<?php echo e(asset('assets/js/script.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/js/theme-customizer/customizer.js')); ?>"></script>
-<!-- Plugin used--><?php /**PATH /home/mohamed/Desktop/kater/resources/views/layouts/admin/partials/js.blade.php ENDPATH**/ ?>
+<!-- Plugin used--><?php /**PATH /home/perfectchoice/public_html/kater/resources/views/layouts/admin/partials/js.blade.php ENDPATH**/ ?>

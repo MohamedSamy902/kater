@@ -70,4 +70,4 @@
     }
 ?>
 <?php echo $__env->yieldContent('css'); ?>
-<?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/layout/css.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/layout/css.blade.php ENDPATH**/ ?>
