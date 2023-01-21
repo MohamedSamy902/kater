@@ -51,13 +51,13 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
-                                    <label class="form-label" for="validationDefault06">{{ __('role.role') }}</label>
+                                    <label class="form-label" for="validationDefault06">{{ __('master.gallery') }}</label>
                                     <select class="form-select" id="validationDefault06" required="" name="galleries_id">
-                                        <option selected="" disabled="" value=""> {{ __('role.role') }}
+                                        <option selected="" disabled="" value=""> {{ __('master.gallery') }}
                                         </option>
                                         @foreach ($galleries as $gallery)
-                                            <option {{ old('roles_name') == $role ? 'selected' : '' }}
-                                                value="{{ $gallery_id }}  ">{{ $gallery->name }}</option>
+                                            <option {{ old('galleries_id') == $gallery ? 'selected' : '' }}
+                                                value="{{ $gallery->id }}">{{ $gallery->title }}</option>
                                         @endforeach
 
                                     </select>

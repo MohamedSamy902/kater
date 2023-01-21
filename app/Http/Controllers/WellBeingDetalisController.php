@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WellBeingDetalis;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
+use App\Models\WellBeingDetalis;
 
 class WellBeingDetalisController extends Controller
 {
@@ -24,7 +25,8 @@ class WellBeingDetalisController extends Controller
      */
     public function create($wellBeing)
     {
-        return view('dashbord.wellbeing.image.create', compact('wellBeing'));
+        $galleries = Gallery::get();
+        return view('dashbord.wellbeing.image.create', compact('wellBeing', 'galleries'));
     }
 
     /**
