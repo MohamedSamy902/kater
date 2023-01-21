@@ -60,7 +60,7 @@
                                         href="{{ route('wellbeing.detils', $wellbeing->id) }}">{{ $wellbeing->title }}</a>
                                 </h3>
                                 <p class="causes-one__text">
-                                    {{ $wellbeing->short_content == null ? Str::limit($wellbeing->content, 250, ' .....') : Str::limit($wellbeing->short_content, 250, ' .....') }}
+                                    {!! $wellbeing->short_content == null ? Str::limit($wellbeing->content, 250, ' .....') : Str::limit($wellbeing->short_content, 250, ' .....') !!}
                                 </p>
 
                             </div>
