@@ -7,12 +7,30 @@
             <div class="row">
                 <h3 class="event-details__title">{{ $healthcare->title }}</h3>
                 <div class="col-xl-9 col-lg-9 ">
-                    <div class="event-details__left">
+                    @php
+                        if ($healthcare->getFirstMediaUrl('healthcarevideo')) {
+                            echo '<div class="event-details__left">
+
+                            <video autoplay controls width="100%" style="">
+                                <source src=" ' .
+                                $healthcare->getFirstMediaUrl('healthcarevideo') .
+                                ' " type="video/mp4">
+                                <source src=" ' .
+                                $healthcare->getFirstMediaUrl('healthcarevideo') .
+                                ' " type="video/ogg">
+                            </video>
+                            </div>';
+                        } else {
+                            echo '<p class="event-details__text-6">' . $healthcare->content . '</p>';
+                        }
+
+                    @endphp
+                    {{-- <div class="event-details__left">
                         <video autoplay controls width="100%" style="">
                             <source src="{{ $healthcare->getFirstMediaUrl('healthcarevideo') }}" type="video/mp4">
                             <source src="{{ $healthcare->getFirstMediaUrl('healthcarevideo') }}" type="video/ogg">
                         </video>
-                    </div>
+                    </div> --}}
 
                 </div>
                 <div class="col-xl-3 col-lg-3 ">
@@ -21,9 +39,7 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            {{-- <h3 class="sidebar__title" style="color: #005172;margin-top: 10px;">{{ __('site.Healthcare') }}
-                            </h3> --}}
-                            <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
+                            <marquee width="100%" direction="up" height="460px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
 
                                 @foreach ($allHealthcare as $allHealth)
@@ -39,7 +55,9 @@
                                                             <p
                                                                 style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
-                                                                {{ $allHealth->title }}
+                                                                {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                                                            </p>
+
                                                             </p>
                                                         </div>
                                                     </div>
@@ -61,7 +79,8 @@
                                                         <div class="col-4">
                                                             <p
                                                                 style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                                {{ $allWell->title }}
+                                                                {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
+
                                                             </p>
                                                         </div>
                                                     </div>
@@ -72,8 +91,6 @@
                                 @endforeach
 
                             </marquee>
-
-
                         </div>
 
                     </div>
@@ -82,8 +99,13 @@
                     <div class="row">
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
+                                @php
+                                    if ($healthcare->getFirstMediaUrl('healthcarevideo')) {
+                                        echo '<p class="event-details__text-6">' . $healthcare->content . '</p>';
+                                    }
 
-                                <p class="event-details__text-6">{!! $healthcare->content !!}</p>
+                                @endphp
+                                {{-- <p class="event-details__text-6">{!! $healthcare->content !!}</p> --}}
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">

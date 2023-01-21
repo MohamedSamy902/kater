@@ -11856,7 +11856,7 @@ body.boxed-wrapper {
 
 .main-timeline9 {
   position: relative;
-  font-family: --khater-font-two;
+  font-family: var(--khater-font-two);
 }
 
 .main-timeline9:after,

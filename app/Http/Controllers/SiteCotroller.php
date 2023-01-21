@@ -76,7 +76,11 @@ class SiteCotroller extends Controller
     public function wellbeingDetiles($id)
     {
         $wellBeing = WellBeing::findOrFail($id);
-        return view('site.wellbeing-details', compact('wellBeing'));
+        $allHealthcare = Healthcare::get();
+        $allWellBeing = WellBeing::get();
+        // return $wellBeing->getFirstMediaUrl('WellBeingvideoo');
+        return view('site.wellbeing-details', compact('wellBeing', 'allHealthcare', 'allWellBeing'));
+
     }
 
 

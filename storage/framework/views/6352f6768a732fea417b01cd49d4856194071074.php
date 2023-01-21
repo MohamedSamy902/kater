@@ -1,31 +1,29 @@
-@extends('site.layout.master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <!--Event Details Start-->
     <section class="event-details ">
         <div class="container-fluid">
             <div class="row">
-                <h3 class="event-details__title">{{ $wellBeing->title }}</h3>
+                <h3 class="event-details__title"><?php echo e($healthcare->title); ?></h3>
                 <div class="col-xl-9 col-lg-9 ">
-
-                    @php
-                        if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
+                    <?php
+                        if ($healthcare->getFirstMediaUrl('healthcarevideo')) {
                             echo '<div class="event-details__left">
 
-                                <video autoplay controls width="100%" style="">
-                                    <source src=" ' .
-                                $wellBeing->getFirstMediaUrl('WellBeingvideo') .
+                            <video autoplay controls width="100%" style="">
+                                <source src=" ' .
+                                $healthcare->getFirstMediaUrl('healthcarevideo') .
                                 ' " type="video/mp4">
-                                    <source src=" ' .
-                                $wellBeing->getFirstMediaUrl('WellBeingvideo') .
+                                <source src=" ' .
+                                $healthcare->getFirstMediaUrl('healthcarevideo') .
                                 ' " type="video/ogg">
-                                </video>
-                                </div>';
+                            </video>
+                            </div>';
                         } else {
-                            echo '<p class="event-details__text-6">' . $wellBeing->content . '</p>';
+                            echo '<p class="event-details__text-6">' . $healthcare->content . '</p>';
                         }
 
-                    @endphp
+                    ?>
+                    
 
                 </div>
                 <div class="col-xl-3 col-lg-3 ">
@@ -37,20 +35,21 @@
                             <marquee width="100%" direction="up" height="460px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
 
-                                @foreach ($allHealthcare as $allHealth)
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="">
-                                        <a href="{{ route('healthcare.detils', $allHealth->id) }}">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
                                             <div class="causes-one__single">
                                                 <div class="causes-one__img">
                                                     <div class="row">
                                                         <div class="col-8"> <img
-                                                                src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
                                                                 style="height: 80px;" alt=""></div>
                                                         <div class="col-4">
                                                             <p
                                                                 style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
-                                                                {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
                                                             </p>
 
                                                             </p>
@@ -60,21 +59,22 @@
                                             </div>
                                         </a>
                                     </div>
-                                @endforeach
-                                @foreach ($allWellBeing as $allWell)
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="">
-                                        <a href="{{ route('wellbeing.detils', $allWell->id) }}">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
                                             <div class="causes-one__single">
                                                 <div class="causes-one__img">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
                                                                 style="height: 80px;" alt="">
                                                         </div>
                                                         <div class="col-4">
                                                             <p
                                                                 style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                                {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
 
                                                             </p>
                                                         </div>
@@ -83,7 +83,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                @endforeach
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                             </marquee>
                         </div>
@@ -94,27 +94,27 @@
                     <div class="row">
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
-                                @php
-                                    if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
-                                        echo '<p class="event-details__text-6">' . $wellBeing->content . '</p>';
+                                <?php
+                                    if ($healthcare->getFirstMediaUrl('healthcarevideo')) {
+                                        echo '<p class="event-details__text-6">' . $healthcare->content . '</p>';
                                     }
 
-                                @endphp
-                                {{-- <p class="event-details__text-6">{{ $wellBeing->content }}</p> --}}
+                                ?>
+                                
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <ul style="padding: 20px 0 0 0;">
                                 <li class="counter-one__single Provided">
-                                    <img src="{{ asset('site') }}/assets/images/well-bieng icon.png" style="height: 50px;"
-                                        alt="">
+                                    <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png"
+                                        style="height: 50px;" alt="">
                                     <div class="counter-one__count-box p-2">
                                         <p class="counter-one__text4" style="width: 300px;">
-                                            {{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
+                                            <?php echo e($healthcare->convoys != 0 ? $healthcare->convoys : ''); ?></span> </p>
                                         <p class="counter-one__text4" style="width: 300px;">
-                                            {{ $wellBeing->services != 0 ? $wellBeing->services : '' }}
-                                        </p>
+                                            <?php echo e($healthcare->services != 0 ? $healthcare->services : ''); ?>
 
+                                        </p>
                                     </div>
                                 </li>
                             </ul>
@@ -151,21 +151,19 @@
                         }
                     }
                 }'>
-                @foreach ($wellBeing->WellBeingDetalis as $WellBeingDetails)
+                <?php $__currentLoopData = $healthcare->HealthcareDetails; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $HealthcareDetails): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
                                 <div class="causes-one__img">
-                                    <img src="{{ $WellBeingDetails->getFirstMediaUrl('wellBeingDetails') }}"
+                                    <img src="<?php echo e($HealthcareDetails->getFirstMediaUrl('healthcareDetails')); ?>"
                                         style="height: 300px" alt="">
-                                    <div class="causes-one__cat">
-                                        <p>{{ $WellBeingDetails->title }}</p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 
             </div>
@@ -173,4 +171,6 @@
     </section>
 
     <!--Events Page End-->
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('site.layout.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/mohamed/Desktop/kater/resources/views/site/healthcare-details.blade.php ENDPATH**/ ?>

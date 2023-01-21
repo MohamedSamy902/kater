@@ -3,9 +3,10 @@
 @section('content')
     <!--Gallery Page Start-->
     <section class="gallery-page">
-        <h1 class="text-center pb-5">{{ $gall->title }}</h1>
-
+        <h1 class="text-center pb-3">{{ $gall->title }}</h1>
         <div class="container">
+        <p class="pb-5 text-center">{{ $gall->content }}</p>
+
 
             <div class="row">
                 @foreach ($galleries as $gallery)

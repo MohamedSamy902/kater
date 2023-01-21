@@ -49,20 +49,19 @@
                 @foreach ($healthcareies as $healthcareie)
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="causes-one__single">
-                            <div class="causes-one__img">
-                                <a href="{{ route('healthcare.detils', $healthcareie->id) }}">
+                            <a href="{{ route('healthcare.detils', $healthcareie->id) }}">
+                                <div class="causes-one__img">
+                                    <img src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}" alt="">
+                                </div>
+                            </a>
 
-                                    <img src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}"
-                                        alt="">
-                                </a>
-
-                            </div>
                             <div class="causes-one__content">
                                 <h3 class="causes-one__title"><a
                                         href="{{ route('healthcare.detils', $healthcareie->id) }}">{{ $healthcareie->title }}</a>
                                 </h3>
                                 <p class="causes-one__text">
-                                    {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }}</p>
+                                    {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }}
+                                </p>
 
                             </div>
                         </div>

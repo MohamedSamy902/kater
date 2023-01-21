@@ -51,6 +51,22 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationDefault06">{{ __('role.role') }}</label>
+                                    <select class="form-select" id="validationDefault06" required="" name="galleries_id">
+                                        <option selected="" disabled="" value=""> {{ __('role.role') }}
+                                        </option>
+                                        @foreach ($galleries as $gallery)
+                                            <option {{ old('roles_name') == $role ? 'selected' : '' }}
+                                                value="{{ $gallery_id }}  ">{{ $gallery->name }}</option>
+                                        @endforeach
+
+                                    </select>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10">{{ __('master.image') }}</label>
                                     <input class="form-control" id="validationCustom10" type="file"
                                         aria-label="file example" name="wellBeingDetails" />

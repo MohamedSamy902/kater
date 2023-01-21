@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use App\Models\HealthcareDetails;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class HealthcareDetailsController extends Controller
      */
     public function create($healthcare)
     {
-        return view('dashbord.healthcare.image.create', compact('healthcare'));
+        $galleries = Gallery::get();
+        return view('dashbord.healthcare.image.create', compact('healthcare', 'galleries'));
     }
 
     /**
@@ -42,7 +44,8 @@ class HealthcareDetailsController extends Controller
                 'en' => $request->title,
                 'ar' => $request->title_ar,
             ],
-            'healthcares_id' => $request->healthcares_id
+            'healthcares_id' => $request->healthcares_id,
+            'galleries_id' => $request->galleries_id
         ]);
 
         if ($request->file('healthcareDetails')) {
