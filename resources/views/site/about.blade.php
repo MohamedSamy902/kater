@@ -63,14 +63,14 @@
                     <div class="main-timeline9" style="top: -80px;">
                         <div class="timeline">
                             <div class="timeline-content line1">
-                                <a href="{{ $TimeLine[0]->link != null ?   URL::to($TimeLine[0]->link) :''}}">
+                                <a href="{{ $TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : '' }}">
                                     <div class="circle"><img src="{{ $TimeLine[0]->getFirstMediaUrl('TimeLine') }}"
                                             class=" " alt="">
                                     </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
-                                    <ul style="text-align: start;">{{ $TimeLine[0]->content }}
+                                    <ul style="text-align: start;">{!! $TimeLine[0]->content !!}
                                     </ul>
                                     </p>
 
@@ -82,10 +82,10 @@
 
                         <div class="timeline">
                             <div class="timeline-content line2" style="margin-top: 50px">
-                                <a href="{{ $TimeLine[1]->link != null ? URL::to('/'.$TimeLine[1]->link) :''}}">
-                                <div class="circle"><img src="{{ $TimeLine[1]->getFirstMediaUrl('TimeLine') }}"
-                                        class=" " alt="">
-                                </div>
+                                <a href="{{ $TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : '' }}">
+                                    <div class="circle"><img src="{{ $TimeLine[1]->getFirstMediaUrl('TimeLine') }}"
+                                            class=" " alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -103,10 +103,10 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <a href="{{ $TimeLine[2]->link != null ?  URL::current('/') .  $TimeLine[2]->link :''}}">
-                                <div class="circle"><img src="{{ $TimeLine[2]->getFirstMediaUrl('TimeLine') }}"
-                                        class=" " alt="">
-                                </div>
+                                <a href="{{ $TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : '' }}">
+                                    <div class="circle"><img src="{{ $TimeLine[2]->getFirstMediaUrl('TimeLine') }}"
+                                            class=" " alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -129,10 +129,10 @@
 
                         <div class="timeline">
                             <div class="timeline-content line4" style="margin-top: 200px;">
-                                <a href="{{ $TimeLine[3]->link != null ?  URL::current('/') .  $TimeLine[3]->link :''}}">
-                                <div class="circle"><img src="{{ $TimeLine[3]->getFirstMediaUrl('TimeLine') }}"
-                                        class=" " alt="">
-                                </div>
+                                <a href="{{ $TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : '' }}">
+                                    <div class="circle"><img src="{{ $TimeLine[3]->getFirstMediaUrl('TimeLine') }}"
+                                            class=" " alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -155,11 +155,11 @@
 
                         <div class="timeline">
                             <div class="timeline-content line6" style="margin-top: 210px;">
-                                <a href="{{ $TimeLine[4]->link != null ?  URL::current('/') .  $TimeLine[4]->link :''}}">
-                                <div class="circle">
-                                    <img src="{{ $TimeLine[4]->getFirstMediaUrl('TimeLine') }}" class=""
-                                        alt="">
-                                </div>
+                                <a href="{{ $TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : '' }}">
+                                    <div class="circle">
+                                        <img src="{{ $TimeLine[4]->getFirstMediaUrl('TimeLine') }}" class=""
+                                            alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -180,9 +180,12 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <div class="circle"><img src="{{ $TimeLine[5]->getFirstMediaUrl('TimeLine') }}"
-                                        class=" " alt="">
-                                </div>
+                                <a href="{{ $TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : '' }}">
+
+                                    <div class="circle"><img src="{{ $TimeLine[5]->getFirstMediaUrl('TimeLine') }}"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -204,10 +207,13 @@
 
                         <div class="timeline">
                             <div class="timeline-content line5" style="margin-top: 200px;">
-                                <div class="circle">
-                                    <img src="{{ $TimeLine[6]->getFirstMediaUrl('TimeLine') }}" class=""
-                                        alt="">
-                                </div>
+                                <a href="{{ $TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : '' }}">
+
+                                    <div class="circle">
+                                        <img src="{{ $TimeLine[6]->getFirstMediaUrl('TimeLine') }}" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -227,10 +233,13 @@
 
                         <div class="timeline">
                             <div class="timeline-content line7" style="margin-top: 210px;">
-                                <div class="circle">
-                                    <img src="{{ $TimeLine[7]->getFirstMediaUrl('TimeLine') }}" class=""
-                                        alt="">
-                                </div>
+                                <a href="{{ $TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : '' }}">
+
+                                    <div class="circle">
+                                        <img src="{{ $TimeLine[7]->getFirstMediaUrl('TimeLine') }}" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -249,10 +258,13 @@
 
                         <div class="timeline">
                             <div class="timeline-content line9" style="margin-top: 250px;">
-                                <div class="circle">
-                                    <img src="{{ $TimeLine[8]->getFirstMediaUrl('TimeLine') }}" class=""
-                                        alt="">
-                                </div>
+                                <a href="{{ $TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : '' }}">
+
+                                    <div class="circle">
+                                        <img src="{{ $TimeLine[8]->getFirstMediaUrl('TimeLine') }}" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -543,9 +555,9 @@
                     </div>
                     <!-- hero only -->
                     <!-- <div class="swiper-slide story"
-                                            data-point="29.9849277,31.2303078,Alameda_en.jpg,Alameda Healthcare Group">
-                                            <img src="{{ asset('site') }}/assets/images/partners/Alameda_en.jpg" alt="">
-                                        </div> -->
+                                                data-point="29.9849277,31.2303078,Alameda_en.jpg,Alameda Healthcare Group">
+                                                <img src="{{ asset('site') }}/assets/images/partners/Alameda_en.jpg" alt="">
+                                            </div> -->
                     <div class="swiper-slide story"
                         data-point="30.0287572,31.2360329,Egyptian_Autistic_Society.jpg,The Egyptian Autistic Society">
                         <img src="{{ asset('site') }}/assets/images/partners/Egyptian_Autistic_Society.jpg"
