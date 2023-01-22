@@ -14,7 +14,7 @@ class HealthcareDetails extends Model implements HasMedia
     protected $table = 'healthcare_detalis';
     public $translatable = ['title'];
 
-    protected $fillable = ['title',  'healthcares_id'];
+    protected $fillable = ['title',  'healthcares_id', 'link'];
 
     public function Healthcare()
     {

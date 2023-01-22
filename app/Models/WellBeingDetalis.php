@@ -13,7 +13,7 @@ class WellBeingDetalis extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title', 'content'];
 
-    protected $fillable = ['title', 'content', 'well_beings_id', 'status'];
+    protected $fillable = ['title', 'content', 'well_beings_id', 'status', 'link'];
 
     public function WellBeing()
     {
