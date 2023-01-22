@@ -151,7 +151,7 @@
                         }
                     }
                 }'>
-                @foreach ($wellBeing->WellBeingDetalis as )
+                @foreach ($wellBeing->WellBeingDetalis as $WellBeingDetails)
                 {{ $WellBeingDetails->id }}
                     <div class="item px-1">
                         <div class="events-one__single">
