@@ -3,7 +3,7 @@
     <section class="gallery-page">
         <h1 class="text-center pb-3"><?php echo e($gall->title); ?></h1>
         <div class="container">
-        <p class="pb-5 text-center"><?php echo e($gall->content); ?></p>
+        <p class="pb-5 text-center"><?php echo $gall->content; ?></p>
 
 
             <div class="row">
@@ -12,7 +12,7 @@
                         <div class="gallery-page__single">
                             <div class="gallery-page__img">
                                 <img src="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>">
-                                <a href="" class="img-popup"></a>
+                                <a href="<?php echo e($gallery->getFirstMediaUrl('galleryDetails')); ?>" class="img-popup"></a>
                             </div>
                         </div>
                     </div>
