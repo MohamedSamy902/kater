@@ -100,7 +100,7 @@ class GalleryController extends Controller
             'ar' => $request->content_ar
         ];
 
-        $gallery = $gallery::update($data);
+        $gallery->update($data);
         if ($request->file('gallery')) {
             $gallery
                 ->addMedia($request->file('gallery'))
