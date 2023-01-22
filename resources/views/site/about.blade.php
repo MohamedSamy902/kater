@@ -82,7 +82,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line2" style="margin-top: 50px">
-                                <a href="{{ $TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) :''}}">
+                                <a href="{{ $TimeLine[1]->link != null ? URL::to('/'$TimeLine[1]->link) :''}}">
                                 <div class="circle"><img src="{{ $TimeLine[1]->getFirstMediaUrl('TimeLine') }}"
                                         class=" " alt="">
                                 </div>
