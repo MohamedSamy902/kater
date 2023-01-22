@@ -138,11 +138,11 @@ class WellBeingController extends Controller
 
         $wellBeing->update($data);
 
-        if ($request->file('WellBeingvideo')) {
+        if ($request->file('wellbeingVideo')) {
             $wellBeing
-                ->addMedia($request->file('WellBeingvideo'))
+                ->addMedia($request->file('wellbeingVideo'))
                 ->usingName($request->title)
-                ->toMediaCollection('WellBeingvideo');
+                ->toMediaCollection('wellbeingVideo');
         }
         if ($request->file('wellbeingPhoto')) {
             $wellBeing

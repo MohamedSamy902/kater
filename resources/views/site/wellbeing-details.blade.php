@@ -95,7 +95,7 @@
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
                                 @php
-                                    if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
+                                    if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
                                         echo '<p class="event-details__text-6">' . $wellBeing->content . '</p>';
                                     }
 
