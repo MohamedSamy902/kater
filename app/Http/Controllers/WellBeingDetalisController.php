@@ -105,6 +105,9 @@ class WellBeingDetalisController extends Controller
 
         if ($request->file('wellBeingDetalis')) {
             $wellBeingDetalis
+            ->clearMediaCollection('wellBeingDetalis')
+
+
                 ->addMedia($request->file('wellBeingDetalis'))
                 ->usingName($request->title)
                 ->toMediaCollection('wellBeingDetalis');

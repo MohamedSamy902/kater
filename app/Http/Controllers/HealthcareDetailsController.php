@@ -102,6 +102,7 @@ class HealthcareDetailsController extends Controller
 
         if ($request->file('healthcareDetails')) {
             $healthcareDetails
+                ->clearMediaCollection('healthcareDetails')
                 ->addMedia($request->file('healthcareDetails'))
                 ->usingName($request->title)
                 ->toMediaCollection('healthcareDetails');

@@ -140,6 +140,7 @@ class WellBeingController extends Controller
 
         if ($request->file('wellbeingVideo')) {
             $wellBeing
+                ->clearMediaCollection('wellbeingVideo')
                 ->addMedia($request->file('wellbeingVideo'))
                 ->usingName($request->title)
                 ->toMediaCollection('wellbeingVideo');
