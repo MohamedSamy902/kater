@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artical;
+use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\GalleryDetalis;
 use App\Models\Healthcare;
@@ -18,7 +19,7 @@ class SiteCotroller extends Controller
         $sliders = Slider::get();
         $HowItAllBegan = Artical::where('section', 'HowItAllBegan')->first();
         $Vision = Artical::where('section', 'Vision')->first();
-        $events = Gallery::whereNotNull('content')->get();
+        $events = Event::whereNotNull('content')->get();
         return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'events'));
     }
 
