@@ -54,6 +54,8 @@ class GalleryController extends Controller
                 ->usingName($request->title)
                 ->toMediaCollection('gallery');
         }
+        return redirect()->back()->with('success', __('master.messages_edit'));
+
     }
 
     /**
@@ -107,6 +109,8 @@ class GalleryController extends Controller
                 ->usingName($request->title)
                 ->toMediaCollection('gallery');
         }
+
+        return redirect()->back()->with('success', __('master.messages_edit'));
     }
 
     /**

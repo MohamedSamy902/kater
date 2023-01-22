@@ -4,7 +4,7 @@
     <!--Page Header Start-->
     <section class="page-header">
         <div class="page-header-bg"
-            style="background-image: url({{ asset('site') }}/assets/images/resources/WhatsApp\ Image\ 2022-11-22\ at\ 12.41.01\ PM.jpeg)">
+            style="background-image: url({{ asset('site') }}/assets/images/wellbeing.jpg)">
         </div>
         <div class="container">
             <div class="page-header__inner">
@@ -23,7 +23,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title">{{ $Wellbiganing->title }}</h2>
                         </div>
-                        <p class="about-two__text-1">{{ $Wellbiganing->content }}</p>
+                        <p class="about-two__text-1">{!! $Wellbiganing->content !!}</p>
                     </div>
                 </div>
                 <div class="col-xl-6">

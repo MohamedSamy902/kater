@@ -39,7 +39,7 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            <marquee width="100%" direction="up" height="510px" scrollamount="2" loop="true"
+                            <marquee width="100%" direction="up" height="580px" scrollamount="5" loop="-1"
                                 onmouseover="this.stop()" onmouseout="this.start()">
 
                                 @foreach ($allHealthcare as $allHealth)

@@ -37,13 +37,10 @@
                                         <h2 class="main-slider__title"><?php echo e($slider->title); ?></h2>
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
-                                            <?php echo e(URL::current()); ?>
-
                                             <?php if($slider->link != null): ?>
-                                            <a href="<?php echo e(route('about')); ?>" class="thm-btn main-slider__btn">
+                                            <a href="<?php echo e(URL::current()); ?>/<?php echo e($slider->link); ?>" class="thm-btn main-slider__btn">
                                                 <?php echo e(__('site.readMore')); ?></a>
                                             <?php endif; ?>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -183,20 +180,20 @@
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <a href="<?php echo e(route('gallery.detils', $gallery->id)); ?>">
+                            <a href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>">
                                 <div class="causes-one__img">
-                                    <img src="<?php echo e($gallery->getFirstMediaUrl('gallery')); ?>" alt="">
+                                    <img src="<?php echo e($event->getFirstMediaUrl('event')); ?>" alt="">
                                 </div>
                             </a>
 
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
-                                        href="<?php echo e(route('gallery.detils', $gallery->id)); ?>"><?php echo e($gallery->title); ?></a>
+                                        href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>"><?php echo e($event->title); ?></a>
                                 </h3>
-                                <p class="causes-one__text"><?php echo e($gallery->content); ?></p>
+                                <p class="causes-one__text"><?php echo e($event->content); ?></p>
                             </div>
                         </div>
                     </div>
