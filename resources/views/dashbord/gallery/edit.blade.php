@@ -27,7 +27,7 @@
                     </div>
                     <div class="card-body">
                         <form class="needs-validation" novalidate="" method="post"
-                            action="{{ route('wellBeing.update', $gallery->id) }}" enctype="multipart/form-data">
+                            action="{{ route('galleries.update', $gallery->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('patch')
 
