@@ -175,6 +175,21 @@
                         </ul>
                     </li>
 
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('events') }}" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span>{{ __('master.events') }}</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('events') }};">
+                            <li><a href="{{ route('events.index') }}"
+                                    class="{{ routeActive('events.index') }}">{{ __('master.events') }}</a>
+                            </li>
+                            <li><a href="{{ route('events.create') }}"
+                                    class="{{ routeActive('events.create') }}">{{ __('master.events') }}
+                                </a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

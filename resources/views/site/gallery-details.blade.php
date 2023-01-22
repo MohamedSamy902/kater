@@ -5,7 +5,7 @@
     <section class="gallery-page">
         <h1 class="text-center pb-3">{{ $gall->title }}</h1>
         <div class="container">
-        <p class="pb-5 text-center">{{ $gall->content }}</p>
+        <p class="pb-5 text-center">{!! $gall->content !!}</p>
 
 
             <div class="row">

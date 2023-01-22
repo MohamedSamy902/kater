@@ -5,18 +5,17 @@
             <div class="row">
                 <h3 class="event-details__title"><?php echo e($wellBeing->title); ?></h3>
                 <div class="col-xl-9 col-lg-9 ">
-                    <?php echo e($wellBeing->getFirstMediaUrl('WellBeingvideo')); ?>
 
                     <?php
-                        if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
+                        if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
                             echo '<div class="event-details__left">
 
                                 <video autoplay controls width="100%" style="">
                                     <source src=" ' .
-                                $wellBeing->getFirstMediaUrl('WellBeingvideo') .
+                                $wellBeing->getFirstMediaUrl('wellbeingVideo') .
                                 ' " type="video/mp4">
                                     <source src=" ' .
-                                $wellBeing->getFirstMediaUrl('WellBeingvideo') .
+                                $wellBeing->getFirstMediaUrl('wellbeingVideo') .
                                 ' " type="video/ogg">
                                 </video>
                                 </div>';

@@ -18,8 +18,8 @@ class SiteCotroller extends Controller
         $sliders = Slider::get();
         $HowItAllBegan = Artical::where('section', 'HowItAllBegan')->first();
         $Vision = Artical::where('section', 'Vision')->first();
-        $galleries = Gallery::whereNotNull('content')->get();
-        return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'galleries'));
+        $events = Gallery::whereNotNull('content')->get();
+        return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'events'));
     }
 
     public function about()

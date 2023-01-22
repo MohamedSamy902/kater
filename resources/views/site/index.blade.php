@@ -181,10 +181,10 @@
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                @foreach ($galleries as $gallery)
+                @foreach ($events as $event)
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <a href="{{ route('gallery.detils', $gallery->id) }}">
+                            <a href="{{  URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
                                     <img src="{{ $gallery->getFirstMediaUrl('gallery') }}" alt="">
                                 </div>
@@ -192,9 +192,9 @@
 
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
-                                        href="{{ route('gallery.detils', $gallery->id) }}">{{ $gallery->title }}</a>
+                                        href="{{  URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
                                 </h3>
-                                <p class="causes-one__text">{{ $gallery->content }}</p>
+                                <p class="causes-one__text">{{ $event->content }}</p>
                             </div>
                         </div>
                     </div>

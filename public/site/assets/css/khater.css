@@ -10596,6 +10596,7 @@ body.locked .page-wrapper {
   overflow: hidden;
   border-radius: var(--khater-bdr-radius);
   z-index: 1;
+  height: 250px;
 }
 
 .gallery-page__img:before {

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticalController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryDetalisController;
 use App\Http\Controllers\HealthcareController;
@@ -46,6 +47,7 @@ Route::group(
                 ['TimeLine'];
                 /** Start Route Roles **/
                 Route::resource('sliders', SliderController::class)->except(['show']);
+                Route::resource('events', EventController::class)->except(['show']);
 
 
                 Route::resource('wellBeing', WellBeingController::class);

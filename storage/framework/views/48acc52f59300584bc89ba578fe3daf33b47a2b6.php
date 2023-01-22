@@ -182,6 +182,22 @@
                         </ul>
                     </li>
 
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('events')); ?>" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span><?php echo e(__('master.events')); ?></span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('events')); ?>;">
+                            <li><a href="<?php echo e(route('events.index')); ?>"
+                                    class="<?php echo e(routeActive('events.index')); ?>"><?php echo e(__('master.events')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(route('events.create')); ?>"
+                                    class="<?php echo e(routeActive('events.create')); ?>"><?php echo e(__('master.events')); ?>
+
+                                </a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
