@@ -52,7 +52,7 @@
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault06">{{ __('master.gallery') }}</label>
-                                    <select class="form-select" id="validationDefault06" required="" name="galleries_id">
+                                    <select class="form-select" id="validationDefault06" name="galleries_id">
                                         <option selected="" disabled="" value=""> {{ __('master.gallery') }}
                                         </option>
                                         @foreach ($galleries as $gallery)
