@@ -48,7 +48,8 @@ class EventController extends Controller
                 'content' => [
                     'en' => $request->content,
                     'ar' => $request->content_ar,
-                ]
+                ],
+                'link' => $request->link,
             ]);
 
             if ($request->file('event')) {

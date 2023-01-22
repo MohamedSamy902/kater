@@ -73,9 +73,11 @@ class GalleryController extends Controller
      * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function edit(Gallery $gallery)
+    public function edit($id)
     {
-        //
+        $gallery = Gallery::findOrFail($id);
+        return view('dashbord.gallery.edit', compact('gallery'));
+
     }
 
     /**
@@ -85,9 +87,26 @@ class GalleryController extends Controller
      * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Gallery $gallery)
+    public function update(Request $request, $id)
     {
-        //
+        $gallery = Gallery::findOrFail($id);
+        $data = $request->all();
+        $data['title'] = [
+            'en' => $request->title,
+            'ar' => $request->title_ar
+        ];
+        $data['content'] = [
+            'en' => $request->content,
+            'ar' => $request->content_ar
+        ];
+
+        $gallery = $gallery::update($data);
+        if ($request->file('gallery')) {
+            $gallery
+                ->addMedia($request->file('gallery'))
+                ->usingName($request->title)
+                ->toMediaCollection('gallery');
+        }
     }
 
     /**
