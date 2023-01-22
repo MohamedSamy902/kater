@@ -186,7 +186,7 @@
                         <div class="causes-one__single">
                             <a href="{{  URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
-                                    <img src="{{ $gallery->getFirstMediaUrl('gallery') }}" alt="">
+                                    <img src="{{ $event->getFirstMediaUrl('event') }}" alt="">
                                 </div>
                             </a>
 
