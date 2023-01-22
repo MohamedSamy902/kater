@@ -158,9 +158,9 @@
                                 <div class="causes-one__img">
                                     <img src="{{ $WellBeingDetails->getFirstMediaUrl('wellBeingDetails') }}"
                                         style="height: 300px" alt="">
-                                    <div class="causes-one__cat">
+                                    {{-- <div class="causes-one__cat">
                                         <p>{{ $WellBeingDetails->title }}</p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
