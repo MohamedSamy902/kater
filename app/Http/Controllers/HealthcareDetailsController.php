@@ -45,7 +45,9 @@ class HealthcareDetailsController extends Controller
                 'ar' => $request->title_ar,
             ],
             'healthcares_id' => $request->healthcares_id,
-            'galleries_id' => $request->galleries_id
+            'galleries_id' => $request->galleries_id,
+            'link' => $request->link
+
         ]);
 
         if ($request->file('healthcareDetails')) {
@@ -97,6 +99,7 @@ class HealthcareDetailsController extends Controller
             'en' => $request->title,
             'ar' => $request->title_ar
         ];
+        $data['link'] = $request->link;
 
         $healthcareDetails->update($data);
 

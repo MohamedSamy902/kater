@@ -13,5 +13,5 @@ class Artical extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title', 'content'];
 
-    protected $fillable = ['title', 'content', 'section', 'status'];
+    protected $fillable = ['title', 'content', 'section', 'link', 'status'];
 }

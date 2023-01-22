@@ -44,6 +44,7 @@ class WellBeingDetalisController extends Controller
         ];
 
         $data['well_beings_id'] = $request->well_beings_id;
+        $data['link'] = $request->link;
 
         $wellBeing = WellBeingDetalis::create(
             $data
@@ -100,6 +101,8 @@ class WellBeingDetalisController extends Controller
             'en' => $request->title,
             'ar' => $request->title_ar
         ];
+        $data['link'] = $request->link;
+
 
         $wellBeingDetalis->update($data);
 

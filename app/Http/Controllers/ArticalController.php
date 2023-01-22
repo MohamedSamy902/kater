@@ -49,6 +49,8 @@ class ArticalController extends Controller
             'ar' => $request->content_ar
         ];
         $data['section'] = $model;
+        $data['link'] = $request->link;
+
         $article = Artical::create($data);
         if ($request->file('article')) {
             $article
@@ -117,6 +119,7 @@ class ArticalController extends Controller
             'en' => $request->content,
             'ar' => $request->content_ar
         ];
+        $data['link'] = $request->link;
 
         $article->update($data);
 
