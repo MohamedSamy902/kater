@@ -105,6 +105,43 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('users')); ?>" href="javascript:void(0)">
                             <i data-feather="home"></i>
+                            <span>Index</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('users')); ?>;">
+                            <li><a href="<?php echo e(URL::route('articles.edit', ['FoundationStory'])); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.FoundationStory')); ?></a>
+                            </li>
+
+                            <li><a href="<?php echo e(route('articles.index', 'TimeLine')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.time_line')); ?></a>
+                            </li>
+
+                            <li><a href="<?php echo e(URL::route('articles.edit', ['WhoWeServe'])); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Who We Serve')); ?></a>
+                            </li>
+
+                            <li><a href="<?php echo e(URL::route('articles.index', 'OurGoals')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Our Goals')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(URL::route('articles.index', 'OurMission')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Our Mission')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(URL::route('articles.index', 'OurVision')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Our Vision')); ?></a>
+                            </li>
+
+
+                            <li><a href="<?php echo e(URL::route('articles.index', 'HowItAllBegan ')); ?>"
+                                class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began ')); ?></a>
+                        </li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('users')); ?>" href="javascript:void(0)">
+                            <i data-feather="home"></i>
                             <span><?php echo e(__('user.user')); ?></span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('users')); ?>;">

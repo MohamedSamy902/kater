@@ -103,6 +103,32 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('users') }}" href="javascript:void(0)">
                             <i data-feather="home"></i>
+                            <span>Index</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
+
+                            <li><a href="{{ URL::route('articles.index', 'Vision') }}"
+                                    class="{{ routeActive('users.index') }}">{{ __('master.Vision') }}</a>
+                            </li>
+                            <li><a href="{{ URL::route('articles.index', 'HowItAllBegan') }}"
+                                    class="{{ routeActive('users.index') }}">{{ __('master.How It All Began') }}</a>
+                            </li>
+                            <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
+                                    class="{{ routeActive('users.index') }}">{{ __('master.Healthcare Initiatives') }}</a>
+                            </li>
+
+
+                            <li><a href="{{ URL::route('articles.index', 'Impact ') }}"
+                                class="{{ routeActive('users.index') }}">{{ __('master.Impact') }}</a>
+                        </li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('users') }}" href="javascript:void(0)">
+                            <i data-feather="home"></i>
                             <span>{{ __('user.user') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
