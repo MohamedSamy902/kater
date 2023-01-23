@@ -4558,9 +4558,9 @@ body.locked .page-wrapper {
   padding-bottom: 30px;
 }
 
-.faq-one__left .section-title {
+/* .faq-one__left .section-title {
   margin-bottom: 28px;
-}
+} */
 
 .faq-one__text-1 {
   font-size: 16px;
@@ -7776,7 +7776,7 @@ body.locked .page-wrapper {
 }
 
 .events-two__text {
-  font-size: 16px;
+  font-size: 19px;
   padding-bottom: 41px;
 }
 
