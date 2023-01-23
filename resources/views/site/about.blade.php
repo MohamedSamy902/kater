@@ -286,7 +286,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
 
 
     </section>
@@ -612,10 +612,10 @@
     <script>
         // basic map setup. include other options as needed, refer to the docs
         var map = L.map('map').setView([30.022863, 31.2378640], 11);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // map.L.setCode("en");
+        L.tileLayer('https://tile.openstreetmap.en/{z}/{x}/{y}.png?lang=en', {
             maxZoom: 17,
             color: 'red',
-            // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
         // bind click event to the story divs, add a marker and zoom to that story's location. Remember to add dot before story as it is classname
@@ -689,13 +689,5 @@
 
         // 30.671873,32.2802739
         // L.marker([28.1807533, 31.6380565]).addTo(map).on('click', onZoomInMark);
-
-
-
-        // •
-        // •
-        // •
-        // •
-        // • Al Sharqia Governorate
     </script>
 @endsection
