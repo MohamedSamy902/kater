@@ -841,11 +841,11 @@ ul {
   margin-left: 10px;
 }
 
-.main-menu__right-bottom {
+    .main-menu__right-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 50px;
+  /* padding-left: 50px; */
   border-top-left-radius: 15px;
 }
 
