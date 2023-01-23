@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class GalleryController extends Controller
 {
@@ -66,7 +67,8 @@ class GalleryController extends Controller
      */
     public function show(Gallery $gallery)
     {
-        //
+        return view('dashbord.gallery.show', compact('gallery'));
+
     }
 
     /**
@@ -122,5 +124,11 @@ class GalleryController extends Controller
     public function destroy(Gallery $gallery)
     {
         //
+    }
+
+    public function removeImage($id)
+    {
+        return $id;
+        $media = Media::whereId($id)->delete();
     }
 }

@@ -2,26 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\User\UserRequest;
 use App\Models\User;
-use Spatie\Permission\Models\Role;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Models\GalleryDetalis;
+use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\User\UserRequest;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class UserController extends Controller
 {
 
-    function __construct()
-    {
-        $this->middleware('permission:user-list',   ['only' => ['index']]);
-        $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:user-edit',   ['only' => ['edit', 'update']]);
-        $this->middleware('permission:user-delete', ['only' => ['destroy']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('permission:user-list',   ['only' => ['index']]);
+    //     $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
+    //     $this->middleware('permission:user-edit',   ['only' => ['edit', 'update']]);
+    //     $this->middleware('permission:user-delete', ['only' => ['destroy']]);
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -134,6 +136,14 @@ class UserController extends Controller
         $users = User::status('inactive')->get();
         return view('dashbord.users.in-active-list', compact('users'));
     }
+
+    public function removeImage($id)
+    {
+        $gallery = GalleryDetalis::findOrFail($id);
+        $gallery->clearMediaCollection('galleryDetails');
+    }
+
+
 
 
 }

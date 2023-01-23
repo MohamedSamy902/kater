@@ -14,4 +14,9 @@ class GalleryDetalis extends Model implements HasMedia
     public $translatable = ['title'];
 
     protected $fillable = ['title', 'status', 'galleries_id'];
+
+    public function Gallery()
+    {
+        return $this->belongsTo(Gallery::class);
+    }
 }

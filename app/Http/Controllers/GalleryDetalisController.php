@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\GalleryDetalis;
 use Illuminate\Http\Request;
+use App\Models\GalleryDetalis;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class GalleryDetalisController extends Controller
 {
@@ -101,5 +102,13 @@ class GalleryDetalisController extends Controller
     public function destroy(GalleryDetalis $galleryDetalis)
     {
         //
+    }
+
+    public function removeImage($id)
+    {
+        $gallery = GalleryDetalis::findOrFail($id);
+        $gallery->clearMediaCollection('galleryDetails');
+        return redirect()->back()
+            ->with('success', __('master.messages_save'));
     }
 }

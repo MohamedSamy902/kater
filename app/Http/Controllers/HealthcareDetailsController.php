@@ -125,4 +125,13 @@ class HealthcareDetailsController extends Controller
     {
         //
     }
+
+
+    public function removeImage($id)
+    {
+        $gallery = HealthcareDetails::findOrFail($id);
+        $gallery->clearMediaCollection('galleryDetails');
+        return redirect()->back()
+            ->with('success', __('master.messages_save'));
+    }
 }

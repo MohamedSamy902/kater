@@ -127,4 +127,14 @@ class WellBeingDetalisController extends Controller
     {
         //
     }
+
+
+    public function removeImage($id)
+    {
+        $gallery = WellBeingDetalis::findOrFail($id);
+        $gallery->clearMediaCollection('galleryDetails');
+        return redirect()->back()
+            ->with('success', __('master.messages_save'));
+    }
+
 }

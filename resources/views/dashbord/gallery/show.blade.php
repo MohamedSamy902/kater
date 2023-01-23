@@ -24,30 +24,31 @@
         <div class="product-grid">
 
             <div class="product-wrapper-grid">
-                <h2 class="text-center">{{ $wellBeing->title }}</h2>
+                <h2 class="text-center">{{ $gallery->title }}</h2>
 
                 <div class="row">
-                    @foreach ($wellBeing->WellBeingDetalis as $well)
+                    @foreach ($gallery->galleryDetalis as $galler)
                         <div class="col-xl-3 col-sm-6 xl-4">
                             <div class="card">
                                 <div class="product-box">
                                     <div class="product-img">
-                                        <img class="img-fluid" src="{{ $well->getFirstMediaUrl('wellBeingDetails') }}"
+                                        <img class="img-fluid" src="{{ $galler->getFirstMediaUrl('galleryDetails') }}"
                                             alt="" />
                                         <div class="product-hover">
+
                                             <ul>
                                                 <li>
-                                                    <a href="cart"><i class="icon-shopping-cart"></i></a>
+                                                    <a href="{{ route('galleriesgDetails.deleteImage', $galler->id) }}"><i class="icon-remove-sign"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('wellBeingDetails.edit', $well->id) }}"><i
+                                                    <a href="{{ route('wellBeingDetails.edit', $galler->id) }}"><i
                                                             class="icon-eye"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="product-details">
-                                        <h4>{{ $well->title }}</h4>
+                                        <h4>{{ $galler->title }} {{ $galler->getFirstMedia() }}</h4>
                                     </div>
                                 </div>
                             </div>

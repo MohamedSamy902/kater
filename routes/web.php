@@ -15,6 +15,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\WellBeingController;
 use App\Http\Controllers\WellBeingDetalisController;
 use App\Models\Healthcare;
+use App\Models\User;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
@@ -40,6 +41,12 @@ Route::group(
                     return 'index';
                 })->name('index');
                 /** End Route Users **/
+
+                Route::get('galleriesgDetails/delete/image/{id}',               [GalleryDetalisController::class, 'removeImage'])->name('galleriesgDetails.deleteImage');
+                Route::get('wellBeingDetails/delete/image/{id}',               [WellBeingDetalisController::class, 'removeImage'])->name('wellBeingDetails.deleteImage');
+                Route::get('healthcareDetails/delete/image/{id}',               [HealthcareDetailsController::class, 'removeImage'])->name('healthcareDetails.deleteImage');
+
+
 
                 /** Start Route Roles **/
                 Route::resource('roles', RoleController::class)->except(['show']);

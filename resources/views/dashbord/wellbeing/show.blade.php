@@ -37,7 +37,7 @@
                                         <div class="product-hover">
                                             <ul>
                                                 <li>
-                                                    <a href="cart"><i class="icon-shopping-cart"></i></a>
+                                                    <a href="{{ route('wellBeingDetails.deleteImage', $well->id) }}"><i class="icon-remove-sign"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ route('wellBeingDetails.edit', $well->id) }}"><i
