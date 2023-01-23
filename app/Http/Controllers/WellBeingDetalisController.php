@@ -52,7 +52,6 @@ class WellBeingDetalisController extends Controller
         );
 
         if ($request->file('wellBeingDetails')) {
-            // return 'test';
             $wellBeing
                 ->addMedia($request->file('wellBeingDetails'))
                 ->usingName($request->title)
@@ -108,9 +107,7 @@ class WellBeingDetalisController extends Controller
 
         if ($request->file('wellBeingDetalis')) {
             $wellBeingDetalis
-            ->clearMediaCollection('wellBeingDetalis')
-
-
+                ->clearMediaCollection('wellBeingDetalis')
                 ->addMedia($request->file('wellBeingDetalis'))
                 ->usingName($request->title)
                 ->toMediaCollection('wellBeingDetalis');

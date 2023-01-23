@@ -143,22 +143,17 @@ class HealthcareController extends Controller
 
         if ($request->file('healthcarevideo')) {
             $healthcare
+                ->clearMediaCollection('healthcarevideo')
                 ->addMedia($request->file('healthcarevideo'))
                 ->usingName($request->title)
                 ->toMediaCollection('healthcarevideo');
         }
 
-        // if ($request->file('healthcareImage')) {
-        //     $healthcare
-        //         ->addMedia($request->file('healthcareImage'))
-        //         ->usingName($request->title)
-        //         ->toMediaCollection('healthcareImage');
-        // }
 
         if ($request->file('healthcarePhoto')) {
 
             $healthcare
-                // ->clearMediaCollection('healthcarePhoto')
+                ->clearMediaCollection('healthcarePhoto')
                 ->addMedia($request->file('healthcarePhoto'))
                 ->usingName($request->title)
                 ->toMediaCollection('healthcarePhoto');
