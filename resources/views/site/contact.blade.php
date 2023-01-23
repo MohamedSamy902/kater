@@ -92,7 +92,7 @@
                         </div>
                         <div class="contact-one__content">
                             <p class="contact-one__sub-title">{{ __('site.address') }}</p>
-                            <h3 class="contact-one__number">40, Road 254, Degla Maadi</h3>
+                            <h3 class="contact-one__number">{{ __('site.addr') }}</h3>
                         </div>
                     </li>
                 </ul>
