@@ -5539,7 +5539,7 @@ body.locked .page-wrapper {
 }
 
 .feature-two__tagline {
-  font-size: 16px;
+  font-size: 19px;
   color: var(--khater-gray);
   /* font-weight: 700; */
 }
@@ -11856,6 +11856,7 @@ body.boxed-wrapper {
 .main-timeline9 {
   position: relative;
   font-family: var(--khater-font-two);
+  font-size: 19px;
 }
 
 .main-timeline9:after,
