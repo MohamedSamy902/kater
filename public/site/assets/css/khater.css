@@ -12469,3 +12469,7 @@ body.boxed-wrapper {
     color: var(--khater-primary);
     transform: rotateY(180deg);
 }
+
+.subscribe {
+    font-family: var(--khater-font-two);
+}

@@ -60,11 +60,11 @@
                                     </li>
                                     <li>
                                         <div class="icon">
-                                            <i class="fas fa-phone-alt"></i>
+                                            {{-- <i class="fas fa-phone-alt"></i> --}}
                                             @php
                                             if (App::getLocale() == 'ar') {
                                                 echo '<i class="fas fa-phone"></i>';
-                                            }else {
+                                            }elseif(App::getLocale() == 'en') {
                                                 echo '<i class="fas fa-phone-alt"></i>';
                                             }
                                         @endphp
@@ -86,7 +86,7 @@
                                     <div class="col-lg-12">
                                         <h3 class="footer-widget__title"> {{ __('site.Subscribetoournewslette') }}</h3>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control p-2 rounded"
+                                            <input type="text" class="form-control p-2 rounded subscribe"
                                                 placeholder="{{ __('site.email') }}" aria-label="Email"
                                                 aria-describedby="button-addon2">
                                             <button style="border-radius: 5px"class="btn btn-info text-white"

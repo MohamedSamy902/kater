@@ -60,8 +60,17 @@
                                     </li>
                                     <li>
                                         <div class="icon">
-                                            <i class="fas fa-phone-alt"></i>
+                                            
+                                            <?php
+                                            if (App::getLocale() == 'ar') {
+                                                echo '<i class="fas fa-phone"></i>';
+                                            }elseif(App::getLocale() == 'en') {
+                                                echo '<i class="fas fa-phone-alt"></i>';
+                                            }
+                                        ?>
                                         </div>
+
+
                                         <div class="text">
                                             <p><a href="tel:980009630">+2 25 17 40 18</a></p>
                                         </div>
@@ -77,7 +86,7 @@
                                     <div class="col-lg-12">
                                         <h3 class="footer-widget__title"> <?php echo e(__('site.Subscribetoournewslette')); ?></h3>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control p-2 rounded"
+                                            <input type="text" class="form-control p-2 rounded subscribe"
                                                 placeholder="<?php echo e(__('site.email')); ?>" aria-label="Email"
                                                 aria-describedby="button-addon2">
                                             <button style="border-radius: 5px"class="btn btn-info text-white"
