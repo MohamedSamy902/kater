@@ -63,7 +63,7 @@
                     <div class="main-timeline9" style="top: -80px;">
                         <div class="timeline">
                             <div class="timeline-content line1">
-                                <a href="{{ $TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : '' }}">
+                                <a href="{{ $TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);' }}">
                                     <div class="circle"><img src="{{ $TimeLine[0]->getFirstMediaUrl('TimeLine') }}"
                                             class=" " alt="">
                                     </div>
@@ -82,7 +82,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line2" style="margin-top: 50px">
-                                <a href="{{ $TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : '' }}">
+                                <a href="{{ $TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : 'javascript: void(0);' }}">
                                     <div class="circle"><img src="{{ $TimeLine[1]->getFirstMediaUrl('TimeLine') }}"
                                             class=" " alt="">
                                     </div>
@@ -103,7 +103,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <a href="{{ $TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : '' }}">
+                                <a href="{{ $TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : 'javascript: void(0);' }}">
                                     <div class="circle"><img src="{{ $TimeLine[2]->getFirstMediaUrl('TimeLine') }}"
                                             class=" " alt="">
                                     </div>
@@ -129,7 +129,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line4" style="margin-top: 200px;">
-                                <a href="{{ $TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : '' }}">
+                                <a href="{{ $TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : 'javascript: void(0);' }}">
                                     <div class="circle"><img src="{{ $TimeLine[3]->getFirstMediaUrl('TimeLine') }}"
                                             class=" " alt="">
                                     </div>
@@ -155,7 +155,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line6" style="margin-top: 210px;">
-                                <a href="{{ $TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : '' }}">
+                                <a href="{{ $TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : 'javascript: void(0);' }}">
                                     <div class="circle">
                                         <img src="{{ $TimeLine[4]->getFirstMediaUrl('TimeLine') }}" class=""
                                             alt="">
@@ -180,7 +180,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <a href="{{ $TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : '' }}">
+                                <a href="{{ $TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : 'javascript: void(0);' }}">
 
                                     <div class="circle"><img src="{{ $TimeLine[5]->getFirstMediaUrl('TimeLine') }}"
                                             class=" " alt="">
@@ -207,7 +207,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line5" style="margin-top: 200px;">
-                                <a href="{{ $TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : '' }}">
+                                <a href="{{ $TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : 'javascript: void(0);' }}">
 
                                     <div class="circle">
                                         <img src="{{ $TimeLine[6]->getFirstMediaUrl('TimeLine') }}" class=""
@@ -233,7 +233,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line7" style="margin-top: 210px;">
-                                <a href="{{ $TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : '' }}">
+                                <a href="{{ $TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : 'javascript: void(0);' }}">
 
                                     <div class="circle">
                                         <img src="{{ $TimeLine[7]->getFirstMediaUrl('TimeLine') }}" class=""
@@ -258,7 +258,7 @@
 
                         <div class="timeline">
                             <div class="timeline-content line9" style="margin-top: 250px;">
-                                <a href="{{ $TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : '' }}">
+                                <a href="{{ $TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : 'javascript: void(0);' }}">
 
                                     <div class="circle">
                                         <img src="{{ $TimeLine[8]->getFirstMediaUrl('TimeLine') }}" class=""
@@ -282,11 +282,12 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="{{ route('gallery') }}" class="thm-btn "> Explore More</a>
+                        <a href="{{ route('gallery') }}" class="thm-btn ">{{ __('site.explore_more') }}</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
+
 
     </section>
 
@@ -302,8 +303,7 @@
                 <div class="col-xl-12 col-lg-12">
                     <div class="faq-one__left">
                         <div class="section-title text-center">
-                            <h2 class="section-title__title">Approaches
-                            </h2>
+                            <h2 class="section-title__title">{{ __('site.approaches') }}</h2>
                         </div>
                     </div>
                 </div>
@@ -494,15 +494,6 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="{{ asset('site') }}/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    {{-- <div class="swiper-slide story"
-                        data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="{{ asset('site') }}/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="{{ asset('site') }}/assets/images/partners/National_Cancer_Institute_en.jpg"
-                            alt="">
-                    </div> --}}
                     @php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide story"
@@ -512,7 +503,7 @@
                                 '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
                             echo '<div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_ar.jpg,National Cancer Institute (Cairo University)">
                         <img src="' .
                                 asset('site') .
                                 '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
@@ -554,10 +545,6 @@
                         <img src="{{ asset('site') }}/assets/images/partners/Ahl_Masr.jpg" alt="">
                     </div>
                     <!-- hero only -->
-                    <!-- <div class="swiper-slide story"
-                                                data-point="29.9849277,31.2303078,Alameda_en.jpg,Alameda Healthcare Group">
-                                                <img src="{{ asset('site') }}/assets/images/partners/Alameda_en.jpg" alt="">
-                                            </div> -->
                     <div class="swiper-slide story"
                         data-point="30.0287572,31.2360329,Egyptian_Autistic_Society.jpg,The Egyptian Autistic Society">
                         <img src="{{ asset('site') }}/assets/images/partners/Egyptian_Autistic_Society.jpg"
@@ -575,15 +562,6 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="{{ asset('site') }}/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    {{-- <div class="swiper-slide story"
-                        data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="{{ asset('site') }}/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="{{ asset('site') }}/assets/images/partners/National_Cancer_Institute_en.jpg"
-                            alt="">
-                    </div> --}}
 
                     @php
                         if (App::getLocale() == 'ar') {
@@ -594,7 +572,7 @@
                                 '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
                             echo '<div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_ar.jpg,National Cancer Institute (Cairo University)">
                         <img src="' .
                                 asset('site') .
                                 '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
@@ -619,12 +597,7 @@
                         <img src="{{ asset('site') }}/assets/images/partners/suez_canal.jpg" alt="">
                     </div>
 
-
-
-
-
                     <div class="swiper-slide">
-                        <!-- <img src="assets/images/partners/suez_canal.jpg" alt=""> -->
                     </div>
                 </div>
             </div>

@@ -9,10 +9,23 @@ return
         'WellBeing' => 'Well-being Initiatives',
         'Well' => 'Well-being ',
 
+        'approaches' => 'Approaches',
+        'explore_more' => ' Explore More',
+
+
         'contact_us'        => 'Contact Us',
         'contact'        => 'Contact Us',
-        'contact_title'        => 'لا تتردد في الكتابة إلينا في أي وقت',
-        'contact_with'        => 'اتصل بنا',
+        'contact_title'        => 'Feel free to write us anytime',
+        'contact_with'        => '',
+        'name' => 'Name',
+        'email' => 'Email Address',
+        'phone' => 'Phone',
+        'subject' => 'Subject',
+        'helpline' => 'Helpline',
+        'address' => 'Address',
+        'send_message' => 'Send a message',
+        'write_message' => 'Write a message',
+
 
         'home' => 'Home',
         'gallery' => 'Gallery',
@@ -26,5 +39,8 @@ return
         'readMore' => 'Read More',
         'timeLine' => 'Key Milestones',
 
+
+        // Footer
+        'addr' => '40, Road 254, Degla Maadi',
 
     ];

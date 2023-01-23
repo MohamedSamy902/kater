@@ -90,7 +90,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title pb-2"><?php echo e($HowItAllBegan->title); ?></h2>
                         </div>
-                        <p class="about-one__text pb-3"><?php echo e($HowItAllBegan->content); ?></p>
+                        <p class="about-one__text pb-3"><?php echo $HowItAllBegan->content; ?></p>
                         <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> <?php echo e($Vision->title); ?></h2>
                         </div>
-                        <p class="faq-one__text-1"><?php echo e($Vision->content); ?></p>
+                        <p class="faq-one__text-1"><?php echo $Vision->content; ?></p>
                         <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
 
                     </div>
@@ -148,7 +148,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3"
                             alt="">
                         <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="14">00</h3>
+                            <h3 class="odometer" style="font-size: 28px;" data-count="۴۲">۴۲</h3>
                             <p class="counter-one__text1"><?php echo e(__('site.Institutions')); ?> </p>
                         </div>
                     </li>

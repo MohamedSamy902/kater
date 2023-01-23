@@ -91,7 +91,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title pb-2">{{ $HowItAllBegan->title }}</h2>
                         </div>
-                        <p class="about-one__text pb-3">{{ $HowItAllBegan->content }}</p>
+                        <p class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</p>
                         <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> {{ $Vision->title }}</h2>
                         </div>
-                        <p class="faq-one__text-1">{{ $Vision->content }}</p>
+                        <p class="faq-one__text-1">{!! $Vision->content !!}</p>
                         <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
 
                     </div>

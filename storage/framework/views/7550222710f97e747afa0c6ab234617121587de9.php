@@ -62,14 +62,14 @@
                     <div class="main-timeline9" style="top: -80px;">
                         <div class="timeline">
                             <div class="timeline-content line1">
-                                <a href="<?php echo e($TimeLine[0]->link != null ?  URL::current('/') .  $TimeLine[0]->link :''); ?>">
+                                <a href="<?php echo e($TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);'); ?>">
                                     <div class="circle"><img src="<?php echo e($TimeLine[0]->getFirstMediaUrl('TimeLine')); ?>"
                                             class=" " alt="">
                                     </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
-                                    <ul style="text-align: start;"><?php echo e($TimeLine[0]->content); ?>
+                                    <ul style="text-align: start;"><?php echo $TimeLine[0]->content; ?>
 
                                     </ul>
                                     </p>
@@ -82,10 +82,10 @@
 
                         <div class="timeline">
                             <div class="timeline-content line2" style="margin-top: 50px">
-                                <a <?php echo e($TimeLine[1]->link); ?>href="<?php echo e($TimeLine[1]->link != null ?  URL::current('/') .  $TimeLine[1]->link :''); ?>">
-                                <div class="circle"><img src="<?php echo e($TimeLine[1]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[1]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -104,10 +104,10 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <a href="<?php echo e($TimeLine[2]->link != null ?  URL::current('/') .  $TimeLine[2]->link :''); ?>">
-                                <div class="circle"><img src="<?php echo e($TimeLine[2]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[2]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -130,10 +130,10 @@
 
                         <div class="timeline">
                             <div class="timeline-content line4" style="margin-top: 200px;">
-                                <a href="<?php echo e($TimeLine[3]->link != null ?  URL::current('/') .  $TimeLine[3]->link :''); ?>">
-                                <div class="circle"><img src="<?php echo e($TimeLine[3]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[3]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -156,11 +156,11 @@
 
                         <div class="timeline">
                             <div class="timeline-content line6" style="margin-top: 210px;">
-                                <a href="<?php echo e($TimeLine[4]->link != null ?  URL::current('/') .  $TimeLine[4]->link :''); ?>">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[4]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[4]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
                                 </a>
                                 <div class="content">
                                     <p class="description">
@@ -181,9 +181,12 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <div class="circle"><img src="<?php echo e($TimeLine[5]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle"><img src="<?php echo e($TimeLine[5]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -205,10 +208,13 @@
 
                         <div class="timeline">
                             <div class="timeline-content line5" style="margin-top: 200px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[6]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[6]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -228,10 +234,13 @@
 
                         <div class="timeline">
                             <div class="timeline-content line7" style="margin-top: 210px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[7]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[7]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -250,10 +259,13 @@
 
                         <div class="timeline">
                             <div class="timeline-content line9" style="margin-top: 250px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[8]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[8]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
@@ -271,7 +283,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="<?php echo e(route('gallery')); ?>" class="thm-btn "> Explore More</a>
+                        <a href="<?php echo e(route('gallery')); ?>" class="thm-btn "><?php echo e(__('site.explore_more')); ?></a>
                     </div>
                 </div>
             </div>
@@ -291,8 +303,7 @@
                 <div class="col-xl-12 col-lg-12">
                     <div class="faq-one__left">
                         <div class="section-title text-center">
-                            <h2 class="section-title__title">Approaches
-                            </h2>
+                            <h2 class="section-title__title"><?php echo e(__('site.approaches')); ?></h2>
                         </div>
                     </div>
                 </div>
@@ -485,7 +496,6 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide story"
@@ -495,7 +505,7 @@
                                 '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
                             echo '<div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_ar.jpg,National Cancer Institute (Cairo University)">
                         <img src="' .
                                 asset('site') .
                                 '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
@@ -537,10 +547,6 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Ahl_Masr.jpg" alt="">
                     </div>
                     <!-- hero only -->
-                    <!-- <div class="swiper-slide story"
-                                            data-point="29.9849277,31.2303078,Alameda_en.jpg,Alameda Healthcare Group">
-                                            <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Alameda_en.jpg" alt="">
-                                        </div> -->
                     <div class="swiper-slide story"
                         data-point="30.0287572,31.2360329,Egyptian_Autistic_Society.jpg,The Egyptian Autistic Society">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Egyptian_Autistic_Society.jpg"
@@ -558,7 +564,6 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    
 
                     <?php
                         if (App::getLocale() == 'ar') {
@@ -569,7 +574,7 @@
                                 '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
                             echo '<div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_ar.jpg,National Cancer Institute (Cairo University)">
                         <img src="' .
                                 asset('site') .
                                 '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
@@ -594,12 +599,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/suez_canal.jpg" alt="">
                     </div>
 
-
-
-
-
                     <div class="swiper-slide">
-                        <!-- <img src="assets/images/partners/suez_canal.jpg" alt=""> -->
                     </div>
                 </div>
             </div>
