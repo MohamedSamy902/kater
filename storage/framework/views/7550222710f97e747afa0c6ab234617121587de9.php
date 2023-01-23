@@ -616,7 +616,7 @@
         // basic map setup. include other options as needed, refer to the docs
         var map = L.map('map').setView([30.022863, 31.2378640], 11);
         // map.L.setCode("en");
-        L.tileLayer('https://tile.openstreetmap.en/{z}/{x}/{y}.png?lang=en', {
+        L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png?lang=en', {
             maxZoom: 17,
             color: 'red',
         }).addTo(map);
