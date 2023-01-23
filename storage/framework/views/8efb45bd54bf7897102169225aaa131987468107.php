@@ -109,7 +109,7 @@
             style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/gallery/Khater.jpg);height: 100%"></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-5 col-lg-5 pt-5 pb-0 px-5">
+                <div class="col-xl-5 col-lg-5 pt-2 pb-0 px-5">
                     <div class="faq-one__left">
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> <?php echo e($Vision->title); ?></h2>
