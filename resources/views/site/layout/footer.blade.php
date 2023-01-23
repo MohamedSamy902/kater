@@ -61,7 +61,16 @@
                                     <li>
                                         <div class="icon">
                                             <i class="fas fa-phone-alt"></i>
+                                            @php
+                                            if (App::getLocale() == 'ar') {
+                                                echo '<i class="fas fa-phone"></i>';
+                                            }else {
+                                                echo '<i class="fas fa-phone-alt"></i>';
+                                            }
+                                        @endphp
                                         </div>
+
+
                                         <div class="text">
                                             <p><a href="tel:980009630">+2 25 17 40 18</a></p>
                                         </div>
