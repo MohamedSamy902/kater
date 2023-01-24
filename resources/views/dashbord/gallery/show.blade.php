@@ -38,7 +38,7 @@
 
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('galleriesgDetails.deleteImage', $galler->id) }}"><i class="icon-remove-sign"></i></a>
+                                                    <a href="{{ route('galleriesgDetails.deleteImage', $galler->id) }}"><i class="icon-eye"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="{{ route('wellBeingDetails.edit', $galler->id) }}"><i

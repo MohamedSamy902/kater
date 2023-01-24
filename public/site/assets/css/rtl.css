@@ -218,13 +218,21 @@ h6 {
     z-index: 100;
     transform: translateY(-50%) translateX(0%);
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end !important;
     /* justify-content: end; */
     max-width: 95vw;
     width: 100%;
     padding: 0 15px;
     height: 0;
     line-height: 0;
+}
+
+@media only screen and (min-width: 1099px) and (max-width: 1450px) {
+    .main-slider__nav {
+
+        align-items: flex-start !important;
+
+    }
 }
 
 /* .main-slider__nav .swiper-button-prev {
