@@ -94,6 +94,7 @@ class HealthcareController extends Controller
      */
     public function show(Healthcare $healthcare)
     {
+        // return $healthcare->healthcareDetalis;
         return view('dashbord.healthcare.show', compact('healthcare'));
     }
 

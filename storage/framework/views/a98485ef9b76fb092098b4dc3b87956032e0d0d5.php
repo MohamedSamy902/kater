@@ -36,7 +36,7 @@
                                         <div class="product-hover">
                                             <ul>
                                                 <li>
-                                                    <a href="cart"><i class="icon-shopping-cart"></i></a>
+                                                    <a href="<?php echo e(route('healthcareDetails.deleteImage', $well->id)); ?>"><i class="fa fa-trash"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo e(route('healthcareDetails.edit', $well->id)); ?>"><i

@@ -15,7 +15,7 @@ class Healthcare extends Model implements HasMedia
 
     protected $fillable = ['title', 'content', 'convoys', 'services',  'status', 'short_content'];
 
-    public function HealthcareDetails()
+    public function healthcareDetalis()
     {
         return $this->hasMany(HealthcareDetails::class, 'healthcares_id', 'id');
     }
