@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <form class="needs-validation" novalidate="" method="post"
-                            action="{{ route('wellBeingDetails.update', $healthcareDetalis->id) }}" enctype="multipart/form-data">
+                            action="{{ route('healthcareDetails.update', $healthcareDetalis->id) }}" enctype="multipart/form-data">
                             @csrf
 
 
