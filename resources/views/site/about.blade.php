@@ -319,7 +319,7 @@
                                         <h3 class="feature-two__title" style="margin: -9px 0px 10px 40px;">
                                             {{ $OurVision->title }}</h3>
                                         <p class="feature-two__tagline">
-                                            {{ $OurVision->content }}
+                                            {!! $OurVision->content !!}
                                         </p>
                                     </div>
                                 </div>
@@ -338,7 +338,7 @@
                                     <div class="feature-two__content-left">
                                         <h3 class="feature-two__title" style="margin: -9px 0px 10px 65px;">
                                             {{ $OurMission->title }}</h3>
-                                        <p class="feature-two__tagline">{{ $OurMission->content }}
+                                        <p class="feature-two__tagline">{!! $OurMission->content !!}
                                         </p>
                                     </div>
 
