@@ -9,8 +9,8 @@ return
         'Health' => 'الرعاية الصحية',
         'Well' => 'الخدمات المجتمعيه',
 
-        'approaches' => 'إعرف أكثر',
-        'explore_more' => 'استكشف المزيد',
+        'approaches' => '',
+        'explore_more' => 'اكتشف المزيد',
 
 
         'contact_us'        => 'تواصل معانا',

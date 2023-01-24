@@ -152,17 +152,20 @@
                     }
                 }'>
                 @foreach ($wellBeing->WellBeingDetalis as $WellBeingDetails)
-
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
-                                <div class="causes-one__img">
-                                    <img src="{{ $WellBeingDetails->getFirstMediaUrl('wellBeingDetails') }}"
-                                        style="height: 300px" alt="">
-                                    {{-- <div class="causes-one__cat">
+                                <a
+                                    href="{{ $WellBeingDetails->link != null ? URL::to($WellBeingDetails->link) : 'javascript: void(0);' }}">
+
+                                    <div class="causes-one__img">
+                                        <img src="{{ $WellBeingDetails->getFirstMediaUrl('wellBeingDetails') }}"
+                                            style="height: 300px" alt="">
+                                        {{-- <div class="causes-one__cat">
                                         <p>{{ $WellBeingDetails->title }}</p>
                                     </div> --}}
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
