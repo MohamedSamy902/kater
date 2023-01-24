@@ -218,7 +218,8 @@ h6 {
     z-index: 100;
     transform: translateY(-50%) translateX(0%);
     display: flex;
-    justify-content: end;
+    align-items: flex-end;
+    /* justify-content: end; */
     max-width: 95vw;
     width: 100%;
     padding: 0 15px;
@@ -226,7 +227,7 @@ h6 {
     line-height: 0;
 }
 
-.main-slider__nav .swiper-button-prev {
+/* .main-slider__nav .swiper-button-prev {
     margin-bottom: 10px;
     margin-right: 10px;
-}
+} */

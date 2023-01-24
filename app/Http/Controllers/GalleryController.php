@@ -121,14 +121,15 @@ class GalleryController extends Controller
      * @param  \App\Models\Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gallery $gallery)
+    public function destroy($id)
     {
-        //
-    }
+        $gallery = Gallery::findOrFail($id);
+        foreach($gallery->galleryDetalis as $galleryDetalis) {
+            $galleryDetalis->clearMediaCollection('galleryDetails');
+        }
 
-    public function removeImage($id)
-    {
-        return $id;
-        $media = Media::whereId($id)->delete();
+        $gallery->clearMediaCollection('gallery');
+        $gallery->delete();
+        return redirect()->back()->with('success', __('master.messages_delete'));
     }
 }

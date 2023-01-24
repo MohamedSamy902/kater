@@ -95,8 +95,8 @@
 
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'HowItAllBegan ')); ?>"
-                                class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began ')); ?></a>
-                        </li>
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began ')); ?></a>
+                            </li>
 
 
                         </ul>
@@ -118,11 +118,14 @@
                             <li><a href="<?php echo e(URL::route('articles.index', 'HealthcareInitiatives')); ?>"
                                     class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Healthcare Initiatives')); ?></a>
                             </li>
+                            <li><a href="<?php echo e(URL::route('articles.index', 'Wellbiganing')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Well-Biganing')); ?></a>
+                            </li>
 
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'Impact ')); ?>"
-                                class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Impact')); ?></a>
-                        </li>
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Impact')); ?></a>
+                            </li>
 
 
                         </ul>
