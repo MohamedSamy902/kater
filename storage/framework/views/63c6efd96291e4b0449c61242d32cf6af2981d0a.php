@@ -37,7 +37,7 @@
 
                                             <ul>
                                                 <li>
-                                                    <a href="<?php echo e(route('deleteImage', $galler->id)); ?>"><i class="icon-shopping-cart"></i></a>
+                                                    <a href="<?php echo e(route('galleriesgDetails.deleteImage', $galler->id)); ?>"><i class="icon-remove-sign"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="<?php echo e(route('wellBeingDetails.edit', $galler->id)); ?>"><i

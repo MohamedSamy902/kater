@@ -113,7 +113,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[2]->content);
+                                            $timelineLists = explode('//', $TimeLine[2]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -139,7 +139,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[3]->content);
+                                            $timelineLists = explode('//', $TimeLine[3]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -166,7 +166,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[4]->content);
+                                            $timelineLists = explode('//', $TimeLine[4]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -191,7 +191,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[5]->content);
+                                            $timelineLists = explode('//', $TimeLine[5]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -219,7 +219,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[6]->content);
+                                            $timelineLists = explode('//', $TimeLine[6]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -245,7 +245,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[7]->content);
+                                            $timelineLists = explode('//', $TimeLine[7]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -270,7 +270,7 @@
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[8]->content);
+                                            $timelineLists = explode('//', $TimeLine[8]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -368,7 +368,7 @@
                                         <div class="feature-two__tagline">
                                             <ul style="list-style-type: '- ';font-family: var(--khater-font-two);">
                                                 <?php
-                                                    $OurGoals = explode(';', $OurGoals->content);
+                                                    $OurGoals = explode('//', $OurGoals->content);
                                                     foreach ($OurGoals as $goal) {
                                                         echo '<li>' . $goal . '</li>';
                                                     }
@@ -589,7 +589,7 @@
                                     </div>';
                             echo '<div class="swiper-slide story"
                         data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src=""' .
+                        <img src="' .
                                 asset('site') .
                                 '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
