@@ -23,7 +23,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title">{{ $healthcare->title }}</h2>
                         </div>
-                        <p class="about-two__text-1">{{ $healthcare->content }}</p>
+                        <p class="about-two__text-1">{!! $healthcare->content !!}</p>
                     </div>
                 </div>
                 <div class="col-xl-6">
