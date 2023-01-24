@@ -148,7 +148,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3"
                             alt="">
                         <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="15">00</h3>
+                            <h3 class="odometer numberphp " style="font-size: 28px;" data-count="15">00</h3>
                             <p class="counter-one__text1"><?php echo e(__('site.Institutions')); ?> </p>
                         </div>
                     </li>
@@ -156,7 +156,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png" class="w-25 p-2 mt-3"
                             alt="">
                         <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="88960">00</h3>
+                            <h3 class="odometer number" style="font-size: 28px;" data-count="88960">00</h3>
                             <p class="counter-one__text2"><?php echo e(__('site.HealthcareServices')); ?></p>
                         </div>
                     </li>
@@ -164,7 +164,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png" class="w-25 p-2 mt-3"
                             alt="">
                         <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="2846146">00</h3>
+                            <h3 class="odometer number" style="font-size: 28px;" data-count="2846146">00</h3>
                             <p class="counter-one__text3"><?php echo e(__('site.WellbeingServices')); ?></p>
                         </div>
                     </li>
