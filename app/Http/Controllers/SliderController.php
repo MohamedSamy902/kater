@@ -111,6 +111,8 @@ class SliderController extends Controller
             'ar' => $request->content_ar,
         ];
         $data['link'] = $request->link;
+        $data['status'] = $request->status;
+
         $slider->update($data);
         if ($request->file('slider')) {
             $slider

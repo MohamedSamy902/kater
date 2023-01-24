@@ -103,6 +103,8 @@ class GalleryController extends Controller
             'en' => $request->content,
             'ar' => $request->content_ar
         ];
+        $data['status'] = $request->status;
+
 
         $gallery->update($data);
         if ($request->file('gallery')) {

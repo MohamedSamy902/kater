@@ -4,7 +4,7 @@
 @extends('layouts.admin.master')
 
 @section('title')
-    {{ __('master.add_wellBeingDetalis') }}
+    {{ __('master.add_healthcareDetalis') }}
 @endsection
 
 @push('css')
@@ -17,8 +17,8 @@
             <h3></h3>
         @endslot
 
-        {{-- <li class="breadcrumb-item"><a href="{{ route('abouts.index') }}">{{ __('master.wellBeingDetalis') }}</a></li> --}}
-        {{-- <li class="breadcrumb-item active">{{ __('master.add_wellBeingDetalis') }}</li> --}}
+        {{-- <li class="breadcrumb-item"><a href="{{ route('abouts.index') }}">{{ __('master.healthcareDetalis') }}</a></li> --}}
+        {{-- <li class="breadcrumb-item active">{{ __('master.add_healthcareDetalis') }}</li> --}}
     @endcomponent
 
     <div class="container-fluid">
@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <form class="needs-validation" novalidate="" method="post"
-                            action="{{ route('wellBeingDetails.update', $wellBeingDetalis->id) }}" enctype="multipart/form-data">
+                            action="{{ route('wellBeingDetails.update', $healthcareDetalis->id) }}" enctype="multipart/form-data">
                             @csrf
 
 
@@ -40,7 +40,7 @@
                                         for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
                                         required=""
-                                        value="{{ old('title') ? old('title') : $wellBeingDetalis->getTranslation('title', 'en') }}" />
+                                        value="{{ old('title') ? old('title') : $healthcareDetalis->getTranslation('title', 'en') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -50,7 +50,7 @@
                                         for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
                                         required=""
-                                        value="{{ old('title_ar') ? old('title_ar') : $wellBeingDetalis->getTranslation('title', 'ar') }}" />
+                                        value="{{ old('title_ar') ? old('title_ar') : $healthcareDetalis->getTranslation('title', 'ar') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -66,7 +66,7 @@
                                 </div>
 
                             </div>
-                            
+
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">

@@ -73,7 +73,17 @@
                                 </div>
                             </div>
 
-
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationDefault06">{{ __('master.status') }}</label>
+                                    <select class="form-select" id="validationDefault06" name="status">
+                                        <option value="active"> Active</option>
+                                        <option value="inactive"> InActive</option>
+                                    </select>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
 
 
                             <div class="row g-1">

@@ -139,6 +139,7 @@ class HealthcareController extends Controller
             'en' => $request->services,
             'ar' => $request->services_ar
         ];
+        $data['status'] = $request->status;
 
         $healthcare->update($data);
 

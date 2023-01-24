@@ -43,7 +43,6 @@ class SiteCotroller extends Controller
     public function impact()
     {
         $impact = Artical::where('section', 'Impact')->first();
-
         return view('site.impact', compact('impact'));
     }
 
