@@ -16,10 +16,10 @@ class SiteCotroller extends Controller
 
     public function index()
     {
-        $sliders = Slider::get();
+        $sliders = Slider::where('status', 'active')->get();
         $HowItAllBegan = Artical::where('section', 'HowItAllBegan')->first();
         $Vision = Artical::where('section', 'Vision')->first();
-        $events = Event::whereNotNull('content')->get();
+        $events = Event::whereNotNull('content')->where('status', 'active')->get();
         return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'events'));
     }
 
@@ -76,8 +76,8 @@ class SiteCotroller extends Controller
     public function wellbeingDetiles($id)
     {
         $wellBeing = WellBeing::findOrFail($id);
-        $allHealthcare = Healthcare::get();
-        $allWellBeing = WellBeing::get();
+        $allHealthcare = Healthcare::where('status', 'active')->get();
+        $allWellBeing = WellBeing::where('status', 'active')->get();
         // return $wellBeing->getFirstMediaUrl('WellBeingvideoo');
         return view('site.wellbeing-details', compact('wellBeing', 'allHealthcare', 'allWellBeing'));
 

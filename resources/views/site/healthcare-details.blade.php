@@ -82,6 +82,7 @@
                                         </a>
                                     </div>
                                 @endforeach
+                                
                                 @foreach ($allHealthcare as $allHealth)
                                     <div class="">
                                         <a href="{{ route('healthcare.detils', $allHealth->id) }}">
