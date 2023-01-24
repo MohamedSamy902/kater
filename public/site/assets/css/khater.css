@@ -12474,3 +12474,11 @@ body.boxed-wrapper {
 .subscribe {
     font-family: var(--khater-font-two);
 }
+@media only screen and (min-width: 1200px) and (max-width: 1425px)
+{
+    .main-slider__nav {
+        left: -38% !important;
+        transform: translateY(-50%) translateX(-50%);
+        align-items: flex-end;
+    }
+}

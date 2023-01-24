@@ -235,7 +235,7 @@ h6 {
 
 @media only screen and (min-width: 1099px) and (max-width: 1450px) {
     .main-slider__nav {
-        left: 94%;
+        left: 94% !important;
         align-items: flex-start !important;
 
     }
