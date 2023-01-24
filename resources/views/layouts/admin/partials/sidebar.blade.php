@@ -93,8 +93,8 @@
 
 
                             <li><a href="{{ URL::route('articles.index', 'HowItAllBegan ') }}"
-                                class="{{ routeActive('users.index') }}">{{ __('master.How It All Began ') }}</a>
-                        </li>
+                                    class="{{ routeActive('users.index') }}">{{ __('master.How It All Began ') }}</a>
+                            </li>
 
 
                         </ul>
@@ -116,11 +116,14 @@
                             <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
                                     class="{{ routeActive('users.index') }}">{{ __('master.Healthcare Initiatives') }}</a>
                             </li>
+                            <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
+                                    class="{{ routeActive('users.index') }}">{{ __('master.Well-Biganing') }}</a>
+                            </li>
 
 
                             <li><a href="{{ URL::route('articles.index', 'Impact ') }}"
-                                class="{{ routeActive('users.index') }}">{{ __('master.Impact') }}</a>
-                        </li>
+                                    class="{{ routeActive('users.index') }}">{{ __('master.Impact') }}</a>
+                            </li>
 
 
                         </ul>

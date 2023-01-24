@@ -21,7 +21,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($impact->title); ?></h2>
                         </div>
-                        <p class="about-four__text"><?php echo e($impact->content); ?></p>
+                        <p class="about-four__text"><?php echo $impact->content; ?></p>
                         <div class="">
                             <a href="<?php echo e(route('healthcare')); ?>" class=" main-slider__btn Healthcare">  <?php echo e(__('site.Health')); ?> </a>
                             <a href="<?php echo e(route('wellbeing')); ?>" class=" main-slider__btn being"> <?php echo e(__('site.Well')); ?></a>
