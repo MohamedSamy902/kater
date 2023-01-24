@@ -10,7 +10,7 @@ return
         'Well' => 'الخدمات المجتمعيه',
 
         'approaches' => 'إعرف أكثر',
-        'explore_more' => 'استكشاف المزيد',
+        'explore_more' => 'استكشف المزيد',
 
 
         'contact_us'        => 'تواصل معانا',
