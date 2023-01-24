@@ -23,7 +23,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title">{{ $impact->title }}</h2>
                         </div>
-                        <p class="about-four__text">{{ $impact->content }}</p>
+                        <p class="about-four__text">{!! $impact->content !!}</p>
                         <div class="">
                             <a href="{{ route('healthcare') }}" class=" main-slider__btn Healthcare">  {{ __('site.Health') }} </a>
                             <a href="{{ route('wellbeing') }}" class=" main-slider__btn being"> {{ __('site.Well') }}</a>
