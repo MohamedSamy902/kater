@@ -50,7 +50,7 @@ class SiteCotroller extends Controller
     public function healthcare()
     {
         $healthcare = Artical::where('section', 'HealthcareInitiatives')->first();
-        $healthcareies = Healthcare::get();
+        $healthcareies = Healthcare::where('status', 'active')->get();
         return view('site.healthcare', compact('healthcare', 'healthcareies'));
     }
 
@@ -67,7 +67,7 @@ class SiteCotroller extends Controller
     public function wellbeing()
     {
         $Wellbiganing = Artical::where('section', 'Wellbiganing')->first();
-        $wellbeingies = WellBeing::get();
+        $wellbeingies = WellBeing::where('status', 'active')->get();
         // return $artical;
         return view('site.wellbeing', compact('Wellbiganing', 'wellbeingies'));
     }
@@ -88,7 +88,7 @@ class SiteCotroller extends Controller
 
     public function gallery()
     {
-        $galleries = Gallery::get();
+        $galleries = Gallery::where('status', 'active')->get();
 
         return view('site.gallery', compact('galleries'));
     }
