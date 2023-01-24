@@ -108,6 +108,7 @@ class GalleryDetalisController extends Controller
     {
         $gallery = GalleryDetalis::findOrFail($id);
         $gallery->clearMediaCollection('galleryDetails');
+        $gallery->delete();
         return redirect()->back()
             ->with('success', __('master.messages_save'));
     }

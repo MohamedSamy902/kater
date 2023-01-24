@@ -133,6 +133,7 @@ class WellBeingDetalisController extends Controller
     {
         $gallery = WellBeingDetalis::findOrFail($id);
         $gallery->clearMediaCollection('galleryDetails');
+        $gallery->delete();
         return redirect()->back()
             ->with('success', __('master.messages_save'));
     }
