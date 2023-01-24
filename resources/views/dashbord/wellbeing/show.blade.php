@@ -37,11 +37,10 @@
                                         <div class="product-hover">
                                             <ul>
                                                 <li>
-                                                    <a href="{{ route('wellBeingDetails.deleteImage', $well->id) }}"><i class="icon-remove-sign"></i></a>
+                                                    <a href="{{ route('wellBeingDetails.deleteImage', $well->id) }}"><i class="fa fa-trash"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('wellBeingDetails.edit', $well->id) }}"><i
-                                                            class="icon-eye"></i></a>
+                                                    <a href="{{ route('wellBeingDetails.edit', $well->id) }}"><i class="icon-eye"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
