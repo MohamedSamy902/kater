@@ -71,7 +71,7 @@
                                         </div>
 
 
-                                        <div class="text">
+                                        <div class="text number">
                                             <p><a class="number" href="tel:980009630">+2 25 17 40 18</a></p>
                                         </div>
                                     </li>

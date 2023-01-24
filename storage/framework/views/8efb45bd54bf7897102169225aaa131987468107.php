@@ -148,7 +148,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3"
                             alt="">
                         <div class="counter-one__count-box">
-                            <h3 class="odometer numberphp " style="font-size: 28px;" data-count="15">00</h3>
+                            <h3 class="odometer number" style="font-size: 28px;" data-count="15">00</h3>
                             <p class="counter-one__text1"><?php echo e(__('site.Institutions')); ?> </p>
                         </div>
                     </li>
