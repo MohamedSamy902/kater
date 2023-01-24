@@ -427,7 +427,7 @@
                     <div class="section-title text-left">
                         <h2 class="section-title__title">{{ $WhereWeServe->title }}</h2>
                     </div>
-                    <p class="events-two__text">{{ $WhereWeServe->content }}</p>
+                    <p class="events-two__text">{!! $WhereWeServe->content !!}</p>
                 </div>
             </div>
             <div class="thm-swiper__slider swiper-container"
