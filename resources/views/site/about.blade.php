@@ -400,7 +400,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title">{{ $WhoWeServe->title }}</h2>
                         </div>
-                        <p class="about-one__text">{{ $WhoWeServe->content }}</p>
+                        <p class="about-one__text">{!! $WhoWeServe->content !!}</p>
 
                     </div>
                 </div>
