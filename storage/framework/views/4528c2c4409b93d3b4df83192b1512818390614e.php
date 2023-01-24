@@ -69,7 +69,7 @@
                         <div class="contact-one__icon">
                             <span class="icon-phone-call"></span>
                         </div>
-                        <div class="contact-one__content">
+                        <div class="contact-one__content number">
                             <p class="contact-one__sub-title"><?php echo e(__('site.phone')); ?></p>
                             <h3 class="contact-one__number"><a href="tel:980009630">+225174018</a></h3>
                         </div>
@@ -90,7 +90,7 @@
                         </div>
                         <div class="contact-one__content">
                             <p class="contact-one__sub-title"><?php echo e(__('site.address')); ?></p>
-                            <h3 class="contact-one__number">40, Road 254, Degla Maadi</h3>
+                            <h3 class="contact-one__number"><?php echo e(__('site.addr')); ?></h3>
                         </div>
                     </li>
                 </ul>

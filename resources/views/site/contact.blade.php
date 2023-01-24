@@ -71,7 +71,7 @@
                         <div class="contact-one__icon">
                             <span class="icon-phone-call"></span>
                         </div>
-                        <div class="contact-one__content">
+                        <div class="contact-one__content number">
                             <p class="contact-one__sub-title">{{ __('site.phone') }}</p>
                             <h3 class="contact-one__number"><a href="tel:980009630">+225174018</a></h3>
                         </div>
