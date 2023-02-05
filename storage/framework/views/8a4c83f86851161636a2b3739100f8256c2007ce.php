@@ -32,9 +32,205 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            <marquee width="100%" direction="up" height="510px" scrollamount="2" loop="true"
+                            <marquee width="100%" direction="up" height="580px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
 
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="">
                                         <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
@@ -95,7 +291,7 @@
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
                                 <?php
-                                    if ($wellBeing->getFirstMediaUrl('WellBeingvideo')) {
+                                    if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
                                         echo '<p class="event-details__text-6">' . $wellBeing->content . '</p>';
                                     }
 
@@ -156,13 +352,15 @@
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
-                                <div class="causes-one__img">
-                                    <img src="<?php echo e($WellBeingDetails->getFirstMediaUrl('wellBeingDetails')); ?>"
-                                        style="height: 300px" alt="">
-                                    <div class="causes-one__cat">
-                                        <p><?php echo e($WellBeingDetails->title); ?></p>
+                                <a
+                                    href="<?php echo e($WellBeingDetails->link != null ? URL::to($WellBeingDetails->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="causes-one__img">
+                                        <img src="<?php echo e($WellBeingDetails->getFirstMediaUrl('wellBeingDetails')); ?>"
+                                            style="height: 300px" alt="">
+                                        
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>

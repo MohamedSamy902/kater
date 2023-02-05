@@ -11922,12 +11922,17 @@ body.boxed-wrapper {
   bottom: -2px
 }
 
-.main-timeline9 .timeline-content {
-  text-align: center;
-  margin-top: 70px;
-  position: relative;
-  transition: all .3s ease 0s
+.main-timeline9 .timeline-content .content ul{
+    list-style-type: '- ';
 }
+
+
+.main-timeline9 .timeline-content {
+    text-align: center;
+    margin-top: 70px;
+    position: relative;
+    transition: all .3s ease 0s
+  }
 
 .main-timeline9 .timeline-content:before {
   content: "";

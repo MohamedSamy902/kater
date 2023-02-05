@@ -1295,13 +1295,50 @@
 
 
 @media only screen and (max-width: 767px) {
+
     .main-slider .image-layer {
         display: none;
     }
 
     .main-slider__title {
-        font-size: 42px;
+        font-size: 25px;
         line-height: 52px;
+    }
+
+    .main-slider__content p {
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    .thm-btn {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        margin-top: 20px;
+        outline: none !important;
+        background-color: var(--khater-primary);
+        color: var(--khater-black);
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0;
+        border: 1px solid var(--khater-primary);
+        border-radius: 30px;
+        padding: 10px 30px;
+        transition: all 0.5s linear;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+
+
+    .about-four__img {
+        position: relative;
+        display: block;
+        z-index: 2;
+        width: 100% !important;
+        right: 0px !important;
+        transform: rotatey(180deg) !important;
     }
 
     .main-slider__nav {
@@ -1339,18 +1376,7 @@
 
 
 
-
-
 }
-
-
-
-
-
-
-
-
-
 
 
 /*--------------------------------------------------------------

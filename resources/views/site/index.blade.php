@@ -66,75 +66,8 @@
     </section>
     <!--Main Slider End-->
 
-    <!--About One Start-->
-    <section class="about-one">
-        <div class="about-one__shape-box-1">
-            <div class="about-one__shape-1"
-                style="background-image: url({{ asset('site') }}/assets/images/shapes/about-one-shape-1.png);">
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row p-0">
-                <div class="col-xl-5 p-0">
-                    <div class="about-one__left">
-                        <div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                            <div class="about-one__img">
-                                <img src="{{ $HowItAllBegan->getFirstMediaUrl('HowItAllBegan') }}" alt="">
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7">
-                    <div class="about-one__right pt-5">
-                        <div class="section-title text-left">
-                            <h2 class="section-title__title pb-2">{{ $HowItAllBegan->title }}</h2>
-                        </div>
-                        <p class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</p>
-                        <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--About One End-->
-
-
-
-    <!--FAQ One Start-->
-    <section class="faq-one faq-two faq-three">
-        <div class="faq-one-shape-1"
-            style="background-image: url({{ asset('site') }}/assets/images/shapes/faq-one-shape-1.png);"></div>
-        <div class="faq-one-bg"
-            style="background-image: url({{ asset('site') }}/assets/images/gallery/Khater.jpg);height: 100%"></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-5 col-lg-5 pt-2 pb-0 px-5">
-                    <div class="faq-one__left">
-                        <div class="section-title text-left">
-                            <h2 class="section-title__title"> {{ $Vision->title }}</h2>
-                        </div>
-                        <p class="faq-one__text-1">{!! $Vision->content !!}</p>
-                        <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
-
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-7 p-0">
-                    <div class="faq-one__right">
-                        <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                            <img src="{{ $Vision->getFirstMediaUrl('Vision') }}" class="" style="width: 100%"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FAQ One End-->
-
-    <!--Become Volunteer One Start-->
-    <section class="become-volunteer-one" style="margin-top: 5px;">
+    {{-- Counter Start --}}
+    <section class="become-volunteer-one" >
         <div class="become-volunteer-one__bg-box">
             <div class="become-volunteer-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
                 style="background-image: url({{ asset('site') }}/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);">
@@ -174,6 +107,81 @@
             </div>
         </div>
     </section>
+    {{-- End Counter --}}
+
+    <!--FAQ One Start-->
+    <section class="faq-one faq-two faq-three">
+        <div class="faq-one-shape-1"
+            style="background-image: url({{ asset('site') }}/assets/images/shapes/faq-one-shape-1.png);"></div>
+        <div class="faq-one-bg"
+            style="background-image: url({{ asset('site') }}/assets/images/gallery/Khater.jpg);height: 100%"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 pt-2 pb-0 px-5">
+                    <div class="faq-one__left">
+                        <div class="section-title text-left">
+                            <h2 class="section-title__title"> {{ $Vision->title }}</h2>
+                        </div>
+                        <p class="faq-one__text-1">{!! $Vision->content !!}</p>
+                        <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
+
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 p-0">
+                    <div class="faq-one__right">
+                        <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                            <img src="{{ $Vision->getFirstMediaUrl('Vision') }}" class="" style="width: 100%"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FAQ One End-->
+
+    <!--About One Start-->
+    <section class="about-one">
+        <div class="about-one__shape-box-1">
+            <div class="about-one__shape-1"
+                style="background-image: url({{ asset('site') }}/assets/images/shapes/about-one-shape-1.png);">
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row p-0">
+                <div class="col-xl-5 p-0">
+                    <div class="about-one__left">
+                        <div class="about-one__img-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                            <div class="about-one__img">
+                                <img src="{{ $HowItAllBegan->getFirstMediaUrl('HowItAllBegan') }}" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="about-one__right pt-5">
+                        <div class="section-title text-left">
+                            <h2 class="section-title__title pb-2">{{ $HowItAllBegan->title }}</h2>
+                        </div>
+                        <p class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</p>
+                        <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About One End-->
+
+
+
+
+
+    <!--Become Volunteer One Start-->
+
+
+
     <section class="donation-carousel-page">
         <div class="container-fuild p-5">
             <div class="row">

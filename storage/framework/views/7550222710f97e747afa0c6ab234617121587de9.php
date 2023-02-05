@@ -320,7 +320,7 @@
                                         <h3 class="feature-two__title" style="margin: -9px 0px 10px 40px;">
                                             <?php echo e($OurVision->title); ?></h3>
                                         <p class="feature-two__tagline">
-                                            <?php echo e($OurVision->content); ?>
+                                            <?php echo $OurVision->content; ?>
 
                                         </p>
                                     </div>
@@ -340,7 +340,7 @@
                                     <div class="feature-two__content-left">
                                         <h3 class="feature-two__title" style="margin: -9px 0px 10px 65px;">
                                             <?php echo e($OurMission->title); ?></h3>
-                                        <p class="feature-two__tagline"><?php echo e($OurMission->content); ?>
+                                        <p class="feature-two__tagline"><?php echo $OurMission->content; ?>
 
                                         </p>
                                     </div>
@@ -403,7 +403,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($WhoWeServe->title); ?></h2>
                         </div>
-                        <p class="about-one__text"><?php echo e($WhoWeServe->content); ?></p>
+                        <p class="about-one__text"><?php echo $WhoWeServe->content; ?></p>
 
                     </div>
                 </div>
@@ -430,7 +430,7 @@
                     <div class="section-title text-left">
                         <h2 class="section-title__title"><?php echo e($WhereWeServe->title); ?></h2>
                     </div>
-                    <p class="events-two__text"><?php echo e($WhereWeServe->content); ?></p>
+                    <p class="events-two__text"><?php echo $WhereWeServe->content; ?></p>
                 </div>
             </div>
             <div class="thm-swiper__slider swiper-container"

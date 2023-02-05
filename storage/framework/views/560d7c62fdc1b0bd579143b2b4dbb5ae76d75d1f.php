@@ -21,7 +21,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($healthcare->title); ?></h2>
                         </div>
-                        <p class="about-two__text-1"><?php echo e($healthcare->content); ?></p>
+                        <p class="about-two__text-1"><?php echo $healthcare->content; ?></p>
                     </div>
                 </div>
                 <div class="col-xl-6">
