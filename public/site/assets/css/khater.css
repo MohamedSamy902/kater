@@ -3571,7 +3571,7 @@ body.locked .page-wrapper {
   position: relative;
   display: block;
   z-index: 1;
-  padding: 30px 20px 70px;
+  padding: 30px 20px 0px;
 }
 
 .become-volunteer-one__bg-box {

@@ -68,13 +68,12 @@
 
     {{-- Counter Start --}}
     <section class="become-volunteer-one" >
-        <div class="become-volunteer-one__bg-box">
+        {{-- <div class="become-volunteer-one__bg-box">
             <div class="become-volunteer-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
                 style="background-image: url({{ asset('site') }}/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);">
             </div>
-        </div>
-        <div class="become-volunteer-one__shape-1"
-            style="background-image: url({{ asset('site') }}/assets/images/shapes/become-volunteer-shape-1.png);"></div>
+        </div> --}}
+
         <div class="container-fuild">
             <div class="become-volunteer-one__inner">
                 <ul class="list-unstyled counter-one__list">
