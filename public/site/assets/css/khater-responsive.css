@@ -481,9 +481,15 @@
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
 
+    .feature-two__single-inner.three {
+        height: 430px;
+    }
 
+    .feature-two__single-inner.one {
+        height: 400px;
+    }
     .impact_img img {
-        width: 70vw !important;
+        width: 101vw !important;
     }
 
     .main-timeline9 .line1:before,
@@ -610,7 +616,7 @@
     }
 
     .causes-one__content {
-        padding: 22px 25px 30px;
+        padding: 22px 3px 30px;
     }
 
     .become-volunteer-one__title br {

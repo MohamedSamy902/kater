@@ -38,8 +38,9 @@
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
                                             <?php if($slider->link != null): ?>
-                                            <a href="<?php echo e(URL::current()); ?>/<?php echo e($slider->link); ?>" class="thm-btn main-slider__btn">
-                                                <?php echo e(__('site.readMore')); ?></a>
+                                                <a href="<?php echo e(URL::current()); ?>/<?php echo e($slider->link); ?>"
+                                                    class="thm-btn main-slider__btn">
+                                                    <?php echo e(__('site.readMore')); ?></a>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -66,7 +67,7 @@
     <!--Main Slider End-->
 
     
-    <section class="become-volunteer-one" >
+    <section class="become-volunteer-one">
         
 
         <div class="container-fuild">
@@ -116,7 +117,10 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> <?php echo e($Vision->title); ?></h2>
                         </div>
-                        <p class="faq-one__text-1"><?php echo $Vision->content; ?></p>
+                        <div>
+                            <?php echo $Vision->content; ?>
+
+                        </div>
                         <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
 
                     </div>
@@ -135,7 +139,7 @@
     <!--FAQ One End-->
 
     <!--About One Start-->
-    <section class="about-one">
+    <section class="about-one responsive">
         <div class="about-one__shape-box-1">
             <div class="about-one__shape-1"
                 style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/about-one-shape-1.png);">
@@ -159,7 +163,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title pb-2"><?php echo e($HowItAllBegan->title); ?></h2>
                         </div>
-                        <p class="about-one__text pb-3"><?php echo $HowItAllBegan->content; ?></p>
+                        <div class="about-one__text pb-3"><?php echo $HowItAllBegan->content; ?></div>
                         <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
                     </div>
                 </div>
