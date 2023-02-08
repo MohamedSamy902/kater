@@ -62,12 +62,14 @@
                     <div class="main-timeline9" style="top: -80px;">
                         <div class="timeline">
                             <div class="timeline-content line1">
-                                <div class="circle"><img src="<?php echo e($TimeLine[0]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[0]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
-                                                                        <p class="description">
-                                    <ul style="text-align: start;"><?php echo e($TimeLine[0]->content); ?>
+                                    <p class="description">
+                                    <ul style="text-align: start;"><?php echo $TimeLine[0]->content; ?>
 
                                     </ul>
                                     </p>
@@ -80,17 +82,19 @@
 
                         <div class="timeline">
                             <div class="timeline-content line2" style="margin-top: 50px">
-                                <div class="circle"><img src="<?php echo e($TimeLine[1]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[1]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
 
                                     <ul style="text-align: start;">
                                         <?php echo e($TimeLine[1]->content); ?>
 
-                                        </ul>
-                                        </p>
+                                    </ul>
+                                    </p>
 
                                     <div class="icon"><?php echo e($TimeLine[1]->title); ?></div>
 
@@ -100,14 +104,16 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <div class="circle"><img src="<?php echo e($TimeLine[2]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[2]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[2]->content);
+                                            $timelineLists = explode('//', $TimeLine[2]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -124,14 +130,16 @@
 
                         <div class="timeline">
                             <div class="timeline-content line4" style="margin-top: 200px;">
-                                <div class="circle"><img src="<?php echo e($TimeLine[3]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[3]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[3]->content);
+                                            $timelineLists = explode('//', $TimeLine[3]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -148,15 +156,17 @@
 
                         <div class="timeline">
                             <div class="timeline-content line6" style="margin-top: 210px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[4]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[4]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[4]->content);
+                                            $timelineLists = explode('//', $TimeLine[4]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -171,14 +181,17 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <div class="circle"><img src="<?php echo e($TimeLine[5]->getFirstMediaUrl('TimeLine')); ?>"
-                                        class=" " alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle"><img src="<?php echo e($TimeLine[5]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[5]->content);
+                                            $timelineLists = explode('//', $TimeLine[5]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -195,15 +208,18 @@
 
                         <div class="timeline">
                             <div class="timeline-content line5" style="margin-top: 200px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[6]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[6]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[6]->content);
+                                            $timelineLists = explode('//', $TimeLine[6]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -218,15 +234,18 @@
 
                         <div class="timeline">
                             <div class="timeline-content line7" style="margin-top: 210px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[7]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[7]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[7]->content);
+                                            $timelineLists = explode('//', $TimeLine[7]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -240,15 +259,18 @@
 
                         <div class="timeline">
                             <div class="timeline-content line9" style="margin-top: 250px;">
-                                <div class="circle">
-                                    <img src="<?php echo e($TimeLine[8]->getFirstMediaUrl('TimeLine')); ?>" class=""
-                                        alt="">
-                                </div>
+                                <a href="<?php echo e($TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[8]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
                                 <div class="content">
                                     <p class="description">
                                     <ul style="text-align: start;">
                                         <?php
-                                            $timelineLists = explode(';', $TimeLine[8]->content);
+                                            $timelineLists = explode('//', $TimeLine[8]->content);
                                             foreach ($timelineLists as $timelineList) {
                                                 echo '<li>' . $timelineList . '</li>';
                                             }
@@ -261,11 +283,12 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="<?php echo e(route('gallery')); ?>" class="thm-btn "> Explore More</a>
+                        <a href="<?php echo e(route('gallery')); ?>" class="thm-btn "><?php echo e(__('site.explore_more')); ?></a>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </section>
 
@@ -281,8 +304,7 @@
                 <div class="col-xl-12 col-lg-12">
                     <div class="faq-one__left">
                         <div class="section-title text-center">
-                            <h2 class="section-title__title">Approaches
-                            </h2>
+                            <h2 class="section-title__title"><?php echo e(__('site.approaches')); ?></h2>
                         </div>
                     </div>
                 </div>
@@ -298,7 +320,7 @@
                                         <h3 class="feature-two__title" style="margin: -9px 0px 10px 40px;">
                                             <?php echo e($OurVision->title); ?></h3>
                                         <p class="feature-two__tagline">
-                                            <?php echo e($OurVision->content); ?>
+                                            <?php echo $OurVision->content; ?>
 
                                         </p>
                                     </div>
@@ -318,7 +340,7 @@
                                     <div class="feature-two__content-left">
                                         <h3 class="feature-two__title" style="margin: -9px 0px 10px 65px;">
                                             <?php echo e($OurMission->title); ?></h3>
-                                        <p class="feature-two__tagline"><?php echo e($OurMission->content); ?>
+                                        <p class="feature-two__tagline"><?php echo $OurMission->content; ?>
 
                                         </p>
                                     </div>
@@ -346,7 +368,7 @@
                                         <div class="feature-two__tagline">
                                             <ul style="list-style-type: '- ';font-family: var(--khater-font-two);">
                                                 <?php
-                                                    $OurGoals = explode(';', $OurGoals->content);
+                                                    $OurGoals = explode('//', $OurGoals->content);
                                                     foreach ($OurGoals as $goal) {
                                                         echo '<li>' . $goal . '</li>';
                                                     }
@@ -381,7 +403,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($WhoWeServe->title); ?></h2>
                         </div>
-                        <p class="about-one__text"><?php echo e($WhoWeServe->content); ?></p>
+                        <p class="about-one__text"><?php echo $WhoWeServe->content; ?></p>
 
                     </div>
                 </div>
@@ -408,7 +430,7 @@
                     <div class="section-title text-left">
                         <h2 class="section-title__title"><?php echo e($WhereWeServe->title); ?></h2>
                     </div>
-                    <p class="events-two__text"><?php echo e($WhereWeServe->content); ?></p>
+                    <p class="events-two__text"><?php echo $WhereWeServe->content; ?></p>
                 </div>
             </div>
             <div class="thm-swiper__slider swiper-container"
@@ -475,25 +497,32 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide story"
                         data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide story"
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_ar.jpg,National Cancer Institute (Cairo University)">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide story"
                         data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide story"
+                            echo '<div class="swiper-slide story"
                         data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     ?>
@@ -519,10 +548,6 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Ahl_Masr.jpg" alt="">
                     </div>
                     <!-- hero only -->
-                    <!-- <div class="swiper-slide story"
-                                        data-point="29.9849277,31.2303078,Alameda_en.jpg,Alameda Healthcare Group">
-                                        <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Alameda_en.jpg" alt="">
-                                    </div> -->
                     <div class="swiper-slide story"
                         data-point="30.0287572,31.2360329,Egyptian_Autistic_Society.jpg,The Egyptian Autistic Society">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Egyptian_Autistic_Society.jpg"
@@ -540,26 +565,33 @@
                         data-point="30.0302578,31.228098,Kasr_Al_Ainy_en.jpg,Kasr AlAiny (Cairo University)">
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/Kasr_Al_Ainy_en.jpg" alt="">
                     </div>
-                    
 
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide story"
                         data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide story"
-                        data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide story"
+                        data-point="30.0243157,31.2302171,National_Cancer_Institute_ar.jpg,National Cancer Institute (Cairo University)">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide story"
                         data-point="30.0605837,31.2244674,Magdi_Yacoub_en.jpg,Magdi Yacoub Global Heart Foundation –Aswan">
-                        <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide story"
+                            echo '<div class="swiper-slide story"
                         data-point="30.0243157,31.2302171,National_Cancer_Institute_en.jpg,National Cancer Institute (Cairo University)">
-                        <img src=""' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                        <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     ?>
@@ -568,12 +600,7 @@
                         <img src="<?php echo e(asset('site')); ?>/assets/images/partners/suez_canal.jpg" alt="">
                     </div>
 
-
-
-
-
                     <div class="swiper-slide">
-                        <!-- <img src="assets/images/partners/suez_canal.jpg" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -588,10 +615,10 @@
     <script>
         // basic map setup. include other options as needed, refer to the docs
         var map = L.map('map').setView([30.022863, 31.2378640], 11);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // map.L.setCode("en");
+        L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png?lang=en', {
             maxZoom: 17,
             color: 'red',
-            // attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
         // bind click event to the story divs, add a marker and zoom to that story's location. Remember to add dot before story as it is classname
@@ -604,8 +631,9 @@
             var txt = latlng[3];
             var zoom = 17;
             var marker = L.marker([lat, lng], {}).addTo(map).bindPopup(
-                `<img src='<?php echo e(asset('site')); ?>/assets/images/partners/${img}' style='max-width:100%'>`).openPopup().on('click',
-                onZoomInMark);
+                    `<img src='<?php echo e(asset('site')); ?>/assets/images/partners/${img}' style='max-width:100%'>`)
+                .openPopup().on('click',
+                    onZoomInMark);
             // set the view
             map.setView([lat, lng], zoom);
         })
@@ -664,14 +692,6 @@
 
         // 30.671873,32.2802739
         // L.marker([28.1807533, 31.6380565]).addTo(map).on('click', onZoomInMark);
-
-
-
-        // •
-        // •
-        // •
-        // •
-        // • Al Sharqia Governorate
     </script>
 <?php $__env->stopSection(); ?>
 

@@ -1,8 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
+    
+
     <?php echo $__env->make('site.layout.css', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </head>
 
@@ -33,7 +36,7 @@
         <?php echo $__env->make('site.layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
-    <?php echo $__env->make('site.layout.js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('site.layout.js', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 </body>
 
 

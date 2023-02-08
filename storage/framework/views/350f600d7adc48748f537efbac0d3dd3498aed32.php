@@ -2,7 +2,7 @@
     <!--Page Header Start-->
     <section class="page-header">
         <div class="page-header-bg"
-            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/resources/WhatsApp\ Image\ 2022-11-22\ at\ 12.41.01\ PM.jpeg)">
+            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/wellbeing.jpg)">
         </div>
         <div class="container">
             <div class="page-header__inner">
@@ -21,7 +21,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($Wellbiganing->title); ?></h2>
                         </div>
-                        <p class="about-two__text-1"><?php echo e($Wellbiganing->content); ?></p>
+                        <p class="about-two__text-1"><?php echo $Wellbiganing->content; ?></p>
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -47,19 +47,18 @@
                 <?php $__currentLoopData = $wellbeingies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $wellbeing): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="causes-one__single">
-                            <div class="causes-one__img">
-                                <a href="<?php echo e(route('wellbeing.detils', $wellbeing->id)); ?>">
-
+                            <a href="<?php echo e(route('wellbeing.detils', $wellbeing->id)); ?>">
+                                <div class="causes-one__img">
                                     <img src="<?php echo e($wellbeing->getFirstMediaUrl('wellbeingPhoto')); ?>" alt="">
-                                </a>
+                                </div>
+                            </a>
 
-                            </div>
                             <div class="causes-one__content">
                                 <h3 class="causes-one__title"><a
                                         href="<?php echo e(route('wellbeing.detils', $wellbeing->id)); ?>"><?php echo e($wellbeing->title); ?></a>
                                 </h3>
                                 <p class="causes-one__text">
-                                    <?php echo e($wellbeing->short_content == null ? Str::limit($wellbeing->title, 250, ' .....') : Str::limit($wellbeing->short_content, 250, ' .....')); ?>
+                                    <?php echo $wellbeing->short_content == null ? Str::limit($wellbeing->content, 250, ' .....') : Str::limit($wellbeing->short_content, 250, ' .....'); ?>
 
                                 </p>
 

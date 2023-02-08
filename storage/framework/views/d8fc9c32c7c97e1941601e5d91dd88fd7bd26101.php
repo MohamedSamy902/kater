@@ -21,7 +21,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"><?php echo e($healthcare->title); ?></h2>
                         </div>
-                        <p class="about-two__text-1"><?php echo e($healthcare->content); ?></p>
+                        <p class="about-two__text-1"><?php echo $healthcare->content; ?></p>
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -47,20 +47,20 @@
                 <?php $__currentLoopData = $healthcareies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $healthcareie): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="causes-one__single">
-                            <div class="causes-one__img">
-                                <a href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>">
+                            <a href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>">
+                                <div class="causes-one__img">
+                                    <img src="<?php echo e($healthcareie->getFirstMediaUrl('healthcarePhoto')); ?>" alt="">
+                                </div>
+                            </a>
 
-                                    <img src="<?php echo e($healthcareie->getFirstMediaUrl('healthcarePhoto')); ?>"
-                                        alt="">
-                                </a>
-
-                            </div>
                             <div class="causes-one__content">
                                 <h3 class="causes-one__title"><a
                                         href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>"><?php echo e($healthcareie->title); ?></a>
                                 </h3>
                                 <p class="causes-one__text">
-                                    <?php echo e($healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....')); ?></p>
+                                    <?php echo e($healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....')); ?>
+
+                                </p>
 
                             </div>
                         </div>

@@ -140,7 +140,7 @@
     <!--FAQ One End-->
 
     <!--About One Start-->
-    <section class="about-one">
+    <section class="about-one responsive">
         <div class="about-one__shape-box-1">
             <div class="about-one__shape-1"
                 style="background-image: url({{ asset('site') }}/assets/images/shapes/about-one-shape-1.png);">

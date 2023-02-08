@@ -37,8 +37,10 @@
                                         <h2 class="main-slider__title"><?php echo e($slider->title); ?></h2>
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
-                                            <a href="<?php echo e(route('about')); ?>" class="thm-btn main-slider__btn">
+                                            <?php if($slider->link != null): ?>
+                                            <a href="<?php echo e(URL::current()); ?>/<?php echo e($slider->link); ?>" class="thm-btn main-slider__btn">
                                                 <?php echo e(__('site.readMore')); ?></a>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -63,8 +65,77 @@
     </section>
     <!--Main Slider End-->
 
+    
+    <section class="become-volunteer-one" >
+        
+
+        <div class="container-fuild">
+            <div class="become-volunteer-one__inner">
+                <ul class="list-unstyled counter-one__list">
+                    <li class="counter-one__single Served">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3"
+                            alt="">
+                        <div class="counter-one__count-box">
+                            <h3 class="odometer number" style="font-size: 28px;" data-count="15">00</h3>
+                            <p class="counter-one__text1"><?php echo e(__('site.Institutions')); ?> </p>
+                        </div>
+                    </li>
+                    <li class="counter-one__single Provided">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png" class="w-25 p-2 mt-3"
+                            alt="">
+                        <div class="counter-one__count-box">
+                            <h3 class="odometer number" style="font-size: 28px;" data-count="88960">00</h3>
+                            <p class="counter-one__text2"><?php echo e(__('site.HealthcareServices')); ?></p>
+                        </div>
+                    </li>
+                    <li class="counter-one__single boxes">
+                        <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png" class="w-25 p-2 mt-3"
+                            alt="">
+                        <div class="counter-one__count-box">
+                            <h3 class="odometer number" style="font-size: 28px;" data-count="2846146">00</h3>
+                            <p class="counter-one__text3"><?php echo e(__('site.WellbeingServices')); ?></p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <!--FAQ One Start-->
+    <section class="faq-one faq-two faq-three">
+        <div class="faq-one-shape-1"
+            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/faq-one-shape-1.png);"></div>
+        <div class="faq-one-bg"
+            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/gallery/Khater.jpg);height: 100%"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 pt-2 pb-0 px-5">
+                    <div class="faq-one__left">
+                        <div class="section-title text-left">
+                            <h2 class="section-title__title"> <?php echo e($Vision->title); ?></h2>
+                        </div>
+                        <p class="faq-one__text-1"><?php echo $Vision->content; ?></p>
+                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
+
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 p-0">
+                    <div class="faq-one__right">
+                        <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                            <img src="<?php echo e($Vision->getFirstMediaUrl('Vision')); ?>" class="" style="width: 100%"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FAQ One End-->
+
     <!--About One Start-->
-    <section class="about-one">
+    <section class="about-one responsive">
         <div class="about-one__shape-box-1">
             <div class="about-one__shape-1"
                 style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/about-one-shape-1.png);">
@@ -88,7 +159,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title pb-2"><?php echo e($HowItAllBegan->title); ?></h2>
                         </div>
-                        <p class="about-one__text pb-3"><?php echo e($HowItAllBegan->content); ?></p>
+                        <p class="about-one__text pb-3"><?php echo $HowItAllBegan->content; ?></p>
                         <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
                     </div>
                 </div>
@@ -99,78 +170,12 @@
 
 
 
-    <!--FAQ One Start-->
-    <section class="faq-one faq-two faq-three">
-        <div class="faq-one-shape-1"
-            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/faq-one-shape-1.png);"></div>
-        <div class="faq-one-bg"
-            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/gallery/Khater.jpg);height: 100%"></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-5 col-lg-5 pt-5 pb-0 px-5">
-                    <div class="faq-one__left">
-                        <div class="section-title text-left">
-                            <h2 class="section-title__title"> <?php echo e($Vision->title); ?></h2>
-                        </div>
-                        <p class="faq-one__text-1"><?php echo e($Vision->content); ?></p>
-                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
 
-                    </div>
-                </div>
-                <div class="col-xl-7 col-lg-7 p-0">
-                    <div class="faq-one__right">
-                        <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
-                            <img src="<?php echo e($Vision->getFirstMediaUrl('Vision')); ?>" class="" style="width: 100%"
-                                alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--FAQ One End-->
 
     <!--Become Volunteer One Start-->
-    <section class="become-volunteer-one" style="margin-top: 5px;">
-        <div class="become-volunteer-one__bg-box">
-            <div class="become-volunteer-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
-                style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);">
-            </div>
-        </div>
-        <div class="become-volunteer-one__shape-1"
-            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/shapes/become-volunteer-shape-1.png);"></div>
-        <div class="container-fuild">
-            <div class="become-volunteer-one__inner">
-                <ul class="list-unstyled counter-one__list">
-                    <li class="counter-one__single Served">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/icon/khater counters (1).png" class="w-25 p-2 mt-3"
-                            alt="">
-                        <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="14">00</h3>
-                            <p class="counter-one__text1"><?php echo e(__('site.Institutions')); ?> </p>
-                        </div>
-                    </li>
-                    <li class="counter-one__single Provided">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/healthcare- icon 2022 KF.png" class="w-25 p-2 mt-3"
-                            alt="">
-                        <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="66,480">00</h3>
-                            <p class="counter-one__text2"><?php echo e(__('site.HealthcareServices')); ?></p>
-                        </div>
-                    </li>
-                    <li class="counter-one__single boxes">
-                        <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png" class="w-25 p-2 mt-3"
-                            alt="">
-                        <div class="counter-one__count-box">
-                            <h3 class="odometer" style="font-size: 28px;" data-count="2,846,020">00</h3>
-                            <p class="counter-one__text3"><?php echo e(__('site.WellbeingServices')); ?></p>
-                        </div>
-                    </li>
 
-                </ul>
-            </div>
-        </div>
-    </section>
+
+
     <section class="donation-carousel-page">
         <div class="container-fuild p-5">
             <div class="row">
@@ -178,19 +183,20 @@
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
-                <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <div class="causes-one__img">
-                                <a href="<?php echo e(route('gallery.detils', $gallery->id)); ?>">
-                                    <img src="<?php echo e($gallery->getFirstMediaUrl('gallery')); ?>" alt="">
-                                </a>
-                            </div>
+                            <a href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>">
+                                <div class="causes-one__img">
+                                    <img src="<?php echo e($event->getFirstMediaUrl('event')); ?>" alt="">
+                                </div>
+                            </a>
+
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
-                                        href="<?php echo e(route('gallery.detils', $gallery->id)); ?>"><?php echo e($gallery->title); ?></a>
+                                        href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>"><?php echo e($event->title); ?></a>
                                 </h3>
-                                <p class="causes-one__text"><?php echo e($gallery->content); ?></p>
+                                <p class="causes-one__text"><?php echo e($event->content); ?></p>
                             </div>
                         </div>
                     </div>
@@ -281,17 +287,25 @@
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     ?>
@@ -343,17 +357,25 @@
                     <?php
                         if (App::getLocale() == 'ar') {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_ar.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_ar.jpg" alt="">
                                     </div>';
                         } else {
                             echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/Magdi_Yacoub_en.jpg" alt="">
                                     </div>';
-                                    echo '<div class="swiper-slide">
-                                    <img src="' . asset('site') . '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
+                            echo '<div class="swiper-slide">
+                                    <img src="' .
+                                asset('site') .
+                                '/assets/images/partners/National_Cancer_Institute_en.jpg" alt="">
                                     </div>';
                         }
                     ?>

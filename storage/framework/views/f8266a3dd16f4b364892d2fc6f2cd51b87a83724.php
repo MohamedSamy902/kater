@@ -44,7 +44,8 @@
                                 <h3 class="footer-widget__title"><?php echo e(__('site.contact')); ?></h3>
                                 <a
                                     href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x145839c7b0d267d3:0x45da94c73096ce18?utm_source=mstt_1&entry=gps&lucs=swa&g_ep=CAESBzEwLjU1LjIYACD___________8BKgNzd2E%3D">
-                                    <p class="footer-widget__contact-text">40, Road 254, Degla Maadi
+                                    <p class="footer-widget__contact-text"><?php echo e(__('site.addr')); ?>
+
                                     </p>
                                 </a>
                                 <ul class="list-unstyled footer-widget__contact-list">
@@ -59,10 +60,19 @@
                                     </li>
                                     <li>
                                         <div class="icon">
-                                            <i class="fas fa-phone-alt"></i>
+                                            
+                                            <?php
+                                            if (App::getLocale() == 'ar') {
+                                                echo '<i class="fas fa-phone"></i>';
+                                            }elseif(App::getLocale() == 'en') {
+                                                echo '<i class="fas fa-phone-alt"></i>';
+                                            }
+                                        ?>
                                         </div>
-                                        <div class="text">
-                                            <p><a href="tel:980009630">+2 25 17 40 18</a></p>
+
+
+                                        <div class="text number">
+                                            <p><a class="number" href="tel:980009630">+2 25 17 40 18</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -76,10 +86,11 @@
                                     <div class="col-lg-12">
                                         <h3 class="footer-widget__title"> <?php echo e(__('site.Subscribetoournewslette')); ?></h3>
                                         <div class="input-group mb-3">
-                                            <input  type="text" class="form-control p-2 rounded" placeholder="Email"
-                                                aria-label="Email" aria-describedby="button-addon2">
-                                            <button  style="border-radius: 5px"class="btn btn-info text-white" type="button"
-                                                id="button-addon2"><?php echo e(__('site.Subscribe')); ?></button>
+                                            <input type="text" class="form-control p-2 rounded subscribe"
+                                                placeholder="<?php echo e(__('site.email')); ?>" aria-label="Email"
+                                                aria-describedby="button-addon2">
+                                            <button style="border-radius: 5px"class="btn btn-info text-white"
+                                                type="button" id="button-addon2"><?php echo e(__('site.Subscribe')); ?></button>
                                         </div>
 
                                     </div>
@@ -167,6 +178,6 @@
         </div>
         <!-- /.search-popup -->
 
-        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i
-                class="icon-up-arrow"></i></a>
+        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-up-arrow"></i>
+        </a>
 <?php /**PATH /home/perfectchoice/public_html/kater/resources/views/site/layout/footer.blade.php ENDPATH**/ ?>

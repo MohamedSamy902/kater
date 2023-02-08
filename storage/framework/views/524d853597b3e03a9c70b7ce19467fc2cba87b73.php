@@ -95,8 +95,37 @@
 
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'HowItAllBegan ')); ?>"
-                                class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began ')); ?></a>
-                        </li>
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began ')); ?></a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('users')); ?>" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span>Index</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('users')); ?>;">
+
+                            <li><a href="<?php echo e(URL::route('articles.index', 'Vision')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Vision')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(URL::route('articles.index', 'HowItAllBegan')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(URL::route('articles.index', 'HealthcareInitiatives')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Healthcare Initiatives')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(URL::route('articles.index', 'Wellbiganing')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Well-Biganing')); ?></a>
+                            </li>
+
+
+                            <li><a href="<?php echo e(URL::route('articles.index', 'Impact ')); ?>"
+                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Impact')); ?></a>
+                            </li>
 
 
                         </ul>
@@ -177,6 +206,22 @@
                             </li>
                             <li><a href="<?php echo e(route('galleries.create')); ?>"
                                     class="<?php echo e(routeActive('galleries.create')); ?>"><?php echo e(__('master.gallery')); ?>
+
+                                </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('events')); ?>" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span><?php echo e(__('master.events')); ?></span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('events')); ?>;">
+                            <li><a href="<?php echo e(route('events.index')); ?>"
+                                    class="<?php echo e(routeActive('events.index')); ?>"><?php echo e(__('master.events')); ?></a>
+                            </li>
+                            <li><a href="<?php echo e(route('events.create')); ?>"
+                                    class="<?php echo e(routeActive('events.create')); ?>"><?php echo e(__('master.events')); ?>
 
                                 </a></li>
                         </ul>

@@ -5,14 +5,25 @@
             <div class="row">
                 <h3 class="event-details__title"><?php echo e($wellBeing->title); ?></h3>
                 <div class="col-xl-9 col-lg-9 ">
-                    <div class="event-details__left">
 
-                        
-                        <video autoplay controls width="100%" style="">
-                            <source src="<?php echo e($wellBeing->getFirstMediaUrl('WellBeingvideo')); ?>" type="video/mp4">
-                            <source src="<?php echo e($wellBeing->getFirstMediaUrl('WellBeingvideo')); ?>" type="video/ogg">
-                        </video>
-                    </div>
+                    <?php
+                        if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
+                            echo '<div class="event-details__left">
+
+                                <video autoplay controls width="100%" style="">
+                                    <source src=" ' .
+                                $wellBeing->getFirstMediaUrl('wellbeingVideo') .
+                                ' " type="video/mp4">
+                                    <source src=" ' .
+                                $wellBeing->getFirstMediaUrl('wellbeingVideo') .
+                                ' " type="video/ogg">
+                                </video>
+                                </div>';
+                        } else {
+                            echo '<p class="event-details__text-6">' . $wellBeing->content . '</p>';
+                        }
+
+                    ?>
 
                 </div>
                 <div class="col-xl-3 col-lg-3 ">
@@ -21,333 +32,256 @@
                         <div class="sidebar__single sidebar__post ">
                             <div class="sidebar-shape-1"
                                 style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
-                            <h3 class="sidebar__title" style="color: #005172;margin-top: 10px;"><?php echo e(__('site.Healthcare')); ?>
-
-                            </h3>
-                            <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
+                            <marquee width="100%" direction="up" height="580px" scrollamount="2" loop="true"
                                 onmouseover="this.stop()" onmouseout="this.start()">
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/resources/a994fa78-cf34-48c6-9ee0-6200db5846b5.jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; padding: 15px 0px 0px 0px;letter-spacing: -0.05em;">
-                                                        Online Clinics</p>
+
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/WhatsApp Image 2022-11-22 at 12.44.56 PM.jpeg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Abu El Reesh Children’s Hospital
-                                                        Al
-                                                        Munira</p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/resources/a994fa78-cf34-48c6-9ee0-6200db5846b5.jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; padding: 15px 0px 0px 0px;letter-spacing: -0.05em;">
-                                                        Online Clinics</p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/WhatsApp Image 2022-11-22 at 12.44.56 PM.jpeg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Abu El Reesh Children’s Hospital
-                                                        Al
-                                                        Munira</p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/resources/a994fa78-cf34-48c6-9ee0-6200db5846b5.jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; padding: 15px 0px 0px 0px;letter-spacing: -0.05em;">
-                                                        Online Clinics</p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </a>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/WhatsApp Image 2022-11-22 at 12.44.56 PM.jpeg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Abu El Reesh Children’s Hospital
-                                                        Al
-                                                        Munira</p>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        </a>
                                     </div>
-                                </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8"> <img
+                                                                src="<?php echo e($allHealth->getFirstMediaUrl('healthcarePhoto')); ?>"
+                                                                style="height: 80px;" alt=""></div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                                <?php echo e($allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : ''); ?>
+
+                                                            </p>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = $allWellBeing; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allWell): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <div class="">
+                                        <a href="<?php echo e(route('wellbeing.detils', $allWell->id)); ?>">
+                                            <div class="causes-one__single">
+                                                <div class="causes-one__img">
+                                                    <div class="row">
+                                                        <div class="col-8">
+                                                            <img src="<?php echo e($allWell->getFirstMediaUrl('wellbeingPhoto')); ?>"
+                                                                style="height: 80px;" alt="">
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <p
+                                                                style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                                <?php echo e($allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : ''); ?>
+
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
                             </marquee>
-
-                            <hr style="height: 2px;">
-                            <h3 class="sidebar__title" style="color: #62BB46;"><?php echo e(__('site.Healthcare')); ?></h3>
-                            <marquee width="100%" direction="up" height="236px" scrollamount="2" loop="true"
-                                onmouseover="this.stop()" onmouseout="this.start()">
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/Khater (40 of 128).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Ramadan Campaigns</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Decent Housing Project</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/khairy (41 of 186).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Edu-behavioural Program for kids
-                                                        with Autism</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/Khater (40 of 128).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Ramadan Campaigns</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Decent Housing Project</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/khairy (41 of 186).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Edu-behavioural Program for kids
-                                                        with Autism</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/Khater (40 of 128).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Ramadan Campaigns</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Decent Housing Project</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/khairy (41 of 186).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Edu-behavioural Program for kids
-                                                        with Autism</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/Khater (40 of 128).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Ramadan Campaigns</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images//gallery/1P7A0605.JPG"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Decent Housing Project</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="causes-one__single">
-                                        <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
-                                                        src="<?php echo e(asset('site')); ?>/assets/images/gallery/khairy (41 of 186).jpg"
-                                                        style="height: 80px;" alt=""></div>
-                                                <div class="col-4">
-                                                    <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
-                                                        Edu-behavioural Program for kids
-                                                        with Autism</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </marquee>
-
-
                         </div>
 
                     </div>
@@ -356,29 +290,28 @@
                     <div class="row">
                         <div class="col-xl-9 col-lg-9">
                             <div class="event-details__top">
+                                <?php
+                                    if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
+                                        echo '<p class="event-details__text-6">' . $wellBeing->content . '</p>';
+                                    }
 
-                                <p class="event-details__text-6"><?php echo e($wellBeing->content); ?></p>
+                                ?>
+                                
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3">
                             <ul style="padding: 20px 0 0 0;">
                                 <li class="counter-one__single Provided">
-                                    <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png"
-                                        style="height: 50px;" alt="">
-
+                                    <img src="<?php echo e(asset('site')); ?>/assets/images/well-bieng icon.png" style="height: 50px;"
+                                        alt="">
                                     <div class="counter-one__count-box p-2">
-
-
-
                                         <p class="counter-one__text4" style="width: 300px;">
                                             <?php echo e($wellBeing->convoys != 0 ? $wellBeing->convoys : ''); ?></span> </p>
                                         <p class="counter-one__text4" style="width: 300px;">
                                             <?php echo e($wellBeing->services != 0 ? $wellBeing->services : ''); ?>
 
                                         </p>
-                                        
-                                        
-                                        
+
                                     </div>
                                 </li>
                             </ul>
@@ -419,13 +352,15 @@
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
-                                <div class="causes-one__img">
-                                    <img src="<?php echo e($WellBeingDetails->getFirstMediaUrl('wellBeingDetails')); ?>"
-                                        style="height: 300px" alt="">
-                                    <div class="causes-one__cat">
-                                        <p><?php echo e($WellBeingDetails->title); ?></p>
+                                <a
+                                    href="<?php echo e($WellBeingDetails->link != null ? URL::to($WellBeingDetails->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="causes-one__img">
+                                        <img src="<?php echo e($WellBeingDetails->getFirstMediaUrl('wellBeingDetails')); ?>"
+                                            style="height: 300px" alt="">
+                                        
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
