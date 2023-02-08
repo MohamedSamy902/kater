@@ -27,12 +27,12 @@ return  [
     'menu'                      => 'القائمه',
     'note'                      => 'ملاحظه',
     'url'                       => 'الرابط',
-    'create_at'                 => 'تاريخ الانضمام' ,
+    'create_at'                 => 'تاريخ الانضمام',
     'view'                      => 'ظهور',
     'subject'                   => 'الموضوع',
     'message'                   => 'الرساله',
 
-    'login_error'               =>'كلمه المرور او البريد الالكتروني غير صحيح',
+    'login_error'               => 'كلمه المرور او البريد الالكتروني غير صحيح',
 
     'phone'     => 'رقم الهاتف',
     'mobile'     => 'رقم الهاتف',
@@ -153,5 +153,47 @@ return  [
     'messages_edit' => 'تم التعديل بنجاح',
     'messages_delete' => 'تم الحذف بنجاح',
     'messages_delete' => 'تم الحذف بنجاح',
+
+    'events' => 'المناسبات',
+    'events_list' => 'قائمه المناسبات',
+    'about'   => ' عن خاطر',
+    'ourImpact' => 'تأثيرنا',
+    'Healthcare' => 'مبادرات الرعاية الصحية',
+    'Healthcare_list' => 'قائمه مبادرات الرعاية الصحية',
+    'WellBeing' => 'مبادرات الخدمات المجتمعيه',
+    'wellBeing_list' => 'قائمه مبادرات الخدمات المجتمعيه',
+    'Health' => 'الرعاية الصحية',
+    'Well' => 'الخدمات المجتمعيه',
+
+    'approaches' => '',
+    'explore_more' => 'اكتشف المزيد',
+
+
+    'contact_us'        => 'تواصل معانا',
+    'contact'        => 'اتصل بنا ',
+    'contact_title'        => 'لا تتردد في الكتابة إلينا في أي وقت',
+    'contact_with'        => 'اتصل بنا',
+    'name' => 'الاسم',
+    'email' => 'البريد الالكتروني',
+    'phone' => 'رقم الهاتف',
+    'subject' => 'الموضوع',
+    'helpline' => 'Helpline',
+    'address' => 'العنوان',
+    'send_message' => 'ارسال الرساله',
+    'write_message' => 'اكتب الرساله',
+
+
+    'home' => 'الرئيسيه',
+    'gallery' => 'معرض الصور',
+    'WellbeingServices' =>  'الخدمات المجتمعية',
+    'HealthcareServices' => 'خدمات الرعاية الصحية',
+    'Institutions' => 'المؤسسات',
+    'Subscribetoournewslette' => 'اشترك في نشرتنا الإخبارية',
+    'Subscribe' => 'اشترك',
+    'Quicklinks' => 'روابط سريعة',
+    'SuccessPartners' => 'شركاء النجاح',
+    'readMore' => 'قراءه المزيد',
+    'timeLine' => 'أبرز المحطات',
+
 
 ];

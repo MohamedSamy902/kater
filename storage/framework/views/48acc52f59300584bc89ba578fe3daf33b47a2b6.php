@@ -30,23 +30,7 @@
                     </li>
 
                     
-                    <li class="dropdown">
-                        <a class="nav-link menu-title <?php echo e(prefixActive('roles')); ?>" href="javascript:void(0)">
-                            <i data-feather="home"></i>
-                            <span><?php echo e(__('role.role')); ?></span>
-                        </a>
-                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('roles')); ?>;">
-                            <li><a href="<?php echo e(route('roles.index')); ?>"
-                                    class="<?php echo e(routeActive('roles.index')); ?>"><?php echo e(__('role.role_list')); ?></a>
-                            </li>
-                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('role-create')): ?>
-                                <li><a href="<?php echo e(route('roles.create')); ?>"
-                                        class="<?php echo e(routeActive('roles.create')); ?>"><?php echo e(__('role.add_role')); ?>
-
-                                    </a></li>
-                            <?php endif; ?>
-                        </ul>
-                    </li>
+                    
                     
 
                     <li class="dropdown">
@@ -72,7 +56,7 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('users')); ?>;">
                             <li><a href="<?php echo e(URL::route('articles.edit', ['FoundationStory'])); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.FoundationStory')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">FoundationStory</a>
                             </li>
 
                             <li><a href="<?php echo e(route('articles.index', 'TimeLine')); ?>"
@@ -80,22 +64,22 @@
                             </li>
 
                             <li><a href="<?php echo e(URL::route('articles.edit', ['WhoWeServe'])); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Who We Serve')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Who We Serve</a>
                             </li>
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'OurGoals')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Our Goals')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Our Goals</a>
                             </li>
                             <li><a href="<?php echo e(URL::route('articles.index', 'OurMission')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Our Mission')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Our Mission</a>
                             </li>
                             <li><a href="<?php echo e(URL::route('articles.index', 'OurVision')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Our Vision')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Our Vision</a>
                             </li>
 
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'HowItAllBegan ')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began ')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">How It All Began </a>
                             </li>
 
 
@@ -110,21 +94,21 @@
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('users')); ?>;">
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'Vision')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Vision')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Vision</a>
                             </li>
                             <li><a href="<?php echo e(URL::route('articles.index', 'HowItAllBegan')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.How It All Began')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">How It All Began</a>
                             </li>
                             <li><a href="<?php echo e(URL::route('articles.index', 'HealthcareInitiatives')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Healthcare Initiatives')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Healthcare Initiatives</a>
                             </li>
                             <li><a href="<?php echo e(URL::route('articles.index', 'Wellbiganing')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Well-Biganing')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Well-Biganing</a>
                             </li>
 
 
                             <li><a href="<?php echo e(URL::route('articles.index', 'Impact ')); ?>"
-                                    class="<?php echo e(routeActive('users.index')); ?>"><?php echo e(__('master.Impact')); ?></a>
+                                    class="<?php echo e(routeActive('users.index')); ?>">Impact</a>
                             </li>
 
 
@@ -150,14 +134,14 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('wellBeing')); ?>" href="javascript:void(0)">
                             <i data-feather="home"></i>
-                            <span><?php echo e(__('master.wellBeing')); ?></span>
+                            <span><?php echo e(__('master.WellBeing')); ?></span>
                         </a>
-                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('wellBeing')); ?>;">
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('WellBeing')); ?>;">
                             <li><a href="<?php echo e(route('wellBeing.index')); ?>"
-                                    class="<?php echo e(routeActive('users.wellBeing')); ?>"><?php echo e(__('user.user_list')); ?></a>
+                                    class="<?php echo e(routeActive('users.wellBeing')); ?>"><?php echo e(__('master.wellBeing')); ?></a>
                             </li>
                             <li><a href="<?php echo e(route('wellBeing.create')); ?>"
-                                    class="<?php echo e(routeActive('wellBeing.create')); ?>"><?php echo e(__('master.wellBeing')); ?>
+                                    class="<?php echo e(routeActive('wellBeing.create')); ?>"><?php echo e(__('master.wellBeing_list')); ?>
 
                                 </a></li>
                         </ul>
@@ -166,14 +150,14 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('healthcare')); ?>" href="javascript:void(0)">
                             <i data-feather="home"></i>
-                            <span><?php echo e(__('master.healthcare')); ?></span>
+                            <span><?php echo e(__('master.Healthcare')); ?></span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('healthcare')); ?>;">
                             <li><a href="<?php echo e(route('healthcare.index')); ?>"
-                                    class="<?php echo e(routeActive('users.healthcare')); ?>"><?php echo e(__('user.user_list')); ?></a>
+                                    class="<?php echo e(routeActive('users.healthcare')); ?>"><?php echo e(__('master.Healthcare')); ?></a>
                             </li>
                             <li><a href="<?php echo e(route('healthcare.create')); ?>"
-                                    class="<?php echo e(routeActive('healthcare.create')); ?>"><?php echo e(__('master.healthcare')); ?>
+                                    class="<?php echo e(routeActive('healthcare.create')); ?>"><?php echo e(__('master.Healthcare_list')); ?>
 
                                 </a></li>
                         </ul>
@@ -205,7 +189,7 @@
                                     class="<?php echo e(routeActive('galleries.index')); ?>"><?php echo e(__('master.gallery')); ?></a>
                             </li>
                             <li><a href="<?php echo e(route('galleries.create')); ?>"
-                                    class="<?php echo e(routeActive('galleries.create')); ?>"><?php echo e(__('master.gallery')); ?>
+                                    class="<?php echo e(routeActive('galleries.create')); ?>">Add <?php echo e(__('master.gallery')); ?>
 
                                 </a></li>
                         </ul>
@@ -221,7 +205,7 @@
                                     class="<?php echo e(routeActive('events.index')); ?>"><?php echo e(__('master.events')); ?></a>
                             </li>
                             <li><a href="<?php echo e(route('events.create')); ?>"
-                                    class="<?php echo e(routeActive('events.create')); ?>"><?php echo e(__('master.events')); ?>
+                                    class="<?php echo e(routeActive('events.create')); ?>"><?php echo e(__('master.events_list')); ?>
 
                                 </a></li>
                         </ul>

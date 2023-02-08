@@ -609,6 +609,7 @@
     .section-title__title {
         font-size: 35px;
         line-height: 45px;
+        padding-bottom: 50px;
     }
 
     .section-title__title br {
@@ -694,7 +695,7 @@
     }
 
     .faq-one__left {
-        margin-bottom: 50px;
+        margin-top: 10px;
     }
 
     .faq-one__text-1 {

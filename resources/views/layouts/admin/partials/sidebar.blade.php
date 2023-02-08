@@ -30,7 +30,7 @@
                     </li>
 
                     {{-- @can('role-list') --}}
-                    <li class="dropdown">
+                    {{-- <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('roles') }}" href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('role.role') }}</span>
@@ -45,7 +45,7 @@
                                     </a></li>
                             @endcan
                         </ul>
-                    </li>
+                    </li> --}}
                     {{-- @endcan --}}
 
                     <li class="dropdown">
@@ -70,7 +70,7 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
                             <li><a href="{{ URL::route('articles.edit', ['FoundationStory']) }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.FoundationStory') }}</a>
+                                    class="{{ routeActive('users.index') }}">FoundationStory</a>
                             </li>
 
                             <li><a href="{{ route('articles.index', 'TimeLine') }}"
@@ -78,22 +78,22 @@
                             </li>
 
                             <li><a href="{{ URL::route('articles.edit', ['WhoWeServe']) }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Who We Serve') }}</a>
+                                    class="{{ routeActive('users.index') }}">Who We Serve</a>
                             </li>
 
                             <li><a href="{{ URL::route('articles.index', 'OurGoals') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Our Goals') }}</a>
+                                    class="{{ routeActive('users.index') }}">Our Goals</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'OurMission') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Our Mission') }}</a>
+                                    class="{{ routeActive('users.index') }}">Our Mission</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'OurVision') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Our Vision') }}</a>
+                                    class="{{ routeActive('users.index') }}">Our Vision</a>
                             </li>
 
 
                             <li><a href="{{ URL::route('articles.index', 'HowItAllBegan ') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.How It All Began ') }}</a>
+                                    class="{{ routeActive('users.index') }}">How It All Began </a>
                             </li>
 
 
@@ -108,21 +108,21 @@
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
 
                             <li><a href="{{ URL::route('articles.index', 'Vision') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Vision') }}</a>
+                                    class="{{ routeActive('users.index') }}">Vision</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'HowItAllBegan') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.How It All Began') }}</a>
+                                    class="{{ routeActive('users.index') }}">How It All Began</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Healthcare Initiatives') }}</a>
+                                    class="{{ routeActive('users.index') }}">Healthcare Initiatives</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Well-Biganing') }}</a>
+                                    class="{{ routeActive('users.index') }}">Well-Biganing</a>
                             </li>
 
 
                             <li><a href="{{ URL::route('articles.index', 'Impact ') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.Impact') }}</a>
+                                    class="{{ routeActive('users.index') }}">Impact</a>
                             </li>
 
 
@@ -147,14 +147,14 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('wellBeing') }}" href="javascript:void(0)">
                             <i data-feather="home"></i>
-                            <span>{{ __('master.wellBeing') }}</span>
+                            <span>{{ __('master.WellBeing') }}</span>
                         </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('wellBeing') }};">
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('WellBeing') }};">
                             <li><a href="{{ route('wellBeing.index') }}"
-                                    class="{{ routeActive('users.wellBeing') }}">{{ __('user.user_list') }}</a>
+                                    class="{{ routeActive('users.wellBeing') }}">{{ __('master.wellBeing') }}</a>
                             </li>
                             <li><a href="{{ route('wellBeing.create') }}"
-                                    class="{{ routeActive('wellBeing.create') }}">{{ __('master.wellBeing') }}
+                                    class="{{ routeActive('wellBeing.create') }}">{{ __('master.wellBeing_list') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -162,14 +162,14 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('healthcare') }}" href="javascript:void(0)">
                             <i data-feather="home"></i>
-                            <span>{{ __('master.healthcare') }}</span>
+                            <span>{{ __('master.Healthcare') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('healthcare') }};">
                             <li><a href="{{ route('healthcare.index') }}"
-                                    class="{{ routeActive('users.healthcare') }}">{{ __('user.user_list') }}</a>
+                                    class="{{ routeActive('users.healthcare') }}">{{ __('master.Healthcare') }}</a>
                             </li>
                             <li><a href="{{ route('healthcare.create') }}"
-                                    class="{{ routeActive('healthcare.create') }}">{{ __('master.healthcare') }}
+                                    class="{{ routeActive('healthcare.create') }}">{{ __('master.Healthcare_list') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -199,7 +199,7 @@
                                     class="{{ routeActive('galleries.index') }}">{{ __('master.gallery') }}</a>
                             </li>
                             <li><a href="{{ route('galleries.create') }}"
-                                    class="{{ routeActive('galleries.create') }}">{{ __('master.gallery') }}
+                                    class="{{ routeActive('galleries.create') }}">Add {{ __('master.gallery') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -214,7 +214,7 @@
                                     class="{{ routeActive('events.index') }}">{{ __('master.events') }}</a>
                             </li>
                             <li><a href="{{ route('events.create') }}"
-                                    class="{{ routeActive('events.create') }}">{{ __('master.events') }}
+                                    class="{{ routeActive('events.create') }}">{{ __('master.events_list') }}
                                 </a></li>
                         </ul>
                     </li>

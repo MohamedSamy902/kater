@@ -157,8 +157,49 @@ return  [
     'messages_edit'     => 'Success Update',
     'messages_delete'   => 'Success Delete',
 
+    'events' => 'Events',
+    'events_list' => 'Events List',
 
 
+    'about'   => 'About Us',
+    'ourImpact' => 'Our Impact',
+    'Healthcare' => 'Healthcare ',
+    'Healthcare_list' => 'Healthcare List',
+    'Health' => 'Healthcare',
+    'WellBeing' => 'Well-being Initiatives',
+    'wellBeing_list' => 'Well-being Initiatives List',
+
+    'Well' => 'Well-being ',
+
+    'approaches' => 'Approaches',
+    'explore_more' => ' Explore More',
+
+
+    'contact_us'        => 'Contact Us',
+    'contact'        => 'Contact Us',
+    'contact_title'        => 'Feel free to write us anytime',
+    'contact_with'        => '',
+    'name' => 'Name',
+    'email' => 'Email Address',
+    'phone' => 'Phone',
+    'subject' => 'Subject',
+    'helpline' => 'Helpline',
+    'address' => 'Address',
+    'send_message' => 'Send a message',
+    'write_message' => 'Write a message',
+
+
+    'home' => 'Home',
+    'gallery' => 'Gallery',
+    'WellbeingServices' =>  'Wellbeing Services',
+    'HealthcareServices' => 'Healthcare Services',
+    'Institutions' => 'Institutions',
+    'Subscribetoournewslette' => 'Subscribe to our newsletter',
+    'Subscribe' => 'Subscribe',
+    'Quicklinks' => 'Quick Links',
+    'SuccessPartners' => 'Success Partners',
+    'readMore' => 'Read More',
+    'timeLine' => 'Key Milestones',
 
 
 ];
