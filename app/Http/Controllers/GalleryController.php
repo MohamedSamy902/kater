@@ -109,6 +109,7 @@ class GalleryController extends Controller
         $gallery->update($data);
         if ($request->file('gallery')) {
             $gallery
+                ->clearMediaCollection('gallery')
                 ->addMedia($request->file('gallery'))
                 ->usingName($request->title)
                 ->toMediaCollection('gallery');
