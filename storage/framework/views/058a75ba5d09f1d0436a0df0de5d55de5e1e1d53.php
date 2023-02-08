@@ -39,13 +39,13 @@
                                         href="<?php echo e(route('contact')); ?>"><?php echo e(__('site.contact')); ?></a></li>
 
 
-                                        <?php
-                                        if (App::getLocale() == 'ar') {
-                                            echo '<li class="current megamenu ling"><a href="'. LaravelLocalization::getLocalizedURL('en'). '"> EN <i class="flag flag-us"></i></a></li>';
-                                        }else {
-                                            echo '<li class="current megamenu ling"><a href="'. LaravelLocalization::getLocalizedURL('ar'). '"> <i class="flag flag-egypt"></i> ع</a></li>';
-                                        }
-                                    ?>
+                                <?php
+                                    if (App::getLocale() == 'ar') {
+                                        echo '<li class="current megamenu ling"><a href="' . LaravelLocalization::getLocalizedURL('en') . '"> EN <i class="flag flag-us"></i></a></li>';
+                                    } else {
+                                        echo '<li class="current megamenu ling"><a href="' . LaravelLocalization::getLocalizedURL('ar') . '"> <i class="flag flag-egypt"></i> ع</a></li>';
+                                    }
+                                ?>
                             </ul>
                         </div>
                         <div class="main-menu__main-menu-content-box">

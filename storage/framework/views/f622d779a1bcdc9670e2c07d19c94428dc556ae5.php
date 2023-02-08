@@ -62,12 +62,12 @@
                                         <div class="icon">
                                             
                                             <?php
-                                            if (App::getLocale() == 'ar') {
-                                                echo '<i class="fas fa-phone"></i>';
-                                            }elseif(App::getLocale() == 'en') {
-                                                echo '<i class="fas fa-phone-alt"></i>';
-                                            }
-                                        ?>
+                                                if (App::getLocale() == 'ar') {
+                                                    echo '<i class="fas fa-phone"></i>';
+                                                } elseif (App::getLocale() == 'en') {
+                                                    echo '<i class="fas fa-phone-alt"></i>';
+                                                }
+                                            ?>
                                         </div>
 
 
@@ -129,7 +129,7 @@
                 <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
                 <div class="logo-box">
-                    <a href="index.html" aria-label="logo image"><img src="<?php echo e(asset('site')); ?>/assets/images/logo.png"
+                    <a href="index.html" aria-label="logo image"><img src="<?php echo e(asset('site')); ?>/assets/images/logo_white.png"
                             width="143" alt="" /></a>
                 </div>
                 <!-- /.logo-box -->
@@ -138,12 +138,17 @@
 
                 <ul class="mobile-nav__contact list-unstyled">
                     <li>
+
                         <i class="fa fa-envelope"></i>
                         <a href="mailto:needhelp@packageName__.com">info@khaterfoundation.com</a>
                     </li>
                     <li>
-                        <i class="fa fa-phone-alt"></i>
-                        <a href="tel:666-888-0000">666 888 0000</a>
+                        <?php if(App::getLocale() == 'ar'): ?>
+                            <i class="fa fa-phone-alt"></i>
+                        <?php else: ?>
+                            <i class="fa fa-phone"></i>
+                        <?php endif; ?>
+                        <a href="tel:+2 25 17 40 18">+2 25 17 40 18</a>
                     </li>
                 </ul><!-- /.mobile-nav__contact -->
                 <div class="mobile-nav__top">
