@@ -39,9 +39,8 @@
                                         <p class="text-white">{{ $slider->content }}</p>
                                         <div class="main-slider__btn-box">
                                             @if ($slider->link != null)
-                                                <a href="{{ URL::current() }}/{{ $slider->link }}"
-                                                    class="thm-btn main-slider__btn">
-                                                    {{ __('site.readMore') }}</a>
+                                            <a href="{{  URL::current() }}/{{ $slider->link }}" class="thm-btn main-slider__btn">
+                                                {{ __('site.readMore') }}</a>
                                             @endif
                                         </div>
                                     </div>
@@ -68,7 +67,7 @@
     <!--Main Slider End-->
 
     {{-- Counter Start --}}
-    <section class="become-volunteer-one">
+    <section class="become-volunteer-one" >
         {{-- <div class="become-volunteer-one__bg-box">
             <div class="become-volunteer-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
                 style="background-image: url({{ asset('site') }}/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);">
@@ -122,9 +121,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> {{ $Vision->title }}</h2>
                         </div>
-                        <div>
-                            {!! $Vision->content !!}
-                        </div>
+                        <p class="faq-one__text-1">{!! $Vision->content !!}</p>
                         <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
 
                     </div>
@@ -167,7 +164,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title pb-2">{{ $HowItAllBegan->title }}</h2>
                         </div>
-                        <div class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</div>
+                        <p class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</p>
                         <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
                     </div>
                 </div>
@@ -194,7 +191,7 @@
                 @foreach ($events as $event)
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <a href="{{ URL::current() }}/{{ $event->link }}">
+                            <a href="{{  URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
                                     <img src="{{ $event->getFirstMediaUrl('event') }}" alt="">
                                 </div>
@@ -202,7 +199,7 @@
 
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
-                                        href="{{ URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
+                                        href="{{  URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
                                 </h3>
                                 <p class="causes-one__text">{{ $event->content }}</p>
                             </div>
