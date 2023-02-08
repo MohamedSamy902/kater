@@ -227,54 +227,60 @@ h6 {
     line-height: 0;
 }
 
-@media only screen and (max-width: 767px){
-.main-timeline9:before {
-    right: 0;
-}
-    .about-four__img {
-    position: relative;
-    display: block;
-    z-index: 2;
-    width: 80%;
-    right: 0px !important;
+@media only screen and (max-width: 767px) {
+    .main-timeline9:before {
+        right: 0;
     }
+
+    .about-four__img {
+        position: relative;
+        display: block;
+        z-index: 2;
+        width: 80%;
+        right: 0px !important;
+    }
+
     .main-timeline9 .icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #fff;
-    border: 4px dashed;
-    position: absolute;
-    top: -50px;
-    right: -10px;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #fff;
+        border: 4px dashed;
+        position: absolute;
+        top: -50px;
+        right: -10px;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-title__title {
+        font-size: 35px;
+        line-height: 80px;
+    }
 }
-.section-title__title {
-    font-size: 35px;
-    line-height: 80px;
-}
-}
+
 .main-slider__nav {
     display: none;
 }
+
 .faq-one__text-1 {
     margin-left: 10px !important;
     margin-right: 0px !important;
 }
-}
-.number
-{
+
+.number {
     direction: ltr !important;
 }
-@media only screen and (max-width: 767px){
-.counter-one__single {
-    flex: 0 0 100%;
-    max-width: 100%;
+
+@media only screen and (max-width: 767px) {
+    .counter-one__single {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
-}
+
 @media only screen and (min-width: 1099px) and (max-width: 1450px) {
     .main-slider__nav {
         left: 94% !important;
@@ -282,8 +288,3 @@ h6 {
 
     }
 }
-
-/* .main-slider__nav .swiper-button-prev {
-    margin-bottom: 10px;
-    margin-right: 10px;
-} */

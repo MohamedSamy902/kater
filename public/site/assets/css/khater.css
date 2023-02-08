@@ -4,10 +4,25 @@
 @import url('https://fonts.cdnfonts.com/css/dinpro-bold');
 @import url('https://fonts.cdnfonts.com/css/dinpro-bold');
 
-@import url(../font/alfont_com_AlFont_com_DINNextLTArabic-Medium-1.ttf);
+/* @import url(../font/alfont_com_AlFont_com_DINNextLTArabic-Medium-1.ttf);
 @import url(../font/DIN\ Next\ LT\ Arabic\ Light.ttf);
 @import url(../font/DINNextLTArabic-Bold-2.ttf);
+ */
 
+@font-face {
+    font-family: "DINNextLTArabic-Bold";
+    src: url("../font/DINNextLTArabic-Bold-2.ttf")
+}
+
+@font-face {
+    font-family: "DINNextLTArabic-Light";
+    src: url("../font/DINNextLTArabic-Light.ttf")
+}
+
+@font-face {
+    font-family: "DINNextLTArabic-Medium";
+    src: url("../font/alfont_com_AlFont_com_DINNextLTArabic-Medium-1.ttf")
+}
 
 /*--------------------------------------------------------------
 # Common
