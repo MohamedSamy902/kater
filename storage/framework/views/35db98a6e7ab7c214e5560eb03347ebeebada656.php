@@ -57,10 +57,33 @@
                             </div>
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationCustom5"><?php echo e(__('master.link')); ?></label>
+                                    <input class="form-control" id="validationCustom5" type="text"
+                                        aria-label="file example" name="link" value="<?php echo e(old('link') ? old('link') : $slider->link); ?>"/>
+                                    <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
+                                    <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
+                                </div>
+
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
                                     <label class="form-label"
                                         for="validationCustom04"><?php echo e(__('master.content_ar')); ?></label>
                                     <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="content_ar"
                                         required=""><?php echo e(old('content_ar') ? old('content_ar') : $slider->getTranslation('content', 'ar')); ?></textarea>
+                                    <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
+                                    <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
+                                </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationDefault06"><?php echo e(__('master.status')); ?></label>
+                                    <select class="form-select" id="validationDefault06" name="status">
+                                        <option value="active"  <?php echo e($slider->status == 'active' ? 'selected' : ''); ?>> Active</option>
+                                        <option value="inactive" <?php echo e($slider->status == 'inactive' ? 'selected' : ''); ?>> InActive</option>
+                                    </select>
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>

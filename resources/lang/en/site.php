@@ -26,6 +26,8 @@ return
         'send_message' => 'Send a message',
         'write_message' => 'Write a message',
 
+        'photo'  => 'Photos',
+        'video'  => 'Videos',
 
         'home' => 'Home',
         'gallery' => 'Gallery',

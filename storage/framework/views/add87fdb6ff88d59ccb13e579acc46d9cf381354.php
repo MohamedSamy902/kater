@@ -33,7 +33,7 @@
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom01"><?php echo e(__('master.title_en')); ?></label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required="" value="Ramadan 2022" />
+                                        required=""  value=".."/>
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>
@@ -41,7 +41,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationCustom02"><?php echo e(__('master.title_ar')); ?></label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required="" value="رمضان 2022" />
+                                        required="" value=".." />
                                         <input type="hidden" value="<?php echo e($gallery); ?>" name="galleries_id">
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
@@ -53,6 +53,16 @@
                                     <label class="form-label" for="validationCustom10"><?php echo e(__('master.image')); ?></label>
                                     <input class="form-control" id="validationCustom10" type="file"
                                         aria-label="file example" name="galleryDetails[]" multiple />
+                                    <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
+                                    <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
+                                </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationCustom10"><?php echo e(__('master.video')); ?></label>
+                                    <input class="form-control" id="validationCustom10" type="file"
+                                        aria-label="file example" name="galleryVideo[]" multiple />
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>

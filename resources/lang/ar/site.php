@@ -27,6 +27,8 @@ return
         'write_message' => 'اكتب الرساله',
 
 
+        'photo'  => 'الصور',
+        'video'  => 'الفديوهات',
         'home' => 'الرئيسيه',
         'gallery' => 'معرض الصور',
         'WellbeingServices' =>  'الخدمات المجتمعية',

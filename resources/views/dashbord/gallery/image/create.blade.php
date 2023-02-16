@@ -59,6 +59,16 @@
                                 </div>
                             </div>
 
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationCustom10">{{ __('master.video') }}</label>
+                                    <input class="form-control" id="validationCustom10" type="file"
+                                        aria-label="file example" name="galleryVideo[]" multiple />
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
 
                             <button class="btn btn-primary" type="submit">{{ __('master.save') }}</button>
                         </form>
