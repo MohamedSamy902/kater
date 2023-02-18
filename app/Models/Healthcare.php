@@ -13,7 +13,7 @@ class Healthcare extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title', 'content', 'convoys', 'services', 'short_content'];
 
-    protected $fillable = ['title', 'content', 'convoys', 'services',  'status', 'short_content'];
+    protected $fillable = ['title', 'content', 'convoys', 'services',  'status', 'short_content', 'order_by'];
 
     public function healthcareDetalis()
     {

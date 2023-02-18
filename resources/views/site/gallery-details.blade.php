@@ -10,9 +10,9 @@
             <div class="row">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-Photos-tab" data-bs-toggle="tab" data-bs-target="#nav-Photos"
+                        <button style="text-transform: unset;" class="nav-link active" id="nav-Photos-tab" data-bs-toggle="tab" data-bs-target="#nav-Photos"
                             type="button" role="tab" aria-controls="nav-Photos" aria-selected="true">{{ __('site.photo') }}</button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-videos"
+                        <button style="text-transform: unset;" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-videos"
                             type="button" role="tab" aria-controls="nav-videos" aria-selected="false">{{ __('site.video') }}</button>
                     </div>
                 </nav>

@@ -19,7 +19,7 @@ class SiteCotroller extends Controller
         $sliders = Slider::where('status', 'active')->get();
         $HowItAllBegan = Artical::where('section', 'HowItAllBegan')->first();
         $Vision = Artical::where('section', 'Vision')->first();
-        $events = Event::whereNotNull('content')->where('status', 'active')->get();
+        $events = Event::whereNotNull('content')->where('status', 'active')->orderBy('order_by', 'ASC')->get();
         return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'events'));
     }
 
@@ -68,7 +68,6 @@ class SiteCotroller extends Controller
     {
         $Wellbiganing = Artical::where('section', 'Wellbiganing')->first();
         $wellbeingies = WellBeing::where('status', 'active')->get();
-        // return $artical;
         return view('site.wellbeing', compact('Wellbiganing', 'wellbeingies'));
     }
 
