@@ -29,7 +29,7 @@
                         <h5>{{ __('master.data') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate="" method="post" action="{{ route('galleriesgDetails.store') }}"
+                        <form class="needs-validation" novalidate="" method="post" action="{{ route('galleriesgDetails.updare', $gallery->id) }}"
                             enctype="multipart/form-data">
                             @csrf
 

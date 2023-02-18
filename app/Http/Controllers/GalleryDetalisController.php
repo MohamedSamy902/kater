@@ -82,9 +82,10 @@ class GalleryDetalisController extends Controller
      * @param  \App\Models\GalleryDetalis  $galleryDetalis
      * @return \Illuminate\Http\Response
      */
-    public function edit(GalleryDetalis $galleryDetalis)
+    public function edit($id)
     {
-        //
+        $gallery = GalleryDetalis::findOrFail($id);
+        return view('dashbord.gallery.image.edit', compact('gallery'));
     }
 
     /**
