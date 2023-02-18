@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->text('title');
             $table->text('content')->nullable();
+            $table->string('order_by')->nullable();
             $table->enum('status', ['active', 'inactive', 'block'])->default('active');
             $table->timestamps();
         });

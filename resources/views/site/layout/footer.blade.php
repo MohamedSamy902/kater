@@ -19,14 +19,7 @@
                                     {{-- <a href=""><img src="{{ asset('site') }}/assets/images/logo_white.png"
                                             alt=""></a> --}}
                                 </div>
-                                <div class="footer-widget__about-text-box">
-                                    <div class="site-footer__social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook"></i></a>
-                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
@@ -151,17 +144,6 @@
                         <a href="tel:+2 25 17 40 18">+2 25 17 40 18</a>
                     </li>
                 </ul><!-- /.mobile-nav__contact -->
-                <div class="mobile-nav__top">
-                    <div class="mobile-nav__social">
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-facebook-square"></a>
-                        <a href="#" class="fab whatsapp"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                    </div><!-- /.mobile-nav__social -->
-                </div><!-- /.mobile-nav__top -->
-
-
-
             </div>
             <!-- /.mobile-nav__content -->
         </div>

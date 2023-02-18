@@ -122,12 +122,19 @@
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault06">{{ __('master.status') }}</label>
                                     <select class="form-select" id="validationDefault06" name="status">
-                                        <option value="active"  {{ $event->status == 'active' ? 'selected' : '' }}> Active</option>
-                                        <option value="inactive" {{ $event->status == 'inactive' ? 'selected' : '' }}> InActive</option>
+                                        <option value="active"  {{ $healthcare->status == 'active' ? 'selected' : '' }}> Active</option>
+                                        <option value="inactive" {{ $healthcare->status == 'inactive' ? 'selected' : '' }}> InActive</option>
                                     </select>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="validationCustom02">{{ __('master.order_by') }}</label>
+                                <input class="form-control" id="validationCustom02" type="text" name="order_by" required="" value="{{ old('order_by') ? old('order_by') : $healthcare->order_by }}" />
+                                <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                             </div>
 
 

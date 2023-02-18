@@ -67,16 +67,7 @@
 
                             </div>
 
-                            <div class="row g-1">
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label"
-                                        for="validationCustom04">{{ __('master.content_ar') }}</label>
-                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="content_ar"
-                                        required="">{{ old('content_ar') ? old('content_ar') : $event->getTranslation('content', 'ar') }}</textarea>
-                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
-                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
-                                </div>
-                            </div>
+
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
@@ -88,6 +79,25 @@
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom04">{{ __('master.content_ar') }}</label>
+                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="content_ar"
+                                        required="">{{ old('content_ar') ? old('content_ar') : $event->getTranslation('content', 'ar') }}</textarea>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="validationCustom02">{{ __('master.order_by') }}</label>
+                                <input class="form-control" id="validationCustom02" type="text" name="order_by" required="" value="{{ old('order_by') ? old('order_by') : $event->order_by }}" />
+                                <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                             </div>
 
                             <div class="row g-1">

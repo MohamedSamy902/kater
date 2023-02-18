@@ -53,14 +53,14 @@ class GalleryDetalisController extends Controller
                 ->toMediaCollection('galleryDetails');
             }
         }
-
+        if ($request->file('galleryVideo')) {
             for ($i=0; $i < COUNT($request->galleryVideo); $i++) {
                 $galleries
                 ->addMedia($request->file('galleryVideo')[$i])
                 ->usingName($request->title)
                 ->toMediaCollection('galleryVideo');
             }
-
+        }
         return redirect()->back()
             ->with('success', __('master.messages_save'));
     }

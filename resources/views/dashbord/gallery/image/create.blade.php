@@ -51,6 +51,17 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom04">{{ __('master.order_by') }}</label>
+                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="order_by"
+                                        required="">{{ old('order_by') ? old('order_by') : $gallery->getTranslation('content', 'ar') }}</textarea>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10">{{ __('master.image') }}</label>
                                     <input class="form-control" id="validationCustom10" type="file"
                                         aria-label="file example" name="galleryDetails[]" multiple />

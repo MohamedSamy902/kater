@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('short_content')->nullable();
             $table->string('convoys');
             $table->string('services');
+            $table->string('order_by')->nullable();
             $table->enum('status', ['active', 'inactive', 'block'])->default('active');
             $table->timestamps();
         });
