@@ -37,7 +37,8 @@
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required=""  value=".."/>
+                                        required=""
+                                        value="{{ old('title') ? old('title') : $gallery->getTranslation('title', 'en') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -45,8 +46,8 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required="" value=".." />
-                                        <input type="hidden" value="{{ $gallery }}" name="galleries_id">
+                                        required=""
+                                        value="{{ old('title_ar') ? old('title_ar') : $gallery->getTranslation('title', 'ar') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -54,12 +55,25 @@
 
 
 
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationDefault06">{{ __('master.status') }}</label>
+                                    <select class="form-select" id="validationDefault06" name="status">
+                                        <option value="active"  {{ $gallery->status == 'active' ? 'selected' : '' }}> Active</option>
+                                        <option value="inactive" {{ $gallery->status == 'inactive' ? 'selected' : '' }}> InActive</option>
+                                    </select>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
                             <div class="col-md-6 mb-3">
                                 <label class="form-label" for="validationCustom02">{{ __('master.order_by') }}</label>
-                                <input class="form-control" id="validationCustom02" type="text" name="order_by" required="" value="{{ old('order_by') ? old('order_by') : '' }}" />
+                                <input class="form-control" id="validationCustom02" type="text" name="order_by" required="" value="{{ old('order_by') ? old('order_by') : $gallery->order_by }}" />
                                 <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                 <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                             </div>
+
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
