@@ -29,46 +29,53 @@
                         <h5>{{ __('master.data') }}</h5>
                     </div>
                     <div class="card-body">
-                        <form class="needs-validation" novalidate="" method="post"
-                            action="{{ route('wellBeingDetails.update', $wellBeingDetalis->id) }}" enctype="multipart/form-data">
+                        <form class="needs-validation" novalidate="" method="post" action="{{ route('galleriesgDetails.store') }}"
+                            enctype="multipart/form-data">
                             @csrf
-
 
                             <div class="row g-2">
                                 <div class="col-md-6">
-                                    <label class="form-label"
-                                        for="validationCustom01">{{ __('master.title_en') }}</label>
+                                    <label class="form-label" for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required=""
-                                        value="{{ old('title') ? old('title') : $wellBeingDetalis->getTranslation('title', 'en') }}" />
+                                        required=""  value=".."/>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label"
-                                        for="validationCustom02">{{ __('master.title_ar') }}</label>
+                                    <label class="form-label" for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required=""
-                                        value="{{ old('title_ar') ? old('title_ar') : $wellBeingDetalis->getTranslation('title', 'ar') }}" />
+                                        required="" value=".." />
+                                        <input type="hidden" value="{{ $gallery }}" name="galleries_id">
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
                             </div>
 
+
+
                             <div class="col-md-6 mb-3">
                                 <label class="form-label" for="validationCustom02">{{ __('master.order_by') }}</label>
-                                <input class="form-control" id="validationCustom02" type="text" name="order_by" required="" value="{{ old('order_by') ? old('order_by') : $wellBeingDetalis->order_by }}" />
+                                <input class="form-control" id="validationCustom02" type="text" name="order_by" required="" value="{{ old('order_by') ? old('order_by') : '' }}" />
                                 <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                 <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                             </div>
-
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10">{{ __('master.image') }}</label>
                                     <input class="form-control" id="validationCustom10" type="file"
-                                        aria-label="file example" name="wellBeingDetails" />
+                                        aria-label="file example" name="galleryDetails[]" multiple />
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="validationCustom10">{{ __('master.video') }}</label>
+                                    <input class="form-control" id="validationCustom10" type="file"
+                                        aria-label="file example" name="galleryVideo[]" multiple />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
