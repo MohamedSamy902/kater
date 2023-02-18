@@ -41,7 +41,7 @@
                                                     <a href="{{ route('galleriesgDetails.deleteImage', $galler->id) }}"><i class="fa fa-trash"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{ route('wellBeingDetails.edit', $galler->id) }}"><i
+                                                    <a href="{{ route('galleriesgDetails.edit', $galler->id) }}"><i
                                                             class="icon-eye"></i></a>
                                                 </li>
                                             </ul>
