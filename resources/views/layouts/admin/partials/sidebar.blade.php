@@ -151,7 +151,7 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('WellBeing') }};">
                             <li><a href="{{ route('wellBeing.index') }}"
-                                    class="{{ routeActive('users.wellBeing') }}">{{ __('master.wellBeing') }}</a>
+                                    class="{{ routeActive('users.wellBeing') }}">{{ __('master.Well') }}</a>
                             </li>
                             <li><a href="{{ route('wellBeing.create') }}"
                                     class="{{ routeActive('wellBeing.create') }}">{{ __('master.wellBeing_list') }}
@@ -199,7 +199,7 @@
                                     class="{{ routeActive('galleries.index') }}">{{ __('master.gallery') }}</a>
                             </li>
                             <li><a href="{{ route('galleries.create') }}"
-                                    class="{{ routeActive('galleries.create') }}">Add {{ __('master.gallery') }}
+                                    class="{{ routeActive('galleries.create') }}"> {{ __('master.add_gallery') }}
                                 </a></li>
                         </ul>
                     </li>

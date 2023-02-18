@@ -66,10 +66,10 @@ return  [
     // End Tag
 
     // Start Gallery
-    'add_gallery'       => 'اضافه ',
-    'gallery'           => 'Gallery',
-    'gallery_list'      => 'Gallery',
-    'edit_gallery'      => 'Edit Gallery',
+    'add_gallery'       => 'اضافه معرض صور ',
+    'gallery'           => 'معرض الصور',
+    'gallery_list'      => 'معرض الصور',
+    'edit_gallery'      => 'تعديل معرض الصور',
     'seo_gallery'       => 'ارشفه الجلري',
     // End Gallery
 
