@@ -202,6 +202,8 @@ return  [
     'timeLine' => 'Key Milestones',
 
     'order_by' => 'Order By',
+    'add_image' => 'Add Image',
+
 
 
 ];
