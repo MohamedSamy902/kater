@@ -19,7 +19,7 @@ class SiteCotroller extends Controller
         $sliders = Slider::where('status', 'active')->get();
         $HowItAllBegan = Artical::where('section', 'HowItAllBegan')->first();
         $Vision = Artical::where('section', 'Vision')->first();
-        $events = Event::whereNotNull('content')->where('status', 'active')->orderBy('order_by', 'ASC')->get();
+        $events = Event::whereNotNull('content')->where('status', 'active')->orderBy('order_by', 'DESC')->get();
         return view('site.index', compact('sliders', 'HowItAllBegan', 'Vision', 'events'));
     }
 
@@ -50,7 +50,7 @@ class SiteCotroller extends Controller
     public function healthcare()
     {
         $healthcare = Artical::where('section', 'HealthcareInitiatives')->first();
-        $healthcareies = Healthcare::where('status', 'active')->orderBy('order_by', 'ASC')->get();
+        $healthcareies = Healthcare::where('status', 'active')->orderBy('order_by', 'DESC')->get();
         return view('site.healthcare', compact('healthcare', 'healthcareies'));
     }
 
@@ -67,7 +67,7 @@ class SiteCotroller extends Controller
     public function wellbeing()
     {
         $Wellbiganing = Artical::where('section', 'Wellbiganing')->first();
-        $wellbeingies = WellBeing::where('status', 'active')->orderBy('order_by', 'ASC')->get();
+        $wellbeingies = WellBeing::where('status', 'active')->orderBy('order_by', 'DESC')->get();
         return view('site.wellbeing', compact('Wellbiganing', 'wellbeingies'));
     }
 
