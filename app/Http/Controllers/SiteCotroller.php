@@ -57,8 +57,8 @@ class SiteCotroller extends Controller
     public function healthcareDetiles($id)
     {
         $healthcare = Healthcare::findOrFail($id);
-        $allHealthcare = Healthcare::get();
-        $allWellBeing = WellBeing::get();
+        $allHealthcare = Healthcare::where('status', 'active')->get();
+        $allWellBeing = WellBeing::where('status', 'active')->get();
         return view('site.healthcare-details', compact('healthcare', 'allHealthcare', 'allWellBeing'));
     }
 
