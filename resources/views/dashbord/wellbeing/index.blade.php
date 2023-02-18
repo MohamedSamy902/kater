@@ -39,10 +39,11 @@
 
                                             <td>{{ ++$i }}</td>
                                             <td><a href="{{ route('wellBeing.show', $well->id) }}">{{ $well->title }}</a></td>
-                                            <td>{{ $well->content }}</td>
+                                            <td> {!! Str::limit($well->content, 100, "...."); !!}</td>
+
 
                                             <td>
-                                                <div style="display: flex;">
+                                                <div>
                                                     <a class="btn btn-outline-primary-2x" style="margin-right: 20px;"
                                                         href="{{ route('wellBeing.edit', $well->id) }}">{{ __('master.edit') }}</a>
 

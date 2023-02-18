@@ -47,7 +47,7 @@
                                             </td>
 
                                             <td>
-                                                <div style="display: flex;">
+                                                <div>
                                                     <a class="btn btn-outline-primary-2x" style="margin-right: 20px;"
                                                         href="{{ route('events.edit', $event->id) }}">{{ __('master.edit') }}</a>
 
