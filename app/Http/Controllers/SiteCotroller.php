@@ -87,7 +87,7 @@ class SiteCotroller extends Controller
 
     public function gallery()
     {
-        $galleries = Gallery::where('status', 'active')->get();
+        $galleries = Gallery::where('status', 'active')->orderBy('order_by', 'DESC')->get();
 
         return view('site.gallery', compact('galleries'));
     }
@@ -95,7 +95,7 @@ class SiteCotroller extends Controller
     public function galleryDetiles($id)
     {
         $gall = Gallery::findOrFail($id);
-        $galleries = GalleryDetalis::where('galleries_id', $id)->get();
+        $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->get();
         return view('site.gallery-details', compact('galleries', 'gall'));
     }
 

@@ -13,7 +13,7 @@ class Gallery extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title', 'content'];
 
-    protected $fillable = ['title', 'content','status'];
+    protected $fillable = ['title', 'content','status', 'order_by'];
 
     public function galleryDetalis()
     {
