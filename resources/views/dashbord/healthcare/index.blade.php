@@ -39,7 +39,7 @@
 
                                             <td>{{ ++$i }}</td>
                                             <td><a href="{{ route('healthcare.show', $well->id) }}">{{ $well->title }}</a></td>
-                                            <td>{{ $well->content }}</td>
+                                            <td> {!! Str::limit($well->content, 100, "...."); !!}</td>
 
                                             <td>
                                                 <div style="display: flex;">

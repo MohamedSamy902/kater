@@ -40,7 +40,8 @@
 
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $event->title }}</td>
-                                            <td>{{ $event->content }}</td>
+                                            <td> {!! Str::limit($event->content, 100, "...."); !!}</td>
+
                                             <td><img style="max-width: 100px;max-height: 100px;"
                                                     src="{{ $event->getFirstMediaUrl('event') != null ? $event->getFirstMediaUrl('event') : asset('') }}">
                                             </td>
