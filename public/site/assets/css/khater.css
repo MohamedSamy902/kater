@@ -4832,7 +4832,7 @@ body.locked .page-wrapper {
 .counter-one__text2 {
   position: relative;
   display: inline-block;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--khater-secondary-2);
   font-weight: 700;
   font-family: var(--khater-font-three);
@@ -5331,7 +5331,8 @@ body.locked .page-wrapper {
 .footer-widget__contact-text {
   color: #FFF;
   font-weight: 400;
-  padding-bottom: 10px;
+  /* padding-bottom: 10 px; */
+  font-size: 15px;
 }
 
 .footer-widget__contact-list {
@@ -5369,6 +5370,7 @@ body.locked .page-wrapper {
 .footer-widget__contact-list li .text p a {
   color: var(--khater-white);
   transition: all 500ms ease;
+  font-size: 15px;
 }
 
 .footer-widget__contact-list li .text p a:hover {
