@@ -8,17 +8,20 @@
             <div class="pb-5 text-center">{!! $gall->content !!}</div>
 
             <div class="row">
-                <nav>
+                @if ($countImageGallery > 0 && $countVideoGallery > 0)
+                    <nav>
 
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center;">
-                        <button style="text-transform: unset;" class="nav-link active" id="nav-Photos-tab"
-                            data-bs-toggle="tab" data-bs-target="#nav-Photos" type="button" role="tab"
-                            aria-controls="nav-Photos" aria-selected="true">{{ __('site.photo') }}</button>
-                        <button style="text-transform: unset;" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                            data-bs-target="#nav-videos" type="button" role="tab" aria-controls="nav-videos"
-                            aria-selected="false">{{ __('site.video') }}</button>
-                    </div>
-                </nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center;">
+                            <button style="text-transform: unset;" class="nav-link active" id="nav-Photos-tab"
+                                data-bs-toggle="tab" data-bs-target="#nav-Photos" type="button" role="tab"
+                                aria-controls="nav-Photos" aria-selected="true">{{ __('site.photo') }}</button>
+                            <button style="text-transform: unset;" class="nav-link" id="nav-profile-tab"
+                                data-bs-toggle="tab" data-bs-target="#nav-videos" type="button" role="tab"
+                                aria-controls="nav-videos" aria-selected="false">{{ __('site.video') }}</button>
+                        </div>
+                    </nav>
+                @endif
+
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-Photos" role="tabpanel" aria-labelledby="nav-home-tab">
 

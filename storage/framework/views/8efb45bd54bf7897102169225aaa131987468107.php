@@ -38,8 +38,9 @@
                                         <p class="text-white"><?php echo e($slider->content); ?></p>
                                         <div class="main-slider__btn-box">
                                             <?php if($slider->link != null): ?>
-                                            <a href="<?php echo e(URL::current()); ?>/<?php echo e($slider->link); ?>" class="thm-btn main-slider__btn">
-                                                <?php echo e(__('site.readMore')); ?></a>
+                                                <a href="<?php echo e(URL::current()); ?>/<?php echo e($slider->link); ?>"
+                                                    class="thm-btn main-slider__btn">
+                                                    <?php echo e(__('site.readMore')); ?></a>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -66,7 +67,7 @@
     <!--Main Slider End-->
 
     
-    <section class="become-volunteer-one" >
+    <section class="become-volunteer-one">
         
 
         <div class="container-fuild">
@@ -179,6 +180,12 @@
     <section class="donation-carousel-page">
         <div class="container-fuild p-5">
             <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <h3 style="font-size: 24px;"  class="section-title__title">More News & Stores</h3>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: end;">
+                    <p style="font-size: 20px;"  class="section-title__title"><a href="<?php echo e(route('gallery')); ?>">View All News</a> </p>
+                </div>
                 <!--Causes One Single Start-->
 
                 <!--Causes One Single End-->

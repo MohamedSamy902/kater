@@ -95,8 +95,21 @@ class SiteCotroller extends Controller
     public function galleryDetiles($id)
     {
         $gall = Gallery::findOrFail($id);
-        $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->get();
-        return view('site.gallery-details', compact('galleries', 'gall'));
+        $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->with(['media'])->get();
+        $countImageGallery = 0;
+        $countVideoGallery = 0;
+        foreach ($galleries as $key) {
+            if ($key->getFirstMediaUrl('galleryDetails')) {
+                $countImageGallery += 1;
+            }
+
+            if ($key->getFirstMediaUrl('galleryVideo')) {
+                $countVideoGallery += 1;
+            }
+        }
+
+        // return $countImageGallery;
+        return view('site.gallery-details', compact('galleries', 'gall', 'countVideoGallery', 'countImageGallery'));
     }
 
     public function contact()

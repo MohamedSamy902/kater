@@ -6,14 +6,20 @@
             <div class="pb-5 text-center"><?php echo $gall->content; ?></div>
 
             <div class="row">
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button class="nav-link active" id="nav-Photos-tab" data-bs-toggle="tab" data-bs-target="#nav-Photos"
-                            type="button" role="tab" aria-controls="nav-Photos" aria-selected="true"><?php echo e(__('site.photo')); ?></button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-videos"
-                            type="button" role="tab" aria-controls="nav-videos" aria-selected="false"><?php echo e(__('site.video')); ?></button>
-                    </div>
-                </nav>
+                <?php if($countImageGallery > 0 && $countVideoGallery > 0): ?>
+                    <nav>
+
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center;">
+                            <button style="text-transform: unset;" class="nav-link active" id="nav-Photos-tab"
+                                data-bs-toggle="tab" data-bs-target="#nav-Photos" type="button" role="tab"
+                                aria-controls="nav-Photos" aria-selected="true"><?php echo e(__('site.photo')); ?></button>
+                            <button style="text-transform: unset;" class="nav-link" id="nav-profile-tab"
+                                data-bs-toggle="tab" data-bs-target="#nav-videos" type="button" role="tab"
+                                aria-controls="nav-videos" aria-selected="false"><?php echo e(__('site.video')); ?></button>
+                        </div>
+                    </nav>
+                <?php endif; ?>
+
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-Photos" role="tabpanel" aria-labelledby="nav-home-tab">
 
@@ -51,7 +57,8 @@
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
-                                                        <video src="<?php echo e($gallery->getFirstMediaUrl('galleryVideo')); ?>"></video>
+                                                        <video
+                                                            src="<?php echo e($gallery->getFirstMediaUrl('galleryVideo')); ?>"></video>
                                                         
                                                         <a href="<?php echo e($gallery->getFirstMediaUrl('galleryVideo')); ?>"
                                                             class="img-popup"></a>
