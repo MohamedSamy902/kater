@@ -185,10 +185,10 @@
     <section class="donation-carousel-page">
         <div class="container-fuild p-5">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-sm-12 p-0 ">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <h1 class="section-title__title">More News & Stores</h1>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-sm-12" style="text-align: end;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: end;">
                     <h2 class="section-title__title"><a href="">View All News</a> </h2>
                 </div>
                 <!--Causes One Single Start-->
