@@ -186,10 +186,10 @@
         <div class="container-fuild p-5">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <h1 class="section-title__title">More News & Stores</h1>
+                    <h3 style="font-size: 24px;padding-left: 10px;"  class="section-title__title">More News & Stores</h3>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: end;">
-                    <h2 class="section-title__title"><a href="">View All News</a> </h2>
+                    <p class="section-title__title"><a href="">View All News</a> </p>
                 </div>
                 <!--Causes One Single Start-->
 
