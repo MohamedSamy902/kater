@@ -138,7 +138,7 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('WellBeing')); ?>;">
                             <li><a href="<?php echo e(route('wellBeing.index')); ?>"
-                                    class="<?php echo e(routeActive('users.wellBeing')); ?>"><?php echo e(__('master.wellBeing')); ?></a>
+                                    class="<?php echo e(routeActive('users.wellBeing')); ?>"><?php echo e(__('master.Well')); ?></a>
                             </li>
                             <li><a href="<?php echo e(route('wellBeing.create')); ?>"
                                     class="<?php echo e(routeActive('wellBeing.create')); ?>"><?php echo e(__('master.wellBeing_list')); ?>
@@ -189,7 +189,7 @@
                                     class="<?php echo e(routeActive('galleries.index')); ?>"><?php echo e(__('master.gallery')); ?></a>
                             </li>
                             <li><a href="<?php echo e(route('galleries.create')); ?>"
-                                    class="<?php echo e(routeActive('galleries.create')); ?>">Add <?php echo e(__('master.gallery')); ?>
+                                    class="<?php echo e(routeActive('galleries.create')); ?>"> <?php echo e(__('master.add_gallery')); ?>
 
                                 </a></li>
                         </ul>

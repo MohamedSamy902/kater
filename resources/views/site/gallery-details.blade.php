@@ -9,11 +9,14 @@
 
             <div class="row">
                 <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <button style="text-transform: unset;" class="nav-link active" id="nav-Photos-tab" data-bs-toggle="tab" data-bs-target="#nav-Photos"
-                            type="button" role="tab" aria-controls="nav-Photos" aria-selected="true">{{ __('site.photo') }}</button>
-                        <button style="text-transform: unset;" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-videos"
-                            type="button" role="tab" aria-controls="nav-videos" aria-selected="false">{{ __('site.video') }}</button>
+
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center;">
+                        <button style="text-transform: unset;" class="nav-link active" id="nav-Photos-tab"
+                            data-bs-toggle="tab" data-bs-target="#nav-Photos" type="button" role="tab"
+                            aria-controls="nav-Photos" aria-selected="true">{{ __('site.photo') }}</button>
+                        <button style="text-transform: unset;" class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-videos" type="button" role="tab" aria-controls="nav-videos"
+                            aria-selected="false">{{ __('site.video') }}</button>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
@@ -53,7 +56,8 @@
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
-                                                        <video src="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"></video>
+                                                        <video
+                                                            src="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"></video>
                                                         {{-- <img src="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"> --}}
                                                         <a href="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"
                                                             class="img-popup"></a>

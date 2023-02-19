@@ -39,8 +39,9 @@
                                         <p class="text-white">{{ $slider->content }}</p>
                                         <div class="main-slider__btn-box">
                                             @if ($slider->link != null)
-                                            <a href="{{  URL::current() }}/{{ $slider->link }}" class="thm-btn main-slider__btn">
-                                                {{ __('site.readMore') }}</a>
+                                                <a href="{{ URL::current() }}/{{ $slider->link }}"
+                                                    class="thm-btn main-slider__btn">
+                                                    {{ __('site.readMore') }}</a>
                                             @endif
                                         </div>
                                     </div>
@@ -67,7 +68,7 @@
     <!--Main Slider End-->
 
     {{-- Counter Start --}}
-    <section class="become-volunteer-one" >
+    <section class="become-volunteer-one">
         {{-- <div class="become-volunteer-one__bg-box">
             <div class="become-volunteer-one__bg jarallax" data-jarallax data-speed="0.2" data-imgPosition="50% 0%"
                 style="background-image: url({{ asset('site') }}/assets/images/resources/khairy\ \(63\ of\ 186\).jpg);">
@@ -184,6 +185,12 @@
     <section class="donation-carousel-page">
         <div class="container-fuild p-5">
             <div class="row">
+                <div class="col-xl-6 col-lg-6 col-sm-12 p-0 ">
+                    <h1 class="section-title__title">More News & Stores</h1>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-sm-12" style="text-align: end;">
+                    <h2 class="section-title__title"><a href="">View All News</a> </h2>
+                </div>
                 <!--Causes One Single Start-->
 
                 <!--Causes One Single End-->
@@ -191,7 +198,7 @@
                 @foreach ($events as $event)
                     <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
-                            <a href="{{  URL::current() }}/{{ $event->link }}">
+                            <a href="{{ URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
                                     <img src="{{ $event->getFirstMediaUrl('event') }}" alt="">
                                 </div>
@@ -199,7 +206,7 @@
 
                             <div class="causes-one__content_index">
                                 <h3 class="causes-one__title"><a
-                                        href="{{  URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
+                                        href="{{ URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
                                 </h3>
                                 <p class="causes-one__text">{{ $event->content }}</p>
                             </div>

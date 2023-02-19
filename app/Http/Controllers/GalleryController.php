@@ -16,7 +16,9 @@ class GalleryController extends Controller
     public function index()
     {
         $i = 0;
-        $galleries = Gallery::get();
+        $galleries = Gallery::all();
+        return $galleries;
+
         return view('dashbord.gallery.index', compact('galleries', 'i'));
     }
 

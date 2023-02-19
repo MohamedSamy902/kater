@@ -38,10 +38,11 @@
 
                                             <td><?php echo e(++$i); ?></td>
                                             <td><a href="<?php echo e(route('wellBeing.show', $well->id)); ?>"><?php echo e($well->title); ?></a></td>
-                                            <td><?php echo e($well->content); ?></td>
+                                            <td> <?php echo Str::limit($well->content, 100, "...."); ?></td>
+
 
                                             <td>
-                                                <div style="display: flex;">
+                                                <div>
                                                     <a class="btn btn-outline-primary-2x" style="margin-right: 20px;"
                                                         href="<?php echo e(route('wellBeing.edit', $well->id)); ?>"><?php echo e(__('master.edit')); ?></a>
 

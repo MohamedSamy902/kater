@@ -5506,7 +5506,7 @@ body.locked .page-wrapper {
   display: block;
   background-color: var(--khater-secondary-10);
   padding: 40px 20px;
-  height: 340px;
+  height: 370px;
   border-radius: var(--khater-bdr-radius);
   overflow: hidden;
   z-index: 1;
