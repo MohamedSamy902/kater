@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\GalleryDetalis;
+use Illuminate\Support\Facades\DB;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class GalleryDetalisController extends Controller
@@ -25,7 +26,8 @@ class GalleryDetalisController extends Controller
      */
     public function create($gallery)
     {
-        return view('dashbord.gallery.image.create', compact('gallery'));
+        $test = DB::table('media')->get();
+        return view('dashbord.gallery.image.create', compact('gallery', 'test'));
     }
 
     /**

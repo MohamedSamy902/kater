@@ -166,10 +166,10 @@ return  [
     'Healthcare' => 'Healthcare ',
     'Healthcare_list' => 'Healthcare List',
     'Health' => 'Healthcare',
-    'WellBeing' => 'Well-being Initiatives',
-    'wellBeing_list' => 'Well-being Initiatives List',
+    'WellBeing' => 'Wellbeing Initiatives',
+    'wellBeing_list' => 'Wellbeing Initiatives List',
 
-    'Well' => 'Well-being ',
+    'Well' => 'Wellbeing ',
 
     'approaches' => 'Approaches',
     'explore_more' => ' Explore More',

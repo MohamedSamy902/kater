@@ -6,6 +6,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\GalleryDetalisController;
 use App\Http\Controllers\HealthcareController;
 use App\Http\Controllers\HealthcareDetailsController;
+use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -43,6 +44,7 @@ Route::group(
                 /** End Route Users **/
 
                 Route::get('galleriesgDetails/delete/image/{id}',               [GalleryDetalisController::class, 'removeImage'])->name('galleriesgDetails.deleteImage');
+                Route::get('image/delete/image/{id}',               [ImageController::class, 'deleteImage'])->name('image.deleteImage');
                 Route::get('wellBeingDetails/delete/image/{id}',               [WellBeingDetalisController::class, 'removeImage'])->name('wellBeingDetails.deleteImage');
                 Route::get('healthcareDetails/delete/image/{id}',               [HealthcareDetailsController::class, 'removeImage'])->name('healthcareDetails.deleteImage');
 
@@ -50,6 +52,7 @@ Route::group(
 
                 /** Start Route Roles **/
                 Route::resource('roles', RoleController::class)->except(['show']);
+                Route::resource('image', ImageController::class)->except(['show']);
                 /** End Route Roles **/
                 ['TimeLine'];
                 /** Start Route Roles **/
