@@ -96,9 +96,7 @@ class SiteCotroller extends Controller
     public function galleryDetiles($id)
     {
         $gall = Gallery::findOrFail($id);
-        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
-        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
-        $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->with(['media'])->get();
+        $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->get();
         $countImageGallery = 1;
         $countVideoGallery = 1;
         foreach ($galleries as $key) {
@@ -112,7 +110,7 @@ class SiteCotroller extends Controller
             }
         }
 
-        return view('site.gallery-details', compact('galleries', 'gall', 'countVideoGallery', 'countImageGallery', 'images', 'videos'));
+        return view('site.gallery-details', compact('galleries', 'gall', 'countVideoGallery', 'countImageGallery'));
     }
 
     public function contact()
