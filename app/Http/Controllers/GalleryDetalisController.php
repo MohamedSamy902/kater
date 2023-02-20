@@ -73,7 +73,6 @@ class GalleryDetalisController extends Controller
                     ->toMediaCollection('galleryVideo');
             }
         }
-        return 'ood ';
         return redirect()->back()
             ->with('success', __('master.messages_save'));
     }
