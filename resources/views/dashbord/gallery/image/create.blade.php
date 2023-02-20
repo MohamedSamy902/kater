@@ -90,7 +90,7 @@
                                                                             <ul>
                                                                                 <li>
                                                                                     <a
-                                                                                        href="{{ route('image.deleteImage', $galler->id) }}"><i
+                                                                                        href=""><i
                                                                                             class="fa fa-plus"></i></a>
                                                                                 </li>
 
