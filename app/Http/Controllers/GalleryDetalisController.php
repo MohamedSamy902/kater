@@ -60,7 +60,7 @@ class GalleryDetalisController extends Controller
                 $galleries = GalleryDetalis::create($data);
                 $galleries
                     ->addMedia($request->file('galleryDetails')[$i])
-                    ->usingName($request->title)
+                    ->usingName('gallery')
                     ->toMediaCollection('galleryDetails');
             }
         }
@@ -69,7 +69,7 @@ class GalleryDetalisController extends Controller
             for ($i = 0; $i < COUNT($request->galleryVideo); $i++) {
                 $galleries
                     ->addMedia($request->file('galleryVideo')[$i])
-                    ->usingName($request->title)
+                    ->usingName('gallery')
                     ->toMediaCollection('galleryVideo');
             }
         }
