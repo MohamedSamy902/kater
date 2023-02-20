@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artical;
 use App\Models\Event;
-use App\Models\Gallery;
-use App\Models\GalleryDetalis;
-use App\Models\Healthcare;
 use App\Models\Slider;
+use App\Models\Artical;
+use App\Models\Gallery;
 use App\Models\WellBeing;
+use App\Models\Healthcare;
 use Illuminate\Http\Request;
+use App\Models\GalleryDetalis;
+use Illuminate\Support\Facades\DB;
 
 class SiteCotroller extends Controller
 {
@@ -95,6 +96,8 @@ class SiteCotroller extends Controller
     public function galleryDetiles($id)
     {
         $gall = Gallery::findOrFail($id);
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
         $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->with(['media'])->get();
         $countImageGallery = 1;
         $countVideoGallery = 1;

@@ -37,7 +37,7 @@
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required=""
+                                        
                                         value="{{ old('title') ? old('title') : $gallery->getTranslation('title', 'en') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
@@ -46,7 +46,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required=""
+                                        
                                         value="{{ old('title_ar') ? old('title_ar') : $gallery->getTranslation('title', 'ar') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
