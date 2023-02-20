@@ -38,8 +38,8 @@
                         <section class="gallery-page">
                             <div class="container">
                                 <div class="row">
-                                    @foreach ($images as $gallery)
-                                        {{-- @if ($gallery->getFirstMediaUrl('galleryDetails') != '') --}}
+                                    @foreach ($galleries as $gallery)
+                                        @if (getUrlMedia($gallery, 'galleryDetails') != '')
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
@@ -49,7 +49,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        {{-- @endif --}}
+                                        @endif
                                     @endforeach
 
                                 </div>
@@ -63,7 +63,7 @@
                         <section class="gallery-page">
                             <div class="container">
                                 <div class="row">
-                                    @foreach ($videos as $gallery)
+                                    @foreach ($galleries as $gallery)
                                         @if (getUrlVideo($gallery, 'galleryVideo') != '')
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
