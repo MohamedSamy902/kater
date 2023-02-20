@@ -200,15 +200,15 @@
                         <div class="causes-one__single">
                             <a href="{{ URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
-                                    <img src="{{ $event->getFirstMediaUrl('event') }}" alt="">
+                                    <img style="height: 260px;" src="{{ $event->getFirstMediaUrl('event') }}" alt="">
                                 </div>
                             </a>
 
                             <div class="causes-one__content_index">
-                                <h3 class="causes-one__title"><a
+                                <h3 class="causes-one__title" style="font-size: 20px;" ><a
                                         href="{{ URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
                                 </h3>
-                                <p class="causes-one__text">{{ $event->content }}</p>
+                                <p class="causes-one__text" style="font-size: 16px;" >{{ $event->content }}</p>
                             </div>
                         </div>
                     </div>
