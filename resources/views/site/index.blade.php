@@ -196,7 +196,7 @@
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
                 @foreach ($events as $event)
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6" style="padding: 0px 25px 0px 25px;">
                         <div class="causes-one__single">
                             <a href="{{ URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
