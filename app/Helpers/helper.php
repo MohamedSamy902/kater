@@ -23,8 +23,9 @@ function getUrlMedia($model = null, $collect)
 {
     if ($model->image_id != null) {
         $test = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->where('id', '=', $model->image_id)->first();
-
-        return url('media/' . $test->id . '/' . $test->file_name);
+        if ($test) {
+            return url('media/' . $test->id . '/' . $test->file_name);
+        }
     } else {
         return $model->getFirstMediaUrl($collect);
     }
@@ -35,8 +36,10 @@ function getUrlVideo($model = null, $collect)
 {
     if ($model->image_id != null) {
         $test = DB::table('media')->where('mime_type', '=', 'video/mp4')->where('id', '=', $model->image_id)->get();
+        if ($test) {
+            return url('media/' . $test->id . '/' . $test->file_name);
+        }
         // $test = DB::table('media')->where('id', '=', $model->image_id)->first();
-        return url('media/' . $test->id . '/' . $test->file_name);
     } else {
         return $model->getFirstMediaUrl($collect);
     }

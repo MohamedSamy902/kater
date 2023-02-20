@@ -67,9 +67,9 @@
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
-                                                        <video
-                                                            src="<?php echo e(getUrlMedia($gallery, 'galleryVideo')); ?>"></video>
-                                                        <a href="<?php echo e(getUrlMedia($gallery, 'galleryVideo')); ?>" class="img-popup"></a>
+                                                        <video width="100%"
+                                                            src="<?php echo e(getUrlVideo($gallery, 'galleryVideo')); ?>"></video>
+                                                        <a href="<?php echo e(getUrlVideo($gallery, 'galleryVideo')); ?>" class="img-popup"></a>
                                                     </div>
                                                 </div>
                                             </div>
