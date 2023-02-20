@@ -112,7 +112,7 @@ class SiteCotroller extends Controller
             }
         }
 
-        return view('site.gallery-details', compact('galleries', 'gall', 'countVideoGallery', 'countImageGallery'));
+        return view('site.gallery-details', compact('galleries', 'gall', 'countVideoGallery', 'countImageGallery', 'images', 'videos'));
     }
 
     public function contact()
