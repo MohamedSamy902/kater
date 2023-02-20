@@ -26,8 +26,9 @@ class GalleryDetalisController extends Controller
      */
     public function create($gallery)
     {
-        $test = DB::table('media')->get();
-        return view('dashbord.gallery.image.create', compact('gallery', 'test'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.gallery.image.create', compact('gallery', 'images', 'videos'));
     }
 
     /**
@@ -46,23 +47,33 @@ class GalleryDetalisController extends Controller
 
         $data['galleries_id'] = $request->galleries_id;
 
-        $galleries = GalleryDetalis::create($data);
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
+
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+                $galleries = GalleryDetalis::create($data);
+            }
+        }
         if ($request->file('galleryDetails')) {
-            for ($i=0; $i < COUNT($request->galleryDetails); $i++) {
+            for ($i = 0; $i < COUNT($request->galleryDetails); $i++) {
+                $galleries = GalleryDetalis::create($data);
                 $galleries
-                ->addMedia($request->file('galleryDetails')[$i])
-                ->usingName($request->title)
-                ->toMediaCollection('galleryDetails');
+                    ->addMedia($request->file('galleryDetails')[$i])
+                    ->usingName($request->title)
+                    ->toMediaCollection('galleryDetails');
             }
         }
         if ($request->file('galleryVideo')) {
-            for ($i=0; $i < COUNT($request->galleryVideo); $i++) {
+            $galleries = GalleryDetalis::create($data);
+            for ($i = 0; $i < COUNT($request->galleryVideo); $i++) {
                 $galleries
-                ->addMedia($request->file('galleryVideo')[$i])
-                ->usingName($request->title)
-                ->toMediaCollection('galleryVideo');
+                    ->addMedia($request->file('galleryVideo')[$i])
+                    ->usingName($request->title)
+                    ->toMediaCollection('galleryVideo');
             }
         }
+        return 'ood ';
         return redirect()->back()
             ->with('success', __('master.messages_save'));
     }

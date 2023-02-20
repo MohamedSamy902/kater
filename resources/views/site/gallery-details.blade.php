@@ -39,17 +39,17 @@
                             <div class="container">
                                 <div class="row">
                                     @foreach ($galleries as $gallery)
-                                        @if ($gallery->getFirstMediaUrl('galleryDetails') != '')
+                                        {{-- @if ($gallery->getFirstMediaUrl('galleryDetails') != '') --}}
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
-                                                        <img src="{{ $gallery->getFirstMediaUrl('galleryDetails') }}">
-                                                        <a href="{{ $gallery->getFirstMediaUrl('galleryDetails') }}"
+                                                        <img src="{{ getUrlMedia($gallery, 'galleryDetails') }}">
+                                                        <a href="{{ getUrlMedia($gallery, 'galleryDetails') }}"
                                                             class="img-popup"></a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endif
+                                        {{-- @endif --}}
                                     @endforeach
 
                                 </div>
@@ -64,19 +64,17 @@
                             <div class="container">
                                 <div class="row">
                                     @foreach ($galleries as $gallery)
-                                        @if ($gallery->getFirstMediaUrl('galleryVideo') != '')
+                                        {{-- @if ($gallery->getFirstMediaUrl('galleryVideo') != '') --}}
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
                                                         <video
-                                                            src="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"></video>
-                                                        {{-- <img src="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"> --}}
-                                                        <a href="{{ $gallery->getFirstMediaUrl('galleryVideo') }}"
-                                                            class="img-popup"></a>
+                                                            src="{{ getUrlMedia($gallery, 'galleryVideo') }}"></video>
+                                                        <a href="{{ getUrlMedia($gallery, 'galleryVideo') }}" class="img-popup"></a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        @endif
+                                        {{-- @endif --}}
                                     @endforeach
                                 </div>
                             </div>
@@ -85,19 +83,6 @@
 
                     </div>
                 </div>
-                {{-- @foreach ($galleries as $gallery)
-                    @if ($gallery->getFirstMediaUrl('galleryDetails') != '')
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="gallery-page__single">
-                                <div class="gallery-page__img">
-                                    <img src="{{ $gallery->getFirstMediaUrl('galleryDetails') }}">
-                                    <a href="{{ $gallery->getFirstMediaUrl('galleryDetails') }}" class="img-popup"></a>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach --}}
-
             </div>
         </div>
     </section>

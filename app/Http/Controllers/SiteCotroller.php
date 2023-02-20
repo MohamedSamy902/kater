@@ -96,12 +96,13 @@ class SiteCotroller extends Controller
     {
         $gall = Gallery::findOrFail($id);
         $galleries = GalleryDetalis::where('galleries_id', $id)->orderBy('order_by', 'DESC')->with(['media'])->get();
-        $countImageGallery = 0;
-        $countVideoGallery = 0;
+        $countImageGallery = 1;
+        $countVideoGallery = 1;
         foreach ($galleries as $key) {
             if ($key->getFirstMediaUrl('galleryDetails')) {
                 $countImageGallery += 1;
             }
+
 
             if ($key->getFirstMediaUrl('galleryVideo')) {
                 $countVideoGallery += 1;

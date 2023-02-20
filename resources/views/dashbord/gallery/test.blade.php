@@ -32,7 +32,7 @@
                             <div class="card">
                                 <div class="product-box">
                                     <div class="product-img">
-                                        <img class="img-fluid" src="{{   url('media/' . $galler->id . '/' . $galler->file_name)}}"
+                                        <img class="img-fluid" src="{{ url('media/' . $galler->id . '/' . $galler->file_name)}}"
                                             alt="" />
                                         <div class="product-hover">
 

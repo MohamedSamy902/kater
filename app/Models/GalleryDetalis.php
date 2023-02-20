@@ -13,7 +13,7 @@ class GalleryDetalis extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title'];
 
-    protected $fillable = ['title', 'status', 'galleries_id', 'order_by'];
+    protected $fillable = ['title', 'status', 'galleries_id', 'order_by', 'image_id'];
 
     public function Gallery()
     {
