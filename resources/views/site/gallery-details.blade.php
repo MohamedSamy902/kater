@@ -68,7 +68,7 @@
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
-                                                        <video width="100%"
+                                                        <video width="100%" controls
                                                             src="{{ getUrlVideo($gallery, 'galleryVideo') }}"></video>
                                                         <a href="{{ getUrlVideo($gallery, 'galleryVideo') }}" class="img-popup"></a>
                                                     </div>
