@@ -60,7 +60,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="section-title__title text-center">{{ __('site.timeLine') }}</h2>
-                    <div class="main-timeline9" style="top: -80px;">
+                    <div class="main-timeline9" style="top: -50px;">
                         <div class="timeline">
                             <div class="timeline-content line1">
                                 <a href="{{ $TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);' }}">
@@ -427,7 +427,10 @@
                     <div class="section-title text-left">
                         <h2 class="section-title__title">{{ $WhereWeServe->title }}</h2>
                     </div>
-                    <p class="events-two__text">{!! $WhereWeServe->content !!}</p>
+                    <div class="pb-5">
+                    {!! $WhereWeServe->content !!}
+
+                    </div>
                 </div>
             </div>
             <div class="thm-swiper__slider swiper-container"

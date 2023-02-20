@@ -107,6 +107,93 @@
                     </div>
                 </div> --}}
                 <!--Causes One Single End-->
+
+            </div>
+        </div>
+    </section>
+    <section class="brand-one brand-three">
+        <div class="container-fluid">
+            <div class="col-xl-12 col-lg-12">
+                <div class="events-two__left">
+                    <div class="section-title text-left">
+                        <h2 class="section-title__title">{{ __('site.SuccessPartners') }}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="thm-swiper__slider swiper-container"
+                data-swiper-options='{"spaceBetween": 0, "slidesPerView": 1, "autoplay":false,
+                "autoplayTimeout":3000,"navigation": {
+                    "nextEl": "#main-slider__swiper-button-next",
+                    "prevEl": "#main-slider__swiper-button-prev"
+                    }, "breakpoints": {
+                            "0": {
+                                "spaceBetween": 0,
+                                "slidesPerView": 1
+                            },
+
+                            "575": {
+                                "spaceBetween": 0,
+                                "slidesPerView": 2
+                            },
+
+
+                            "1199": {
+                                "spaceBetween": 0,
+                                "slidesPerView": 3
+                            }
+                        }}'>
+                <div class="swiper-wrapper">
+                    @foreach ($healthcareies as $healthcareie)
+                        <div class="col-xl-12 col-lg-12 col-md-6 p-2 swiper-slide">
+                            <div class="causes-one__single">
+                                <a href="{{ route('healthcare.detils', $healthcareie->id) }}">
+                                    <div class="causes-one__img">
+                                        <img style="width: 100%; height: 300px;" src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="causes-one__content">
+                                    <h3 class="causes-one__title"><a
+                                            href="{{ route('healthcare.detils', $healthcareie->id) }}">{{ $healthcareie->title }}</a>
+                                    </h3>
+                                    <p class="causes-one__text">
+                                        {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }}
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-4 col-lg-6 col-md-6  p-2 swiper-slide">
+                            <div class="causes-one__single">
+                                <a href="{{ route('healthcare.detils', $healthcareie->id) }}">
+                                    <div class="causes-one__img">
+                                        <img style="width: 100%; height: 300px;" src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}" alt="">
+                                    </div>
+                                </a>
+
+                                <div class="causes-one__content">
+                                    <h3 class="causes-one__title"><a
+                                            href="{{ route('healthcare.detils', $healthcareie->id) }}">{{ $healthcareie->title }}</a>
+                                    </h3>
+                                    <p class="causes-one__text">
+                                        {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }}
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="main-slider__nav" style="display: -webkit-box;">
+                    <div class="swiper-button-prev" id="main-slider__swiper-button-next">
+                        <i class="icon-left-arrow"></i>
+                    </div>
+                    <div class="swiper-button-next" id="main-slider__swiper-button-prev">
+                        <i class="icon-right-arrow"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

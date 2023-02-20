@@ -50,22 +50,15 @@
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
-                                    <label class="form-label" for="validationDefault06"><?php echo e(__('master.gallery')); ?></label>
-                                    <select class="form-select" id="validationDefault06" required="" name="galleries_id">
-                                        <option selected="" disabled="" value=""> <?php echo e(__('role.role')); ?>
-
-                                        </option>
-                                        <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <option <?php echo e(old('galleries_id') == $gallery ? 'selected' : ''); ?>
-
-                                                value="<?php echo e($gallery->id); ?>"><?php echo e($gallery->title); ?></option>
-                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
-                                    </select>
+                                    <label class="form-label" for="validationCustom5"><?php echo e(__('master.link')); ?></label>
+                                    <input class="form-control" id="validationCustom5" type="text"
+                                        aria-label="file example" name="link" />
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>
+
                             </div>
+
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom10"><?php echo e(__('master.image')); ?></label>

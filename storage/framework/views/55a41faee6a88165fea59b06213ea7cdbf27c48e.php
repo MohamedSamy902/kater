@@ -108,6 +108,13 @@
                                 </div>
                             </div>
 
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="validationCustom02"><?php echo e(__('master.order_by')); ?></label>
+                                <input class="form-control" id="validationCustom02" type="text" name="order_by" value="<?php echo e(old('order_by') ? old('order_by') : ''); ?>" />
+                                <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
+                                <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
+                            </div>
+
 
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">

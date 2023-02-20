@@ -181,10 +181,10 @@
         <div class="container-fuild p-5">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <h3 style="font-size: 24px;"  class="section-title__title">More News & Stores</h3>
+                    <h3 style="font-size: 24px;"  class="section-title__title">More News & Stories</h3>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: end;">
-                    <p style="font-size: 20px;"  class="section-title__title"><a href="<?php echo e(route('gallery')); ?>">View All News</a> </p>
+                    <p style="font-size: 20px;"  class="section-title__title"><a href="<?php echo e(route('gallery')); ?>">View All Stories</a> </p>
                 </div>
                 <!--Causes One Single Start-->
 

@@ -6,8 +6,8 @@ return
         'ourImpact' => 'Our Impact',
         'Healthcare' => 'Healthcare Initiatives',
         'Health' => 'Healthcare',
-        'WellBeing' => 'Well-being Initiatives',
-        'Well' => 'Well-being ',
+        'WellBeing' => 'Wellbeing Initiatives',
+        'Well' => 'Wellbeing ',
 
         'approaches' => 'Approaches',
         'explore_more' => ' Explore More',
@@ -40,8 +40,6 @@ return
         'SuccessPartners' => 'Success Partners',
         'readMore' => 'Read More',
         'timeLine' => 'Key Milestones',
-
-
         // Footer
         'addr' => '40, Road 254, Degla Maadi',
 
