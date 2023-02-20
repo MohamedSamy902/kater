@@ -38,7 +38,7 @@
                         <section class="gallery-page">
                             <div class="container">
                                 <div class="row">
-                                    @foreach ($galleries as $gallery)
+                                    @foreach ($images as $gallery)
                                         {{-- @if ($gallery->getFirstMediaUrl('galleryDetails') != '') --}}
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
@@ -63,7 +63,7 @@
                         <section class="gallery-page">
                             <div class="container">
                                 <div class="row">
-                                    @foreach ($galleries as $gallery)
+                                    @foreach ($videos as $gallery)
                                         {{-- @if ($gallery->getFirstMediaUrl('galleryVideo') != '') --}}
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
