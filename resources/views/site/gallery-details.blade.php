@@ -70,7 +70,7 @@
                                                     <div class="gallery-page__img">
                                                         <video width="100%" controls
                                                             src="{{ getUrlVideo($gallery, 'galleryVideo') }}"></video>
-                                                        <a href="{{ getUrlVideo($gallery, 'galleryVideo') }}" class="img-popup"></a>
+                                                        {{-- <a href="{{ getUrlVideo($gallery, 'galleryVideo') }}" class="img-popup"></a> --}}
                                                     </div>
                                                 </div>
                                             </div>
