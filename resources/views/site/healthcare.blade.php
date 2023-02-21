@@ -1,5 +1,53 @@
 @extends('site.layout.master')
+@section('css')
+    <style>
+        .main-slider__nav {
+            position: absolute;
+            top: 90%;
+            left: 43% !important;
+            z-index: 100;
+            transform: translateY(-50%) translateX(0%);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 15px;
+            height: 0;
+            line-height: 0;
+        }
 
+        .main-slider__nav .swiper-button-next,
+        .main-slider__nav .swiper-button-prev {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            z-index: 100;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #15c0f2;
+            border: 2px solid #15c0f2;
+            border-radius: 50%;
+            margin: 0;
+            text-align: center;
+            transition: all 500ms ease;
+            padding: 23px 0;
+            margin-right: 10px;
+        }
+
+        .main-slider__nav .swiper-button-next:hover,
+        .main-slider__nav .swiper-button-prev:hover {
+            color: #4a346d;
+            border: 2px solid #4a346d;
+        }
+    </style>
+@endsection
 @section('content')
     <!--Page Header Start-->
     <section class="page-header">
@@ -74,7 +122,8 @@
                             <div class="causes-one__single">
                                 <a href="{{ route('healthcare.detils', $healthcareie->id) }}">
                                     <div class="causes-one__img">
-                                        <img style="width: 100%; height: 300px;" src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}" alt="">
+                                        <img style="width: 100%; height: 300px;"
+                                            src="{{ $healthcareie->getFirstMediaUrl('healthcarePhoto') }}" alt="">
                                     </div>
                                 </a>
 
@@ -89,7 +138,6 @@
                                 </div>
                             </div>
                         </div>
-
                     @endforeach
                 </div>
                 <div class="main-slider__nav" style="display: -webkit-box;">
