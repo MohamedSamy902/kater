@@ -73,15 +73,15 @@ return  [
     // End Gallery
     // Start Gallery
     'add_slider'       => 'Add Slider',
-    'slider'           => 'Slider',
-    'slider_list'      => 'Slider',
+    'slider'           => 'Slider ',
+    'slider_list'      => 'Slider List',
     'edit_slider'      => 'Edit Slider',
     // End Gallery
     // Start Gallery
-    'add_time_line'       => 'Add Time Line',
-    'time_line'           => 'Time Line',
-    'time_line_list'      => 'Time Line',
-    'edit_time_line'      => 'Edit Time Line',
+    'add_time_line'       => 'Add Key Milestones',
+    'time_line'           => 'Key Milestones',
+    'time_line_list'      => 'Key Milestones',
+    'edit_time_line'      => 'Edit Key Milestones',
     // End Gallery
 
     // Start Gallery

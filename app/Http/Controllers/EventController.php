@@ -40,18 +40,25 @@ class EventController extends Controller
     {
         $data = $request->all();
 
-            $event = Event::create([
-                'title' => [
-                    'en' => $request->title,
-                    'ar' => $request->title_ar,
-                ],
-                'content' => [
-                    'en' => $request->content,
-                    'ar' => $request->content_ar,
-                ],
-                'link' => $request->link,
-            ]);
+            // $event = Event::create([
+            //     'title' => [
+            //         'en' => $request->title,
+            //         'ar' => $request->title_ar,
+            //     ],
+            //     'content' => [
+            //         'en' => $request->content,
+            //         'ar' => $request->content_ar,
+            //     ],
+            //     'link' => $request->link,
+            // ]);
+            $arrayAttach =  explode(',',  $request->attachments[0]);
+            if ($request->attachments[0] != null) {
 
+                for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                    $data['image_id'] = $arrayAttach[$i];
+                    $event = Event::create($data);
+                }
+            }
             if ($request->file('event')) {
                 $event
                         ->addMedia($request->file('event'))

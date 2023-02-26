@@ -88,7 +88,7 @@
                                 </div>
                             </div> --}}
 
-                            <div class="row g-1">
+                            {{-- <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault08">{{ __('master.view') }}</label>
                                     <select class="form-select" id="validationDefault08" required="" name="view">
@@ -109,7 +109,7 @@
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                             <button class="btn btn-primary" type="submit">{{ __('master.save') }}</button>

@@ -14,6 +14,7 @@
             padding: 0 15px;
             height: 0;
             line-height: 0;
+            direction: ltr;
         }
 
         .main-slider__nav .swiper-button-next,
@@ -50,8 +51,7 @@
 <?php $__env->startSection('content'); ?>
     <!--Page Header Start-->
     <section class="page-header">
-        <div class="page-header-bg"
-            style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/wellbeing.jpg)">
+        <div class="page-header-bg" style="background-image: url(<?php echo e(asset('site')); ?>/assets/images/wellbeing.jpg)">
         </div>
         <div class="container">
             <div class="page-header__inner">
@@ -138,7 +138,6 @@
                                 </div>
                             </div>
                         </div>
-
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
                 <div class="main-slider__nav" style="display: -webkit-box;">

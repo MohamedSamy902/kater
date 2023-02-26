@@ -191,19 +191,19 @@
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
                 <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="col-xl-4 col-lg-6 col-md-6" style="padding: 0px 25px 0px 25px;">
                         <div class="causes-one__single">
                             <a href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>">
                                 <div class="causes-one__img">
-                                    <img src="<?php echo e($event->getFirstMediaUrl('event')); ?>" alt="">
+                                    <img style="height: 260px;" src="<?php echo e($event->getFirstMediaUrl('event')); ?>" alt="">
                                 </div>
                             </a>
 
                             <div class="causes-one__content_index">
-                                <h3 class="causes-one__title"><a
+                                <h3 class="causes-one__title" style="font-size: 20px;" ><a
                                         href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>"><?php echo e($event->title); ?></a>
                                 </h3>
-                                <p class="causes-one__text"><?php echo e($event->content); ?></p>
+                                <p class="causes-one__text" style="font-size: 16px;" ><?php echo e($event->content); ?></p>
                             </div>
                         </div>
                     </div>

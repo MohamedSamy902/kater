@@ -73,7 +73,7 @@
                             </div>
 
 
-                            <div class="row g-1">
+                            {{-- <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationDefault06">{{ __('role.role') }}</label>
                                     <select class="form-select" id="validationDefault06" required="" name="roles_name">
@@ -86,30 +86,18 @@
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="row g-1">
-                                <div class="col-md-12 mb-3">
-                                    <label class="form-label" for="validationDefault08">{{ __('master.view') }}</label>
-                                    <select class="form-select" id="validationDefault08" required="" name="view">
-                                        {{-- <option selected="" disabled="" value=""> {{ __('master.view') }}
-                                        </option> --}}
-                                            <option value="yes" {{ $user->view == 'yes'? 'selected' : '' }}>Yes</option>
-                                            <option value="no" {{ $user->view == 'no'? 'selected' : '' }}>No</option>
-                                    </select>
-                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
-                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
-                                </div>
-                            </div>
 
-                            <div class="row g-1">
+
+                            {{-- <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label" for="validationCustom07">{{ __('master.image') }}</label>
                                     <input class="form-control" id="validationCustom07" type="file"
                                         aria-label="file example" name="photo" />
                                     <div class="valid-feedback">جيد!</div>
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                             <button class="btn btn-primary" type="submit">حفظ</button>

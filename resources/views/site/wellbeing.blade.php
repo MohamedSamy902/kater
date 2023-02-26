@@ -15,6 +15,7 @@
             padding: 0 15px;
             height: 0;
             line-height: 0;
+            direction: ltr;
         }
 
         .main-slider__nav .swiper-button-next,

@@ -23,10 +23,7 @@ class  User extends Authenticatable implements HasMedia
         'name',
         'email',
         'password',
-        'phone',
-        'roles_name',
-        'point',
-        'photo'
+        'mobile',
     ];
     /**
      * The attributes that should be hidden for arrays.

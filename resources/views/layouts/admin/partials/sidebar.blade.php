@@ -29,31 +29,12 @@
                         </div>
                     </li>
 
-                    {{-- @can('role-list') --}}
-                    {{-- <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('roles') }}" href="javascript:void(0)">
-                            <i data-feather="home"></i>
-                            <span>{{ __('role.role') }}</span>
-                        </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('roles') }};">
-                            <li><a href="{{ route('roles.index') }}"
-                                    class="{{ routeActive('roles.index') }}">{{ __('role.role_list') }}</a>
-                            </li>
-                            @can('role-create')
-                                <li><a href="{{ route('roles.create') }}"
-                                        class="{{ routeActive('roles.create') }}">{{ __('role.add_role') }}
-                                    </a></li>
-                            @endcan
-                        </ul>
-                    </li> --}}
-                    {{-- @endcan --}}
-
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('users') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title " href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('user.user') }}</span>
                         </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
+                        <ul class="nav-submenu menu-content">
                             <li><a href="{{ route('users.index') }}"
                                     class="{{ routeActive('users.index') }}">{{ __('user.user_list') }}</a>
                             </li>
@@ -63,49 +44,14 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('users') }}" href="javascript:void(0)">
-                            <i data-feather="home"></i>
-                            <span>About</span>
-                        </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
-                            <li><a href="{{ URL::route('articles.edit', ['FoundationStory']) }}"
-                                    class="{{ routeActive('users.index') }}">FoundationStory</a>
-                            </li>
 
-                            <li><a href="{{ route('articles.index', 'TimeLine') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.time_line') }}</a>
-                            </li>
-
-                            <li><a href="{{ URL::route('articles.edit', ['WhoWeServe']) }}"
-                                    class="{{ routeActive('users.index') }}">Who We Serve</a>
-                            </li>
-
-                            <li><a href="{{ URL::route('articles.index', 'OurGoals') }}"
-                                    class="{{ routeActive('users.index') }}">Our Goals</a>
-                            </li>
-                            <li><a href="{{ URL::route('articles.index', 'OurMission') }}"
-                                    class="{{ routeActive('users.index') }}">Our Mission</a>
-                            </li>
-                            <li><a href="{{ URL::route('articles.index', 'OurVision') }}"
-                                    class="{{ routeActive('users.index') }}">Our Vision</a>
-                            </li>
-
-
-                            <li><a href="{{ URL::route('articles.index', 'HowItAllBegan ') }}"
-                                    class="{{ routeActive('users.index') }}">How It All Began </a>
-                            </li>
-
-
-                        </ul>
-                    </li>
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('users') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title " href="javascript:void(0)">
                             <i data-feather="home"></i>
-                            <span>Index</span>
+                            <span>Index </span>
                         </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
+                        <ul class="nav-submenu menu-content">
 
                             <li><a href="{{ URL::route('articles.index', 'Vision') }}"
                                     class="{{ routeActive('users.index') }}">Vision</a>
@@ -119,10 +65,55 @@
                             <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
                                     class="{{ routeActive('users.index') }}">Well-Biganing</a>
                             </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('sliders') }}" href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span>{{ __('master.slider') }}</span>
+                        </a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('sliders') }};">
+                            <li><a href="{{ route('sliders.index') }}"
+                                    class="{{ routeActive('sliders.index') }}">{{ __('master.slider_list') }}</a>
+                            </li>
+                            <li><a href="{{ route('sliders.create') }}"
+                                    class="{{ routeActive('sliders.create') }}">{{ __('master.slider') }}
+                                </a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title " href="javascript:void(0)">
+                            <i data-feather="home"></i>
+                            <span>About</span>
+                        </a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{ URL::route('articles.edit', ['FoundationStory']) }}"
+                                    class="{{ routeActive('users.index') }}">FoundationStory</a>
+                            </li>
+
+                            <li><a href="{{ route('articles.index', 'TimeLine') }}"
+                                    class="{{ routeActive('users.index') }}">{{ __('master.time_line') }}</a>
+                            </li>
+
+                            <li><a href="{{ URL::route('articles.index', 'OurGoals') }}"
+                                    class="{{ routeActive('users.index') }}">Our Goals</a>
+                            </li>
+                            <li><a href="{{ URL::route('articles.index', 'OurMission') }}"
+                                    class="{{ routeActive('users.index') }}">Our Mission</a>
+                            </li>
+                            <li><a href="{{ URL::route('articles.index', 'OurVision') }}"
+                                    class="{{ routeActive('users.index') }}">Our Vision</a>
+                            </li>
+
+                            <li><a href="{{ URL::route('articles.edit', ['WhoWeServe']) }}"
+                                    class="{{ routeActive('users.index') }}">Who We Serve</a>
+                            </li>
 
 
-                            <li><a href="{{ URL::route('articles.index', 'Impact ') }}"
-                                    class="{{ routeActive('users.index') }}">Impact</a>
+                            <li><a href="{{ URL::route('articles.index', 'WhereWeServe ') }}"
+                                    class="{{ routeActive('users.index') }}">Where We Serve</a>
                             </li>
 
 
@@ -130,19 +121,25 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('users') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title " href="javascript:void(0)">
                             <i data-feather="home"></i>
-                            <span>{{ __('user.user') }}</span>
+                            <span>Our Impact</span>
                         </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('users') }};">
-                            <li><a href="{{ route('users.index') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('user.user_list') }}</a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="{{ URL::route('articles.index', 'Impact ') }}"
+                                    class="{{ routeActive('users.index') }}">Impact</a>
                             </li>
-                            <li><a href="{{ route('users.create') }}"
-                                    class="{{ routeActive('users.create') }}">{{ __('user.user_add') }}
-                                </a></li>
+
+                            <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
+                                    class="{{ routeActive('users.index') }}">Healthcare Initiatives</a>
+                            </li>
+                            <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
+                                    class="{{ routeActive('users.index') }}">Well-Biganing</a>
+                            </li>
+
                         </ul>
                     </li>
+
 
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('wellBeing') }}" href="javascript:void(0)">
@@ -151,10 +148,10 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('WellBeing') }};">
                             <li><a href="{{ route('wellBeing.index') }}"
-                                    class="{{ routeActive('users.wellBeing') }}">{{ __('master.Well') }}</a>
+                                    class="{{ routeActive('users.wellBeing') }}">{{ __('master.wellBeing_list') }}</a>
                             </li>
                             <li><a href="{{ route('wellBeing.create') }}"
-                                    class="{{ routeActive('wellBeing.create') }}">{{ __('master.wellBeing_list') }}
+                                    class="{{ routeActive('wellBeing.create') }}">Add {{ __('master.Well') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -166,28 +163,15 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('healthcare') }};">
                             <li><a href="{{ route('healthcare.index') }}"
-                                    class="{{ routeActive('users.healthcare') }}">{{ __('master.Healthcare') }}</a>
+                                    class="{{ routeActive('users.healthcare') }}">{{ __('master.Healthcare_list') }}</a>
                             </li>
                             <li><a href="{{ route('healthcare.create') }}"
-                                    class="{{ routeActive('healthcare.create') }}">{{ __('master.Healthcare_list') }}
+                                    class="{{ routeActive('healthcare.create') }}">Add {{ __('master.Healthcare') }}
                                 </a></li>
                         </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('sliders') }}" href="javascript:void(0)">
-                            <i data-feather="home"></i>
-                            <span>{{ __('master.slider') }}</span>
-                        </a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('sliders') }};">
-                            <li><a href="{{ route('sliders.index') }}"
-                                    class="{{ routeActive('sliders.index') }}">{{ __('master.sliders') }}</a>
-                            </li>
-                            <li><a href="{{ route('sliders.create') }}"
-                                    class="{{ routeActive('sliders.create') }}">{{ __('master.sliders') }}
-                                </a></li>
-                        </ul>
-                    </li>
+
 
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('galleries') }}" href="javascript:void(0)">
@@ -196,7 +180,7 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('galleries') }};">
                             <li><a href="{{ route('galleries.index') }}"
-                                    class="{{ routeActive('galleries.index') }}">{{ __('master.gallery') }}</a>
+                                    class="{{ routeActive('galleries.index') }}">{{ __('master.gallery') }} List</a>
                             </li>
                             <li><a href="{{ route('galleries.create') }}"
                                     class="{{ routeActive('galleries.create') }}"> {{ __('master.add_gallery') }}
@@ -211,10 +195,10 @@
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('events') }};">
                             <li><a href="{{ route('events.index') }}"
-                                    class="{{ routeActive('events.index') }}">{{ __('master.events') }}</a>
+                                    class="{{ routeActive('events.index') }}">{{ __('master.events_list') }}</a>
                             </li>
                             <li><a href="{{ route('events.create') }}"
-                                    class="{{ routeActive('events.create') }}">{{ __('master.events_list') }}
+                                    class="{{ routeActive('events.create') }}">Add {{ __('master.events') }}
                                 </a></li>
                         </ul>
                     </li>

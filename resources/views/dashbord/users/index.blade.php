@@ -30,10 +30,6 @@
                                         <th>{{ __('master.name') }}</th>
                                         <th>{{ __('master.email') }}</th>
                                         <th>{{ __('master.phone') }}</th>
-                                        <th>{{ __('master.view') }}</th>
-                                        <th>{{ __('role.role') }}</th>
-                                        <th>{{ __('master.image') }}</th>
-
                                         <th>{{ __('master.processes') }}</th>
                                     </tr>
                                 </thead>
@@ -45,27 +41,21 @@
                                             </td> --}}
                                             <td>{{ $user->email }}</td>
                                             <td>{{ $user->mobile }}</td>
-                                            <td>{{ $user->view }}</td>
-                                            <td>{{ $user->roles_name }}</td>
 
-                                            <td><img style="max-width: 100px;max-height: 100px;" src="{{ $user->getFirstMediaUrl('user') != null ?  $user->getFirstMediaUrl('user') : asset('assets/images/dashboard/1.png')}}"></td>
+
                                             <td>
                                                 <div style="display: flex;">
-                                                    @can('user-edit')
-                                                        <a class="btn btn-outline-primary-2x" style="margin:0 20px;"
-                                                            href="{{ route('users.edit', $user->id) }}">{{ __('master.edit') }}</a>
-                                                    @endcan
+                                                    <a class="btn btn-outline-primary-2x" style="margin:0 20px;"
+                                                        href="{{ route('users.edit', $user->id) }}">{{ __('master.edit') }}</a>
 
-                                                    @can('user-delete')
-                                                        <form action="{{ route('users.destroy', $user->id) }}" method="post">
-                                                            @csrf
-                                                            @method('delete')
-                                                            <input style="border-color: #d22d3d;"
-                                                                class="btn btn-outline-danger-2x"
-                                                                value="{{ __('master.delete') }}" type="submit">
+                                                    <form action="{{ route('users.destroy', $user->id) }}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <input style="border-color: #d22d3d;"
+                                                            class="btn btn-outline-danger-2x"
+                                                            value="{{ __('master.delete') }}" type="submit">
 
-                                                        </form>
-                                                    @endcan
+                                                    </form>
                                                 </div>
                                             </td>
                                         </tr>

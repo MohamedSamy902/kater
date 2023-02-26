@@ -31,7 +31,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $users = User::where('roles_name', '!=', 'Volunteer')->get();
+        $users = User::get();
         return view('dashbord.users.index', compact('users'));
     }
     /**
@@ -57,13 +57,13 @@ class UserController extends Controller
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
         $input['status'] = 'active';
-        $input['roles_name'] = $request->roles_name;
+        // $input['roles_name'] = $request->roles_name;
         $user = User::create($input);
-        if ($request->file('photo')) {
-            upladeImage($user, ['photo'], ['user']);
-        }
-        upladeImage($input, ['photo'], ['user']);
-        $user->assignRole($request->input('roles_name'));
+        // if ($request->file('photo')) {
+        //     upladeImage($user, ['photo'], ['user']);
+        // }
+        // upladeImage($input, ['photo'], ['user']);
+        // $user->assignRole($request->input('roles_name'));
         return redirect()->route('users.index')
             ->with('success', __('master.messages_save'));
     }

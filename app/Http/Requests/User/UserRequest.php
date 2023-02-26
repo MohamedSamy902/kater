@@ -28,9 +28,6 @@ class UserRequest extends FormRequest
             'mobile'        => 'required|numeric|digits:11|unique:users,mobile,except,'. $this->id,
             'email'         => 'required|email|unique:users,email,except,'. $this->id,
             'password'      => 'required|string|min:6|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/',
-            'roles_name'    => 'required|string|exists:roles,name',
-            'photo'         => 'image|mimes:jpeg,png,jpg,gif,svg|max:3048|nullable',
-            'view'          => 'nullable|string|in:yes,no',
         ];
     }
 
@@ -56,13 +53,13 @@ class UserRequest extends FormRequest
             'password.min'              => __('validation.min'),
             'password.regex'            => __('validation.regex'),
 
-            'roles_name.required'       =>  __('validation.required'),
-            'roles_name.string'         => __('validation.string'),
-            'roles_name.exists'         => __('validation.exists'),
+            // 'roles_name.required'       =>  __('validation.required'),
+            // 'roles_name.string'         => __('validation.string'),
+            // 'roles_name.exists'         => __('validation.exists'),
 
-            'photo.image'               => __('validation.image'),
-            'photo.mimes'               => __('validation.mimes'),
-            'photo.max'                 => __('validation.max'),
+            // 'photo.image'               => __('validation.image'),
+            // 'photo.mimes'               => __('validation.mimes'),
+            // 'photo.max'                 => __('validation.max'),
         ];
     }
 
@@ -74,8 +71,8 @@ class UserRequest extends FormRequest
             'mobile'        => __('master.mobile'),
             'email'         => __('master.email'),
             'password'      => __('master.password'),
-            'roles_name'    => __('role.name'),
-            'photo'         => __('master.image'),
+            // 'roles_name'    => __('role.name'),
+            // 'photo'         => __('master.image'),
         ];
     }
 }
