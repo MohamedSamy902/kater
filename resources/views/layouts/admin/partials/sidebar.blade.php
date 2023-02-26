@@ -36,10 +36,10 @@
                         </a>
                         <ul class="nav-submenu menu-content">
                             <li><a href="{{ route('users.index') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('user.user_list') }}</a>
+                                    class="">{{ __('user.user_list') }}</a>
                             </li>
                             <li><a href="{{ route('users.create') }}"
-                                    class="{{ routeActive('users.create') }}">{{ __('user.user_add') }}
+                                    class="">{{ __('user.user_add') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -54,31 +54,31 @@
                         <ul class="nav-submenu menu-content">
 
                             <li><a href="{{ URL::route('articles.index', 'Vision') }}"
-                                    class="{{ routeActive('users.index') }}">Vision</a>
+                                    class="">Vision</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'HowItAllBegan') }}"
-                                    class="{{ routeActive('users.index') }}">How It All Began</a>
+                                    class="">How It All Began</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
-                                    class="{{ routeActive('users.index') }}">Healthcare Initiatives</a>
+                                    class="">Healthcare Initiatives</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
-                                    class="{{ routeActive('users.index') }}">Well-Biganing</a>
+                                    class="">Well-Biganing</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('sliders') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title  href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('master.slider') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('sliders') }};">
                             <li><a href="{{ route('sliders.index') }}"
-                                    class="{{ routeActive('sliders.index') }}">{{ __('master.slider_list') }}</a>
+                                    class="">{{ __('master.slider_list') }}</a>
                             </li>
                             <li><a href="{{ route('sliders.create') }}"
-                                    class="{{ routeActive('sliders.create') }}">{{ __('master.slider') }}
+                                    class="">{{ __('master.slider') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -90,30 +90,30 @@
                         </a>
                         <ul class="nav-submenu menu-content">
                             <li><a href="{{ URL::route('articles.edit', ['FoundationStory']) }}"
-                                    class="{{ routeActive('users.index') }}">FoundationStory</a>
+                                    class="">FoundationStory</a>
                             </li>
 
                             <li><a href="{{ route('articles.index', 'TimeLine') }}"
-                                    class="{{ routeActive('users.index') }}">{{ __('master.time_line') }}</a>
+                                    class="">{{ __('master.time_line') }}</a>
                             </li>
 
                             <li><a href="{{ URL::route('articles.index', 'OurGoals') }}"
-                                    class="{{ routeActive('users.index') }}">Our Goals</a>
+                                    class="">Our Goals</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'OurMission') }}"
-                                    class="{{ routeActive('users.index') }}">Our Mission</a>
+                                    class="">Our Mission</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'OurVision') }}"
-                                    class="{{ routeActive('users.index') }}">Our Vision</a>
+                                    class="">Our Vision</a>
                             </li>
 
                             <li><a href="{{ URL::route('articles.edit', ['WhoWeServe']) }}"
-                                    class="{{ routeActive('users.index') }}">Who We Serve</a>
+                                    class="">Who We Serve</a>
                             </li>
 
 
                             <li><a href="{{ URL::route('articles.index', 'WhereWeServe ') }}"
-                                    class="{{ routeActive('users.index') }}">Where We Serve</a>
+                                    class="">Where We Serve</a>
                             </li>
 
 
@@ -127,14 +127,14 @@
                         </a>
                         <ul class="nav-submenu menu-content">
                             <li><a href="{{ URL::route('articles.index', 'Impact ') }}"
-                                    class="{{ routeActive('users.index') }}">Impact</a>
+                                    class="">Impact</a>
                             </li>
 
                             <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
-                                    class="{{ routeActive('users.index') }}">Healthcare Initiatives</a>
+                                    class="">Healthcare Initiatives</a>
                             </li>
                             <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
-                                    class="{{ routeActive('users.index') }}">Well-Biganing</a>
+                                    class="">Well-Biganing</a>
                             </li>
 
                         </ul>
@@ -142,31 +142,31 @@
 
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('wellBeing') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title" href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('master.WellBeing') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('WellBeing') }};">
                             <li><a href="{{ route('wellBeing.index') }}"
-                                    class="{{ routeActive('users.wellBeing') }}">{{ __('master.wellBeing_list') }}</a>
+                                    class="">{{ __('master.wellBeing_list') }}</a>
                             </li>
                             <li><a href="{{ route('wellBeing.create') }}"
-                                    class="{{ routeActive('wellBeing.create') }}">Add {{ __('master.Well') }}
+                                    class="">Add {{ __('master.Well') }}
                                 </a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('healthcare') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title" href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('master.Healthcare') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('healthcare') }};">
                             <li><a href="{{ route('healthcare.index') }}"
-                                    class="{{ routeActive('users.healthcare') }}">{{ __('master.Healthcare_list') }}</a>
+                                    class="">{{ __('master.Healthcare_list') }}</a>
                             </li>
                             <li><a href="{{ route('healthcare.create') }}"
-                                    class="{{ routeActive('healthcare.create') }}">Add {{ __('master.Healthcare') }}
+                                    class="">Add {{ __('master.Healthcare') }}
                                 </a></li>
                         </ul>
                     </li>
@@ -174,31 +174,31 @@
 
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('galleries') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title" href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('master.gallery') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('galleries') }};">
                             <li><a href="{{ route('galleries.index') }}"
-                                    class="{{ routeActive('galleries.index') }}">{{ __('master.gallery') }} List</a>
+                                    class="">{{ __('master.gallery') }} List</a>
                             </li>
                             <li><a href="{{ route('galleries.create') }}"
-                                    class="{{ routeActive('galleries.create') }}"> {{ __('master.add_gallery') }}
+                                    class=""> {{ __('master.add_gallery') }}
                                 </a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('events') }}" href="javascript:void(0)">
+                        <a class="nav-link menu-title" href="javascript:void(0)">
                             <i data-feather="home"></i>
                             <span>{{ __('master.events') }}</span>
                         </a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('events') }};">
                             <li><a href="{{ route('events.index') }}"
-                                    class="{{ routeActive('events.index') }}">{{ __('master.events_list') }}</a>
+                                    class="">{{ __('master.events_list') }}</a>
                             </li>
                             <li><a href="{{ route('events.create') }}"
-                                    class="{{ routeActive('events.create') }}">Add {{ __('master.events') }}
+                                    class="">Add {{ __('master.events') }}
                                 </a></li>
                         </ul>
                     </li>

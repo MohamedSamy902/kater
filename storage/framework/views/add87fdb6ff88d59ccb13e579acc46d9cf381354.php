@@ -36,7 +36,7 @@
                                 <div class="col-md-6">
                                     <label class="form-label" for="validationCustom01"><?php echo e(__('master.title_en')); ?></label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required="" value=".." />
+                                        value="" />
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
                                 </div>
@@ -44,7 +44,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="validationCustom02"><?php echo e(__('master.title_ar')); ?></label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required="" value=".." />
+                                        value="" />
                                     <input type="hidden" value="<?php echo e($gallery); ?>" name="galleries_id">
                                     <div class="valid-feedback"><?php echo e(__('validation.valid_feedback')); ?></div>
                                     <div class="invalid-feedback"><?php echo e(__('validation.invalid_feedback')); ?></div>
