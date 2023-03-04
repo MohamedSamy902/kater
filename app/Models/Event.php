@@ -13,5 +13,5 @@ class Event extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title', 'content'];
 
-    protected $fillable = ['title', 'content', 'link','status', 'order_by'];
+    protected $fillable = ['title', 'content', 'link','status', 'order_by', 'image_id'];
 }

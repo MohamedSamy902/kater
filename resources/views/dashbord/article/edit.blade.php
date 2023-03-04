@@ -76,13 +76,29 @@
                                     <div class="col-md-12 mb-3">
                                         <label class="form-label" for="validationCustom5">{{ __('master.link') }}</label>
                                         <input class="form-control" id="validationCustom5" type="text"
-                                            aria-label="file example" name="link" value="{{ old('link') ? old('link') : $article->link }}" />
+                                            aria-label="file example" name="link"
+                                            value="{{ old('link') ? old('link') : $article->link }}" />
                                         <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                         <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                     </div>
 
                                 </div>
                             @endif
+
+                            @include('dashbord.image')
+
+
+                            {{-- <div class="bg-image card shadow-1-strong"
+                                style="background-image: url('{{ $article->getFirstMediaUrl($model) }}');
+                                background-size: contain;width: 300px;    background-repeat: no-repeat;">
+                                <div class="card-body text-white">
+                                    <h5 class="card-title"></h5>
+                                    <p class="card-text">
+                                    </p>
+                                    <a style="margin-top: 62px; margin-left: 30px;background-color: #15c0f2;color:#4a346d" href="#!" class="btn btn-outline-light">Delete Image</a>
+                                </div>
+                            </div> --}}
+
 
 
                             <div class="row g-1">

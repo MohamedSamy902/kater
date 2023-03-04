@@ -59,12 +59,7 @@
                             <li><a href="{{ URL::route('articles.index', 'HowItAllBegan') }}"
                                     class="">How It All Began</a>
                             </li>
-                            <li><a href="{{ URL::route('articles.index', 'HealthcareInitiatives') }}"
-                                    class="">Healthcare Initiatives</a>
-                            </li>
-                            <li><a href="{{ URL::route('articles.index', 'Wellbiganing') }}"
-                                    class="">Well-Biganing</a>
-                            </li>
+                            
                         </ul>
                     </li>
 

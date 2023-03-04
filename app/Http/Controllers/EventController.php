@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
@@ -26,8 +27,9 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('dashbord.events.create');
-
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.events.create', 'images', 'videos');
     }
 
     /**
@@ -40,35 +42,36 @@ class EventController extends Controller
     {
         $data = $request->all();
 
-            // $event = Event::create([
-            //     'title' => [
-            //         'en' => $request->title,
-            //         'ar' => $request->title_ar,
-            //     ],
-            //     'content' => [
-            //         'en' => $request->content,
-            //         'ar' => $request->content_ar,
-            //     ],
-            //     'link' => $request->link,
-            // ]);
-            $arrayAttach =  explode(',',  $request->attachments[0]);
-            if ($request->attachments[0] != null) {
+        // $event = Event::create([
+        //     'title' => [
+        //         'en' => $request->title,
+        //         'ar' => $request->title_ar,
+        //     ],
+        //     'content' => [
+        //         'en' => $request->content,
+        //         'ar' => $request->content_ar,
+        //     ],
+        //     'link' => $request->link,
+        // ]);
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
-                for ($i = 0; $i < COUNT($arrayAttach); $i++) {
-                    $data['image_id'] = $arrayAttach[$i];
-                    $event = Event::create($data);
-                }
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
             }
-            if ($request->file('event')) {
-                $event
-                        ->addMedia($request->file('event'))
-                        ->usingName($request->title)
-                        ->toMediaCollection('event');
-            }
+        }
+        $event = Event::create($data);
+
+        if ($request->file('event')) {
+            $event
+                ->addMedia($request->file('event'))
+                ->usingName($request->title)
+                ->toMediaCollection('event');
+        }
 
 
         return redirect()->back()
-        ->with('success', __('master.messages_save'));
+            ->with('success', __('master.messages_save'));
     }
 
     /**
@@ -90,8 +93,10 @@ class EventController extends Controller
      */
     public function edit($id)
     {
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
         $event = Event::findOrFail($id);
-        return view('dashbord.events.edit', compact('event'));
+        return view('dashbord.events.edit', compact('event', 'images', 'videos'));
     }
 
     /**
@@ -115,7 +120,15 @@ class EventController extends Controller
         ];
         $data['link'] = $request->link;
         $data['status'] = $request->status;
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
+
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+            }
+        }
         $event->update($data);
+
         if ($request->file('event')) {
             $event
                 ->clearMediaCollection('event')
@@ -125,7 +138,7 @@ class EventController extends Controller
         }
 
         return redirect()->route('events.index')
-        ->with('success', __('master.messages_edit'));
+            ->with('success', __('master.messages_edit'));
     }
 
     /**
@@ -138,7 +151,7 @@ class EventController extends Controller
     {
         Event::findOrFail($id)->delete();
 
-            return redirect()->route('events.index')
-        ->with('success', __('master.messages_delete'));
+        return redirect()->route('events.index')
+            ->with('success', __('master.messages_delete'));
     }
 }

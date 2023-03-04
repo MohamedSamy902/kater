@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\WellBeingDetalis;
+use Illuminate\Support\Facades\DB;
 
 class WellBeingDetalisController extends Controller
 {
@@ -26,7 +27,9 @@ class WellBeingDetalisController extends Controller
     public function create($wellBeing)
     {
         $galleries = Gallery::get();
-        return view('dashbord.wellbeing.image.create', compact('wellBeing', 'galleries'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.wellbeing.image.create', compact('wellBeing', 'galleries', 'images', 'videos'));
     }
 
     /**
@@ -46,10 +49,14 @@ class WellBeingDetalisController extends Controller
         $data['well_beings_id'] = $request->well_beings_id;
         $data['link'] = $request->link;
 
-        $wellBeing = WellBeingDetalis::create(
-            $data
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
-        );
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+                $wellBeing = WellBeingDetalis::create($data);
+            }
+        }
 
         if ($request->file('wellBeingDetails')) {
             $wellBeing
@@ -81,8 +88,10 @@ class WellBeingDetalisController extends Controller
      */
     public function edit($id)
     {
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
         $wellBeingDetalis = WellBeingDetalis::findOrFail($id);
-        return view('dashbord.wellbeing.image.edit', compact('wellBeingDetalis'));
+        return view('dashbord.wellbeing.image.edit', compact('wellBeingDetalis','images', 'videos'));
     }
 
     /**
@@ -101,13 +110,19 @@ class WellBeingDetalisController extends Controller
             'ar' => $request->title_ar
         ];
         $data['link'] = $request->link;
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+            }
+        }
 
         $wellBeingDetalis->update($data);
 
         if ($request->file('wellBeingDetalis')) {
             $wellBeingDetalis
-                ->clearMediaCollection('wellBeingDetalis')
+                // ->clearMediaCollection('wellBeingDetalis')
                 ->addMedia($request->file('wellBeingDetalis'))
                 ->usingName($request->title)
                 ->toMediaCollection('wellBeingDetalis');
@@ -132,7 +147,7 @@ class WellBeingDetalisController extends Controller
     public function removeImage($id)
     {
         $gallery = WellBeingDetalis::findOrFail($id);
-        $gallery->clearMediaCollection('galleryDetails');
+        // $gallery->clearMediaCollection('galleryDetails');
         $gallery->delete();
         return redirect()->back()
             ->with('success', __('master.messages_save'));

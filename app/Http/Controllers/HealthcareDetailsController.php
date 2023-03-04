@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
-use App\Models\HealthcareDetails;
 use Illuminate\Http\Request;
+use App\Models\HealthcareDetails;
+use Illuminate\Support\Facades\DB;
 
 class HealthcareDetailsController extends Controller
 {
@@ -26,7 +27,10 @@ class HealthcareDetailsController extends Controller
     public function create($healthcare)
     {
         $galleries = Gallery::get();
-        return view('dashbord.healthcare.image.create', compact('healthcare', 'galleries'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        // return view('dashbord.gallery.image.create', compact('gallery', 'images', 'videos'));
+        return view('dashbord.healthcare.image.create', compact('healthcare', 'galleries', 'images', 'videos'));
     }
 
     /**
@@ -38,17 +42,32 @@ class HealthcareDetailsController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['title'] = [
+            'en' => $request->title,
+            'ar' => $request->title_ar,
+        ];
+        $data['healthcares_id'] =  $request->healthcares_id;
+            $data['galleries_id'] = $request->galleries_id;
+            $data['link'] = $request->link;
 
-        $healthcare = HealthcareDetails::create([
-            'title' => [
-                'en' => $request->title,
-                'ar' => $request->title_ar,
-            ],
-            'healthcares_id' => $request->healthcares_id,
-            'galleries_id' => $request->galleries_id,
-            'link' => $request->link
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
-        ]);
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+                $healthcare = HealthcareDetails::create($data);
+            }
+        }
+        // $healthcare = HealthcareDetails::create([
+        //     'title' => [
+        //         'en' => $request->title,
+        //         'ar' => $request->title_ar,
+        //     ],
+        //     'healthcares_id' => $request->healthcares_id,
+        //     'galleries_id' => $request->galleries_id,
+        //     'link' => $request->link
+
+        // ]);
 
         if ($request->file('healthcareDetails')) {
             $healthcare
@@ -80,8 +99,10 @@ class HealthcareDetailsController extends Controller
      */
     public function edit($id)
     {
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
         $healthcareDetalis = HealthcareDetails::findOrFail($id);
-        return view('dashbord.healthcare.image.edit', compact('healthcareDetalis'));
+        return view('dashbord.healthcare.image.edit', compact('healthcareDetalis','images', 'videos'));
     }
 
     /**
@@ -100,7 +121,14 @@ class HealthcareDetailsController extends Controller
             'ar' => $request->title_ar
         ];
         $data['link'] = $request->link;
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+                // $healthcareDetails = HealthcareDetails::create($data);
+            }
+        }
         $healthcareDetails->update($data);
 
         if ($request->file('healthcareDetails')) {

@@ -78,7 +78,9 @@ class SiteCotroller extends Controller
         $wellBeing = WellBeing::findOrFail($id);
         $allHealthcare = Healthcare::where('status', 'active')->get();
         $allWellBeing = WellBeing::where('status', 'active')->get();
-        // return $wellBeing->getFirstMediaUrl('WellBeingvideoo');
+        // return $wellBeing->WellBeingDetalis;
+        // return  DB::table('media')->where('id',  10)->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->first();
+
         return view('site.wellbeing-details', compact('wellBeing', 'allHealthcare', 'allWellBeing'));
 
     }

@@ -38,7 +38,7 @@
                             <div class="container">
                                 <div class="row">
                                     <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        
+                                        <?php if(getUrlMedia($gallery, 'galleryDetails') != ''): ?>
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
@@ -48,7 +48,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+                                        <?php endif; ?>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                 </div>
@@ -63,17 +63,17 @@
                             <div class="container">
                                 <div class="row">
                                     <?php $__currentLoopData = $galleries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $gallery): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                        
+                                        <?php if(getUrlVideo($gallery, 'galleryVideo') != ''): ?>
                                             <div class="col-xl-4 col-lg-6 col-md-6">
                                                 <div class="gallery-page__single">
                                                     <div class="gallery-page__img">
-                                                        <video width="100%"
+                                                        <video width="100%" controls
                                                             src="<?php echo e(getUrlVideo($gallery, 'galleryVideo')); ?>"></video>
-                                                        <a href="<?php echo e(getUrlVideo($gallery, 'galleryVideo')); ?>" class="img-popup"></a>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
-                                        
+                                        <?php endif; ?>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </div>
                             </div>

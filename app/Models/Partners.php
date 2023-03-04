@@ -13,5 +13,5 @@ class Partners extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title'];
 
-    protected $fillable = ['title', 'status'];
+    protected $fillable = ['title', 'status', 'image_id'];
 }

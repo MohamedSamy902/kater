@@ -13,5 +13,5 @@ class Slider extends Model implements HasMedia
     use HasTranslations, HasFactory, InteractsWithMedia;
     public $translatable = ['title', 'content'];
 
-    protected $fillable = ['title', 'content', 'link'];
+    protected $fillable = ['title', 'content', 'link', 'image_id'];
 }

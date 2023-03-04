@@ -47,6 +47,7 @@
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
                             </div>
+
                             <div class="row g-1">
                                 <div class="col-md-12 mb-3">
                                     <label class="form-label"
@@ -63,6 +64,27 @@
                                         for="validationCustom04">{{ __('master.content_ar') }}</label>
                                     <textarea id="editor2" cols="30" rows="10" class="form-control" id="validationCustom04" type="text"
                                         name="content_ar" required=""></textarea>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom03">{{ __('master.short_content_en') }}</label>
+                                    <textarea rows="5" class="form-control" id="validationCustom03" type="text" name="short_content"
+                                        required=""></textarea>
+                                    <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
+                                    <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
+                                </div>
+                            </div>
+                            <div class="row g-1">
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label"
+                                        for="validationCustom04">{{ __('master.short_content_ar') }}</label>
+                                    <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="short_content_ar"
+                                        required=""></textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>

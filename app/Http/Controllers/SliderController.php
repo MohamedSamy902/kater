@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SliderController extends Controller
 {
@@ -26,7 +27,9 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('dashbord.slider.create');
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.slider.create', compact('images', 'videos'));
     }
 
     /**
@@ -88,7 +91,9 @@ class SliderController extends Controller
     public function edit($id)
     {
         $slider = Slider::findOrFail($id);
-        return view('dashbord.slider.edit', compact('slider'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.slider.edit', compact('slider','images', 'videos'));
     }
 
     /**

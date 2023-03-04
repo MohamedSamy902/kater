@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\WellBeing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class WellBeingController extends Controller
 {
@@ -26,7 +27,9 @@ class WellBeingController extends Controller
      */
     public function create()
     {
-        return view('dashbord.wellbeing.create');
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.wellbeing.create', compact('images', 'videos'));
     }
 
     /**
@@ -102,7 +105,9 @@ class WellBeingController extends Controller
      */
     public function edit(WellBeing $wellBeing)
     {
-        return view('dashbord.wellbeing.edit', compact('wellBeing'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.wellbeing.edit', compact('wellBeing','images', 'videos'));
     }
 
     /**

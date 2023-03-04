@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Healthcare;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HealthcareController extends Controller
 {
@@ -27,7 +28,9 @@ class HealthcareController extends Controller
      */
     public function create()
     {
-        return view('dashbord.healthcare.create');
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.healthcare.create', compact('images', 'videos'));
     }
 
     /**
@@ -106,7 +109,9 @@ class HealthcareController extends Controller
      */
     public function edit(Healthcare $healthcare)
     {
-        return view('dashbord.healthcare.edit', compact('healthcare'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.healthcare.edit', compact('healthcare','images', 'videos'));
     }
 
     /**

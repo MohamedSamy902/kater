@@ -47,7 +47,7 @@
                                             <i class="fa fa-envelope"></i>
                                         </div>
                                         <div class="text">
-                                            <p><a href="mailto:info@khaterfoundation.com ">info@khaterfoundation.com</a>
+                                            <p><a href="mailto:offical@khaterfoundation.com ">offical@khaterfoundation.com</a>
                                             </p>
                                         </div>
                                     </li>
@@ -133,7 +133,7 @@
                     <li>
 
                         <i class="fa fa-envelope"></i>
-                        <a href="mailto:needhelp@packageName__.com">info@khaterfoundation.com</a>
+                        <a href="mailto:needhelp@packageName__.com">offical@khaterfoundation.com</a>
                     </li>
                     <li>
                         <?php if(App::getLocale() == 'ar'): ?>

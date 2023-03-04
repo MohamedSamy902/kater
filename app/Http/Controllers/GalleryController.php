@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class GalleryController extends Controller
@@ -28,7 +29,9 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('dashbord.gallery.create');
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.gallery.create', compact('images', 'videos'));
     }
 
     /**
@@ -81,7 +84,7 @@ class GalleryController extends Controller
     public function edit($id)
     {
         $gallery = Gallery::findOrFail($id);
-        return view('dashbord.gallery.edit', compact('gallery'));
+        return view('dashbord.gallery.edit', compact('gallery','images', 'videos'));
 
     }
 

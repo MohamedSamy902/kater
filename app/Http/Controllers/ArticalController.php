@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artical;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticalController extends Controller
 {
@@ -27,8 +28,10 @@ class ArticalController extends Controller
      */
     public function create($model)
     {
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
 
-        return view('dashbord.article.create', compact('model'));
+        return view('dashbord.article.create', compact('model', 'images', 'videos', 'images', 'videos'));
     }
 
     /**
@@ -50,8 +53,18 @@ class ArticalController extends Controller
         ];
         $data['section'] = $model;
         $data['link'] = $request->link;
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
-        $article = Artical::create($data);
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+                $article = Artical::create($data);
+            }
+        }else {
+            $article = Artical::create($data);
+
+        }
+
         if ($request->file('article')) {
             $article
                 ->addMedia($request->file('article'))
@@ -60,7 +73,7 @@ class ArticalController extends Controller
         }
 
         return redirect()->back()
-        ->with('success', __('master.messages_save'));
+            ->with('success', __('master.messages_save'));
     }
 
     /**
@@ -71,7 +84,6 @@ class ArticalController extends Controller
      */
     public function show($id, $model)
     {
-
     }
 
     /**
@@ -80,24 +92,21 @@ class ArticalController extends Controller
      * @param  \App\Models\Artical  $artical
      * @return \Illuminate\Http\Response
      */
-    public function edit($model, $id= null)
+    public function edit($model, $id = null)
     {
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
 
         if ($id != null) {
             $article = Artical::where('section', $model)->where('id', $id)->first();
-
-        }else {
+        } else {
             $article = Artical::where('section', $model)->first();
-
         }
-        // return $article;
         if ($article != NULL) {
-            return view('dashbord.article.edit', compact('model', 'article'));
-
-        }else {
+            return view('dashbord.article.edit', compact('model', 'article', 'images', 'videos'));
+        } else {
             return abort('404');
         }
-
     }
 
     /**
@@ -120,7 +129,13 @@ class ArticalController extends Controller
             'ar' => $request->content_ar
         ];
         $data['link'] = $request->link;
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
 
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+            }
+        }
         $article->update($data);
 
         if ($request->file('article')) {
@@ -132,7 +147,7 @@ class ArticalController extends Controller
         }
 
         return redirect()->back()
-        ->with('success', __('master.messages_edit'));
+            ->with('success', __('master.messages_edit'));
     }
 
     /**

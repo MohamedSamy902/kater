@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partners;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PartnersController extends Controller
 {
@@ -24,7 +25,8 @@ class PartnersController extends Controller
      */
     public function create()
     {
-        //
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
     }
 
     /**
@@ -57,7 +59,8 @@ class PartnersController extends Controller
      */
     public function edit(Partners $partners)
     {
-        //
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
     }
 
     /**

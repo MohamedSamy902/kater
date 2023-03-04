@@ -28,7 +28,7 @@ class GalleryDetalisController extends Controller
     {
         $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
         $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
-        return view('dashbord.gallery.image.create', compact('gallery', 'images', 'videos'));
+        return view('dashbord.gallery.image.create', compact('gallery', 'images', 'videos','images', 'videos'));
     }
 
     /**
@@ -97,7 +97,9 @@ class GalleryDetalisController extends Controller
     public function edit($id)
     {
         $gallery = GalleryDetalis::findOrFail($id);
-        return view('dashbord.gallery.image.edit', compact('gallery'));
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.gallery.image.edit', compact('gallery','images', 'videos'));
     }
 
     /**
