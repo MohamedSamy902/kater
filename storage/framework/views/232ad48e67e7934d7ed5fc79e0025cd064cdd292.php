@@ -55,7 +55,9 @@
     </section>
     <!--About Four End-->
     <!--About Time Line Start -->
-    <section class="content-inner-1">
+
+
+    <section class="content-inner-1 titmelineweb">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -63,7 +65,8 @@
                     <div class="main-timeline9" style="top: -50px;">
                         <div class="timeline">
                             <div class="timeline-content line1">
-                                <a href="<?php echo e($TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);'); ?>">
                                     <div class="circle"><img src="<?php echo e($TimeLine[0]->getFirstMediaUrl('TimeLine')); ?>"
                                             class=" " alt="">
                                     </div>
@@ -83,7 +86,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line2" style="margin-top: 50px">
-                                <a href="<?php echo e($TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : 'javascript: void(0);'); ?>">
                                     <div class="circle"><img src="<?php echo e($TimeLine[1]->getFirstMediaUrl('TimeLine')); ?>"
                                             class=" " alt="">
                                     </div>
@@ -105,7 +109,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <a href="<?php echo e($TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : 'javascript: void(0);'); ?>">
                                     <div class="circle"><img src="<?php echo e($TimeLine[2]->getFirstMediaUrl('TimeLine')); ?>"
                                             class=" " alt="">
                                     </div>
@@ -131,7 +136,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line4" style="margin-top: 200px;">
-                                <a href="<?php echo e($TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : 'javascript: void(0);'); ?>">
                                     <div class="circle"><img src="<?php echo e($TimeLine[3]->getFirstMediaUrl('TimeLine')); ?>"
                                             class=" " alt="">
                                     </div>
@@ -157,7 +163,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line6" style="margin-top: 210px;">
-                                <a href="<?php echo e($TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : 'javascript: void(0);'); ?>">
                                     <div class="circle">
                                         <img src="<?php echo e($TimeLine[4]->getFirstMediaUrl('TimeLine')); ?>" class=""
                                             alt="">
@@ -182,7 +189,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line3" style="margin-top: 210px;">
-                                <a href="<?php echo e($TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : 'javascript: void(0);'); ?>">
 
                                     <div class="circle"><img src="<?php echo e($TimeLine[5]->getFirstMediaUrl('TimeLine')); ?>"
                                             class=" " alt="">
@@ -209,7 +217,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line5" style="margin-top: 200px;">
-                                <a href="<?php echo e($TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : 'javascript: void(0);'); ?>">
 
                                     <div class="circle">
                                         <img src="<?php echo e($TimeLine[6]->getFirstMediaUrl('TimeLine')); ?>" class=""
@@ -235,7 +244,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line7" style="margin-top: 210px;">
-                                <a href="<?php echo e($TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : 'javascript: void(0);'); ?>">
 
                                     <div class="circle">
                                         <img src="<?php echo e($TimeLine[7]->getFirstMediaUrl('TimeLine')); ?>" class=""
@@ -260,7 +270,8 @@
 
                         <div class="timeline">
                             <div class="timeline-content line9" style="margin-top: 250px;">
-                                <a href="<?php echo e($TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : 'javascript: void(0);'); ?>">
 
                                     <div class="circle">
                                         <img src="<?php echo e($TimeLine[8]->getFirstMediaUrl('TimeLine')); ?>" class=""
@@ -279,6 +290,260 @@
                                     </ul>
                                     </p>
                                     <div class="icon"><?php echo e($TimeLine[8]->title); ?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a href="<?php echo e(route('gallery')); ?>" class="thm-btn "><?php echo e(__('site.explore_more')); ?></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="content-inner-1 titmelinemob">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-title__title text-center"><?php echo e(__('site.timeLine')); ?></h2>
+                    <div class="main-timeline9" style="top: -50px;">
+                        <div class="timeline">
+                            <div class="timeline-content line1">
+                                <div class="iconweb"><?php echo e($TimeLine[0]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[0]->link != null ? URL::to($TimeLine[0]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[0]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;"><?php echo $TimeLine[0]->content; ?>
+
+                                    </ul>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line2" style="margin-top: 50px">
+                                <div class="iconweb"><?php echo e($TimeLine[1]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[1]->link != null ? URL::to($TimeLine[1]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[1]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+
+                                    <ul style="text-align: start;">
+                                        <?php echo e($TimeLine[1]->content); ?>
+
+                                    </ul>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line3" style="margin-top: 60px;">
+                                <div class="iconweb"><?php echo e($TimeLine[2]->title); ?></div>
+                                <a
+                                    href="<?php echo e($TimeLine[2]->link != null ? URL::to($TimeLine[2]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[2]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[2]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+
+                                    </ul>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line4" style="margin-top: 60px;">
+                                <div class="iconweb"><?php echo e($TimeLine[3]->title); ?></div>
+                                <a
+                                    href="<?php echo e($TimeLine[3]->link != null ? URL::to($TimeLine[3]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle"><img src="<?php echo e($TimeLine[3]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[3]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+
+                                    </ul>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line6" style="margin-top: 60px;">
+                                <div class="iconweb"><?php echo e($TimeLine[4]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[4]->link != null ? URL::to($TimeLine[4]->link) : 'javascript: void(0);'); ?>">
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[4]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[4]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line3" style="margin-top: 60px;">
+                                <div class="iconweb"><?php echo e($TimeLine[5]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[5]->link != null ? URL::to($TimeLine[5]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle"><img src="<?php echo e($TimeLine[5]->getFirstMediaUrl('TimeLine')); ?>"
+                                            class=" " alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[5]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+
+                                    </ul>
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line5" style="margin-top: 60px;">
+                                <div class="iconweb"><?php echo e($TimeLine[6]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[6]->link != null ? URL::to($TimeLine[6]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[6]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[6]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line7" style="margin-top: 60px;">
+                                <div class="iconweb"><?php echo e($TimeLine[7]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[7]->link != null ? URL::to($TimeLine[7]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[7]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[7]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-content line9" style="margin-top: 70px;">
+                                <div class="iconweb"><?php echo e($TimeLine[8]->title); ?></div>
+
+                                <a
+                                    href="<?php echo e($TimeLine[8]->link != null ? URL::to($TimeLine[8]->link) : 'javascript: void(0);'); ?>">
+
+                                    <div class="circle">
+                                        <img src="<?php echo e($TimeLine[8]->getFirstMediaUrl('TimeLine')); ?>" class=""
+                                            alt="">
+                                    </div>
+                                </a>
+                                <div class="content">
+                                    <p class="description">
+                                    <ul style="text-align: start;">
+                                        <?php
+                                            $timelineLists = explode('//', $TimeLine[8]->content);
+                                            foreach ($timelineLists as $timelineList) {
+                                                echo '<li>' . $timelineList . '</li>';
+                                            }
+                                        ?>
+                                    </ul>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +697,7 @@
                         <h2 class="section-title__title"><?php echo e($WhereWeServe->title); ?></h2>
                     </div>
                     <div class="pb-5">
-                    <?php echo $WhereWeServe->content; ?>
+                        <?php echo $WhereWeServe->content; ?>
 
 
                     </div>

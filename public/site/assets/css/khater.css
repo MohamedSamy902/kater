@@ -2682,6 +2682,11 @@ body.locked .page-wrapper {
     transition: transform 2000ms ease, opacity 2000ms ease,
         -webkit-transform 2000ms ease;
 }
+@media (max-width: 767px) {
+    .main-slider__btn-box {
+        display: none !important;
+    }
+}
 
 .main-slider__btn:hover {
     color: var(--khater-base);
@@ -11886,7 +11891,6 @@ body.boxed-wrapper {
     -webkit-animation: displace 70s linear infinite;
     animation: displace 70s linear infinite;
 }
-
 
 @-webkit-keyframes displace {
     from {
