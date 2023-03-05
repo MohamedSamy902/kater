@@ -119,7 +119,7 @@
                         </div>
                         <?php echo $Vision->content; ?>
 
-                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
+                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn btnresponsev"><?php echo e(__('site.readMore')); ?></a>
 
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                             <h2 class="section-title__title pb-2"><?php echo e($HowItAllBegan->title); ?></h2>
                         </div>
                         <p class="about-one__text pb-3"><?php echo $HowItAllBegan->content; ?></p>
-                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn btnresponsev"><?php echo e(__('site.readMore')); ?></a>
+                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn "><?php echo e(__('site.readMore')); ?></a>
                     </div>
                 </div>
             </div>

@@ -123,7 +123,7 @@
                             <h2 class="section-title__title"> {{ $Vision->title }}</h2>
                         </div>
                         {!! $Vision->content !!}
-                        <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
+                        <a href="{{ route('about') }}" class="thm-btn about-one__btn btnresponsev">{{ __('site.readMore') }}</a>
 
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                             <h2 class="section-title__title pb-2">{{ $HowItAllBegan->title }}</h2>
                         </div>
                         <p class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</p>
-                        <a href="{{ route('about') }}" class="thm-btn about-one__btn btnresponsev">{{ __('site.readMore') }}</a>
+                        <a href="{{ route('about') }}" class="thm-btn about-one__btn ">{{ __('site.readMore') }}</a>
                     </div>
                 </div>
             </div>
