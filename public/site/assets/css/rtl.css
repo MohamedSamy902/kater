@@ -1,22 +1,22 @@
 @font-face {
     font-family: "DINNextLTArabic-Bold";
-    src: url("../font/DINNextLTArabic-Bold-2.ttf")
+    src: url("../font/DINNextLTArabic-Bold-2.ttf");
 }
 
 @font-face {
     font-family: "DINNextLTArabic-Light";
-    src: url("../font/DINNextLTArabic-Light.ttf")
+    src: url("../font/DINNextLTArabic-Light.ttf");
 }
 
 @font-face {
     font-family: "DINNextLTArabic-Medium";
-    src: url("../font/alfont_com_AlFont_com_DINNextLTArabic-Medium-1.ttf")
+    src: url("../font/alfont_com_AlFont_com_DINNextLTArabic-Medium-1.ttf");
 }
 
 :root {
-    --khater-font: 'DINNextLTArabic-Bold', sans-serif !important;
-    --khater-font-two: 'DINNextLTArabic-Light', sans-serif !important;
-    --khater-font-three: 'DINNextLTArabic-Medium', sans-serif !important;
+    --khater-font: "DINNextLTArabic-Bold", sans-serif !important;
+    --khater-font-two: "DINNextLTArabic-Light", sans-serif !important;
+    --khater-font-three: "DINNextLTArabic-Medium", sans-serif !important;
     --khater-gray: #6f7775;
     --khater-gray-rgb: 111, 119, 117;
     --khater-white: #ffffff;
@@ -24,13 +24,13 @@
     --khater-base: #522e90;
     --khater-base-rgb: 0, 113, 93;
     --khater-black: #4a346d;
-    --khater-secondary-1: #62BB46;
+    --khater-secondary-1: #62bb46;
     --khater-secondary-10: #61bb4675;
     --khater-secondary-2: #005172;
     --khater-secondary-20: #00527259;
-    --khater-secondary-3: #F37024;
+    --khater-secondary-3: #f37024;
     --khater-secondary-30: #f370245b;
-    --khater-secondary-4: #FEC340;
+    --khater-secondary-4: #fec340;
     --khater-secondary-5: #5e3056;
     --khater-black-rgb: 40, 55, 52;
     --khater-primary: #15c0f2;
@@ -40,7 +40,6 @@
     --khater-bdr-color: #eee9db;
     --khater-bdr-color-rgb: 238, 233, 219;
     --khater-bdr-radius: 20px;
-
 }
 
 body {
@@ -65,9 +64,8 @@ h6 {
     font-size: 32px;
 }
 
-
-.main-menu .main-menu__list>li+li,
-.stricky-header .main-menu__list>li+li {
+.main-menu .main-menu__list > li + li,
+.stricky-header .main-menu__list > li + li {
     margin-right: 55px;
     margin-left: 5px;
     font-family: var(--khater-font-two);
@@ -90,18 +88,15 @@ h6 {
 }
 
 .faq-one__text-1 {
-
     margin-left: 70px !important;
     margin-right: 0px !important;
 }
 
-.main-menu .main-menu__list>li>ul>li>a::before,
-.main-menu .main-menu__list>li>ul>li>ul>li>a::before,
-.stricky-header .main-menu__list>li>ul>li>a::before,
-.stricky-header .main-menu__list>li>ul>li>ul>li>a::before {
-
+.main-menu .main-menu__list > li > ul > li > a::before,
+.main-menu .main-menu__list > li > ul > li > ul > li > a::before,
+.stricky-header .main-menu__list > li > ul > li > a::before,
+.stricky-header .main-menu__list > li > ul > li > ul > li > a::before {
     content: "";
-
 }
 
 .list-unstyled {
@@ -118,10 +113,9 @@ h6 {
     display: block;
     margin-right: 0;
     margin-left: 84px;
-
 }
 
-.site-footer__social a+a {
+.site-footer__social a + a {
     margin-right: 10px;
     margin-left: 0px;
 }
@@ -139,8 +133,10 @@ h6 {
     position: relative;
     display: block;
     z-index: 2;
-    width: 80%;
+    width: 100% !important;
     right: 150px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .feature-two__title {
@@ -151,7 +147,6 @@ h6 {
     text-align: right !important;
     direction: rtl;
     margin-right: 18px;
-
 }
 
 .events-carousel-page {
@@ -165,10 +160,8 @@ h6 {
 }
 
 .main-slider-shape-2 {
-
     right: 130px !important;
     direction: rtl !important;
-
 }
 
 .main-slider .image-layer {
@@ -181,13 +174,11 @@ h6 {
 
 } */
 
-
 .about-four__right {
     position: relative;
     display: block;
     margin-right: 60px;
 }
-
 
 .counter-one__single {
     position: relative;
@@ -202,13 +193,13 @@ h6 {
 .megamenu.ling {
     margin-left: 0 !important;
     margin-right: 20vh !important;
-
 }
-
-
 
 .preloader__image {
     background-image: url(../images/logo-ar.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-slider__nav {
@@ -257,7 +248,10 @@ h6 {
 
     .section-title__title {
         font-size: 35px;
-        line-height: 80px;
+        text-align: center !important;
+    }
+    h3.section-title__title {
+        padding-bottom: 10px;
     }
 }
 
@@ -285,6 +279,5 @@ h6 {
     .main-slider__nav {
         left: 94% !important;
         align-items: flex-start !important;
-
     }
 }
