@@ -27,6 +27,7 @@ class PartnersController extends Controller
     {
         $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
         $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
+        return view('dashbord.partners.create', compact('images', 'videos'));
     }
 
     /**

@@ -25,7 +25,7 @@
 
     <!--About Four Start-->
     <section class="about-four mt-5">
-        <div class="container-fuild">
+        <div class="container">
             <div class="row">
 
                 <div class="col-xl-6">

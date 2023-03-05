@@ -5752,8 +5752,8 @@ body.locked .page-wrapper {
     display: block;
 }
 
-.about-two__right .section-title {
-    margin-bottom: 28px;
+.viewAllStories {
+    text-align: end;
 }
 
 .about-two__text-1 {

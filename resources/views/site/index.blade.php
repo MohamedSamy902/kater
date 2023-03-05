@@ -122,7 +122,7 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> {{ $Vision->title }}</h2>
                         </div>
-                        <p class="faq-one__text-1">{!! $Vision->content !!}</p>
+                        {!! $Vision->content !!}
                         <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
 
                     </div>
@@ -166,7 +166,7 @@
                             <h2 class="section-title__title pb-2">{{ $HowItAllBegan->title }}</h2>
                         </div>
                         <p class="about-one__text pb-3">{!! $HowItAllBegan->content !!}</p>
-                        <a href="{{ route('about') }}" class="thm-btn about-one__btn">{{ __('site.readMore') }}</a>
+                        <a href="{{ route('about') }}" class="thm-btn about-one__btn btnresponsev">{{ __('site.readMore') }}</a>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <h3 style="font-size: 24px;"  class="section-title__title">More News & Stories</h3>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: end;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 viewAllStories" style="">
                     <p style="font-size: 20px;"  class="section-title__title"><a href="{{ route('gallery') }}">View All Stories</a> </p>
                 </div>
                 <!--Causes One Single Start-->
@@ -196,7 +196,7 @@
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
                 @foreach ($events as $event)
-                    <div class="col-xl-4 col-lg-6 col-md-6" style="padding: 0px 25px 0px 25px;">
+                    <div class="col-xl-4 col-lg-6 col-md-6" >
                         <div class="causes-one__single">
                             <a href="{{ URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
@@ -208,7 +208,7 @@
                                 <h3 class="causes-one__title" style="font-size: 20px;" ><a
                                         href="{{ URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
                                 </h3>
-                                <p class="causes-one__text" style="font-size: 16px;" >{{ $event->content }}</p>
+                                {{-- <p class="causes-one__text" style="font-size: 16px;" >{{ $event->content }}</p> --}}
                             </div>
                         </div>
                     </div>

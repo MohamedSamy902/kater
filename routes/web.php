@@ -7,6 +7,7 @@ use App\Http\Controllers\GalleryDetalisController;
 use App\Http\Controllers\HealthcareController;
 use App\Http\Controllers\HealthcareDetailsController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\PartnersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -53,6 +54,7 @@ Route::group(
                 /** Start Route Roles **/
                 Route::resource('roles', RoleController::class)->except(['show']);
                 Route::resource('image', ImageController::class)->except(['show']);
+                Route::resource('partners', PartnersController::class)->except(['show']);
                 /** End Route Roles **/
                 ['TimeLine'];
                 /** Start Route Roles **/

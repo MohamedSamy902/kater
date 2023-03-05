@@ -117,7 +117,8 @@
                         <div class="section-title text-left">
                             <h2 class="section-title__title"> <?php echo e($Vision->title); ?></h2>
                         </div>
-                        <p class="faq-one__text-1"><?php echo $Vision->content; ?></p>
+                        <?php echo $Vision->content; ?>
+
                         <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
 
                     </div>
@@ -161,7 +162,7 @@
                             <h2 class="section-title__title pb-2"><?php echo e($HowItAllBegan->title); ?></h2>
                         </div>
                         <p class="about-one__text pb-3"><?php echo $HowItAllBegan->content; ?></p>
-                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn"><?php echo e(__('site.readMore')); ?></a>
+                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn btnresponsev"><?php echo e(__('site.readMore')); ?></a>
                     </div>
                 </div>
             </div>
@@ -183,7 +184,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <h3 style="font-size: 24px;"  class="section-title__title">More News & Stories</h3>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: end;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 viewAllStories" style="">
                     <p style="font-size: 20px;"  class="section-title__title"><a href="<?php echo e(route('gallery')); ?>">View All Stories</a> </p>
                 </div>
                 <!--Causes One Single Start-->
@@ -191,7 +192,7 @@
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
                 <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-xl-4 col-lg-6 col-md-6" style="padding: 0px 25px 0px 25px;">
+                    <div class="col-xl-4 col-lg-6 col-md-6" >
                         <div class="causes-one__single">
                             <a href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>">
                                 <div class="causes-one__img">
@@ -203,7 +204,7 @@
                                 <h3 class="causes-one__title" style="font-size: 20px;" ><a
                                         href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>"><?php echo e($event->title); ?></a>
                                 </h3>
-                                <p class="causes-one__text" style="font-size: 16px;" ><?php echo e($event->content); ?></p>
+                                
                             </div>
                         </div>
                     </div>

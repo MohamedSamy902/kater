@@ -3,7 +3,7 @@
         .main-slider__nav {
             position: absolute;
             top: 90%;
-            left: 49% !important;
+            left: 43% !important;
             z-index: 100;
             transform: translateY(-50%) translateX(0%);
             display: flex;
@@ -118,29 +118,6 @@
                 <div class="swiper-wrapper">
                     <?php $__currentLoopData = $healthcareies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $healthcareie): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-xl-12 col-lg-12 col-md-6 p-2 swiper-slide">
-                            <div class="causes-one__single">
-                                <a href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>">
-                                    <div class="causes-one__img">
-                                        <img style="width: 100%; height: 300px;"
-                                            src="<?php echo e($healthcareie->getFirstMediaUrl('healthcarePhoto')); ?>" alt="">
-                                    </div>
-                                </a>
-
-                                <div class="causes-one__content">
-                                    <h3 class="causes-one__title"><a
-                                            href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>"><?php echo e($healthcareie->title); ?></a>
-                                    </h3>
-                                    <p class="causes-one__text">
-                                        <?php echo e($healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....')); ?>
-
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xl-4 col-lg-6 col-md-6  p-2 swiper-slide">
                             <div class="causes-one__single">
                                 <a href="<?php echo e(route('healthcare.detils', $healthcareie->id)); ?>">
                                     <div class="causes-one__img">
