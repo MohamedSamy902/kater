@@ -199,7 +199,7 @@ h6 {
     background-image: url(../images/logo-ar.png) !important;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .main-slider__nav {
