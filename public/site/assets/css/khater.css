@@ -11883,6 +11883,7 @@ body.boxed-wrapper {
     animation: displace 70s linear infinite;
 }
 
+
 @-webkit-keyframes displace {
     from {
         background-position: 0 center;
@@ -11927,7 +11928,7 @@ body.boxed-wrapper {
     content: "";
     width: 3px;
     height: 98%;
-    background: none;
+    background: #4a346d;
     position: absolute;
     top: 0;
     left: 50%;
