@@ -27,8 +27,7 @@
             ) {
                 location.href = `http://127.0.0.1:8000/ar/wellbeing/3`;
             } else if (
-                $(".main-slider h2").html() ===
-                `مستشفى سرطان الاطفال " 57357"`
+                $(".main-slider h2").html() === `مستشفى سرطان الاطفال " 57357"`
             ) {
                 location.href = `http://127.0.0.1:8000/ar/gallery/9`;
             } else if (
@@ -36,8 +35,25 @@
                 "القوافل الطبية بمدينة ههيا- محافظة الشرقية"
             ) {
                 location.href = `http://127.0.0.1:8000/ar/healthcare/1`;
+            } else if (
+                $(".main-slider h2").html() ===
+                "Abu El Reesh Children’s Hospital Al Munira - Cairo University"
+            ) {
+                location.href = `http://127.0.0.1:8000/en/healthcare/1`;
+            } else if (
+                $(".main-slider h2").html() === "Decent Housing Project"
+            ) {
+                location.href = `http://127.0.0.1:8000/en/wellbeing/3`;
+            } else if (
+                $(".main-slider h2").html() ===
+                `The Children's Cancer Hospital Foundation (57357) - Egypt`
+            ) {
+                location.href = `http://127.0.0.1:8000/en/gallery/9`;
+            } else if (
+                $(".main-slider h2").html() === "Hihya Convoys’ Clinics"
+            ) {
+                location.href = `http://127.0.0.1:8000/en/healthcare/1`;
             }
-            
         });
     }
     // End Karim :)
