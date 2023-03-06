@@ -177,7 +177,7 @@ h6 {
 .about-four__right {
     position: relative;
     display: block;
-    margin-right: 60px;
+    /* margin-right: 60px; */
 }
 
 .counter-one__single {

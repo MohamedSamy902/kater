@@ -51,6 +51,10 @@ class WellBeingController extends Controller
                 'en' => $request->content,
                 'ar' => $request->content_ar,
             ],
+            'short_content' => [
+                'en' => $request->short_content,
+                'ar' => $request->short_content_ar,
+            ],
             'convoys' => [
                 'en' => $request->convoys,
                 'ar' => $request->convoys_ar,
@@ -129,6 +133,11 @@ class WellBeingController extends Controller
         $data['content'] = [
             'en' => $request->content,
             'ar' => $request->content_ar
+        ];
+
+        $data['short_content'] = [
+            'en' => $request->short_content,
+            'ar' => $request->short_content_ar
         ];
 
         $data['convoys'] = [

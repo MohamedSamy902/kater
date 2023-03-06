@@ -146,7 +146,7 @@
                     @foreach ($wellbeingies as $wellbeing)
                         <div class="col-xl-12 col-lg-12 col-md-6 p-2 swiper-slide">
                             <div class="causes-one__single">
-                                <a href="{{ route('healthcare.detils', $wellbeing->id) }}">
+                                <a href="{{ route('wellbeing.detils', $wellbeing->id) }}">
                                     <div class="causes-one__img">
                                         <img style="width: 100%; height: 300px;"
                                             src="{{ $wellbeing->getFirstMediaUrl('wellbeingPhoto') }}" alt="">
@@ -155,7 +155,7 @@
 
                                 <div class="causes-one__content">
                                     <h3 class="causes-one__title"><a
-                                            href="{{ route('healthcare.detils', $wellbeing->id) }}">{{ $wellbeing->title }}</a>
+                                            href="{{ route('wellbeing.detils', $wellbeing->id) }}">{{ $wellbeing->title }}</a>
                                     </h3>
                                     <p class="causes-one__text">
                                         {{ $wellbeing->short_content == null ? Str::limit($wellbeing->title, 250, ' .....') : Str::limit($wellbeing->short_content, 250, ' .....') }}

@@ -2,13 +2,13 @@
     <nav class="main-menu">
         <div class="main-menu__wrapper">
             <div class="main-menu__wrapper-inner">
-                <div class="main-menu__left">
+                <div class="main-menu__left pt-2">
                     <div class="main-menu__logo">
                         @php
                             if (App::getLocale() == 'ar') {
-                                echo '<a href="' . route('about') . '"><img src=" ' . asset('site') . '/assets/images/logo-ar.png" alt="" width="200px" class="pb-2"></a>';
+                                echo '<a href="' . route('index') . '"><img src=" ' . asset('site') . '/assets/images/logo-ar.png" alt="" width="200px" class="pb-2"></a>';
                             } else {
-                                echo '<a href=""><img src=" ' . asset('site') . '/assets/images/logo.png" alt="" width="200px" class="pb-2"></a>';
+                                echo '<a href="' . route('index') . '"><img src=" ' . asset('site') . '/assets/images/logo.png" alt="" width="200px" class="pb-2"></a>';
                             }
                         @endphp
                     </div>

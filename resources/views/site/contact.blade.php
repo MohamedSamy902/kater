@@ -83,7 +83,7 @@
                         <div class="contact-one__content">
                             <p class="contact-one__sub-title">{{ __('site.email') }}</p>
                             <h3 class="contact-one__number"><a
-                                    href="mailto:info@khaterfoundation.com">info@khaterfoundation.com</a></h3>
+                                    href="mailto:offical@khaterfoundation.com">offical@khaterfoundation.com</a></h3>
                         </div>
                     </li>
                     <li class="contact-one__single">

@@ -82,7 +82,7 @@
                                         </a>
                                     </div>
                                 @endforeach
-                                
+
                                 @foreach ($allHealthcare as $allHealth)
                                     <div class="">
                                         <a href="{{ route('healthcare.detils', $allHealth->id) }}">
@@ -341,14 +341,15 @@
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
-                                <a href="{{ $HealthcareDetails->link != null ? URL::to($HealthcareDetails->link) : 'javascript: void(0);' }}">
+                                <a
+                                    href="{{ $HealthcareDetails->link != null ? URL::to($HealthcareDetails->link) : 'javascript: void(0);' }}">
 
                                     <div class="causes-one__img">
                                         <img src="{{ $HealthcareDetails->getFirstMediaUrl('healthcareDetails') }}"
                                             style="height: 300px" alt="">
-                                        {{-- <div class="causes-one__cat">
-                                        <p>{{ $HealthcareDetails->title }}</p>
-                                    </div> --}}
+                                        <div class="causes-one__cat">
+                                            <p>{{ $HealthcareDetails->title }}</p>
+                                        </div>
                                     </div>
                                 </a>
 

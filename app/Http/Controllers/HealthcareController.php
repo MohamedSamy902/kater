@@ -135,6 +135,11 @@ class HealthcareController extends Controller
             'ar' => $request->content_ar
         ];
 
+        $data['short_content'] = [
+            'en' => $request->short_content,
+            'ar' => $request->short_content_ar
+        ];
+       
         $data['convoys'] = [
             'en' => $request->convoys,
             'ar' => $request->convoys_ar

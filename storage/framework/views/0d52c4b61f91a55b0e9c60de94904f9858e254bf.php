@@ -119,7 +119,7 @@
                     <?php $__currentLoopData = $wellbeingies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $wellbeing): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <div class="col-xl-12 col-lg-12 col-md-6 p-2 swiper-slide">
                             <div class="causes-one__single">
-                                <a href="<?php echo e(route('healthcare.detils', $wellbeing->id)); ?>">
+                                <a href="<?php echo e(route('wellbeing.detils', $wellbeing->id)); ?>">
                                     <div class="causes-one__img">
                                         <img style="width: 100%; height: 300px;"
                                             src="<?php echo e($wellbeing->getFirstMediaUrl('wellbeingPhoto')); ?>" alt="">
@@ -128,7 +128,7 @@
 
                                 <div class="causes-one__content">
                                     <h3 class="causes-one__title"><a
-                                            href="<?php echo e(route('healthcare.detils', $wellbeing->id)); ?>"><?php echo e($wellbeing->title); ?></a>
+                                            href="<?php echo e(route('wellbeing.detils', $wellbeing->id)); ?>"><?php echo e($wellbeing->title); ?></a>
                                     </h3>
                                     <p class="causes-one__text">
                                         <?php echo e($wellbeing->short_content == null ? Str::limit($wellbeing->title, 250, ' .....') : Str::limit($wellbeing->short_content, 250, ' .....')); ?>

@@ -352,9 +352,9 @@
                                             style="height: 300px" alt=""> --}}
                                             {{-- {{ getUrlMedia($WellBeingDetails, 'wellBeingDetails') }} --}}
                                             <img src="{{ getUrlMedia($WellBeingDetails, 'wellBeingDetails') }}">
-                                        {{-- <div class="causes-one__cat">
+                                        <div class="causes-one__cat">
                                         <p>{{ $WellBeingDetails->title }}</p>
-                                    </div> --}}
+                                    </div>
                                     </div>
                                 </a>
                             </div>
