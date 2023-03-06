@@ -361,7 +361,9 @@
                                         
                                             
                                             <img src="<?php echo e(getUrlMedia($WellBeingDetails, 'wellBeingDetails')); ?>">
-                                        
+                                        <div class="causes-one__cat">
+                                        <p><?php echo e($WellBeingDetails->title); ?></p>
+                                    </div>
                                     </div>
                                 </a>
                             </div>

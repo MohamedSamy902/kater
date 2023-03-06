@@ -205,7 +205,7 @@
                                 <h3 class="causes-one__title" style="font-size: 20px;" ><a
                                         href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>"><?php echo e($event->title); ?></a>
                                 </h3>
-                                
+                                <p class="causes-one__text" style="font-size: 16px;" ><?php echo e($event->content); ?></p>
                             </div>
                         </div>
                     </div>

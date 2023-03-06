@@ -253,10 +253,9 @@ h6 {
     h3.section-title__title {
         padding-bottom: 10px;
     }
-}
-
-.main-slider__nav {
-    display: none;
+    .main-slider__nav {
+        transform: translate(-25px, 100px) !important;
+    }
 }
 
 .faq-one__text-1 {
