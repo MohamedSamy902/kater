@@ -1530,6 +1530,13 @@
         background-color: transparent !important;
         /* display: none !important; */
     }
+
+    .px-1 {
+        padding-right: 0.25rem!important;
+        padding-left: 0.25rem!important;
+        width: 383px;
+        margin-left: -66px;
+    }
     .marqueeweb {
         display: none !important;
 
