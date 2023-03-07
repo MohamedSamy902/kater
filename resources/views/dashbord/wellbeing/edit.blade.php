@@ -78,7 +78,7 @@
                                     <label class="form-label"
                                         for="validationCustom03">Short Content En</label>
                                     <textarea rows="5" class="form-control" id="validationCustom03" type="text" name="short_content"
-                                        required="">{{ old('short_content') ? old('short_content') : $wellBeing->getTranslation('short_content', 'en') }}</textarea>
+                                        >{{ old('short_content') ? old('short_content') : $wellBeing->getTranslation('short_content', 'en') }}</textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -88,7 +88,7 @@
                                     <label class="form-label"
                                         for="validationCustom04">Short Content Ar</label>
                                     <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="short_content_ar"
-                                        required="">{{ old('short_content_ar') ? old('short_content_ar') : $wellBeing->getTranslation('short_content', 'ar') }}</textarea>
+                                        >{{ old('short_content_ar') ? old('short_content_ar') : $wellBeing->getTranslation('short_content', 'ar') }}</textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>

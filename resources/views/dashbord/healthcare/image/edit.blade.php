@@ -39,7 +39,7 @@
                                     <label class="form-label"
                                         for="validationCustom01">{{ __('master.title_en') }}</label>
                                     <input class="form-control" id="validationCustom01" type="text" name="title"
-                                        required=""
+                                        
                                         value="{{ old('title') ? old('title') : $healthcareDetalis->getTranslation('title', 'en') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
@@ -49,7 +49,7 @@
                                     <label class="form-label"
                                         for="validationCustom02">{{ __('master.title_ar') }}</label>
                                     <input class="form-control" id="validationCustom02" type="text" name="title_ar"
-                                        required=""
+                                        
                                         value="{{ old('title_ar') ? old('title_ar') : $healthcareDetalis->getTranslation('title', 'ar') }}" />
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>

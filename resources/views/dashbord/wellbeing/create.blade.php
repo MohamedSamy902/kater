@@ -74,7 +74,7 @@
                                     <label class="form-label"
                                         for="validationCustom03">{{ __('master.short_content_en') }}</label>
                                     <textarea rows="5" class="form-control" id="validationCustom03" type="text" name="short_content"
-                                        required=""></textarea>
+                                        ></textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
@@ -84,7 +84,7 @@
                                     <label class="form-label"
                                         for="validationCustom04">{{ __('master.short_content_ar') }}</label>
                                     <textarea rows="5" class="form-control" id="validationCustom04" type="text" name="short_content_ar"
-                                        required=""></textarea>
+                                        ></textarea>
                                     <div class="valid-feedback">{{ __('validation.valid_feedback') }}</div>
                                     <div class="invalid-feedback">{{ __('validation.invalid_feedback') }}</div>
                                 </div>
