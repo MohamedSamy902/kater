@@ -82,7 +82,7 @@
                                         </a>
                                     </div>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                
+
                                 <?php $__currentLoopData = $allHealthcare; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $allHealth): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <div class="">
                                         <a href="<?php echo e(route('healthcare.detils', $allHealth->id)); ?>">
@@ -350,12 +350,15 @@
                     <div class="item px-1">
                         <div class="events-one__single">
                             <div class="causes-one__single">
-                                <a href="<?php echo e($HealthcareDetails->link != null ? URL::to($HealthcareDetails->link) : 'javascript: void(0);'); ?>">
+                                <a
+                                    href="<?php echo e($HealthcareDetails->link != null ? URL::to($HealthcareDetails->link) : 'javascript: void(0);'); ?>">
 
                                     <div class="causes-one__img">
                                         <img src="<?php echo e($HealthcareDetails->getFirstMediaUrl('healthcareDetails')); ?>"
                                             style="height: 300px" alt="">
-                                        
+                                        <div class="causes-one__cat">
+                                            <p><?php echo e($HealthcareDetails->title); ?></p>
+                                        </div>
                                     </div>
                                 </a>
 

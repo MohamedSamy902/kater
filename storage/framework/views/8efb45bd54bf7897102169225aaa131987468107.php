@@ -119,7 +119,8 @@
                         </div>
                         <?php echo $Vision->content; ?>
 
-                        <a href="<?php echo e(route('about')); ?>" class="thm-btn about-one__btn btnresponsev"><?php echo e(__('site.readMore')); ?></a>
+                        <a href="<?php echo e(route('about')); ?>"
+                            class="thm-btn about-one__btn btnresponsev"><?php echo e(__('site.readMore')); ?></a>
 
                     </div>
                 </div>
@@ -182,29 +183,31 @@
         <div class="container-fuild p-5">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <h3 style="font-size: 24px;"  class="section-title__title">More News & Stories</h3>
+                    <h3 style="font-size: 24px;" class="section-title__title">More News & Stories</h3>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 viewAllStories" style="">
-                    <p style="font-size: 20px;"  class="section-title__title"><a href="<?php echo e(route('gallery')); ?>">View All Stories</a> </p>
+                    <p style="font-size: 20px;" class="section-title__title"><a href="<?php echo e(route('gallery')); ?>">View All
+                            Stories</a> </p>
                 </div>
                 <!--Causes One Single Start-->
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
                 <?php $__currentLoopData = $events; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $event): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-xl-4 col-lg-6 col-md-6" >
+                    <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
                             <a href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>">
                                 <div class="causes-one__img">
-                                    <img style="height: 260px;" src="<?php echo e($event->getFirstMediaUrl('event')); ?>" alt="">
+                                    <img style="height: 260px;" src="<?php echo e($event->getFirstMediaUrl('event')); ?>"
+                                        alt="">
                                 </div>
                             </a>
 
                             <div class="causes-one__content_index">
-                                <h3 class="causes-one__title" style="font-size: 20px;" ><a
+                                <h3 class="causes-one__title" style="font-size: 20px;"><a
                                         href="<?php echo e(URL::current()); ?>/<?php echo e($event->link); ?>"><?php echo e($event->title); ?></a>
                                 </h3>
-                                <p class="causes-one__text" style="font-size: 16px;" ><?php echo e($event->content); ?></p>
+                                <p class="causes-one__text" style="font-size: 16px;"><?php echo e($event->content); ?></p>
                             </div>
                         </div>
                     </div>

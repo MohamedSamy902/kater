@@ -208,7 +208,7 @@ h6 {
     right: 45px;
     z-index: 100;
     transform: translateY(-50%) translateX(0%);
-    display: flex;
+    display: flex !important;
     align-items: flex-end !important;
     /* justify-content: end; */
     max-width: 95vw;

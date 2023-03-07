@@ -2670,13 +2670,13 @@ body.locked .page-wrapper {
 @media (max-width: 767px) {
     .main-slider__title {
         font-weight: 900;
-        color: #24b47e;
-        text-shadow: 2px 2px 2px #000000;
+        color: #000;
+        /* text-shadow: 2px 2px 2px #000000; */
     }
     .main-slider__content p {
         font-weight: 900;
-        color: #24b47e !important;
-        text-shadow: 1px 2px #000000 !important;
+        color: #000 !important;
+        /* text-shadow: 1px 2px #000000 !important; */
     }
 }
 
@@ -2774,8 +2774,8 @@ body.locked .page-wrapper {
 @media (max-width: 767px) {
 .main-slider__nav .swiper-button-next,
 .main-slider__nav .swiper-button-prev {
-    color:#24b47e;
-    border-color: #24b47e;
+    color:var(--khater-white-rgb);
+    border-color: var(--khater-white-rgb);
     opacity: 0.6;
 }
 .main-slider__nav .swiper-button-next:hover,

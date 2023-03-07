@@ -52,7 +52,15 @@ class GalleryController extends Controller
             'ar' => $request->content_ar
         ];
 
-        $gallery = Gallery::create($data);
+        $arrayAttach =  explode(',',  $request->attachments[0]);
+        if ($request->attachments[0] != null) {
+            for ($i = 0; $i < COUNT($arrayAttach); $i++) {
+                $data['image_id'] = $arrayAttach[$i];
+                $gallery = Gallery::create($data);
+            }
+        }
+
+        // $gallery = Gallery::create($data);
         if ($request->file('gallery')) {
             $gallery
                 ->addMedia($request->file('gallery'))
@@ -84,6 +92,8 @@ class GalleryController extends Controller
     public function edit($id)
     {
         $gallery = Gallery::findOrFail($id);
+        $images = DB::table('media')->where('mime_type', '=', 'image/jpeg')->orWhere('mime_type', '=', 'image/png')->orWhere('mime_type', '=', 'image/webp')->orWhere('mime_type', '=', 'image/jpg')->get();
+        $videos = DB::table('media')->where('mime_type', '=', 'video/mp4')->get();
         return view('dashbord.gallery.edit', compact('gallery','images', 'videos'));
 
     }

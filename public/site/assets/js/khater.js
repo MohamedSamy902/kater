@@ -15,7 +15,7 @@
     // Karim's Edit
 
     if ($("body").width() < 768) {
-        $(".main-slider h2").css("text-decoration", "underline");
+        $(".main-slider h2").css("text-decoration", "none");
         $(".main-slider h2").click(() => {
             if (
                 $(".main-slider h2").html() ===

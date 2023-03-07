@@ -123,7 +123,8 @@
                             <h2 class="section-title__title"> {{ $Vision->title }}</h2>
                         </div>
                         {!! $Vision->content !!}
-                        <a href="{{ route('about') }}" class="thm-btn about-one__btn btnresponsev">{{ __('site.readMore') }}</a>
+                        <a href="{{ route('about') }}"
+                            class="thm-btn about-one__btn btnresponsev">{{ __('site.readMore') }}</a>
 
                     </div>
                 </div>
@@ -186,29 +187,31 @@
         <div class="container-fuild p-5">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                    <h3 style="font-size: 24px;"  class="section-title__title">More News & Stories</h3>
+                    <h3 style="font-size: 24px;" class="section-title__title">More News & Stories</h3>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 viewAllStories" style="">
-                    <p style="font-size: 20px;"  class="section-title__title"><a href="{{ route('gallery') }}">View All Stories</a> </p>
+                    <p style="font-size: 20px;" class="section-title__title"><a href="{{ route('gallery') }}">View All
+                            Stories</a> </p>
                 </div>
                 <!--Causes One Single Start-->
 
                 <!--Causes One Single End-->
                 <!--Causes One Single Start-->
                 @foreach ($events as $event)
-                    <div class="col-xl-4 col-lg-6 col-md-6" >
+                    <div class="col-xl-4 col-lg-6 col-md-6">
                         <div class="causes-one__single">
                             <a href="{{ URL::current() }}/{{ $event->link }}">
                                 <div class="causes-one__img">
-                                    <img style="height: 260px;" src="{{ $event->getFirstMediaUrl('event') }}" alt="">
+                                    <img style="height: 260px;" src="{{ $event->getFirstMediaUrl('event') }}"
+                                        alt="">
                                 </div>
                             </a>
 
                             <div class="causes-one__content_index">
-                                <h3 class="causes-one__title" style="font-size: 20px;" ><a
+                                <h3 class="causes-one__title" style="font-size: 20px;"><a
                                         href="{{ URL::current() }}/{{ $event->link }}">{{ $event->title }}</a>
                                 </h3>
-                                <p class="causes-one__text" style="font-size: 16px;" >{{ $event->content }}</p>
+                                <p class="causes-one__text" style="font-size: 16px;">{{ $event->content }}</p>
                             </div>
                         </div>
                     </div>
