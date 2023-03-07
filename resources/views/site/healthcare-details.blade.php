@@ -26,7 +26,7 @@
 
                     @endphp
                 </div>
-                <div class="col-xl-3 col-lg-3 ">
+                <div class="col-xl-3 col-lg-3 marqueeweb">
                     <div class="sidebar">
 
                         <div class="sidebar__single sidebar__post ">

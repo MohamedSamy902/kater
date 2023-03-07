@@ -1530,11 +1530,15 @@
         background-color: transparent !important;
         /* display: none !important; */
     }
+    .marqueeweb {
+        display: none !important;
 
+    }
     .marqueemob {
         display: block !important;
 
     }
+
 
     .viewAllStories {
         text-align: start;
