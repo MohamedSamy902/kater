@@ -373,31 +373,33 @@
                 <marquee width="100%" direction="scroll" height="200px" scrollamount="2" loop="-1"
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
-                        @foreach ($allHealthcare as $allHealth)
-                            <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 10px;">
-                                <div style="">
-                                    <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                        style="height: 150px; width:150px;" alt="">
-                                    <p style="font-size: 12px;">
+                        @for ($i = 0; $i < 20; $i++)
+                            @foreach ($allHealthcare as $allHealth)
+                                <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 10px;">
+                                    <div style="">
+                                        <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                                            style="height: 150px; width:150px;" alt="">
+                                        <p style="font-size: 12px;">
 
-                                        {{ $allHealth->title != null ? Str::limit($allHealth->title, 26, ' .....') : '' }}
-                                    </p>
-                                </div>
-                            </a>
-                        @endforeach
-                        @foreach ($allWellBeing as $allWell)
-                            <a href="{{ route('wellbeing.detils', $allWell->id) }}" style="margin: 0px 10px;">
-                                <div style="">
-                                    <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
-                                        style="height: 150px; width:150px;" alt="">
-                                    <p style="font-size: 12px;">
+                                            {{ $allHealth->title != null ? Str::limit($allHealth->title, 26, ' .....') : '' }}
+                                        </p>
+                                    </div>
+                                </a>
+                            @endforeach
+                            @foreach ($allWellBeing as $allWell)
+                                <a href="{{ route('wellbeing.detils', $allWell->id) }}" style="margin: 0px 10px;">
+                                    <div style="">
+                                        <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
+                                            style="height: 150px; width:150px;" alt="">
+                                        <p style="font-size: 12px;">
 
-                                        {{ $allWell->title != null ? Str::limit($allWell->title, 26, ' .....') : '' }}
-                                    </p>
-                                </div>
-                            </a>
+                                            {{ $allWell->title != null ? Str::limit($allWell->title, 26, ' .....') : '' }}
+                                        </p>
+                                    </div>
+                                </a>
+                            @endforeach
+                        @endfor
 
-                        @endforeach
 
 
                         {{-- @foreach ($allHealthcare as $allHealth)
