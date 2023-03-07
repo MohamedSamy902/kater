@@ -323,7 +323,6 @@
                     "items": 4,
                     "margin": 0,
                     "loop":true,
-
                     "autoplay": { "delay": 5000 },
                     "nav":false,
                     "dots":false,
