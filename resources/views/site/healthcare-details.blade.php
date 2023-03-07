@@ -364,7 +364,7 @@
     </section>
 
 
-    <div class="col-xl-3 col-lg-3 ">
+    <div class="col-xl-3 col-lg-3 marqueemob">
         <div class="sidebar">
 
             <div class="sidebar__single sidebar__post ">
@@ -374,7 +374,7 @@
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
                         @foreach ($allHealthcare as $allHealth)
-                            <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
+                            <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 10px;">
                                 <div style="">
                                     <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                         style="height: 150px; width:150px;" alt="">
@@ -386,7 +386,7 @@
                             </a>
                         @endforeach
                         @foreach ($allWellBeing as $allWell)
-                            <a href="{{ route('wellbeing.detils', $allWell->id) }}" style="margin: 0px 30px;">
+                            <a href="{{ route('wellbeing.detils', $allWell->id) }}" style="margin: 0px 10px;">
                                 <div style="">
                                     <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
                                         style="height: 150px; width:150px;" alt="">
