@@ -362,7 +362,29 @@
             </div>
         </div>
     </section>
+    <a href="">
+        <div class="">
+            <div class="">
+                <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                    style="height: 120px; width:120px" alt="">
+                <p style="font-size: 12px;">
+                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                </p>
+            </div>
+        </div>
+    </a>
 
+    <a href="">
+        <div class="">
+            <div class="">
+                <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                    style="height: 120px; width:120px" alt="">
+                <p style="font-size: 12px;">
+                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                </p>
+            </div>
+        </div>
+    </a>
 
     <div class="col-xl-3 col-lg-3 ">
         <div class="sidebar">
