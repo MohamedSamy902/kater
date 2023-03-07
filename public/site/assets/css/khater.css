@@ -282,6 +282,10 @@ ul {
 .titmelinemob {
     display: none;
 }
+.marqueemob {
+    display: none !important;
+
+}
 
 .thm-btn:before {
     transition-duration: 800ms;
