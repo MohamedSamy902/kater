@@ -11175,7 +11175,7 @@ body.locked .page-wrapper {
 .about-four__right {
     position: relative;
     display: block;
-    margin-left: 60px;
+    /* margin-left: 60px; */
 }
 
 .about-four__right .section-title {

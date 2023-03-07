@@ -30,7 +30,7 @@
             <div class="row">
 
                 <div class="col-xl-6">
-                    <div class="about-four__right">
+                    <div class="about-four__right about-fout-resposev">
                         <div class="section-title text-left">
                             <h2 class="section-title__title">{{ $FoundationStory->title }}</h2>
                         </div>

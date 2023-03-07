@@ -1560,6 +1560,11 @@
         background-color: var(--khater-black);
         z-index: 1;
     }
+
+    .main-slider__nav {
+        left: 30% !important;
+    }
+
     .marqueemob {
         display: block !important;
 
@@ -2064,4 +2069,13 @@
     .main-menu-three__btn-box {
         display: none;
     }
+}
+
+
+
+
+
+
+.about-fout-resposev {
+    padding-left: 0px;
 }
