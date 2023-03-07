@@ -1532,11 +1532,12 @@
     }
 
     .px-1 {
-        padding-right: 0.25rem!important;
-        padding-left: 0.25rem!important;
-        width: 383px;
-        margin-left: -66px;
+        padding-right: 0.25rem !important;
+        padding-left: 0.25rem !important;
+        width: 350px;
+        margin-left: -49px;
     }
+
     .marqueeweb {
         display: none !important;
 
@@ -1577,7 +1578,7 @@
 
     }
 
-    .event-details__title{
+    .event-details__title {
         font-size: 22px;
         line-height: 30px;
     }
