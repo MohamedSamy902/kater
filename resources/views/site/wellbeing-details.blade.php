@@ -28,7 +28,7 @@
                     @endphp
 
                 </div>
-                <div class="col-xl-3 col-lg-3 ">
+                <div class="col-xl-3 col-lg-3 marqueeweb">
                     <div class="sidebar">
 
                         <div class="sidebar__single sidebar__post ">
@@ -294,8 +294,8 @@
                         <div class="col-xl-3 col-lg-3">
                             <ul style="padding: 20px 0 0 0;">
                                 <li class="counter-one__single Provided">
-                                    <img src="{{ asset('site') }}/assets/images/well-bieng icon.png" style="height: 50px;"
-                                        alt="">
+                                    <img src="{{ asset('site') }}/assets/images/well-bieng icon.png"
+                                        style="height: 50px;" alt="">
                                     <div class="counter-one__count-box p-2">
                                         <p class="counter-one__text4" style="width: 300px;">
                                             {{ $wellBeing->convoys != 0 ? $wellBeing->convoys : '' }}</span> </p>
@@ -350,11 +350,11 @@
                                         {{-- <img src="{{ $WellBeingDetails->getFirstMediaUrl('wellBeingDetails') }}"
 
                                             style="height: 300px" alt=""> --}}
-                                            {{-- {{ getUrlMedia($WellBeingDetails, 'wellBeingDetails') }} --}}
-                                            <img src="{{ getUrlMedia($WellBeingDetails, 'wellBeingDetails') }}">
+                                        {{-- {{ getUrlMedia($WellBeingDetails, 'wellBeingDetails') }} --}}
+                                        <img src="{{ getUrlMedia($WellBeingDetails, 'wellBeingDetails') }}">
                                         <div class="causes-one__cat">
-                                        <p>{{ $WellBeingDetails->title }}</p>
-                                    </div>
+                                            <p>{{ $WellBeingDetails->title }}</p>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
@@ -366,6 +366,50 @@
             </div>
         </div>
     </section>
+
+
+    <div class="col-xl-3 col-lg-3 marqueemob">
+        <div class="sidebar">
+
+            <div class="sidebar__single sidebar__post ">
+                <div class="sidebar-shape-1" style="background-image: url(assets/images/shapes/sidebar-shape-1.png)">
+                </div>
+                <marquee width="100%" direction="scroll" height="200px" scrollamount="2" loop="-1"
+                    onmouseover="this.stop()" onmouseout="this.start()">
+                    <div style="display: flex;">
+                        @for ($i = 0; $i < 10; $i++)
+                            @foreach ($allHealthcare as $allHealth)
+                                <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 10px;">
+                                    <div style="">
+                                        <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                                            style="height: 150px; width:150px;" alt="">
+                                        <p style="font-size: 12px;">
+
+                                            {{ $allHealth->title != null ? Str::limit($allHealth->title, 26, ' .....') : '' }}
+                                        </p>
+                                    </div>
+                                </a>
+                            @endforeach
+                            @foreach ($allWellBeing as $allWell)
+                                <a href="{{ route('wellbeing.detils', $allWell->id) }}" style="margin: 0px 10px;">
+                                    <div style="">
+                                        <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
+                                            style="height: 150px; width:150px;" alt="">
+                                        <p style="font-size: 12px;">
+
+                                            {{ $allWell->title != null ? Str::limit($allWell->title, 26, ' .....') : '' }}
+                                        </p>
+                                    </div>
+                                </a>
+                            @endforeach
+                        @endfor
+                    </div>
+                </marquee>
+            </div>
+
+        </div>
+    </div>
+
 
     <!--Events Page End-->
 @endsection
