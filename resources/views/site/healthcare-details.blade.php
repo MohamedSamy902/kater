@@ -370,48 +370,33 @@
             <div class="sidebar__single sidebar__post ">
                 <div class="sidebar-shape-1" style="background-image: url(assets/images/shapes/sidebar-shape-1.png)">
                 </div>
-                <div style="display: flex;">
-                    @foreach ($allHealthcare as $allHealth)
-                        <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
-                            <div style="width: 150px;">
-                                <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                    style="height: 150px; width:150px" alt="">
-                                <p style="font-size: 12px;">
-
-                                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
-                                </p>
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-
                 <marquee width="100%" direction="scroll" height="200px" scrollamount="2" loop="-1"
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
                         @foreach ($allHealthcare as $allHealth)
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
-                                <div style="width: 200px;">
+                                <div style="">
                                     <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                         style="height: 150px; width:150px;" alt="">
                                     <p style="font-size: 12px;">
 
-                                        {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                                        {{ $allHealth->title != null ? Str::limit($allHealth->title, 26, ' .....') : '' }}
                                     </p>
                                 </div>
                             </a>
                         @endforeach
                         @foreach ($allWellBeing as $allWell)
                             <a href="{{ route('wellbeing.detils', $allWell->id) }}" style="margin: 0px 30px;">
-                                <div style="width: 200px;">
+                                <div style="">
                                     <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
                                         style="height: 150px; width:150px;" alt="">
                                     <p style="font-size: 12px;">
 
-                                        {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
+                                        {{ $allWell->title != null ? Str::limit($allWell->title, 26, ' .....') : '' }}
                                     </p>
                                 </div>
                             </a>
-                            
+
                         @endforeach
 
 
