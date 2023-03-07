@@ -389,7 +389,6 @@
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
                         @foreach ($allHealthcare as $allHealth)
-                        <div>
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
                                 <div style="width: 150px;">
                                     <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
@@ -400,8 +399,6 @@
                                     </p>
                                 </div>
                             </a>
-                        </div>
-
                         @endforeach
                         {{-- @foreach ($allHealthcare as $allHealth)
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
