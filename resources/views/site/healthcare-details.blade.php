@@ -372,15 +372,13 @@
                 </div>
                 @foreach ($allHealthcare as $allHealth)
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
-                                <div class="">
-                                    <div class="">
+                                <div style="width: 150px;">
                                         <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                             style="height: 150px; width:150px" alt="">
                                         <p style="font-size: 12px;">
 
                                             {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                         </p>
-                                    </div>
                                 </div>
                             </a>
                         @endforeach
