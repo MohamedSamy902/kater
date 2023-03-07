@@ -374,15 +374,17 @@
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
                         @foreach ($allHealthcare as $allHealth)
-                            <div class="">
+                            {{-- <div class=""> --}}
                                 <a href="{{ route('healthcare.detils', $allHealth->id) }}">
                                     <div class="causes-one__single">
                                         <div class="causes-one__img">
-                                            <div class="row">
-                                                <div class="col-8"> <img
+                                            {{-- <div class="row"> --}}
+                                                {{-- <div class="col-8"> --}}
+                                                     <img
                                                         src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                                        style="height: 120px;" alt=""></div>
-                                                <div class="col-4">
+                                                        style="height: 120px;" alt="">
+                                                    {{-- </div> --}}
+                                                {{-- <div class="col-4"> --}}
                                                     <p
                                                         style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
@@ -390,12 +392,12 @@
                                                     </p>
 
                                                     </p>
-                                                </div>
-                                            </div>
+                                                {{-- </div> --}}
+                                            {{-- </div> --}}
                                         </div>
                                     </div>
                                 </a>
-                            </div>
+                            {{-- </div> --}}
                         @endforeach
                         @foreach ($allWellBeing as $allWell)
                         <div class="">
