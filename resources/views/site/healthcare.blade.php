@@ -132,7 +132,8 @@
                                             href="{{ route('healthcare.detils', $healthcareie->id) }}">{{ $healthcareie->title }}</a>
                                     </h3>
                                     <p class="causes-one__text">
-                                        {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }}
+                                        {{ $healthcareie->short_content  }}
+                                        {{-- {{ $healthcareie->short_content == null ? Str::limit($healthcareie->title, 250, ' .....') : Str::limit($healthcareie->short_content, 250, ' .....') }} --}}
                                     </p>
 
                                 </div>
