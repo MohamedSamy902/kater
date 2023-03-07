@@ -284,7 +284,7 @@
                             <div class="event-details__top">
                                 @php
                                     if ($wellBeing->getFirstMediaUrl('wellbeingVideo')) {
-                                        echo '<div class="event-details__text-6">' . $wellBeing->content . '</div>';
+                                        echo '<div class="pt-2">' . $wellBeing->content . '</div>';
                                     }
 
                                 @endphp
