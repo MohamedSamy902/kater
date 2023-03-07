@@ -1552,6 +1552,14 @@
         background-position: center;
         z-index: -1;
     }
+
+    .page-header {
+        position: relative;
+        display: block;
+        padding: 10px 0;
+        background-color: var(--khater-black);
+        z-index: 1;
+    }
     .marqueemob {
         display: block !important;
 
