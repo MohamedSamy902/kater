@@ -382,7 +382,7 @@
                                                 {{-- <div class="col-8"> --}}
                                                      <img
                                                         src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                                        style="height: 150px;" alt="">
+                                                        style="height: 120px; width:120px" alt="">
                                                     {{-- </div> --}}
                                                 {{-- <div class="col-4"> --}}
                                                     <p
