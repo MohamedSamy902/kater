@@ -100,8 +100,8 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© All Copyright 2022 by <a
-                                        href="#">KhaterFoundation.com</a>
+                                <p class="site-footer__bottom-text">© <?php echo e(__('site.footerCopyRight')); ?>
+
                                 </p>
                             </div>
                         </div>

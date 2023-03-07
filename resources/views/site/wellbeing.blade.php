@@ -3,7 +3,7 @@
     <style>
         .main-slider__nav {
             position: absolute;
-            top: 90%;
+            top: 89%;
             left: 43% !important;
             z-index: 100;
             transform: translateY(-50%) translateX(0%);

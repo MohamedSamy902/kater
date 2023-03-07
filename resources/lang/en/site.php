@@ -42,5 +42,5 @@ return
         'timeLine' => 'Key Milestones',
         // Footer
         'addr' => '40, Road 254, Degla Maadi',
-
+        'footerCopyRight' => 'A non-governmental, non-profit developmental institution registered under No. 8123/2011 in accordance with the provisions of the Associations and Foundations’ Law in the Arab Republic of Egypt.',
     ];
