@@ -622,18 +622,15 @@
                                 <a href="{{ route('wellbeing.detils', $allWell->id) }}">
                                     <div class="causes-one__single">
                                         <div class="causes-one__img">
-                                            {{-- <div class="row"> --}}
-                                            {{-- <div class="col-8"> --}}
+                                            
                                             <img src="{{ $allWell->getFirstMediaUrl('wellbeingPhoto') }}"
                                                 style="height: 80px;" alt="">
-                                            {{-- </div> --}}
-                                            {{-- <div class="col-4"> --}}
+
                                             <p style="">
                                                 {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
 
                                             </p>
-                                            {{-- </div> --}}
-                                            {{-- </div> --}}
+
                                         </div>
                                     </div>
                                 </a>
