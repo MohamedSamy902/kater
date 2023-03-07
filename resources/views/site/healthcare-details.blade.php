@@ -368,35 +368,37 @@
         <div class="sidebar">
 
             <div class="sidebar__single sidebar__post ">
-                <div class="sidebar-shape-1"
-                    style="background-image: url(assets/images/shapes/sidebar-shape-1.png)"></div>
+                <div class="sidebar-shape-1" style="background-image: url(assets/images/shapes/sidebar-shape-1.png)">
+                </div>
                 <marquee width="100%" direction="scroll" height="150px" scrollamount="2" loop="-1"
                     onmouseover="this.stop()" onmouseout="this.start()">
+                    <div>
+                        @foreach ($allHealthcare as $allHealth)
+                            <div class="">
+                                <a href="{{ route('healthcare.detils', $allHealth->id) }}">
+                                    <div class="causes-one__single">
+                                        <div class="causes-one__img">
+                                            <div class="row">
+                                                <div class="col-8"> <img
+                                                        src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                                                        style="height: 80px;" alt=""></div>
+                                                <div class="col-4">
+                                                    <p
+                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
-                    @foreach ($allHealthcare as $allHealth)
-                        <div class="">
-                            <a href="{{ route('healthcare.detils', $allHealth->id) }}">
-                                <div class="causes-one__single">
-                                    <div class="causes-one__img">
-                                        <div class="row">
-                                            <div class="col-8"> <img
-                                                    src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                                    style="height: 80px;" alt=""></div>
-                                            <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                        {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                                                    </p>
 
-                                                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
-                                                </p>
-
-                                                </p>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+
                     @foreach ($allWellBeing as $allWell)
                         <div class="">
                             <a href="{{ route('wellbeing.detils', $allWell->id) }}">
@@ -408,8 +410,7 @@
                                                     style="height: 80px;" alt="">
                                             </div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
                                                     {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
 
                                                 </p>
@@ -431,8 +432,7 @@
                                                     src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                                     style="height: 80px;" alt=""></div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
                                                     {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                                 </p>
@@ -456,8 +456,7 @@
                                                     style="height: 80px;" alt="">
                                             </div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
                                                     {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
 
                                                 </p>
@@ -478,8 +477,7 @@
                                                     src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                                     style="height: 80px;" alt=""></div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
                                                     {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                                 </p>
@@ -503,8 +501,7 @@
                                                     style="height: 80px;" alt="">
                                             </div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
                                                     {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
 
                                                 </p>
@@ -525,8 +522,7 @@
                                                     src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                                     style="height: 80px;" alt=""></div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
                                                     {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                                 </p>
@@ -550,8 +546,7 @@
                                                     style="height: 80px;" alt="">
                                             </div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
                                                     {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
 
                                                 </p>
@@ -572,8 +567,7 @@
                                                     src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                                     style="height: 80px;" alt=""></div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
 
                                                     {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                                 </p>
@@ -597,8 +591,7 @@
                                                     style="height: 80px;" alt="">
                                             </div>
                                             <div class="col-4">
-                                                <p
-                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                <p style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
                                                     {{ $allWell->title != null ? Str::limit($allWell->title, 38, ' .....') : '' }}
 
                                                 </p>
