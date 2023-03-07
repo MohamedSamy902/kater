@@ -1534,10 +1534,34 @@
         display: none !important;
 
     }
+
+    .impactMob {
+        display: none !important;
+
+    }
+
+    .page-header-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
     .marqueemob {
         display: block !important;
 
     }
+
+    .event-details__title{
+        font-size: 22px;
+        line-height: 30px;
+    }
+
 
 
     .viewAllStories {

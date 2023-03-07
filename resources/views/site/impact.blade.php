@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5">
+                <div class="col-xl-5 impactMob">
                     <div class="about-four__left " style="margin-top: 70px;">
                         <div class="about-four__img-box impact_img">
                             <div class="about-four__img-box impact_img" style="left: 15px;">
