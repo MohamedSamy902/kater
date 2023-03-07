@@ -362,29 +362,7 @@
             </div>
         </div>
     </section>
-    <a href="">
-        <div class="">
-            <div class="">
-                <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                    style="height: 120px; width:120px" alt="">
-                <p style="font-size: 12px;">
-                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
-                </p>
-            </div>
-        </div>
-    </a>
 
-    <a href="">
-        <div class="">
-            <div class="">
-                <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                    style="height: 120px; width:120px" alt="">
-                <p style="font-size: 12px;">
-                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
-                </p>
-            </div>
-        </div>
-    </a>
 
     <div class="col-xl-3 col-lg-3 ">
         <div class="sidebar">
@@ -392,6 +370,20 @@
             <div class="sidebar__single sidebar__post ">
                 <div class="sidebar-shape-1" style="background-image: url(assets/images/shapes/sidebar-shape-1.png)">
                 </div>
+                @foreach ($allHealthcare as $allHealth)
+                    <a href="{{ route('healthcare.detils', $allHealth->id) }}">
+                        <div class="">
+                            <div class="">
+                                <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                                    style="height: 120px; width:120px" alt="">
+                                <p style="font-size: 12px;">
+
+                                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
                 <marquee width="100%" direction="scroll" height="200px" scrollamount="2" loop="-1"
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
