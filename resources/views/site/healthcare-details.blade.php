@@ -400,7 +400,7 @@
                                 </div>
                             </a>
                         @endforeach
-                        @foreach ($allHealthcare as $allHealth)
+                        {{-- @foreach ($allHealthcare as $allHealth)
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
                                 <div class="">
                                     <div class="">
@@ -638,7 +638,7 @@
                                     </div>
                                 </a>
                             </div>
-                        @endforeach
+                        @endforeach --}}
                     </div>
 
 
