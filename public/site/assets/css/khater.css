@@ -11119,7 +11119,7 @@ body.locked .page-wrapper {
 .about-four {
     position: relative;
     display: block;
-    /* padding: 40px 0 0; */
+    padding: 40px 0 0;
 }
 
 .about-four__left {
