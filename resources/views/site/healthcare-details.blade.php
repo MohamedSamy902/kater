@@ -390,9 +390,9 @@
                     <div style="display: flex;">
                         @foreach ($allHealthcare as $allHealth)
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
-                                <div style="width: 150px;">
+                                <div style="width: 200px;">
                                     <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                        style="height: 150px; width:150px" alt="">
+                                        style="height: 150px; width:150px;margin-left: 15%;" alt="">
                                     <p style="font-size: 12px;">
 
                                         {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
