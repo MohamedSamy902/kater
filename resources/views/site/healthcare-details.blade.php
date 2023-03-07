@@ -283,7 +283,7 @@
                             <div class="event-details__top">
                                 @php
                                     if ($healthcare->getFirstMediaUrl('healthcarevideo')) {
-                                        echo '<p class="event-details__text-6">' . $healthcare->content . '</p>';
+                                        echo '<div class="pt-2">' . $healthcare->content . '</div>';
                                     }
 
                                 @endphp
