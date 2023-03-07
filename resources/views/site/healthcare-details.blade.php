@@ -389,7 +389,29 @@
                     onmouseover="this.stop()" onmouseout="this.start()">
                     <div style="display: flex;">
                         @foreach ($allHealthcare as $allHealth)
-                            <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
+                        <div class="">
+                            <a href="{{ route('healthcare.detils', $allHealth->id) }}">
+                                <div class="causes-one__single">
+                                    <div class="causes-one__img">
+                                        <div class="row">
+                                            <div class="col-8"> <img
+                                                    src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
+                                                    style="height: 120px;" alt=""></div>
+                                            <div class="col-4">
+                                                <p
+                                                    style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+
+                                                    {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
+                                                </p>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                            {{-- <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
                                 <div style="width: 150px;">
                                     <img src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
                                         style="height: 150px; width:150px" alt="">
@@ -398,7 +420,7 @@
                                         {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                     </p>
                                 </div>
-                            </a>
+                            </a> --}}
                         @endforeach
                         {{-- @foreach ($allHealthcare as $allHealth)
                             <a href="{{ route('healthcare.detils', $allHealth->id) }}" style="margin: 0px 30px;">
