@@ -382,11 +382,11 @@
                                                 {{-- <div class="col-8"> --}}
                                                      <img
                                                         src="{{ $allHealth->getFirstMediaUrl('healthcarePhoto') }}"
-                                                        style="height: 120px;" alt="">
+                                                        style="height: 80px;" alt="">
                                                     {{-- </div> --}}
                                                 {{-- <div class="col-4"> --}}
                                                     <p
-                                                        style="font-size: 12px; margin-left: -9px; letter-spacing: -0.05em;">
+                                                        style="font-size: 12px;">
 
                                                         {{ $allHealth->title != null ? Str::limit($allHealth->title, 38, ' .....') : '' }}
                                                     </p>
