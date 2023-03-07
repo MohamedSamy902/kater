@@ -320,10 +320,10 @@
         <div class="container-fluid">
             <div class="events-carousel thm-owl__carousel owl-theme owl-carousel carousel-dot-style"
                 data-owl-options='{
-                    "items": 3,
+                    "items": 4,
                     "margin": 0,
                     "loop":true,
-                    
+
                     "autoplay": { "delay": 5000 },
                     "nav":false,
                     "dots":false,
@@ -336,7 +336,7 @@
                             "items":2
                         },
                         "992":{
-                            "items": 3
+                            "items": 4
                         }
                     }
                 }'>
